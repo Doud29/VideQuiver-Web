@@ -1,0 +1,24 @@
+.container-header {
+  border: 2px solid red;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  height: 65px;
+  background: white;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  .container-btn {
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    span {
+      font-size: 12px;
+      margin-top: 8px;
+    }
+  }
+}
