@@ -8,11 +8,8 @@ import BtnSale from "../Btn-Header/BtnSale";
 import BtnResearch from "../Btn-Header/BtnResearch";
 
 //---------------// Packages
-import { useState } from "react";
 
-const Header = () => {
-  const [isSearchBarexisting, setIsSearchBarexisting] = useState(false);
-  console.log(isSearchBarexisting);
+const Header = ({ setIsSearchBarexisting }) => {
   return (
     <div className="container-header">
       <BtnAcceuil />
