@@ -11,7 +11,6 @@ import { useState } from "react";
 
 const Home = () => {
   const [isSearchBarexisting, setIsSearchBarexisting] = useState(false);
-
   return (
     <div className="container-home">
       <Header setIsSearchBarexisting={setIsSearchBarexisting} />
