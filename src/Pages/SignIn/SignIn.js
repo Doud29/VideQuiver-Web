@@ -9,12 +9,12 @@ import { Link } from "react-router-dom";
 const SignIn = () => {
   return (
     <div className="container-signIn">
-      <div className="container-signIn-inputs">
+      <div className="container-inputs">
         <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Mot de passe" />
         <button>Se connecter</button>
         <Link to="/signup" style={{ textDecoration: "none" }}>
-          <span>Still not registered? Click Here</span>
+          <span>Pas de compte? Cliqué ici</span>
         </Link>
       </div>
     </div>

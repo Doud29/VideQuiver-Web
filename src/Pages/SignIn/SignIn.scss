@@ -6,7 +6,7 @@
   justify-content: center;
   align-items: center;
   background: #508ae2;
-  .container-signIn-inputs {
+  .container-inputs {
     box-sizing: border-box;
     width: 80%;
     min-width: 200px;
@@ -37,6 +37,47 @@
     span {
       color: white;
       font-size: 12px;
+    }
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .container-signIn {
+    .container-inputs {
+      height: 400px;
+      max-width: 520px;
+      input {
+        height: 50px;
+        width: 300px;
+        font-size: 25px;
+      }
+      button {
+        height: 50px;
+        width: 300px;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-signIn {
+    .container-inputs {
+      height: 500px;
+      input {
+        height: 80px;
+        font-size: 30px;
+        width: 500px;
+      }
+      button {
+        height: 80px;
+        width: 500px;
+      }
+      span {
+        color: white;
+        font-size: 25px;
+      }
     }
   }
 }
