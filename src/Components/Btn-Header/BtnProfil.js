@@ -14,7 +14,9 @@ const user = <FontAwesomeIcon icon={faUser} />;
 const BtnProfil = () => {
   return (
     <div className="container-btn user">
-      <Link to="/Profile">{user}</Link>
+      <Link to="/Profile">
+        <div className="header-image">{user}</div>
+      </Link>
       <span>Profile</span>
     </div>
   );

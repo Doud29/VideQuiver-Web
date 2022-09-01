@@ -8,17 +8,15 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 
-const sale = <FontAwesomeIcon icon={faSquarePlus} />;
+const rent = <FontAwesomeIcon icon={faSquarePlus} />;
 
-const BtnSale = () => {
+const BtnRent = () => {
   return (
     <div className="container-btn sale">
-      <Link to="/sale">
-        <div className="header-image">{sale}</div>
-      </Link>
-      <span>Vendre</span>
+      <Link to="/sale">{rent}</Link>
+      <span>Louer</span>
     </div>
   );
 };
 
-export default BtnSale;
+export default BtnRent;

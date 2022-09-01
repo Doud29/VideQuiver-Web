@@ -1,0 +1,21 @@
+.container-swiper {
+  width: 100%;
+  border: 3px solid red;
+  margin: 0 auto;
+  height: 400px;
+  position: absolute;
+  box-sizing: border-box;
+  background: beige;
+  display: none;
+  .bloc-infos {
+    height: 223px;
+    width: 322px;
+    position: relative;
+    border: 1px solid green;
+    z-index: 3;
+    background: white;
+    border-radius: 10px;
+    top: 50px;
+    left: 8px;
+  }
+}

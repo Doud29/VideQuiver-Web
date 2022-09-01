@@ -14,7 +14,9 @@ const house = <FontAwesomeIcon icon={faHouse} />;
 const BtnAcceuil = () => {
   return (
     <div className="container-btn acceuil">
-      <Link to="/home">{house}</Link>
+      <Link to="/home">
+        <div className="header-image"> {house}</div>
+      </Link>
       <span>Acceuil</span>
     </div>
   );

@@ -9,6 +9,7 @@ const SignUp = () => {
   return (
     <div className="container-signUp">
       <div className="container-inputs">
+        <h1>Inscription</h1>
         <input type="text" placeholder="Pseudo" />
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Mot de passe" />

@@ -2,17 +2,24 @@
 import "./SearchBar.scss";
 
 //---------------// icones
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faXmark } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 //---------------// Composent
+import BtnProfil from "../Btn-Header/BtnProfil";
 
-// const xMark = <FontAwesomeIcon icon={faXmark} />;
+const user = <FontAwesomeIcon icon={faUser} />;
 
-const SearchBar = ({ setIsSearchBarexisting }) => {
+const SearchBar = () => {
   return (
     <div className="container-searchBar">
-      {/* <input type="search" placeholder="What are you looking for?" /> */}
+      <span>Vide Quiver</span>
+      <input type="search" placeholder="Rechercher" />
+      {/* <div className="container-searchBar-profil">
+        <p>Mon compte</p>
+        {user}
+      </div>
+      <button>Vendre</button> */}
     </div>
   );
 };

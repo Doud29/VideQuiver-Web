@@ -10,15 +10,15 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 
 const magniFyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 
-const BtnResearch = ({ setIsSearchBarexisting }) => {
+const BtnResearch = ({ setIsSearchBarexisting, isSearchBarexisting }) => {
   return (
     <div
       className="container-btn recherche"
       onClick={() => {
-        setIsSearchBarexisting(true);
+        setIsSearchBarexisting(!isSearchBarexisting);
       }}
     >
-      <div>{magniFyingGlass}</div>
+      <div className="header-image">{magniFyingGlass}</div>
       <span>Rechercher</span>
     </div>
   );
