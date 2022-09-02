@@ -5,7 +5,7 @@ import "./categorie.scss";
 
 //---------------// Packages
 
-const Categorie = () => {
+const CategorieGlisse = () => {
   return (
     <div className="container-categorie">
       <div className="categorie">
@@ -36,4 +36,4 @@ const Categorie = () => {
   );
 };
 
-export default Categorie;
+export default CategorieGlisse;
