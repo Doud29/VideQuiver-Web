@@ -21,9 +21,8 @@ const Home = () => {
   //--------------// pour l'affichage de la bar de recherche
   const [montagneState, setMontagneState] = useState(false);
   const [merState, setMerState] = useState(false);
-
-  console.log(montagneState, "montagne");
-  console.log(merState, "mer");
+  // console.log(montagneState, "montagne");
+  // console.log(merState, "mer");
 
   //--------------// Fonction permettant d'afficher les composants de chaque discipline
   const wichCategorie = (montagneState, merState) => {
@@ -40,7 +39,8 @@ const Home = () => {
         setIsSearchBarexisting={setIsSearchBarexisting}
         isSearchBarexisting={isSearchBarexisting}
       />
-      {isSearchBarexisting === false ? <></> : <SearchBar />}
+      <SearchBar />
+      <h3>Catégories</h3>
       <Disciplines
         montagneState={montagneState}
         setMontagneState={setMontagneState}
@@ -49,7 +49,7 @@ const Home = () => {
       />
       {wichCategorie(montagneState, merState)}
       <Infos />
-      <h3>Les nouveautés</h3>
+      <h3>Nouveautés</h3>
       <Produit />
     </div>
   );
