@@ -14,6 +14,7 @@ import { faMessage } from "@fortawesome/free-solid-svg-icons";
 //---------------// Link
 import { Link } from "react-router-dom";
 
+//---------------// Déclaration des constantes
 const user = <FontAwesomeIcon icon={faUser} />;
 const maginFyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 const message = <FontAwesomeIcon icon={faMessage} />;
@@ -30,7 +31,7 @@ const SearchBar = () => {
       <div className="container-searchBar-profil">
         {/* <p>Mon compte</p> */}
         <div className="bloc-font">
-          <Link to="/signup" style={{ color: "grey" }}>
+          <Link to="/welcome" style={{ color: "grey" }}>
             {user}
           </Link>
           <Link to="/message" style={{ color: "grey" }}>

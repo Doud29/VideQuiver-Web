@@ -1,0 +1,85 @@
+.container-welcome {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  min-width: 320px;
+  .bloc-header {
+    height: 55px;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid grey;
+    p {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -125%);
+      font-size: 15px;
+      color: grey;
+    }
+    .bloc-xmark {
+      position: absolute;
+      font-size: 20px;
+      top: 55%;
+      right: 10px;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .bloc-image-citation {
+    height: 250px;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #508ae2;
+    p {
+      font-size: 15px;
+      margin-left: 10px;
+      margin-right: 10px;
+      position: absolute;
+      top: 75px;
+      z-index: 15;
+      color: grey;
+    }
+    span {
+      position: absolute;
+      top: 170px;
+      font-size: 15px;
+      z-index: 15;
+      margin-left: 10px;
+      color: grey;
+    }
+  }
+  img {
+    width: 100%;
+    height: auto;
+  }
+  .bloc-inscription {
+    box-sizing: border-box;
+    margin-top: 15px;
+    width: 100%;
+    height: 60%;
+    padding: 10px;
+    .bloc-inscription-email {
+      border: 1px solid black;
+      box-sizing: border-box;
+      height: 55px;
+      width: 100%;
+      margin-bottom: 20px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: flex-start;
+      padding-left: 10px;
+      padding-right: 10px;
+      .enveloppe {
+        height: auto;
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+    .bloc-inscription-email:hover {
+      cursor: pointer;
+    }
+  }
+}

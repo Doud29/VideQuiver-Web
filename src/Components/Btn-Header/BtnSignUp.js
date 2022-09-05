@@ -14,7 +14,7 @@ const login = <FontAwesomeIcon icon={faArrowRightToBracket} />;
 const BtnSignUp = () => {
   return (
     <div className="container-btn user">
-      <Link to="/signup">{login}</Link>
+      <Link to="/welcome">{login}</Link>
       <span>Create an account</span>
     </div>
   );
