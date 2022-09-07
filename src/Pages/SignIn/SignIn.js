@@ -22,7 +22,7 @@ const SignIn = () => {
             {arrowLeft}
           </Link>
         </div>
-      </div>{" "}
+      </div>
       <div className="container-inputs">
         <input type="email" placeholder="Email" />
         <input type="password" placeholder="Mot de passe" />

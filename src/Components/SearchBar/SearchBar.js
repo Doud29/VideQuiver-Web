@@ -42,8 +42,12 @@ const SearchBar = () => {
           </Link>
         </div>
         <div className="bloc-button">
-          <button>Vendre</button>
-          <button>Louer</button>
+          <Link to="/addProduct" style={{ height: "100%" }}>
+            <button>Vendre</button>
+          </Link>
+          <Link to="/addProduct" style={{ height: "100%" }}>
+            <button>Louer</button>
+          </Link>
         </div>
       </div>
     </div>

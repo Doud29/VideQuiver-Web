@@ -13,7 +13,7 @@ const sale = <FontAwesomeIcon icon={faSquarePlus} />;
 const BtnSale = () => {
   return (
     <div className="container-btn sale">
-      <Link to="/sale">
+      <Link to="/addProduct">
         <div className="header-image">{sale}</div>
       </Link>
       <span>Vendre</span>

@@ -2,11 +2,15 @@
   box-sizing: border-box;
   border-bottom: 0.8px solid grey;
   width: 100%;
+  position: fixed;
+  z-index: 10;
+  top: 0;
   height: 55px;
   padding-left: 10px;
   justify-content: center;
   display: flex;
   align-items: center;
+  background: white;
   h2 {
     color: #508ae2;
     display: block;
@@ -70,7 +74,6 @@
       width: 35%;
     }
     .container-searchBar-profil {
-      display: block;
       display: flex;
       justify-content: space-evenly;
       align-items: center;
@@ -105,5 +108,12 @@
         }
       }
     }
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-searchBar {
+    width: 1200px;
+    margin: auto;
   }
 }
