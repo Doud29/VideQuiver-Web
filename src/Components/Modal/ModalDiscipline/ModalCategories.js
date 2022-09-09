@@ -1,5 +1,5 @@
 //--------------// Css
-import "./modalDiscipline.scss";
+import "./modalCategories.scss";
 
 //--------------// Components
 import ModalMer from "../ModalMer/ModalMer";
@@ -16,25 +16,21 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
 
-const ModalDiscipline = ({ setDisciplineState }) => {
+const ModalCategories = ({ closeModalCategories }) => {
   //------------------// States Modal Discipline Aquatique [Permettent d'acceder à la pa suivante]
-  const [merState, setMerState] = useState(false);
-  const [volState, setVolState] = useState(false);
-  const [montagneState, setMontagneState] = useState(false);
-  const [streetState, setStreetState] = useState(false);
+  const [openSeaModalState, setOpenSeaModalState] = useState(false);
+  // const [volState, setVolState] = useState(false);
+  // const [montagneState, setMontagneState] = useState(false);
+  // const [streetState, setStreetState] = useState(false);
 
   return (
     //-----------------------------//Container Modal
     <div className="container-modal">
       {/* //-----------------------// Condition pour faire apparaitre ModalMer avec l'ensemble des sport aquatiques //------------// */}
-      {merState === true ? (
-        <ModalMer
-          setMerState={setMerState}
-          //   disciplineState={disciplineState}
-        />
-      ) : (
-        <></>
+      {openSeaModalState && (
+        <ModalMer closeModalDiscipline={setOpenSeaModalState} />
       )}
+
       {/* //-----------------------------//Overlay  */}
       <div className="overlay-modal-trigger"></div>
       {/* //-----------------------------//Modal et son contenu */}
@@ -44,7 +40,7 @@ const ModalDiscipline = ({ setDisciplineState }) => {
           <div
             className="bloc-arrowLeft"
             onClick={() => {
-              setDisciplineState(false);
+              closeModalCategories(false);
             }}
           >
             {arrowLeft}
@@ -53,32 +49,32 @@ const ModalDiscipline = ({ setDisciplineState }) => {
         <div className="container-button">
           <button
             onClick={() => {
-              setMerState(!merState);
+              setOpenSeaModalState(true);
             }}
           >
             <span>Mer</span>
             <div className="chevronRight">{chevronRigth}</div>
           </button>{" "}
           <button
-            onClick={() => {
-              setMontagneState(!montagneState);
-            }}
+          // onClick={() => {
+          //   setMontagneState(!montagneState);
+          // }}
           >
             <span>Montagne</span>
             <div className="chevronRight">{chevronRigth}</div>
           </button>
           <button
-            onClick={() => {
-              setVolState(!volState);
-            }}
+          // onClick={() => {
+          //   setVolState(!volState);
+          // }}
           >
             <span>Vol</span>
             <div className="chevronRight">{chevronRigth}</div>
           </button>
           <button
-            onClick={() => {
-              setStreetState(!streetState);
-            }}
+          // onClick={() => {
+          //   setStreetState(!streetState);
+          // }}
           >
             <span>Street</span>
             <div className="chevronRight">{chevronRigth}</div>
@@ -89,4 +85,4 @@ const ModalDiscipline = ({ setDisciplineState }) => {
   );
 };
 
-export default ModalDiscipline;
+export default ModalCategories;

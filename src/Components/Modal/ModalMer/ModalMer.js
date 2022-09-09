@@ -1,5 +1,5 @@
 //--------------// Css
-import "./modalmer.scss";
+// import "./modalmer.scss";
 
 //--------------// Components
 import ModalSurf from "./ModalSurf/ModalSurf";
@@ -15,17 +15,17 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
 
-const ModalMer = ({ setMerState }) => {
+const ModalMer = ({ closeModalDiscipline }) => {
   //------------------// State Modal Discipline Aquatique
   const [surfState, setsurfState] = useState(false);
-  const [foilState, setfoilState] = useState(false);
-  const [bodyBoardState, setbodyBoardState] = useState(false);
-  const [standUpPaddleState, setStandUpPaddleState] = useState(false);
-  const [kiteSurfState, setKiteSurfState] = useState(false);
-  const [windState, setWindState] = useState(false);
-  const [bodySurfState, setBodySurfState] = useState(false);
-  const [apneeState, setApneeState] = useState(false);
-  const [combinaisonState, setCombinaisonStaTe] = useState(false);
+  // const [foilState, setfoilState] = useState(false);
+  // const [bodyBoardState, setbodyBoardState] = useState(false);
+  // const [standUpPaddleState, setStandUpPaddleState] = useState(false);
+  // const [kiteSurfState, setKiteSurfState] = useState(false);
+  // const [windState, setWindState] = useState(false);
+  // const [bodySurfState, setBodySurfState] = useState(false);
+  // const [apneeState, setApneeState] = useState(false);
+  // const [combinaisonState, setCombinaisonStaTe] = useState(false);
 
   return (
     //-----------------------------//Container Modal
@@ -40,7 +40,7 @@ const ModalMer = ({ setMerState }) => {
           <div
             className="bloc-arrowLeft"
             onClick={() => {
-              setMerState(false);
+              closeModalDiscipline(false);
             }}
           >
             {arrowLeft}

@@ -2,18 +2,18 @@
 // import ModalMer from "../ModalMer/ModalMer";
 
 //--------------// packages
-// import { Link } from "react-router-dom";
-// import { useState } from "react";
 
 //---------------// icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
 
 const ModalSurf = ({ setsurfState }) => {
+  const handleCheckBox = (e) => {
+    console.log(e.target.value);
+  };
+
   return (
     <div className="container-modal">
       {/* //-----------------------------//Overlay  */}
@@ -34,23 +34,51 @@ const ModalSurf = ({ setsurfState }) => {
         <div className="container-button">
           <button>
             <span>Planches de surf</span>
-            <input type="checkbox" />
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="Planches de Surf"
+            />
           </button>{" "}
           <button>
             <span>Dérives/Ailerons </span>
-            <input type="checkbox" />{" "}
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="Dérives/Ailerons"
+            />{" "}
           </button>{" "}
           <button>
             <span>Housse </span>
-            <input type="checkbox" />{" "}
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="Housse"
+            />{" "}
           </button>{" "}
           <button>
-            <span>Pads </span>
-            <input type="checkbox" />{" "}
+            <span>Pad </span>
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="Pads"
+            />{" "}
+          </button>{" "}
+          <button>
+            <span>Leash</span>
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="leash"
+            />{" "}
           </button>{" "}
           <button>
             <span>Accessoires </span>
-            <input type="checkbox" />{" "}
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="Accessoires"
+            />{" "}
           </button>{" "}
         </div>
       </div>

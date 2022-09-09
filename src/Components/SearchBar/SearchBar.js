@@ -23,7 +23,11 @@ const panier = <FontAwesomeIcon icon={faCartShopping} />;
 const SearchBar = () => {
   return (
     <div className="container-searchBar">
-      <h2>VideQuiver</h2>
+      <Link to="/home" style={{ textDecoration: "none" }}>
+        {" "}
+        <h2>VideQuiver</h2>
+      </Link>
+
       <div className="container-input-glass">
         <input type="search" placeholder="Rechercher" />
         <div className="glass">{maginFyingGlass}</div>

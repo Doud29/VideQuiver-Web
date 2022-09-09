@@ -1,0 +1,76 @@
+.container-modal {
+  width: 100vw;
+  background: white;
+  box-sizing: border-box;
+  min-width: 320px;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 10;
+  .overlay-modal-trigger {
+    width: 0%;
+    height: 0%;
+  }
+  .modal {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    .container-button {
+      width: 100%;
+      box-sizing: border-box;
+      button {
+        width: 100%;
+        height: 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 0.5px solid grey;
+        background: white;
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      button:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+//----------------------------------------------------------------------------//
+//-----------------------------// MEDIA QUERY //------------------------------//
+//----------------------------------------------------------------------------//
+
+@media (min-width: 755px) {
+  .container-modal {
+    position: fixed;
+    height: 100vh;
+    top: 0;
+    background: none;
+    .overlay-modal-trigger {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: hsla(0, 0%, 20%, 0.2);
+    }
+    .modal {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      height: 550px;
+      transform: translate(-50%, -50%);
+      width: 50%;
+      max-width: 600px;
+      background-color: white;
+      box-sizing: border-box;
+      .container-button {
+        border-radius: 8px;
+      }
+    }
+  }
+}

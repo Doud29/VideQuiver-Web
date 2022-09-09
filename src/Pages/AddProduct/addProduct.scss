@@ -1,19 +1,22 @@
+.container-header-addproduct {
+  display: none;
+}
+
 .container-addProduct {
   width: 100%;
   min-width: 320px;
-  height: auto;
+  height: 100%;
   box-sizing: border-box;
   .bloc-header {
     height: 55px;
     width: 100%;
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    text-align: center;
     border-bottom: 0.5px solid grey;
     p {
-      position: absolute;
-      top: 50%;
-      left: 55%;
-      transform: translate(-50%, -125%);
       font-size: 15px;
       color: grey;
       width: 240px;
@@ -22,7 +25,7 @@
       position: absolute;
       font-size: 20px;
       margin-right: 10px;
-      top: 55%;
+      top: 50%;
       left: 25px;
       transform: translate(-50%, -50%);
     }
@@ -86,5 +89,20 @@
   .container-techniques-generales {
     width: 100%;
     height: auto;
+    display: none;
+  }
+}
+
+@media (min-width: 755px) {
+  .container-header-addproduct {
+    display: block;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container-header-addproduct,
+  .container-addProduct {
+    width: 1200px;
+    margin: auto;
   }
 }
