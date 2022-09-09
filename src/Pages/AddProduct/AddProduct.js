@@ -13,9 +13,11 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { faImage } from "@fortawesome/free-solid-svg-icons";
 
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
+const addimage = <FontAwesomeIcon icon={faImage} />;
 
 const AddProduct = () => {
   //------------------// State Modal Discipline
@@ -45,6 +47,7 @@ const AddProduct = () => {
         <div className="bloc-photo">
           <input type="file" id="image" />
           <label htmlFor="image" id="image-file">
+            <div className="container-ajoutimage">{addimage}</div>
             <p>Ajouter des photos</p>
           </label>
         </div>

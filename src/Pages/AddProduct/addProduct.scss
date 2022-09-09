@@ -51,6 +51,15 @@
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      position: relative;
+      .container-ajoutimage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 45px;
+        color: #508ae2;
+      }
     }
     #image-file:hover {
       cursor: pointer;

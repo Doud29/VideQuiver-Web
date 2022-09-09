@@ -1,6 +1,3 @@
-//--------------// Components
-// import ModalMer from "../ModalMer/ModalMer";
-
 //--------------// packages
 
 //---------------// icones
@@ -9,7 +6,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 
-const ModalSurf = ({ setsurfState }) => {
+const ModalKiteSurf = ({ closeModal }) => {
   const handleCheckBox = (e) => {
     console.log(e.target.value);
   };
@@ -21,11 +18,11 @@ const ModalSurf = ({ setsurfState }) => {
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
         <div className="bloc-header">
-          <p>Surf</p>
+          <p>Kite Surf</p>
           <div
             className="bloc-arrowLeft"
             onClick={() => {
-              setsurfState(false);
+              closeModal(false);
             }}
           >
             {arrowLeft}
@@ -33,31 +30,59 @@ const ModalSurf = ({ setsurfState }) => {
         </div>
         <div className="container-button">
           <button>
-            <span>Planches de surf</span>
-            <input onChange={handleCheckBox} type="checkbox" value="planche" />
+            <span>Aile</span>
+            <input onChange={handleCheckBox} type="checkbox" value="aile" />
           </button>{" "}
           <button>
-            <span>Dérives/Ailerons </span>
+            <span>Barre</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="ailerons"
+              value="barre"
             />{" "}
           </button>{" "}
           <button>
-            <span>Pad </span>
-            <input onChange={handleCheckBox} type="checkbox" value="pad" />{" "}
-          </button>{" "}
-          <button>
-            <span>Leash</span>
+            <span>Twin-Tip</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="leash"
+              value="twin-tip"
             />{" "}
           </button>{" "}
           <button>
-            <span>Casque</span>
+            <span>Planche directionnelle</span>
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="directionnelle"
+            />{" "}
+          </button>{" "}
+          <button>
+            <span>Planche de Kite foil</span>
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="kitefoil"
+            />{" "}
+          </button>
+          <button>
+            <span>Foil Kitesurf</span>
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="foil"
+            />{" "}
+          </button>
+          <button>
+            <span>Harnais</span>
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="harnais"
+            />{" "}
+          </button>{" "}
+          <button>
+            <span>Casque / Gilet </span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
@@ -65,15 +90,7 @@ const ModalSurf = ({ setsurfState }) => {
             />{" "}
           </button>{" "}
           <button>
-            <span>Gilet Impact</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="gilet"
-            />{" "}
-          </button>{" "}
-          <button>
-            <span>Accessoires </span>
+            <span>Accessoires [Ailes / Barres / Planches]</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
@@ -81,7 +98,7 @@ const ModalSurf = ({ setsurfState }) => {
             />{" "}
           </button>{" "}
           <button>
-            <span>Bagagerie Surf </span>
+            <span>Bagagerie KitSurf</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
@@ -94,4 +111,4 @@ const ModalSurf = ({ setsurfState }) => {
   );
 };
 
-export default ModalSurf;
+export default ModalKiteSurf;

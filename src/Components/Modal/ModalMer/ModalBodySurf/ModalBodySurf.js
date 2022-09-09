@@ -1,6 +1,3 @@
-//--------------// Components
-// import ModalMer from "../ModalMer/ModalMer";
-
 //--------------// packages
 
 //---------------// icones
@@ -9,7 +6,7 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 
-const ModalSurf = ({ setsurfState }) => {
+const ModalBodySurf = ({ closeModal }) => {
   const handleCheckBox = (e) => {
     console.log(e.target.value);
   };
@@ -21,11 +18,11 @@ const ModalSurf = ({ setsurfState }) => {
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
         <div className="bloc-header">
-          <p>Surf</p>
+          <p>BodySurf</p>
           <div
             className="bloc-arrowLeft"
             onClick={() => {
-              setsurfState(false);
+              closeModal(false);
             }}
           >
             {arrowLeft}
@@ -33,27 +30,27 @@ const ModalSurf = ({ setsurfState }) => {
         </div>
         <div className="container-button">
           <button>
-            <span>Planches de surf</span>
-            <input onChange={handleCheckBox} type="checkbox" value="planche" />
-          </button>{" "}
-          <button>
-            <span>Dérives/Ailerons </span>
+            <span>Palmes</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="ailerons"
+              value="palme"
             />{" "}
           </button>{" "}
           <button>
-            <span>Pad </span>
-            <input onChange={handleCheckBox} type="checkbox" value="pad" />{" "}
-          </button>{" "}
-          <button>
-            <span>Leash</span>
+            <span>Leash </span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="leash"
+            />{" "}
+          </button>{" "}
+          <button>
+            <span>HandPlane</span>
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              value="handplane"
             />{" "}
           </button>{" "}
           <button>
@@ -65,14 +62,6 @@ const ModalSurf = ({ setsurfState }) => {
             />{" "}
           </button>{" "}
           <button>
-            <span>Gilet Impact</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="gilet"
-            />{" "}
-          </button>{" "}
-          <button>
             <span>Accessoires </span>
             <input
               onChange={handleCheckBox}
@@ -81,7 +70,7 @@ const ModalSurf = ({ setsurfState }) => {
             />{" "}
           </button>{" "}
           <button>
-            <span>Bagagerie Surf </span>
+            <span>Bagagerie BodySurf </span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
@@ -94,4 +83,4 @@ const ModalSurf = ({ setsurfState }) => {
   );
 };
 
-export default ModalSurf;
+export default ModalBodySurf;
