@@ -40,7 +40,6 @@ const Home = () => {
         isSearchBarexisting={isSearchBarexisting}
       />
       <SearchBar />
-      <h3>Catégories</h3>
       <Disciplines
         montagneState={montagneState}
         setMontagneState={setMontagneState}
