@@ -11,6 +11,7 @@ import SignIn from "./Pages/SignIn/SignIn.js";
 import SignUp from "./Pages/SignUp/SignUp.js";
 import Welcome from "./Pages/Welcome/Welcome.js";
 import AddProduct from "./Pages/AddProduct/AddProduct";
+import Product from "./Pages/Product/Product";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/addProduct" element={<AddProduct />} />
+          <Route path="/product" element={<Product />} />
+
           {/* <div className="App">
           <header className="App-header">Vide Quiver Let's gooo</header>
         </div> */}

@@ -4,6 +4,7 @@ import "./addProduct.scss";
 //--------------// Components
 import ModalCategories from "../../Components/Modal/ModalDiscipline/ModalCategories";
 import SearchBar from "../../Components/SearchBar/SearchBar";
+import SurfDescription from "../../Components/DescriptionProduit/SurfDescription";
 
 //--------------// packages
 import { Link } from "react-router-dom";
@@ -67,7 +68,7 @@ const AddProduct = () => {
         </div>
         {/* //-----------------------// Container information général & techniques//-----------------------// */}
 
-        <div className="container-techniques-generales">bloc</div>
+        <SurfDescription />
       </div>
     </>
   );
