@@ -31,74 +31,74 @@ const ModalSup = ({ closeModal }) => {
           </div>
         </div>
         <div className="container-button">
-          <button>
+          <div>
             <span>SUP de vagues</span>
             <input onChange={handleCheckBox} type="checkbox" value="supvague" />
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>SUP gonflables</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="supgonflable"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>SUP de race</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="suprace"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>SUP foil</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="supfoil"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Ailerons / Dérives</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="ailerons"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Pagaie</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="pagaie"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Leash</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="leash"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Accessoires Sup</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="accessoire"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Bagagerie Sup</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="bagagerie"
             />{" "}
-          </button>{" "}
+          </div>{" "}
         </div>
       </div>
     </div>

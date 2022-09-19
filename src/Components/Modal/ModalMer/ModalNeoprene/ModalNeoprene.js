@@ -8,7 +8,7 @@ const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 
 const ModalNeoprene = ({ closeModal }) => {
   const handleCheckBox = (e) => {
-    console.log(e.target.value);
+    // console.log(e.target.value);
   };
 
   return (
@@ -29,70 +29,70 @@ const ModalNeoprene = ({ closeModal }) => {
           </div>
         </div>
         <div className="container-button">
-          <button>
+          <div>
             <span>Integrale</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="integrale"
             />
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Shorty</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="shorty"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Lycra / Top</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="lycra"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Pants / Long John</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="pant"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Veste Néoprène</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="veste"
             />{" "}
-          </button>
-          <button>
+          </div>
+          <div>
             <span>Chaussons</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="chaussons"
             />{" "}
-          </button>
-          <button>
+          </div>
+          <div>
             <span>Cagoules / Bonnets</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="cagoule"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Gants</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="gant"
             />{" "}
-          </button>{" "}
+          </div>{" "}
         </div>
       </div>
     </div>

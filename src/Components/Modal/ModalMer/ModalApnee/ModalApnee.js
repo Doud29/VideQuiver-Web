@@ -26,54 +26,54 @@ const ModalApnee = ({ closeModal }) => {
           </div>
         </div>
         <div className="container-button">
-          <button>
+          <div>
             <span>Palmes Polymères</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="palmes"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Palmes Carbonnes</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="palmes"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Tubas</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="tuba"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Masques</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="masque"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Accessoires </span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="accessoire"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Bagagerie Apnée</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="bagagerie"
             />{" "}
-          </button>{" "}
+          </div>{" "}
         </div>
       </div>
     </div>

@@ -32,42 +32,42 @@ const ModalBodyBoard = ({ closeModal }) => {
           </div>
         </div>
         <div className="container-button">
-          <button>
+          <div>
             <span>Planche</span>
             <input onChange={handleCheckBox} type="checkbox" value="planche" />
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Palmes</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="palmes"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Leash</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="leash"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Accessoires BodyBoard</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="accessoire"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Bagagerie BodyBoard</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="bagagerie"
             />{" "}
-          </button>{" "}
+          </div>{" "}
         </div>
       </div>
     </div>

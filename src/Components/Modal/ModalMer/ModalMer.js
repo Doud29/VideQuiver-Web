@@ -51,7 +51,10 @@ const ModalMer = ({ closeModalDiscipline }) => {
       {/* {kiteSurfState && <ModalKiteSurf closeModal={setBodySurfState} />} */}
 
       {/* //-----------------------------//Overlay  */}
-      <div className="overlay-modal-trigger"></div>
+      <div
+        className="overlay-modal-trigger"
+        // onClick={closeModalDiscipline(false)}
+      ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
         <div className="bloc-header">
@@ -66,58 +69,58 @@ const ModalMer = ({ closeModalDiscipline }) => {
           </div>
         </div>
         <div className="container-button">
-          <button
+          <div
             onClick={() => {
               setCombinaisonStaTe(true);
             }}
           >
             <span>Néoprène </span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>
-          <button onClick={() => setsurfState(!surfState)}>
+          </div>
+          <div onClick={() => setsurfState(true)}>
             <span>Surf</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>{" "}
-          <button onClick={() => setbodyBoardState(true)}>
+          </div>{" "}
+          <div onClick={() => setbodyBoardState(true)}>
             <span>BodyBoard</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>{" "}
-          <button onClick={() => setBodySurfState(true)}>
+          </div>{" "}
+          <div onClick={() => setBodySurfState(true)}>
             <span>BodySurf</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>{" "}
-          {/* <button onClick={() => setfoilState(true)}>
+          </div>{" "}
+          {/* <div onClick={() => setfoilState(true)}>
             <span>Foil</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button> */}
-          <button onClick={() => setKiteSurfState(true)}>
+          </div> */}
+          <div onClick={() => setKiteSurfState(true)}>
             <span>KiteSurf</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>
-          <button
+          </div>
+          <div
             onClick={() => {
               setWindState(true);
             }}
           >
             <span>WindSurf</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>
-          <button
+          </div>
+          <div
             onClick={() => {
               setStandUpPaddleState(true);
             }}
           >
             <span>StandUpPaddle</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>
-          <button
+          </div>
+          <div
             onClick={() => {
               setApneeState(true);
             }}
           >
             <span>Apnée</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>
+          </div>
         </div>
       </div>
     </div>

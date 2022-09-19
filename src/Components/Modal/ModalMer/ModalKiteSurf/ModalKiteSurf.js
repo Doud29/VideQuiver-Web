@@ -29,82 +29,82 @@ const ModalKiteSurf = ({ closeModal }) => {
           </div>
         </div>
         <div className="container-button">
-          <button>
+          <div>
             <span>Aile</span>
             <input onChange={handleCheckBox} type="checkbox" value="aile" />
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Barre</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="barre"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Twin-Tip</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="twin-tip"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Planche directionnelle</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="directionnelle"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Planche de Kite foil</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="kitefoil"
             />{" "}
-          </button>
-          <button>
+          </div>
+          <div>
             <span>Foil Kitesurf</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="foil"
             />{" "}
-          </button>
-          <button>
+          </div>
+          <div>
             <span>Harnais</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="harnais"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Casque / Gilet </span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="casque"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Accessoires [Ailes / Barres / Planches]</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="accessoire"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Bagagerie KitSurf</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="bagagerie"
             />{" "}
-          </button>{" "}
+          </div>{" "}
         </div>
       </div>
     </div>

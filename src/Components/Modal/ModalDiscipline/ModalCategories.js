@@ -47,38 +47,38 @@ const ModalCategories = ({ closeModalCategories }) => {
           </div>
         </div>
         <div className="container-button">
-          <button
+          <div
             onClick={() => {
               setOpenSeaModalState(true);
             }}
           >
             <span>Mer</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>{" "}
-          <button
+          </div>{" "}
+          <div
           // onClick={() => {
           //   setMontagneState(!montagneState);
           // }}
           >
             <span>Montagne</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>
-          <button
+          </div>
+          <div
           // onClick={() => {
           //   setVolState(!volState);
           // }}
           >
             <span>Vol</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>
-          <button
+          </div>
+          <div
           // onClick={() => {
           //   setStreetState(!streetState);
           // }}
           >
             <span>Street</span>
             <div className="chevronRight">{chevronRigth}</div>
-          </button>
+          </div>
         </div>
       </div>
     </div>

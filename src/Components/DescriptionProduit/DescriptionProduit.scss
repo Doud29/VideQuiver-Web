@@ -1,0 +1,34 @@
+.container-description {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  //   height: auto;
+  padding: 15px;
+  position: relative;
+  #Type,
+  #Etat,
+  #Derives,
+  #Marque,
+  input,
+  #Epaisseur,
+  #Genre,
+  #Taille,
+  #Boitier,
+  #Zip {
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    color: #555555;
+    width: 100%;
+  }
+
+  input {
+    box-sizing: border-box;
+  }
+}

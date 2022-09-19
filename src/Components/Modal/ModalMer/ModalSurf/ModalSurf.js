@@ -3,6 +3,9 @@
 
 //--------------// packages
 
+import React, { useContext } from "react";
+import { DescriptionContext } from "../../../../DescriptionContext";
+
 //---------------// icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -10,8 +13,16 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 
 const ModalSurf = ({ setsurfState }) => {
+  //---------// on destrucure notre objet pour une meilleure lecture du code
+  const { description, updateInpute } = useContext(DescriptionContext);
+
   const handleCheckBox = (e) => {
-    console.log(e.target.value);
+    const name = e.target.name;
+    let value = e.target.checked;
+
+    updateInpute((prevalue) => {
+      return { ...prevalue, [name]: value };
+    });
   };
 
   return (
@@ -32,63 +43,104 @@ const ModalSurf = ({ setsurfState }) => {
           </div>
         </div>
         <div className="container-button">
-          <button>
-            <span>Planches de surf</span>
-            <input onChange={handleCheckBox} type="checkbox" value="planche" />
-          </button>{" "}
-          <button>
-            <span>Dérives/Ailerons </span>
+          <div>
+            <label htmlFor="planche">Planches de surf</label>
+            <input
+              type="checkbox"
+              onChange={handleCheckBox}
+              checked={description.planche}
+              id="planche"
+              name="planche"
+            />
+          </div>{" "}
+          <div>
+            <label htmlFor="dérives">Dérives/Ailerons </label>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="ailerons"
+              checked={description.dérives}
+              id="dérives"
+              name="dérives"
             />{" "}
-          </button>{" "}
-          <button>
-            <span>Pad </span>
-            <input onChange={handleCheckBox} type="checkbox" value="pad" />{" "}
-          </button>{" "}
-          <button>
-            <span>Leash</span>
+          </div>{" "}
+          <div>
+            <label htmlFor="pad">Pad </label>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="leash"
+              checked={description.pad}
+              id="pad"
+              name="pad"
             />{" "}
-          </button>{" "}
-          <button>
-            <span>Casque</span>
+          </div>{" "}
+          <div>
+            <label htmlFor="leash">Leash</label>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="casque"
+              checked={description.leash}
+              id="leash"
+              name="leash"
             />{" "}
-          </button>{" "}
-          <button>
-            <span>Gilet Impact</span>
+          </div>{" "}
+          <div>
+            <label htmlFor="casque">Casque</label>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="gilet"
+              checked={description.casque}
+              id="casque"
+              name="casque"
             />{" "}
-          </button>{" "}
-          <button>
-            <span>Accessoires </span>
+          </div>{" "}
+          <div>
+            <label htmlFor="gilet">Gilet Impact</label>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="accessoire"
+              checked={description.gilet}
+              id="gilet"
+              name="gilet"
             />{" "}
-          </button>{" "}
-          <button>
-            <span>Bagagerie Surf </span>
+          </div>{" "}
+          <div>
+            <label htmlFor="accessoires">Accessoires </label>
             <input
               onChange={handleCheckBox}
               type="checkbox"
-              value="bagagerie"
+              checked={description.accessoires}
+              id="accessoires"
+              name="accessoires"
             />{" "}
-          </button>{" "}
+          </div>{" "}
+          <div>
+            <label htmlFor="bagagerie">Bagagerie Surf </label>
+            <input
+              onChange={handleCheckBox}
+              type="checkbox"
+              checked={description.bagagerie}
+              id="bagagerie"
+              name="bagagerie"
+            />{" "}
+          </div>{" "}
+          {JSON.stringify(description)}
         </div>
+        {description.planche ||
+        description.dérives ||
+        description.pad ||
+        description.leash ||
+        description.casque ||
+        description.gilet ||
+        description.accessoires ||
+        description.bagagerie === true ? (
+          <button
+            onClick={() => {
+              setsurfState(false);
+            }}
+          >
+            Valider sélection
+          </button>
+        ) : null}
       </div>
     </div>
   );

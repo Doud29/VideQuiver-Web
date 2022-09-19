@@ -71,11 +71,11 @@
     border-top: 0.5px solid grey;
     display: flex;
     flex-direction: column;
-    height: 300px;
+    height: auto;
     padding: 15px;
     #model,
     button {
-      height: 60px;
+      height: 50px;
     }
     #model,
     #description,

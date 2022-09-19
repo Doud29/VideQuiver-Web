@@ -1,5 +1,5 @@
 //--------------// Css
-import "./SurfDescription.scss";
+import "./DescriptionProduit.scss";
 
 //--------------// packages
 // import { Link } from "react-router-dom";
@@ -10,12 +10,14 @@ const SurfDescription = () => {
     Type: "",
     Marque: "",
     Etat: "",
+    Derives: "",
     Longueur: "",
     Largeur: "",
     Epaisseur: "",
+    Prix: "",
   });
 
-  console.log(surfDescriptionState);
+  // console.log(surfDescriptionState);
 
   const handleChange = (event) => {
     let value = event.target.value;
@@ -30,14 +32,16 @@ const SurfDescription = () => {
   };
 
   return (
-    <div className="container-surfdescription">
+    <div className="container-description">
       {/* //-----------------// LISTE type de la planche //----------------//*/}
       <select
         type="text"
         value={surfDescriptionState.Type}
         onChange={handleChange}
         name="Type"
+        id="Type"
       >
+        <option>Type de Planche</option>
         <option value="Shortboard">ShortBoard</option>
         <option value="Longboard">Longboard</option>
         <option value="MiniMalibu">MiniMalibu</option>
@@ -49,14 +53,94 @@ const SurfDescription = () => {
         <option value="Enfant">Enfant</option>
         <option value="Retro">Retro</option>
       </select>
-      <br />
       {/* //-----------------// LISTE des Marques  //----------------------//*/}
+
+      <input
+        type="text"
+        placeholder="Marque"
+        name="Marque"
+        id="Marque"
+        onChange={handleChange}
+      />
+
+      {/* //-----------------// système de dérives  //----------------------//*/}
       <select
+        value={surfDescriptionState.Derives}
+        onChange={handleChange}
+        name="Derives"
+        id="Derives"
+      >
+        <option>Système de dérives</option>
+        <option value="Single">Single(1)</option>
+        <option value="Twin">Twin(2)</option>
+        <option value="Thruster">Thruster(3)</option>
+        <option value="Quad">Quad(4)</option>
+        <option value="Combo">Combo(5)</option>
+        <option value="Boitier US 2+1">Boitier US 2+1</option>
+        <option value="Boitier US 4+1">Boitier US 4+1</option>
+      </select>
+      {/* //-----------------// Etat de la planche //----------------------//*/}
+      <select
+        value={surfDescriptionState.Etat}
+        onChange={handleChange}
+        name="Etat"
+        id="Etat"
+      >
+        <option>Etat de la planche</option>
+        <option value="Très bon état">Très bon état</option>
+        <option value="Bon état">Bon état</option>
+        <option value="Etat correct">Etat correct</option>
+        <option value="Mauvais Etat">Mauvais Etat</option>
+      </select>
+      {/* //--------------------------// Longueur //-----------------------//*/}
+
+      <input
+        type="text"
+        placeholder="Longueur"
+        name="longueur"
+        id="Longueur"
+        onChange={handleChange}
+      />
+      {/* //--------------------------// Largeur //------------------------//*/}
+      <input
+        type="text"
+        placeholder="Largeur"
+        name="Largeur"
+        id="Largeur"
+        onChange={handleChange}
+      />
+      {/* //--------------------------// Epaisseur //----------------------//*/}
+      <input
+        type="text"
+        placeholder="Epaisseur"
+        name="Epaisseur"
+        id="Epaisseur"
+        onChange={handleChange}
+      />
+      {/* //--------------------------// Prix //-----------------------//*/}
+
+      <input
+        type="text"
+        placeholder="Prix de vente [€]"
+        name="Prix"
+        id="Prix"
+        onChange={handleChange}
+      />
+      {JSON.stringify(surfDescriptionState)}
+    </div>
+  );
+};
+
+export default SurfDescription;
+
+/* <select
         type="text"
         value={surfDescriptionState.Marque}
         onChange={handleChange}
         name="Marque"
+        id="Marque"
       >
+        <option>Marque de la planche</option>
         <option value="Your Local Shaper">Your Local Shaper</option>
         <option value="Channel Island & Al Merrick">
           Channel Island & Al Merrick
@@ -86,49 +170,4 @@ const SurfDescription = () => {
         <option value="Takayama">Takayama</option>
         <option value="Torq">Torq</option>
         <option value="Takoro">Takoro</option>
-      </select>
-      <br />
-      {/* //-----------------// Etat de la planche //----------------------//*/}
-      <select
-        value={surfDescriptionState.Etat}
-        onChange={handleChange}
-        name="Etat"
-      >
-        <option value="Très bon état">Très bon état</option>
-        <option value="Bon état">Bon état</option>
-        <option value="Etat correct">Etat correct</option>
-        <option value="Mauvais état">Mauvais état</option>
-      </select>
-      <br />
-      {/* //--------------------------// Longueur //-----------------------//*/}
-      <input
-        type="text"
-        placeholder="Longueur"
-        name="longueur"
-        id="longueur"
-        onChange={handleChange}
-      />
-      {/* //--------------------------// Largeur //------------------------//*/}
-      <br />
-      <input
-        type="text"
-        placeholder="Largeur"
-        name="Largeur"
-        id="largeur"
-        onChange={handleChange}
-      />
-      <br />
-      {/* //--------------------------// Epaisseur //----------------------//*/}
-      <input
-        type="text"
-        placeholder="Epaisseur"
-        name="Epaisseur"
-        id="epaisseur"
-        onChange={handleChange}
-      />
-      <br />
-    </div>
-  );
-};
-
-export default SurfDescription;
+      </select> */

@@ -29,54 +29,54 @@ const ModalBodySurf = ({ closeModal }) => {
           </div>
         </div>
         <div className="container-button">
-          <button>
+          <div>
             <span>Palmes</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="palme"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Leash </span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="leash"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>HandPlane</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="handplane"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Casque</span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="casque"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Accessoires </span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="accessoire"
             />{" "}
-          </button>{" "}
-          <button>
+          </div>{" "}
+          <div>
             <span>Bagagerie BodySurf </span>
             <input
               onChange={handleCheckBox}
               type="checkbox"
               value="bagagerie"
             />{" "}
-          </button>{" "}
+          </div>{" "}
         </div>
       </div>
     </div>
