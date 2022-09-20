@@ -16,23 +16,37 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
 
-const ModalCategories = ({ closeModalCategories }) => {
+const ModalCategories = ({
+  closeModalCategorie,
+  choiceValidatedForSellState,
+  setChoiceValidatedForSellState,
+}) => {
   //------------------// States Modal Discipline Aquatique [Permettent d'acceder à la pa suivante]
-  const [openSeaModalState, setOpenSeaModalState] = useState(false);
+  const [ModalState, setModalState] = useState(false);
   // const [volState, setVolState] = useState(false);
   // const [montagneState, setMontagneState] = useState(false);
   // const [streetState, setStreetState] = useState(false);
 
+  // console.log(ModalState);
   return (
     //-----------------------------//Container Modal
     <div className="container-modal">
       {/* //-----------------------// Condition pour faire apparaitre ModalMer avec l'ensemble des sport aquatiques //------------// */}
-      {openSeaModalState && (
-        <ModalMer closeModalDiscipline={setOpenSeaModalState} />
-      )}
+      {ModalState === true && choiceValidatedForSellState === false ? (
+        <ModalMer
+          setModalState={setModalState}
+          choiceValidatedForSellState={choiceValidatedForSellState}
+          setChoiceValidatedForSellState={setChoiceValidatedForSellState}
+        />
+      ) : null}
 
       {/* //-----------------------------//Overlay  */}
-      <div className="overlay-modal-trigger"></div>
+      <div
+        className="overlay-modal-trigger"
+        onClick={() => {
+          closeModalCategorie(false);
+        }}
+      ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
         <div className="bloc-header">
@@ -40,7 +54,7 @@ const ModalCategories = ({ closeModalCategories }) => {
           <div
             className="bloc-arrowLeft"
             onClick={() => {
-              closeModalCategories(false);
+              closeModalCategorie(false);
             }}
           >
             {arrowLeft}
@@ -49,7 +63,7 @@ const ModalCategories = ({ closeModalCategories }) => {
         <div className="container-button">
           <div
             onClick={() => {
-              setOpenSeaModalState(true);
+              setModalState(true);
             }}
           >
             <span>Mer</span>

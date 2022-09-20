@@ -25,28 +25,33 @@ const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
 const addimage = <FontAwesomeIcon icon={faImage} />;
 
 const AddProduct = () => {
-  //------------------// State Modal Discipline
-  const [openCategoriesModalState, setOpenCategoriesState] = useState(false);
+  //------------------------------------------------------//
+  //----------------------// STATES //--------------------//
+  //------------------------------------------------------//
 
-  //------------------// State permettant de connaitre  quelle case a été coché et quelle description de produit nous allons devoir utilisé
-  const [checkValue, setcheckValueState] = useState({
-    planche: false,
-    dérives: false,
-    pad: false,
-    leash: false,
-    casque: false,
-    gilet: false,
-    accessoires: false,
-    bagagerie: false,
-  });
+  //-------// State pour ouvrir et fermer modal
+  const [openModalState, setOpenModalState] = useState(false);
+  //-------// State pour valider le choix de l'input et fermer l'ensemble des modaux lors de la validation
+  const [choiceValidatedForSellState, setChoiceValidatedForSellState] =
+    useState(false);
+  //-------// State permettant de connaitre  quelle case a été cochée et quelle description de produit nous allons devoir utilisé
+  const [Produit, setProduct] = useState([]);
+  console.log(Produit);
+  const [numberOfCaractAvailable, setNumberOfCaractAvailable] = useState(0);
 
-  // console.log(checkValue);
+  //------------------------------------------------------//
+  //------------------// Contexte //----------------------//
+  //------------------------------------------------------//
 
-  //-----// Cet objet doit ressembler trait pour trait à l'objet que l'on a créé dans DescriptionContext
+  //------// Cet objet doit ressembler trait pour trait à l'objet que l'on a créé dans DescriptionContext
   const contextValue = {
-    description: checkValue,
-    updateInpute: setcheckValueState,
+    Produit,
+    updateInpute: setProduct,
   };
+
+  //------------------------------------------------------//
+  //------------------// FONCTIONS //---------------------//
+  //------------------------------------------------------//
 
   return (
     <DescriptionContext.Provider value={contextValue}>
@@ -56,9 +61,13 @@ const AddProduct = () => {
         </div>
         <div className="container-addProduct">
           {/* //-----------------------// Condition pour faire apparaitre ModalDiscipline //------------// */}
-          {openCategoriesModalState && (
-            <ModalCategories closeModalCategories={setOpenCategoriesState} />
-          )}
+          {openModalState === true && choiceValidatedForSellState === false ? (
+            <ModalCategories
+              closeModalCategorie={setOpenModalState}
+              choiceValidatedForSellState={choiceValidatedForSellState}
+              setChoiceValidatedForSellState={setChoiceValidatedForSellState}
+            />
+          ) : null}
 
           {/* //-----------------------// Container Haeder pour revenir en arrière //-----------------------// */}
           <div className="bloc-header">
@@ -79,17 +88,36 @@ const AddProduct = () => {
           </div>
           {/* //-----------------------// Container description produit//-----------------------// */}
           <div className="container-input-button">
-            <input type="text" placeholder="Modèle" id="model" />
-            <input type="text" placeholder="Description" id="description" />
             <button
               className="Discipline"
               onClick={() => {
-                setOpenCategoriesState(true);
+                setOpenModalState(true);
+                setChoiceValidatedForSellState(false);
               }}
             >
-              <span>Discipline</span>
-              <div>{chevronRigth}</div>
+              <span>Produit</span>
+
+              <div>
+                {" "}
+                <span id="product">{Produit}</span>
+                {chevronRigth}
+              </div>
             </button>
+            <input
+              type="text"
+              placeholder="Modèle"
+              id="modéle"
+              name="modèle"
+              maxLength={40}
+            />
+            <span>caractères restants</span>
+            <input
+              type="text"
+              placeholder="Description"
+              name="description"
+              id="description"
+              maxLength={300}
+            />
           </div>
           {/* //-----------------------// Container information général & techniques de chaque produit//-----------------------// */}
           {/*       
@@ -101,10 +129,11 @@ const AddProduct = () => {
 //------------// Composents Surf //-------------// 
 //----------------------------------------------//  
            */}
-          {checkValue.planche && <SurfDescription />}
-          {checkValue.dérives && <DerivesDescription />}
-          {checkValue.pad && <PadDescription />}
-          {checkValue.leash && <LeashDescription />}
+
+          {Produit === "Planche de surf" && <SurfDescription />}
+          {Produit === "Dérives / Ailerons" && <DerivesDescription />}
+          {Produit === "Pad" && <PadDescription />}
+          {Produit === "Leash" && <LeashDescription />}
           {/*
 //----------------------------------------------//  
 //-----------// Composents Néopréne //----------// 

@@ -24,7 +24,11 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
 
-const ModalMer = ({ closeModalDiscipline }) => {
+const ModalMer = ({
+  setModalState,
+  choiceValidatedForSellState,
+  setChoiceValidatedForSellState,
+}) => {
   //------------------// State Modal Discipline Aquatique
   const [surfState, setsurfState] = useState(false);
   const [bodyBoardState, setbodyBoardState] = useState(false);
@@ -39,7 +43,15 @@ const ModalMer = ({ closeModalDiscipline }) => {
   return (
     //-----------------------------//Container Modal
     <div className="container-modal">
-      {surfState && <ModalSurf setsurfState={setsurfState} />}
+      {/* {surfState && <ModalSurf setsurfState={setsurfState} />} */}
+
+      {surfState === true && choiceValidatedForSellState === false ? (
+        <ModalSurf
+          setsurfState={setsurfState}
+          setChoiceValidatedForSellState={setChoiceValidatedForSellState}
+        />
+      ) : null}
+
       {bodyBoardState && <ModalBodyBoard closeModal={setbodyBoardState} />}
       {standUpPaddleState && <ModalSup closeModal={setStandUpPaddleState} />}
       {windState && <ModalWindSurf closeModal={setWindState} />}
@@ -53,7 +65,9 @@ const ModalMer = ({ closeModalDiscipline }) => {
       {/* //-----------------------------//Overlay  */}
       <div
         className="overlay-modal-trigger"
-        // onClick={closeModalDiscipline(false)}
+        onClick={() => {
+          setModalState(false);
+        }}
       ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
@@ -62,7 +76,7 @@ const ModalMer = ({ closeModalDiscipline }) => {
           <div
             className="bloc-arrowLeft"
             onClick={() => {
-              closeModalDiscipline(false);
+              setModalState(false);
             }}
           >
             {arrowLeft}

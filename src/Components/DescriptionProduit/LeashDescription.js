@@ -95,7 +95,7 @@ const LeashDescription = () => {
       {/* //-----------------// Prix du leash //----------------//*/}
       <input
         type="text"
-        placeholder="prix du leash"
+        placeholder="prix du leash [€]"
         name="Prix"
         id="Prix"
         value={leashDescription.Prix}

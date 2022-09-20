@@ -44,7 +44,7 @@ const PadDescription = () => {
         value={padDescription.Nombredepieces}
         onChange={handleChange}
         name="nombre de pièces"
-        id="nombre de pièces"
+        id="pièces"
       >
         <option>Nombre de pièces</option>
         <option value="1">1 pièces</option>
