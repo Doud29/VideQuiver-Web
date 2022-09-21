@@ -5,7 +5,8 @@
 .container-addProduct {
   width: 100%;
   min-width: 320px;
-  height: 100%;
+  background: white;
+  height: auto;
   box-sizing: border-box;
   .bloc-header {
     height: 55px;
@@ -73,6 +74,35 @@
     flex-direction: column;
     height: auto;
     padding: 15px;
+    .container-titre {
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+      height: 40px;
+      margin-bottom: 10px;
+      .line {
+        box-sizing: border-box;
+
+        border: 0.5px solid #508ae2;
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        z-index: 1;
+      }
+      h3 {
+        font-size: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        position: absolute;
+        top: -15%;
+        color: #555555;
+        margin-left: 30px;
+        background-color: white;
+        z-index: 1;
+      }
+    }
     #model,
     button {
       height: 50px;
@@ -80,10 +110,15 @@
     #model,
     #description,
     button {
-      padding: 10px;
+      padding-left: 10px;
       border-radius: 8px;
       border: 1px solid grey;
-      margin-bottom: 15px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+    #model,
+    #description {
+      margin: 15px 0;
     }
     #description {
       height: 100px;
@@ -93,11 +128,22 @@
       align-items: center;
       justify-content: space-between;
       background: white;
+      margin: 0 auto;
     }
     #product {
       color: #508ae2;
       margin-right: 10px;
       font-size: 15px;
+    }
+    .container-input-span {
+      width: 100%;
+      position: relative;
+      span {
+        font-size: 10px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
     }
   }
   .container-techniques-generales {

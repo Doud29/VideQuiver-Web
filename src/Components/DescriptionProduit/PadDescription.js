@@ -1,5 +1,5 @@
-//--------------// Css
-import "./DescriptionProduit.scss";
+//--------------// Composent
+import TitleTechnicalInformation from "./TitleTechnicalInformations";
 
 //--------------// packages
 // import { Link } from "react-router-dom";
@@ -29,6 +29,8 @@ const PadDescription = () => {
   };
   return (
     <div className="container-description">
+      <TitleTechnicalInformation />
+
       {/* //-----------------// Couleur type de la planche //----------------//*/}
       <input
         type="text"
@@ -59,9 +61,9 @@ const PadDescription = () => {
       {/* //-----------------// Marque du pad //----------------//*/}
       <input
         type="text"
-        placeholder="Couleur du Pad"
-        name="couleur"
-        id="couleur"
+        placeholder="Marque du Pad"
+        name="Marque"
+        id="Marque"
         value={padDescription.Marque}
         onChange={handleChange}
       />
@@ -73,6 +75,7 @@ const PadDescription = () => {
         id="Etat"
       >
         <option>Etat du pad</option>
+        <option value="Neuf">Neuf</option>
         <option value="Très bon état">Très bon état</option>
         <option value="Bon état">Bon état</option>
         <option value="Etat correct">Etat correct</option>

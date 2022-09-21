@@ -37,7 +37,12 @@ const AddProduct = () => {
   //-------// State permettant de connaitre  quelle case a été cochée et quelle description de produit nous allons devoir utilisé
   const [Produit, setProduct] = useState([]);
   console.log(Produit);
-  const [numberOfCaractAvailable, setNumberOfCaractAvailable] = useState(0);
+
+  //-------// State pour récupérer la valeur du modèle renseigné
+  const [Model, setModelState] = useState("");
+
+  //-------// State pour récupérer la valeur du modèle renseigné
+  const [descriptionState, setDescriptionState] = useState("");
 
   //------------------------------------------------------//
   //------------------// Contexte //----------------------//
@@ -52,6 +57,39 @@ const AddProduct = () => {
   //------------------------------------------------------//
   //------------------// FONCTIONS //---------------------//
   //------------------------------------------------------//
+
+  //------// fonction pour afficher le nombre de caractere restant dans l'input Modèle
+  const numberOfCaractersModel = (valueInput) => {
+    let LongueurInput = valueInput.length;
+    const Limit = 40;
+    let result = Limit - LongueurInput;
+    return result;
+  };
+
+  //------// fonction pour afficher le nombre de caractere restant dans l'input Description
+  const numberOfCaractersDescription = (valueInput) => {
+    let LongueurInput = valueInput.length;
+    const Limit = 300;
+    let result = Limit - LongueurInput;
+    return result;
+  };
+
+  //------// fonction la couleur de l'input si maximum de caractére est atteinds
+  const getColor = (valueInput) => {
+    let InputLength = valueInput.length;
+    let color = "";
+    if (InputLength === 40) {
+      return (color = "red");
+    }
+  };
+
+  const getColorDescription = (valueInput) => {
+    let InputLength = valueInput.length;
+    let color = "";
+    if (InputLength === 300) {
+      return (color = "red");
+    }
+  };
 
   return (
     <DescriptionContext.Provider value={contextValue}>
@@ -88,6 +126,11 @@ const AddProduct = () => {
           </div>
           {/* //-----------------------// Container description produit//-----------------------// */}
           <div className="container-input-button">
+            <div className="container-titre">
+              <div className="line"></div>
+              <h3>Description de votre offre</h3>
+            </div>
+
             <button
               className="Discipline"
               onClick={() => {
@@ -103,21 +146,39 @@ const AddProduct = () => {
                 {chevronRigth}
               </div>
             </button>
-            <input
-              type="text"
-              placeholder="Modèle"
-              id="modéle"
-              name="modèle"
-              maxLength={40}
-            />
-            <span>caractères restants</span>
-            <input
-              type="text"
-              placeholder="Description"
-              name="description"
-              id="description"
-              maxLength={300}
-            />
+            <div className="container-input-span">
+              <input
+                type="text"
+                placeholder="Modèle"
+                onChange={(e) => {
+                  setModelState(e.target.value);
+                }}
+                value={Model}
+                id="model"
+                name="model"
+                maxLength={40}
+              />
+              <span style={{ color: getColor(Model) }}>
+                {numberOfCaractersModel(Model)} caractères restants
+              </span>
+            </div>
+            <div className="container-input-span">
+              <input
+                type="text"
+                placeholder="Description de l'annonce"
+                onChange={(e) => {
+                  setDescriptionState(e.target.value);
+                }}
+                value={descriptionState}
+                name="description"
+                id="description"
+                maxLength={300}
+              />
+              <span style={{ color: getColorDescription(descriptionState) }}>
+                {numberOfCaractersDescription(descriptionState)} caractères
+                restants
+              </span>
+            </div>
           </div>
           {/* //-----------------------// Container information général & techniques de chaque produit//-----------------------// */}
           {/*       

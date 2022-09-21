@@ -1,8 +1,7 @@
-//--------------// Css
-import "./DescriptionProduit.scss";
+//--------------// Composent
+import TitleTechnicalInformation from "./TitleTechnicalInformations";
 
 //--------------// packages
-// import { Link } from "react-router-dom";
 import { useState } from "react";
 
 const SurfDescription = () => {
@@ -14,10 +13,9 @@ const SurfDescription = () => {
     Longueur: "",
     Largeur: "",
     Epaisseur: "",
+    Volume: "",
     Prix: "",
   });
-
-  // console.log(surfDescriptionState);
 
   const handleChange = (event) => {
     let value = event.target.value;
@@ -25,7 +23,7 @@ const SurfDescription = () => {
 
     setSurfDescriptionState((prevalue) => {
       return {
-        ...prevalue, // Spread Operator
+        ...prevalue,
         [name]: value,
       };
     });
@@ -33,6 +31,7 @@ const SurfDescription = () => {
 
   return (
     <div className="container-description">
+      <TitleTechnicalInformation />
       {/* //-----------------// LISTE type de la planche //----------------//*/}
       <select
         type="text"
@@ -87,36 +86,50 @@ const SurfDescription = () => {
         id="Etat"
       >
         <option>Etat de la planche</option>
+        <option value="Neuf">Neuf</option>
         <option value="Très bon état">Très bon état</option>
         <option value="Bon état">Bon état</option>
         <option value="Etat correct">Etat correct</option>
         <option value="Mauvais Etat">Mauvais Etat</option>
       </select>
       {/* //--------------------------// Longueur //-----------------------//*/}
-
-      <input
-        type="text"
-        placeholder="Longueur"
-        name="longueur"
-        id="Longueur"
-        onChange={handleChange}
-      />
-      {/* //--------------------------// Largeur //------------------------//*/}
-      <input
-        type="text"
-        placeholder="Largeur"
-        name="Largeur"
-        id="Largeur"
-        onChange={handleChange}
-      />
-      {/* //--------------------------// Epaisseur //----------------------//*/}
-      <input
-        type="text"
-        placeholder="Epaisseur"
-        name="Epaisseur"
-        id="Epaisseur"
-        onChange={handleChange}
-      />
+      <div className="container-dimension">
+        <input
+          type="text"
+          placeholder="Longueur"
+          value={surfDescriptionState.Longueur}
+          name="longueur"
+          id="Longueur"
+          onChange={handleChange}
+        />
+        {/* //--------------------------// Largeur //------------------------//*/}
+        <input
+          type="text"
+          placeholder="Largeur"
+          value={surfDescriptionState.Largeur}
+          name="Largeur"
+          id="Largeur"
+          onChange={handleChange}
+        />
+        {/* //--------------------------// Epaisseur //----------------------//*/}
+        <input
+          type="text"
+          placeholder="Epaisseur"
+          value={surfDescriptionState.Epaisseur}
+          name="Epaisseur"
+          id="Epaisseur"
+          onChange={handleChange}
+        />
+        {/* //--------------------------// Epaisseur //----------------------//*/}
+        <input
+          type="text"
+          placeholder="Volume de la planche"
+          value={surfDescriptionState.Volume}
+          name="Volume"
+          id="Volume"
+          onChange={handleChange}
+        />
+      </div>
       {/* //--------------------------// Prix //-----------------------//*/}
 
       <input
@@ -126,7 +139,7 @@ const SurfDescription = () => {
         id="Prix"
         onChange={handleChange}
       />
-      {JSON.stringify(surfDescriptionState)}
+      {/* {JSON.stringify(surfDescriptionState)} */}
     </div>
   );
 };

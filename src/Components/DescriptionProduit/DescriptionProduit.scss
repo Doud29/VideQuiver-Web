@@ -5,20 +5,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid red;
-  //   height: auto;
-  padding: 15px;
+  padding: 0 15px;
   position: relative;
   #Type,
   #Etat,
   #Derives,
   #Marque,
-  input,
+  #Longueur,
+  #Largeur,
+  #Volume,
+  #Prix,
+  #Genre,
   #Epaisseur,
   #Genre,
   #Taille,
   #Boitier,
   #Zip,
+  #pièces,
+  #couleur,
   #pièces,
   #Maintien {
     height: 50px;
@@ -29,8 +33,70 @@
     color: #555555;
     width: 100%;
   }
+  .container-titre {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 40px;
+    margin-bottom: 10px;
+    .line {
+      box-sizing: border-box;
+
+      border: 0.5px solid #508ae2;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    h3 {
+      font-size: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+      position: absolute;
+      top: -15%;
+      color: #555555;
+      margin-left: 30px;
+      background-color: white;
+      z-index: 1;
+    }
+  }
 
   input {
     box-sizing: border-box;
+  }
+  .container-dimension {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: 600px) {
+  .container-dimension {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    box-sizing: border-box;
+    #Longueur,
+    #Largeur,
+    #Volume,
+    #Epaisseur {
+      box-sizing: border-box;
+      width: 49%;
+    }
+    #Volume,
+    #Largeur {
+      margin-left: 5px;
+    }
+
+    #Epaisseur,
+    #Longueur {
+      margin-right: 5px;
+    }
   }
 }

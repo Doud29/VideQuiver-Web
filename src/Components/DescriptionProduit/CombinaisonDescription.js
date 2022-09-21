@@ -1,6 +1,9 @@
 //--------------// Css
 import "./DescriptionProduit.scss";
 
+//--------------// Composent
+import TitleTechnicalInformation from "./TitleTechnicalInformations";
+
 //--------------// packages
 // import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -31,6 +34,7 @@ const CombinaisonDescription = () => {
   };
   return (
     <div className="container-description">
+      <TitleTechnicalInformation />
       {/* //-----------------// Epaisseur combinaisaon //----------------//*/}
       <select
         type="text"
@@ -118,6 +122,7 @@ const CombinaisonDescription = () => {
         id="Etat"
       >
         <option>Etat de la combinaison</option>
+        <option value="Neuf">Neuf</option>
         <option value="Très bon état">Très bon état</option>
         <option value="Bon état">Bon état</option>
         <option value="Etat correct">Etat correct</option>

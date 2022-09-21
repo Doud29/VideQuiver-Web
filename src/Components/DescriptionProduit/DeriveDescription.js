@@ -27,6 +27,10 @@ const DerivesDescription = () => {
   };
   return (
     <div className="container-description">
+      <div className="container-titre">
+        <div className="line"></div>
+        <h3>Informations Techniques</h3>
+      </div>
       {/* //-----------------// Systeme derives//----------------//*/}
       <select
         type="text"
@@ -81,6 +85,7 @@ const DerivesDescription = () => {
         id="Etat"
       >
         <option>Etat des dérives</option>
+        <option value="Neuf">Neuf</option>
         <option value="Très bon état">Très bon état</option>
         <option value="Bon état">Bon état</option>
         <option value="Etat correct">Etat correct</option>
