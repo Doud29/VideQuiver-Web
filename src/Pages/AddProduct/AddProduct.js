@@ -149,7 +149,7 @@ const AddProduct = () => {
             <div className="container-input-span">
               <input
                 type="text"
-                placeholder="Modèle"
+                placeholder=" "
                 onChange={(e) => {
                   setModelState(e.target.value);
                 }}
@@ -157,15 +157,20 @@ const AddProduct = () => {
                 id="model"
                 name="model"
                 maxLength={40}
+                required="required"
               />
-              <span style={{ color: getColor(Model) }}>
+              <span className="modèleSpan">Modèle</span>
+              <span
+                className="numberCaracters"
+                style={{ color: getColor(Model) }}
+              >
                 {numberOfCaractersModel(Model)} caractères restants
               </span>
             </div>
             <div className="container-input-span">
               <input
                 type="text"
-                placeholder="Description de l'annonce"
+                placeholder=""
                 onChange={(e) => {
                   setDescriptionState(e.target.value);
                 }}
@@ -173,8 +178,13 @@ const AddProduct = () => {
                 name="description"
                 id="description"
                 maxLength={300}
+                required="required"
               />
-              <span style={{ color: getColorDescription(descriptionState) }}>
+              <span className="descriptionSpan">Description de l'annonce</span>
+              <span
+                className="numberCaracters"
+                style={{ color: getColorDescription(descriptionState) }}
+              >
                 {numberOfCaractersDescription(descriptionState)} caractères
                 restants
               </span>

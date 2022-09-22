@@ -18,7 +18,9 @@ const ModalSurf = ({ setsurfState, setChoiceValidatedForSellState }) => {
 
   const handleCheckBox = (e) => {
     if (e.target.value !== "") {
-      setChoiceValidatedForSellState(true);
+      setTimeout(() => {
+        setChoiceValidatedForSellState(true);
+      }, 500);
     }
     // const name = e.target.name;
     // let value = e.target.value;

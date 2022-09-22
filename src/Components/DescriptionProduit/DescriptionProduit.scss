@@ -32,6 +32,7 @@
     margin-bottom: 15px;
     color: #555555;
     width: 100%;
+    outline: none;
   }
   .container-titre {
     width: 100%;
@@ -71,6 +72,75 @@
     margin: 0 auto;
     box-sizing: border-box;
   }
+
+  //------------------------------------------------------------------------//
+  //-----------------// Dimensionnement des listes déroulantes //-----------//
+  //------------------------------------------------------------------------//
+
+  .selectdiv {
+    position: relative;
+    // float: left;
+    width: 100%;
+  }
+
+  .selectdiv:after {
+    content: "\22C1";
+    color: #508ae2;
+    right: 0;
+    top: 0;
+    border: 1px solid grey;
+    border-left: none;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 50px;
+    width: 35px;
+    position: absolute;
+    pointer-events: none;
+    box-sizing: border-box;
+    background: white;
+    font-size: 20px;
+    padding: 10px 5px 5px 5px;
+    font-weight: 600;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  select {
+    appearance: none;
+  }
+
+  /* style the items (options), including the selected item: */
+  // .select-items div,
+  .selectdiv-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+
+  // select::-ms-expand {
+  //   display: none;
+  // }
+  // select::after {
+  //   content: "\25BC";
+  //   position: absolute;
+  //   top: 0%;
+  //   right: 0;
+  //   padding: 5px;
+  //   background: #508ae2;
+  // }
 }
 
 @media (min-width: 600px) {

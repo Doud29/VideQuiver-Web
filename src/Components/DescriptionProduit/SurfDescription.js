@@ -33,25 +33,28 @@ const SurfDescription = () => {
     <div className="container-description">
       <TitleTechnicalInformation />
       {/* //-----------------// LISTE type de la planche //----------------//*/}
-      <select
-        type="text"
-        value={surfDescriptionState.Type}
-        onChange={handleChange}
-        name="Type"
-        id="Type"
-      >
-        <option>Type de Planche</option>
-        <option value="Shortboard">ShortBoard</option>
-        <option value="Longboard">Longboard</option>
-        <option value="MiniMalibu">MiniMalibu</option>
-        <option value="Fish">Fish</option>
-        <option value="Hybride">Hybride</option>
-        <option value="Egg">Egg</option>
-        <option value="Evolutive">Evolutive</option>
-        <option value="Gun">Gun</option>
-        <option value="Enfant">Enfant</option>
-        <option value="Retro">Retro</option>
-      </select>
+      <div className="selectdiv ">
+        <select
+          type="text"
+          value={surfDescriptionState.Type}
+          onChange={handleChange}
+          name="Type"
+          id="Type"
+        >
+          <option>Type de Planche</option>
+          <option value="Shortboard">ShortBoard</option>
+          <option value="Longboard">Longboard</option>
+          <option value="MiniMalibu">MiniMalibu</option>
+          <option value="Fish">Fish</option>
+          <option value="Hybride">Hybride</option>
+          <option value="Egg">Egg</option>
+          <option value="Evolutive">Evolutive</option>
+          <option value="Gun">Gun</option>
+          <option value="Enfant">Enfant</option>
+          <option value="Retro">Retro</option>
+        </select>
+      </div>
+
       {/* //-----------------// LISTE des Marques  //----------------------//*/}
 
       <input
@@ -63,45 +66,50 @@ const SurfDescription = () => {
       />
 
       {/* //-----------------// système de dérives  //----------------------//*/}
-      <select
-        value={surfDescriptionState.Derives}
-        onChange={handleChange}
-        name="Derives"
-        id="Derives"
-      >
-        <option>Système de dérives</option>
-        <option value="Single">Single(1)</option>
-        <option value="Twin">Twin(2)</option>
-        <option value="Thruster">Thruster(3)</option>
-        <option value="Quad">Quad(4)</option>
-        <option value="Combo">Combo(5)</option>
-        <option value="Boitier US 2+1">Boitier US 2+1</option>
-        <option value="Boitier US 4+1">Boitier US 4+1</option>
-      </select>
+      <div className="selectdiv">
+        <select
+          value={surfDescriptionState.Derives}
+          onChange={handleChange}
+          name="Derives"
+          id="Derives"
+        >
+          <option>Système de dérives</option>
+          <option value="Single">Single(1)</option>
+          <option value="Twin">Twin(2)</option>
+          <option value="Thruster">Thruster(3)</option>
+          <option value="Quad">Quad(4)</option>
+          <option value="Combo">Combo(5)</option>
+          <option value="Boitier US 2+1">Boitier US 2+1</option>
+          <option value="Boitier US 4+1">Boitier US 4+1</option>
+        </select>
+      </div>
       {/* //-----------------// Etat de la planche //----------------------//*/}
-      <select
-        value={surfDescriptionState.Etat}
-        onChange={handleChange}
-        name="Etat"
-        id="Etat"
-      >
-        <option>Etat de la planche</option>
-        <option value="Neuf">Neuf</option>
-        <option value="Très bon état">Très bon état</option>
-        <option value="Bon état">Bon état</option>
-        <option value="Etat correct">Etat correct</option>
-        <option value="Mauvais Etat">Mauvais Etat</option>
-      </select>
+      <div className="selectdiv ">
+        <select
+          value={surfDescriptionState.Etat}
+          onChange={handleChange}
+          name="Etat"
+          id="Etat"
+        >
+          <option>Etat de la planche</option>
+          <option value="Neuf">Neuf</option>
+          <option value="Très bon état">Très bon état</option>
+          <option value="Bon état">Bon état</option>
+          <option value="Etat correct">Etat correct</option>
+          <option value="Mauvais Etat">Mauvais Etat</option>
+        </select>
+      </div>
       {/* //--------------------------// Longueur //-----------------------//*/}
       <div className="container-dimension">
         <input
           type="text"
           placeholder="Longueur"
           value={surfDescriptionState.Longueur}
-          name="longueur"
+          name="Longueur"
           id="Longueur"
           onChange={handleChange}
         />
+
         {/* //--------------------------// Largeur //------------------------//*/}
         <input
           type="text"

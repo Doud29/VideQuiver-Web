@@ -80,6 +80,7 @@
       position: relative;
       height: 40px;
       margin-bottom: 10px;
+
       .line {
         box-sizing: border-box;
 
@@ -110,6 +111,7 @@
     #model,
     #description,
     button {
+      outline: none;
       padding-left: 10px;
       border-radius: 8px;
       border: 1px solid grey;
@@ -128,21 +130,57 @@
       align-items: center;
       justify-content: space-between;
       background: white;
-      margin: 0 auto;
+      margin: 0 auto 10px auto;
     }
     #product {
       color: #508ae2;
       margin-right: 10px;
       font-size: 15px;
     }
+    //------------------------------------------------------------------------------------------------//
+    //---------------------// Animation des inputs lors de leur sélection //--------------------------//
+    //------------------------------------------------------------------------------------------------//
+
     .container-input-span {
       width: 100%;
       position: relative;
-      span {
+      .numberCaracters {
         font-size: 10px;
         position: absolute;
         bottom: 0;
         right: 0;
+      }
+      .modèleSpan {
+        position: absolute;
+        top: 30px;
+        left: 10px;
+        font-size: 15px;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+      .descriptionSpan {
+        position: absolute;
+        top: 55px;
+        left: 10px;
+        font-size: 15px;
+        pointer-events: none;
+        transition: 0.5s;
+      }
+
+      input:valid ~ .descriptionSpan {
+        color: #508ae2;
+        transform: translateX(12px) translateY(-50px);
+        background: white;
+        padding-left: 5px;
+        padding-right: 5px;
+      }
+
+      input:valid ~ .modèleSpan {
+        color: #508ae2;
+        transform: translateX(12px) translateY(-26px);
+        background: white;
+        padding-left: 5px;
+        padding-right: 5px;
       }
     }
   }
@@ -152,6 +190,10 @@
     display: none;
   }
 }
+
+//------------------------------------------------------------------------------------------------//
+//--------------------------------------------// Média Querys //----------------------------------//
+//------------------------------------------------------------------------------------------------//
 
 @media (min-width: 755px) {
   .container-header-addproduct {
