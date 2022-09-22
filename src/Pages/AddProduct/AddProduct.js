@@ -77,18 +77,20 @@ const AddProduct = () => {
   //------// fonction la couleur de l'input si maximum de caractére est atteinds
   const getColor = (valueInput) => {
     let InputLength = valueInput.length;
-    let color = "";
+    let color1 = "";
     if (InputLength === 40) {
-      return (color = "red");
+      color1 = "red";
     }
+    return color1;
   };
 
   const getColorDescription = (valueInput) => {
     let InputLength = valueInput.length;
     let color = "";
     if (InputLength === 300) {
-      return (color = "red");
+      color = "red";
     }
+    return color;
   };
 
   return (
@@ -139,7 +141,6 @@ const AddProduct = () => {
               }}
             >
               <span>Produit</span>
-
               <div>
                 {" "}
                 <span id="product">{Produit}</span>

@@ -40,8 +40,9 @@ const SurfDescription = () => {
           onChange={handleChange}
           name="Type"
           id="Type"
+          required="required"
         >
-          <option>Type de Planche</option>
+          <option value={null}></option>
           <option value="Shortboard">ShortBoard</option>
           <option value="Longboard">Longboard</option>
           <option value="MiniMalibu">MiniMalibu</option>
@@ -53,17 +54,21 @@ const SurfDescription = () => {
           <option value="Enfant">Enfant</option>
           <option value="Retro">Retro</option>
         </select>
+        <span className="spanDescriptionInput">Type de planche</span>
       </div>
 
       {/* //-----------------// LISTE des Marques  //----------------------//*/}
-
-      <input
-        type="text"
-        placeholder="Marque"
-        name="Marque"
-        id="Marque"
-        onChange={handleChange}
-      />
+      <div className="inputdiv ">
+        <input
+          type="text"
+          placeholder=" "
+          name="Marque"
+          id="Marque"
+          onChange={handleChange}
+          required="required"
+        />
+        <span className="spanDescriptionInput">Marque</span>
+      </div>
 
       {/* //-----------------// système de dérives  //----------------------//*/}
       <div className="selectdiv">

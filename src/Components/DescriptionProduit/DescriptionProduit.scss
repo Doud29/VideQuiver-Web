@@ -74,13 +74,51 @@
   }
 
   //------------------------------------------------------------------------//
+  //-------------------// Dimensionnement des listes INPUTS //--------------//
+  //------------------------------------------------------------------------//
+
+  .inputdiv {
+    position: relative;
+    width: 100%;
+    .spanDescriptionInput {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      font-size: 15px;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+    input:valid ~ .spanDescriptionInput {
+      color: #508ae2;
+      transform: translateX(12px) translateY(-25px);
+      background: white;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  //------------------------------------------------------------------------//
   //-----------------// Dimensionnement des listes déroulantes //-----------//
   //------------------------------------------------------------------------//
 
   .selectdiv {
     position: relative;
-    // float: left;
     width: 100%;
+    .spanDescriptionInput {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      font-size: 15px;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+    select:valid ~ .spanDescriptionInput {
+      color: #508ae2;
+      transform: translateX(12px) translateY(-25px);
+      background: white;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
   }
 
   .selectdiv:after {
