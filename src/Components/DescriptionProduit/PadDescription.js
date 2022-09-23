@@ -11,7 +11,6 @@ const PadDescription = () => {
     Marque: "",
     Nombredepieces: "",
     Etat: "",
-    Prix: "",
   });
 
   // console.log(surfDescriptionState);
@@ -86,14 +85,14 @@ const PadDescription = () => {
         </select>
       </div>
       {/* //-----------------// Prix du pad //----------------//*/}
-      <input
+      {/* <input
         type="text"
         placeholder="prix du Pad"
         name="Prix"
         id="Prix"
         value={padDescription.Prix}
         onChange={handleChange}
-      />
+      /> */}
     </div>
   );
 };

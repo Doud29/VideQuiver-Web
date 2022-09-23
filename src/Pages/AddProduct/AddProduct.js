@@ -5,11 +5,13 @@ import "./addProduct.scss";
 import ModalCategories from "../../Components/Modal/ModalDiscipline/ModalCategories";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import SurfDescription from "../../Components/DescriptionProduit/SurfDescription";
-import CombinaisonDescription from "../../Components/DescriptionProduit/CombinaisonDescription";
+// import CombinaisonDescription from "../../Components/DescriptionProduit/CombinaisonDescription";
 import DerivesDescription from "../../Components/DescriptionProduit/DeriveDescription";
 import { DescriptionContext } from "../../DescriptionContext";
 import LeashDescription from "../../Components/DescriptionProduit/LeashDescription";
 import PadDescription from "../../Components/DescriptionProduit/PadDescription";
+import InformationsLiv from "../../Components/informationslivraison/InformationsLiv";
+
 //--------------// packages
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -36,13 +38,21 @@ const AddProduct = () => {
     useState(false);
   //-------// State permettant de connaitre  quelle case a été cochée et quelle description de produit nous allons devoir utilisé
   const [Produit, setProduct] = useState([]);
-  console.log(Produit);
+  // console.log(Produit);
 
   //-------// State pour récupérer la valeur du modèle renseigné
   const [Model, setModelState] = useState("");
 
-  //-------// State pour récupérer la valeur du modèle renseigné
+  //-------// State pour récupérer la description du produit renseigné
   const [descriptionState, setDescriptionState] = useState("");
+
+  const [technicalInformations, setTechnicalInformations] = useState({
+    Marque: "",
+    Dimension: "",
+    Adresse: "",
+    Prix: "",
+  });
+  console.log(technicalInformations);
 
   //------------------------------------------------------//
   //------------------// Contexte //----------------------//
@@ -57,6 +67,19 @@ const AddProduct = () => {
   //------------------------------------------------------//
   //------------------// FONCTIONS //---------------------//
   //------------------------------------------------------//
+
+  //------// fonction pour récuperer les valeurs des INPUTS "Informations Techniques"
+  const handleChange = (event) => {
+    let value = event.target.value;
+    let name = event.target.name;
+
+    setTechnicalInformations((prevalue) => {
+      return {
+        ...prevalue,
+        [name]: value,
+      };
+    });
+  };
 
   //------// fonction pour afficher le nombre de caractere restant dans l'input Modèle
   const numberOfCaractersModel = (valueInput) => {
@@ -92,6 +115,12 @@ const AddProduct = () => {
     }
     return color;
   };
+  //------// fonction pour soumetre la demande de vente
+  const handlAddProduct = (event) => {
+    try {
+      event.preventDefault();
+    } catch (error) {}
+  };
 
   return (
     <DescriptionContext.Provider value={contextValue}>
@@ -100,99 +129,107 @@ const AddProduct = () => {
           <SearchBar />
         </div>
         <div className="container-addProduct">
-          {/* //-----------------------// Condition pour faire apparaitre ModalDiscipline //------------// */}
-          {openModalState === true && choiceValidatedForSellState === false ? (
-            <ModalCategories
-              closeModalCategorie={setOpenModalState}
-              choiceValidatedForSellState={choiceValidatedForSellState}
-              setChoiceValidatedForSellState={setChoiceValidatedForSellState}
-            />
-          ) : null}
+          <form onSubmit={handlAddProduct}>
+            {/* //-----------------------// Condition pour faire apparaitre ModalDiscipline //------------// */}
+            {openModalState === true &&
+            choiceValidatedForSellState === false ? (
+              <ModalCategories
+                closeModalCategorie={setOpenModalState}
+                choiceValidatedForSellState={choiceValidatedForSellState}
+                setChoiceValidatedForSellState={setChoiceValidatedForSellState}
+              />
+            ) : null}
 
-          {/* //-----------------------// Container Haeder pour revenir en arrière //-----------------------// */}
-          <div className="bloc-header">
-            <p>Vendre un article</p>
-            <div className="bloc-arrowLeft">
-              <Link to="/home" style={{ color: "grey" }}>
-                {arrowLeft}
-              </Link>
-            </div>
-          </div>
-          {/* //-----------------------// Container ajout image//-----------------------// */}
-          <div className="bloc-photo">
-            <input type="file" id="image" />
-            <label htmlFor="image" id="image-file">
-              <div className="container-ajoutimage">{addimage}</div>
-              <p>Ajouter des photos</p>
-            </label>
-          </div>
-          {/* //-----------------------// Container description produit//-----------------------// */}
-          <div className="container-input-button">
-            <div className="container-titre">
-              <div className="line"></div>
-              <h3>Description de votre offre</h3>
-            </div>
-
-            <button
-              className="Discipline"
-              onClick={() => {
-                setOpenModalState(true);
-                setChoiceValidatedForSellState(false);
-              }}
-            >
-              <span>Produit</span>
-              <div>
-                {" "}
-                <span id="product">{Produit}</span>
-                {chevronRigth}
+            {/* //-----------------------// Container Haeder pour revenir en arrière //-----------------------// */}
+            <div className="bloc-header">
+              <p>Vendre un article</p>
+              <div className="bloc-arrowLeft">
+                <Link to="/home" style={{ color: "grey" }}>
+                  {arrowLeft}
+                </Link>
               </div>
-            </button>
-            <div className="container-input-span">
-              <input
-                type="text"
-                placeholder=" "
-                onChange={(e) => {
-                  setModelState(e.target.value);
-                }}
-                value={Model}
-                id="model"
-                name="model"
-                maxLength={40}
-                required="required"
-              />
-              <span className="modèleSpan">Modèle</span>
-              <span
-                className="numberCaracters"
-                style={{ color: getColor(Model) }}
-              >
-                {numberOfCaractersModel(Model)} caractères restants
-              </span>
             </div>
-            <div className="container-input-span">
-              <input
-                type="text"
-                placeholder=""
-                onChange={(e) => {
-                  setDescriptionState(e.target.value);
-                }}
-                value={descriptionState}
-                name="description"
-                id="description"
-                maxLength={300}
-                required="required"
-              />
-              <span className="descriptionSpan">Description de l'annonce</span>
-              <span
-                className="numberCaracters"
-                style={{ color: getColorDescription(descriptionState) }}
-              >
-                {numberOfCaractersDescription(descriptionState)} caractères
-                restants
-              </span>
+            {/* //-----------------------// Container ajout image//-----------------------// */}
+            <div className="bloc-photo">
+              <input type="file" id="image" />
+              <label htmlFor="image" id="image-file">
+                <div className="container-ajoutimage">{addimage}</div>
+                <p>Ajouter des photos</p>
+              </label>
             </div>
-          </div>
-          {/* //-----------------------// Container information général & techniques de chaque produit//-----------------------// */}
-          {/*       
+            {/* //-----------------------// Container description produit//-----------------------// */}
+            <div className="container-input-button">
+              <div className="container-titre">
+                <div className="line"></div>
+                <h3>Description de votre offre</h3>
+              </div>
+
+              <button
+                className="Discipline"
+                onClick={() => {
+                  setOpenModalState(true);
+                  setChoiceValidatedForSellState(false);
+                }}
+              >
+                <span>Produit</span>
+                <div>
+                  {" "}
+                  <span id="product">{Produit}</span>
+                  {chevronRigth}
+                </div>
+              </button>
+              <div className="container-input-span">
+                <input
+                  type="text"
+                  placeholder=""
+                  onChange={(e) => {
+                    setModelState(e.target.value);
+                  }}
+                  value={Model}
+                  id="model"
+                  name="model"
+                  maxLength={40}
+                  required="required"
+                />
+                <span className="modèleSpan">Modèle</span>
+                <span
+                  className="numberCaracters"
+                  style={{
+                    color: getColor(Model),
+                  }}
+                >
+                  {numberOfCaractersModel(Model)} caractères restants
+                </span>
+              </div>
+              <div className="container-input-span">
+                <input
+                  type="text"
+                  placeholder=""
+                  onChange={(e) => {
+                    setDescriptionState(e.target.value);
+                  }}
+                  value={descriptionState}
+                  name="description"
+                  id="description"
+                  maxLength={300}
+                  required="required"
+                />
+                <span className="descriptionSpan">
+                  Description de l'annonce
+                </span>
+                <span
+                  className="numberCaracters"
+                  style={{
+                    color: getColorDescription(descriptionState),
+                  }}
+                >
+                  {numberOfCaractersDescription(descriptionState)} caractères
+                  restants
+                </span>
+              </div>
+            </div>
+            {/* //-----------------------// Container information général & techniques de chaque produit//-----------------------// */}
+            {/*       
 //----------------------------------------------//  
 //--------------------// MER //-----------------//
 //----------------------------------------------//  
@@ -202,51 +239,67 @@ const AddProduct = () => {
 //----------------------------------------------//  
            */}
 
-          {Produit === "Planche de surf" && <SurfDescription />}
-          {Produit === "Dérives / Ailerons" && <DerivesDescription />}
-          {Produit === "Pad" && <PadDescription />}
-          {Produit === "Leash" && <LeashDescription />}
-          {/*
+            {Produit === "Planche de surf" && (
+              <SurfDescription
+                technicalInformations={technicalInformations}
+                handleChange={handleChange}
+              />
+            )}
+            {Produit === "Dérives / Ailerons" && <DerivesDescription />}
+            {Produit === "Pad" && <PadDescription />}
+            {Produit === "Leash" && <LeashDescription />}
+            {/*
 //----------------------------------------------//  
 //-----------// Composents Néopréne //----------// 
 //----------------------------------------------//   */}
 
-          {/* <CombinaisonDescription /> */}
+            {/* <CombinaisonDescription /> */}
 
-          {/*
+            {/*
 //----------------------------------------------//  
 //-----------// Composents BodyBoard //---------// 
 //----------------------------------------------//   */}
 
-          {/*
+            {/*
 //----------------------------------------------//  
 //-----------// Composents BodySurf //----------// 
 //----------------------------------------------//   */}
 
-          {/*
+            {/*
 //----------------------------------------------//  
 //-----------// Composents Kite Surf //---------// 
 //----------------------------------------------//   */}
 
-          {/*
+            {/*
 //----------------------------------------------//  
 //-----------// Composents Windsurf //----------// 
 //----------------------------------------------//   */}
 
-          {/*
+            {/*
 //----------------------------------------------//  
 //--------// Composents StandUpPaddle //--------// 
 //----------------------------------------------//   */}
 
-          {/*
+            {/*
 //----------------------------------------------//  
 //----------// Composents Apnée //--------------// 
 //----------------------------------------------//   */}
 
-          {/* 
+            {/* 
 //----------------------------------------------//  
 //------------------// MONTAGNE //--------------//
 //----------------------------------------------//   */}
+            {/* 
+//----------------------------------------------//  
+//--------------------//Prix //-----------------//
+//----------------------------------------------// */}
+            {choiceValidatedForSellState === true && (
+              <InformationsLiv
+                technicalInformations={technicalInformations}
+                handleChange={handleChange}
+              />
+            )}
+          </form>
         </div>
       </>
     </DescriptionContext.Provider>

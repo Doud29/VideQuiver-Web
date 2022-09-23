@@ -12,7 +12,6 @@ const LeashDescription = () => {
     Epaisseur: "",
     Maintien: "",
     Etat: "",
-    Prix: "",
   });
 
   // console.log(surfDescriptionState);
@@ -93,14 +92,14 @@ const LeashDescription = () => {
         <option value="8mm">8mm</option>
       </select>
       {/* //-----------------// Prix du leash //----------------//*/}
-      <input
+      {/* <input
         type="text"
         placeholder="prix du leash [€]"
         name="Prix"
         id="Prix"
         value={leashDescription.Prix}
         onChange={handleChange}
-      />
+      /> */}
     </div>
   );
 };

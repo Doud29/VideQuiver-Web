@@ -16,7 +16,6 @@ const CombinaisonDescription = () => {
     Marque: "",
     Genre: "",
     Etat: "",
-    Prix: "",
   });
 
   // console.log(wetsuitDescriptionState);
@@ -131,13 +130,13 @@ const CombinaisonDescription = () => {
 
       {/* //-----------------// Prix //----------------------//*/}
 
-      <input
+      {/* <input
         type="text"
         placeholder="Prix de vente [€]"
         name="Prix"
         id="Prix"
         onChange={handleChange}
-      />
+      /> */}
       {JSON.stringify(wetsuitDescriptionState)}
     </div>
   );

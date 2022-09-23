@@ -11,7 +11,6 @@ const DerivesDescription = () => {
     Type: "",
     Marque: "",
     Etat: "",
-    Prix: " €",
   });
 
   const handleChange = (event) => {
@@ -31,7 +30,7 @@ const DerivesDescription = () => {
         <div className="line"></div>
         <h3>Informations Techniques</h3>
       </div>
-      {/* //-----------------// Systeme derives//----------------//*/}
+      {/* //-----------------// Boitier derives//----------------//*/}
       <div className="selectdiv ">
         <select
           type="text"
@@ -96,13 +95,13 @@ const DerivesDescription = () => {
       </div>
 
       {/* //--------------------// Prix //------------------//*/}
-      <input
+      {/* <input
         type="text"
         placeholder="Prix de vente [€]"
         name="Prix"
         id="Prix"
         onChange={handleChange}
-      />
+      /> */}
       {JSON.stringify(derivesDescriptionState)}
     </div>
   );
