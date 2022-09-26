@@ -4,7 +4,7 @@
 //--------------// packages
 
 import React, { useContext } from "react";
-import { DescriptionContext } from "../../../../DescriptionContext";
+import { DescriptionContext } from "../../../../../DescriptionContext";
 
 //---------------// icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

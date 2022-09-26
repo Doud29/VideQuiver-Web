@@ -2,12 +2,12 @@
 import "./Home.scss";
 
 //--------------// Components
-import Header from "../../Components/Header/Header";
+import Header from "../../Components/SearchBar/Header/Header";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import CategorieGlisse from "../../Components/CategorieGlisse/CategorieGlisse";
 import CategorieMontagne from "../../Components/CategorieMontagne/CategorieMontagne";
 import Disciplines from "../../Components/Disciplines/Disciplines";
-import Infos from "../../Components/Infos/Infos";
+// import Infos from "../../Components/Infos/Infos";
 import Produit from "../../Components/Fiche-Produit/Produit";
 
 //--------------// packages
@@ -47,7 +47,7 @@ const Home = () => {
         setMerState={setMerState}
       />
       {wichCategorie(montagneState, merState)}
-      <Infos />
+      {/* <Infos /> */}
       <h3>Nouveautés</h3>
       <Produit />
     </div>

@@ -6,41 +6,11 @@
   justify-content: center;
   align-items: center;
   padding: 0 15px;
-  position: relative;
-  #Type,
-  #Etat,
-  #Derives,
-  #Dimension,
-  #Marque,
-  #Adresse,
-  #Volume,
-  #Prix,
-  #Genre,
-  #Epaisseur,
-  #Genre,
-  #Taille,
-  #Boitier,
-  #Zip,
-  #pièces,
-  #couleur,
-  #pièces,
-  #Maintien {
-    height: 50px;
-    padding-left: 10px;
-    border-radius: 8px;
-    border: 1px solid grey;
-    margin-bottom: 15px;
-    color: #555555;
-    width: 100%;
-    outline: none;
-  }
 
-  ion-icon {
-    font-size: 25px;
-    position: absolute;
-    right: 7px;
-    top: 12px;
-  }
+  //------------------------------------------------------------------------//
+  //-------------------// BLOC TITRE "INFORMATIONS TECHNIQUES//-------------//
+  //------------------------------------------------------------------------//
+
   .container-titre {
     width: 100%;
     box-sizing: border-box;
@@ -70,9 +40,29 @@
     }
   }
 
-  input {
+  //------------------------------------------------------------------------//
+  //-----------------------// LISTE DEROULANTES ET CHAMPS//-----------------//
+  //------------------------------------------------------------------------//
+
+  input,
+  select {
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    color: #555555;
+    width: 100%;
+    outline: none;
     box-sizing: border-box;
   }
+  ion-icon {
+    font-size: 25px;
+    position: absolute;
+    right: 7px;
+    top: 12px;
+  }
+
   .container-dimension {
     width: 100%;
     margin: 0 auto;
@@ -83,49 +73,65 @@
   //-------------------// Dimensionnement des listes INPUTS //--------------//
   //------------------------------------------------------------------------//
 
-  .inputdiv {
+  .inputdiv,
+  .selectdiv {
     position: relative;
     width: 100%;
-    .spanDescriptionInput {
-      position: absolute;
-      top: 15px;
-      left: 10px;
-      font-size: 15px;
-      pointer-events: none;
-      transition: 0.5s;
-    }
-    input:valid ~ .spanDescriptionInput {
-      color: #508ae2;
-      transform: translateX(12px) translateY(-25px);
-      background: white;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
+  }
+  .spanDescriptionInput {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 15px;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  #Marque:focus ~ .spanDescriptionInput,
+  #Marque:not(:placeholder-shown)#Marque:not(:focus) ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #Dimension:focus ~ .spanDescriptionInput,
+  #Dimension:not(:placeholder-shown)#Dimension:not(:focus)
+    ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #Adresse:focus ~ .spanDescriptionInput,
+  #Adresse:not(:placeholder-shown)#Adresse:not(:focus) ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #Prix:focus ~ .spanDescriptionInput,
+  #Prix:not(:placeholder-shown)#Prix:not(:focus) ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  select:valid ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   //------------------------------------------------------------------------//
   //-----------------// Dimensionnement des listes déroulantes //-----------//
   //------------------------------------------------------------------------//
-
-  .selectdiv {
-    position: relative;
-    width: 100%;
-    .spanDescriptionInput {
-      position: absolute;
-      top: 15px;
-      left: 10px;
-      font-size: 15px;
-      pointer-events: none;
-      transition: 0.5s;
-    }
-    select:valid ~ .spanDescriptionInput {
-      color: #508ae2;
-      transform: translateX(12px) translateY(-25px);
-      background: white;
-      padding-left: 5px;
-      padding-right: 5px;
-    }
-  }
 
   .selectdiv:after {
     content: "\22C1";
@@ -173,44 +179,4 @@
     right: 0;
     z-index: 99;
   }
-
-  // select::-ms-expand {
-  //   display: none;
-  // }
-  // select::after {
-  //   content: "\25BC";
-  //   position: absolute;
-  //   top: 0%;
-  //   right: 0;
-  //   padding: 5px;
-  //   background: #508ae2;
-  // }
 }
-
-// @media (min-width: 600px) {
-//   .container-dimension {
-//     display: flex;
-//     flex-wrap: wrap;
-//     flex-direction: row;
-//     justify-items: center;
-//     justify-content: space-between;
-//     margin: 0 auto;
-//     box-sizing: border-box;
-//     #Longueur,
-//     #Largeur,
-//     #Volume,
-//     #Epaisseur {
-//       box-sizing: border-box;
-//       width: 49%;
-//     }
-//     #Volume,
-//     #Largeur {
-//       margin-left: 5px;
-//     }
-
-//     #Epaisseur,
-//     #Longueur {
-//       margin-right: 5px;
-//     }
-//   }
-// }

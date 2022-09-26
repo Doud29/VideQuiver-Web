@@ -2,7 +2,7 @@
 import "./modalCategories.scss";
 
 //--------------// Components
-import ModalMer from "../ModalMer/ModalMer";
+import ModalMer from "./ModalMer/ModalMer";
 
 //--------------// packages
 // import { Link } from "react-router-dom";

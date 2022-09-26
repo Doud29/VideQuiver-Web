@@ -1,14 +1,12 @@
 //--------------// Composent
 import TitleTechnicalInformation from "./TitleTechnicalInformations";
-//--------------// packages
-// import { useState } from "react";
 
 const SurfDescription = ({ technicalInformations, handleChange }) => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
       {/* //-----------------// LISTE type de la planche //----------------//*/}
-      <div className="selectdiv ">
+      <div className="selectdiv">
         <select
           type="text"
           value={technicalInformations.Type}
@@ -22,6 +20,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           <option value="Shortboard">ShortBoard</option>
           <option value="Longboard">Longboard</option>
           <option value="MiniMalibu">MiniMalibu</option>
+          <option value="Mousse">Mousse</option>
           <option value="Fish">Fish</option>
           <option value="Hybride">Hybride</option>
           <option value="Egg">Egg</option>
@@ -34,7 +33,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
       </div>
 
       {/* //-----------------// LISTE des Marques  //----------------------//*/}
-      <div className="inputdiv ">
+      <div className="inputdiv">
         <input
           type="text"
           placeholder=" "
@@ -42,7 +41,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           name="Marque"
           id="Marque"
           onChange={handleChange}
-          required="required"
+          autoComplete="off"
         />
         <span className="spanDescriptionInput">Marque</span>
       </div>
@@ -91,7 +90,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
         <span className="spanDescriptionInput">Type de Dérives</span>
       </div>
       {/* //-----------------// Etat de la planche //----------------------//*/}
-      <div className="selectdiv ">
+      <div className="selectdiv">
         <select
           value={technicalInformations.Etat}
           onChange={handleChange}
@@ -110,7 +109,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
       </div>
       <div className="container-dimension">
         {/* //--------------------------// Dimension //------------------------//*/}
-        <div className="inputdiv ">
+        <div className="inputdiv">
           <input
             type="text"
             placeholder=" "
@@ -118,19 +117,18 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
             name="Dimension"
             id="Dimension"
             onChange={handleChange}
-            required="required"
+            autoComplete="off"
           />
           <span className="spanDescriptionInput">Dimensions</span>
           <div>
             <ion-icon
               style={{ color: "grey" }}
-              // size=""
               name="information-circle-outline"
             ></ion-icon>
           </div>
         </div>
         {/* //--------------------------// Volume //------------------------//*/}
-        <div className="selectdiv ">
+        <div className="selectdiv">
           <select
             value={technicalInformations.Volume}
             onChange={handleChange}

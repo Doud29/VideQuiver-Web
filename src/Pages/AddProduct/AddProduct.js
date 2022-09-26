@@ -31,6 +31,10 @@ const AddProduct = () => {
   //----------------------// STATES //--------------------//
   //------------------------------------------------------//
 
+  //-------// State pour réupérer les files de type photo
+  const [selectFileState, setselectFileState] = useState({});
+  console.log(selectFileState);
+
   //-------// State pour ouvrir et fermer modal
   const [openModalState, setOpenModalState] = useState(false);
   //-------// State pour valider le choix de l'input et fermer l'ensemble des modaux lors de la validation
@@ -52,7 +56,7 @@ const AddProduct = () => {
     Adresse: "",
     Prix: "",
   });
-  console.log(technicalInformations);
+  // console.log(technicalInformations);
 
   //------------------------------------------------------//
   //------------------// Contexte //----------------------//
@@ -151,11 +155,18 @@ const AddProduct = () => {
             </div>
             {/* //-----------------------// Container ajout image//-----------------------// */}
             <div className="bloc-photo">
-              <input type="file" id="image" />
+              <input
+                type="file"
+                onChange={(e) => setselectFileState(e.target.files[0])}
+                name="image"
+                id="image"
+                webkitdirectory="true"
+              />
               <label htmlFor="image" id="image-file">
                 <div className="container-ajoutimage">{addimage}</div>
                 <p>Ajouter des photos</p>
               </label>
+              <img alt="annonce" />
             </div>
             {/* //-----------------------// Container description produit//-----------------------// */}
             <div className="container-input-button">
@@ -163,7 +174,6 @@ const AddProduct = () => {
                 <div className="line"></div>
                 <h3>Description de votre offre</h3>
               </div>
-
               <button
                 className="Discipline"
                 onClick={() => {
@@ -181,15 +191,15 @@ const AddProduct = () => {
               <div className="container-input-span">
                 <input
                   type="text"
-                  placeholder=""
+                  placeholder=" "
                   onChange={(e) => {
                     setModelState(e.target.value);
                   }}
                   value={Model}
                   id="model"
                   name="model"
+                  autoComplete="off"
                   maxLength={40}
-                  required="required"
                 />
                 <span className="modèleSpan">Modèle</span>
                 <span
@@ -202,23 +212,23 @@ const AddProduct = () => {
                 </span>
               </div>
               <div className="container-input-span">
-                <input
+                <textarea
                   type="text"
-                  placeholder=""
+                  value={descriptionState}
+                  placeholder=" "
                   onChange={(e) => {
                     setDescriptionState(e.target.value);
                   }}
-                  value={descriptionState}
                   name="description"
                   id="description"
                   maxLength={300}
-                  required="required"
+                  autoComplete="off"
                 />
                 <span className="descriptionSpan">
                   Description de l'annonce
                 </span>
                 <span
-                  className="numberCaracters"
+                  className="numberCaracterstextaera"
                   style={{
                     color: getColorDescription(descriptionState),
                   }}
