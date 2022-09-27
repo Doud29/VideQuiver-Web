@@ -1,4 +1,4 @@
-import "../CategorieGlisse/categorie.scss";
+import "../../Categories/categorie.scss";
 
 const CategorieMontagne = () => {
   return (

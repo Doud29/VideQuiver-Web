@@ -1,5 +1,5 @@
 //---------------// Css
-import "./categorie.scss";
+import "../../Categories/categorie.scss";
 
 //---------------// Composent
 

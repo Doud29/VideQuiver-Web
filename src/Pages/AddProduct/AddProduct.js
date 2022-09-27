@@ -11,6 +11,7 @@ import { DescriptionContext } from "../../DescriptionContext";
 import LeashDescription from "../../Components/DescriptionProduit/LeashDescription";
 import PadDescription from "../../Components/DescriptionProduit/PadDescription";
 import InformationsLiv from "../../Components/informationslivraison/InformationsLiv";
+import DragnDrop from "../../Components/DrapNDrop/DragnDrop";
 
 //--------------// packages
 import { Link } from "react-router-dom";
@@ -20,11 +21,9 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-import { faImage } from "@fortawesome/free-solid-svg-icons";
 
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
-const addimage = <FontAwesomeIcon icon={faImage} />;
 
 const AddProduct = () => {
   //------------------------------------------------------//
@@ -32,8 +31,7 @@ const AddProduct = () => {
   //------------------------------------------------------//
 
   //-------// State pour réupérer les files de type photo
-  const [selectFileState, setselectFileState] = useState({});
-  console.log(selectFileState);
+  // const [FileState, setselectFileState] = useState([]);
 
   //-------// State pour ouvrir et fermer modal
   const [openModalState, setOpenModalState] = useState(false);
@@ -56,7 +54,6 @@ const AddProduct = () => {
     Adresse: "",
     Prix: "",
   });
-  // console.log(technicalInformations);
 
   //------------------------------------------------------//
   //------------------// Contexte //----------------------//
@@ -154,21 +151,8 @@ const AddProduct = () => {
               </div>
             </div>
             {/* //-----------------------// Container ajout image//-----------------------// */}
-            <div className="bloc-photo">
-              <input
-                type="file"
-                onChange={(e) => setselectFileState(e.target.files[0])}
-                name="image"
-                id="image"
-                webkitdirectory="true"
-              />
-              <label htmlFor="image" id="image-file">
-                <div className="container-ajoutimage">{addimage}</div>
-                <p>Ajouter des photos</p>
-              </label>
-              <img alt="annonce" />
-            </div>
-            {/* //-----------------------// Container description produit//-----------------------// */}
+            <DragnDrop />
+            {/* //-----------------------// Container description produit//---------------// */}
             <div className="container-input-button">
               <div className="container-titre">
                 <div className="line"></div>
