@@ -1,21 +1,15 @@
 .bloc-photo {
   box-sizing: border-box;
-  width: 100%;
+  width: auto;
   height: 230px;
   display: flex;
   padding-left: 15px;
-  flex-direction: row;
-  justify-content: center;
+  padding-right: 15px;
+  justify-content: flex-start;
   align-items: center;
   overflow: hidden;
   overflow-x: scroll;
-  scroll-behavior: smooth;
   background-color: rgb(245, 241, 241);
-  margin: 0 auto;
-  z-index: 0;
-  input[type="file"] {
-    display: none;
-  }
   #image-file {
     border: 0.5px solid grey;
     border-radius: 8px;
@@ -25,24 +19,35 @@
     background: white;
     font-size: 12px;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     margin-right: 10px;
     .container-ajoutimage {
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 45px;
       color: #508ae2;
     }
+    span {
+      margin-bottom: 10px;
+    }
   }
   #image-file:hover {
     cursor: pointer;
   }
-
+  .addPhoto {
+    border: 0.5px dashed grey;
+    height: 160px;
+    width: 160px;
+    min-width: 160px;
+    border-radius: 8px;
+  }
   .bloc-choosen-image {
+    box-sizing: border-box;
     border: 0.5px solid grey;
     height: 160px;
     width: 160px;

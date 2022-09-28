@@ -15,7 +15,7 @@ const InformationsLivraison = ({ technicalInformations, handleChange }) => {
           onChange={handleChange}
           autoComplete="off"
         />
-        <span className="spanDescriptionInput">Prix de vente</span>
+        <span className="spanDescriptionInput">Prix de l'annonce</span>
       </div>
       <div className="inputdiv">
         <input

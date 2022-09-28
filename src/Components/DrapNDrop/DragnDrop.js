@@ -7,16 +7,13 @@ import React, { useState } from "react";
 //--------------// icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faImage } from "@fortawesome/free-solid-svg-icons";
+
 const addimage = <FontAwesomeIcon icon={faImage} />;
 
 const DragnDrop = () => {
-  //---------------------------------------//
-  //----// State récupérer les files //----//
-  //---------------------------------------//
-
   //--------// On définie un tableau tableau vide dans lequel on viendra récupérer nos fichiers déposer
-
   const [files, setfiles] = useState([]);
+
   const { getRootProps, getInputProps } = useDropzone({
     //on accept seulement Jpeg/png
     accept: {
@@ -44,31 +41,25 @@ const DragnDrop = () => {
 
   //------------// fonction pour supprimer un élément du tableau
 
-  const deleteFile = (key, arr) => {
-    let ImageName = key;
-    console.log(ImageName);
-    let newArray = [];
-    newArray = [...arr];
-
-    for (let i = 0; i < arr.length; i++) {
-      if (newArray[i].key === ImageName) {
-        console.log("trouvé");
-      } else {
-        console.log("pas trouvé");
-      }
-    }
+  const removeFile = (file) => {
+    console.log(file);
+    let newFiles = [...files];
+    console.log(newFiles);
+    newFiles.splice(newFiles.indexOf(file), 1);
+    console.log(newFiles);
+    setfiles(newFiles);
   };
 
   //------------// composant image
 
-  const images = files.map((index) => {
+  const images = files.map((file) => {
     return (
-      <div key={index.name} className="bloc-choosen-image">
-        <img src={index.preview} id="image" alt="contenuvente" />
+      <div key={file.path} className="bloc-choosen-image">
+        <img src={file.preview} id="image" alt="contenuvente" />
         <div
           className="trash"
           onClick={() => {
-            deleteFile(index.name, images);
+            removeFile(file);
           }}
         >
           <ion-icon
@@ -83,13 +74,15 @@ const DragnDrop = () => {
   return (
     <div className="bloc-photo">
       <div {...getRootProps()}>
-        <input {...getInputProps()} />
+        <input {...getInputProps()} id="addImage" />
         <label htmlFor="image" id="image-file">
           <div className="container-ajoutimage">{addimage}</div>
-          <p>Ajouter des photos</p>
+          <span>Ajouter des photos</span>
+          <span>10 photos max</span>
         </label>
       </div>
       {images}
+      <div className="addPhoto"></div>
     </div>
   );
 };
@@ -114,4 +107,4 @@ export default DragnDrop;
                 alt="selection"
                 id="image"
               />
-            </div> */
+</div> */
