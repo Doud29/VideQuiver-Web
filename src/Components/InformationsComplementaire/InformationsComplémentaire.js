@@ -1,9 +1,12 @@
-const InformationsLivraison = ({ technicalInformations, handleChange }) => {
+const InformationsComplémentaire = ({
+  technicalInformations,
+  handleChange,
+}) => {
   return (
     <div className="container-description">
       <div className="container-titre">
         <div className="line"></div>
-        <h3>Informations livraison </h3>
+        <h3>Prix et Livraison</h3>
       </div>
       <div className="inputdiv">
         <input
@@ -27,10 +30,10 @@ const InformationsLivraison = ({ technicalInformations, handleChange }) => {
           onChange={handleChange}
           autoComplete="off"
         />
-        <span className="spanDescriptionInput">Adresse</span>
+        <span className="spanDescriptionInput"></span>
       </div>
     </div>
   );
 };
 
-export default InformationsLivraison;
+export default InformationsComplémentaire;

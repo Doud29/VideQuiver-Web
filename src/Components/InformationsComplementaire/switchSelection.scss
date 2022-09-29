@@ -1,0 +1,86 @@
+.container-switch {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 15px;
+  .container-titre {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 40px;
+    .line {
+      box-sizing: border-box;
+      border: 0.5px solid #508ae2;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    h3 {
+      font-size: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+      position: absolute;
+      top: -15%;
+      color: #555555;
+      margin-left: 30px;
+      background-color: white;
+      z-index: 1;
+    }
+  }
+
+  .bloc-switch {
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  .location {
+    opacity: 0.4;
+  }
+  //----------// container contenant l'ensemble du slider
+  .switch {
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    width: 65px;
+
+    input {
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 32px;
+      background-color: #ccc;
+      transition: 0.4s;
+    }
+    .slider:before {
+      height: 26px;
+      content: " ";
+      width: 26px;
+      position: absolute;
+      top: 4px;
+      left: 4px;
+      border-radius: 50%;
+      background: white;
+      transition: 0.4s;
+    }
+
+    input:checked + .slider {
+      background: #508ae2;
+    }
+    input:checked + .slider:before {
+      transform: translate(30px);
+    }
+  }
+}

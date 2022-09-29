@@ -10,8 +10,9 @@ import DerivesDescription from "../../Components/DescriptionProduit/DeriveDescri
 import { DescriptionContext } from "../../DescriptionContext";
 import LeashDescription from "../../Components/DescriptionProduit/LeashDescription";
 import PadDescription from "../../Components/DescriptionProduit/PadDescription";
-import InformationsLiv from "../../Components/informationslivraison/InformationsLiv";
+import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import DragnDrop from "../../Components/DrapNDrop/DragnDrop";
+import SwitchSelection from "../../Components/InformationsComplementaire/SwitchSelection";
 
 //--------------// packages
 import { Link } from "react-router-dom";
@@ -32,6 +33,9 @@ const AddProduct = () => {
 
   //-------// State pour réupérer les files de type photo
   // const [FileState, setselectFileState] = useState([]);
+
+  //--------// On définie un tableau tableau vide dans lequel on viendra récupérer nos fichiers déposer
+  const [files, setfiles] = useState([]);
 
   //-------// State pour ouvrir et fermer modal
   const [openModalState, setOpenModalState] = useState(false);
@@ -151,7 +155,7 @@ const AddProduct = () => {
               </div>
             </div>
             {/* //-----------------------// Container ajout image//-----------------------// */}
-            <DragnDrop />
+            <DragnDrop files={files} setfiles={setfiles} />
             {/* //-----------------------// Container description produit//---------------// */}
             <div className="container-input-button">
               <div className="container-titre">
@@ -228,6 +232,8 @@ const AddProduct = () => {
 //--------------------// MER //-----------------//
 //----------------------------------------------//  
 
+
+
 //----------------------------------------------//  
 //------------// Composents Surf //-------------// 
 //----------------------------------------------//  
@@ -285,10 +291,21 @@ const AddProduct = () => {
 //----------------------------------------------//   */}
             {/* 
 //----------------------------------------------//  
-//--------------------//Prix //-----------------//
+//----------------//Type D'ANNONCE //-----------//
+//----------------------------------------------// */}
+
+            {choiceValidatedForSellState === true && (
+              <SwitchSelection
+              // technicalInformations={technicalInformations}
+              // handleChange={handleChange}
+              />
+            )}
+            {/* 
+//----------------------------------------------//  
+//----------//INFORMATIONS COMPLEMENTAIRE //----//
 //----------------------------------------------// */}
             {choiceValidatedForSellState === true && (
-              <InformationsLiv
+              <InformationsComplémentaire
                 technicalInformations={technicalInformations}
                 handleChange={handleChange}
               />

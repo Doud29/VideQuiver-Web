@@ -2,7 +2,7 @@
 import "./dragnDrop.scss";
 //--------------// packages
 import { useDropzone } from "react-dropzone";
-import React, { useState } from "react";
+import React from "react";
 
 //--------------// icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -10,10 +10,7 @@ import { faImage } from "@fortawesome/free-solid-svg-icons";
 
 const addimage = <FontAwesomeIcon icon={faImage} />;
 
-const DragnDrop = () => {
-  //--------// On définie un tableau tableau vide dans lequel on viendra récupérer nos fichiers déposer
-  const [files, setfiles] = useState([]);
-
+const DragnDrop = ({ setfiles, files }) => {
   const { getRootProps, getInputProps } = useDropzone({
     //on accept seulement Jpeg/png
     accept: {
