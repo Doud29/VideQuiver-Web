@@ -5,8 +5,20 @@ import "./switchSelection.scss";
 import { useState } from "react";
 
 const SwitchSelection = () => {
-  const [toggleSellSate, setToggleSellSate] = useState(false);
-  const [toggleRentState, setToggleRentState] = useState(false);
+  const [toggle, settoggle] = useState({
+    sell: false,
+    exchange: false,
+    rent: false,
+  });
+
+  const handleToggle = (e) => {
+    let name = e.target.name;
+    let value = e.target.checked;
+
+    settoggle((prevalue) => {
+      return { ...prevalue, [name]: value };
+    });
+  };
 
   return (
     <div className="container-switch">
@@ -17,24 +29,45 @@ const SwitchSelection = () => {
       <div className="bloc-switch">
         <span>Vente : </span>
         <label className="switch">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            onChange={handleToggle}
+            checked={toggle.sell}
+            name="sell"
+          />
           <span className="slider"></span>
         </label>
       </div>
-      <div className="bloc-switch">
-        <span>Echange Possible : </span>
-        <label className="switch">
-          <input type="checkbox" />
-          <span className="slider"></span>
-        </label>
-      </div>
+      {toggle.sell === true ? (
+        <div className="bloc-switch">
+          <span>Echange Possible : </span>
+          <label className="switch">
+            <input
+              type="checkbox"
+              name="exchange"
+              checked={toggle.exchange}
+              onChange={handleToggle}
+            />
+            <span className="slider"></span>
+          </label>
+        </div>
+      ) : (
+        <>{null}</>
+      )}
+
       <div className="bloc-switch location">
-        <span>Location : [prochainement] </span>
+        <span>Location : </span>
         <label className="switch">
-          <input type="checkbox" />
+          <input
+            type="checkbox"
+            name="rent"
+            onChange={handleToggle}
+            checked={toggle.rent}
+          />
           <span className="slider"></span>
         </label>
       </div>
+      {JSON.stringify(toggle)}
     </div>
   );
 };
