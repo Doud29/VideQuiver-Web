@@ -25,10 +25,6 @@ function App() {
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/addProduct" element={<AddProduct />} />
           <Route path="/product" element={<Product />} />
-
-          {/* <div className="App">
-          <header className="App-header">Vide Quiver Let's gooo</header>
-        </div> */}
         </Routes>
       </div>
     </Router>
