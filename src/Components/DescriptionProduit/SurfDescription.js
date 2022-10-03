@@ -45,6 +45,26 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
         />
         <span className="spanDescriptionInput">Marque</span>
       </div>
+      {/* //-----------------// Niveau //----------------//*/}
+
+      <div className="selectdiv">
+        <select
+          type="text"
+          value={technicalInformations.Level}
+          onChange={handleChange}
+          name="Level"
+          id="Level"
+          required="required"
+        >
+          <option value={null}></option>
+          <option value="0">Je ne sais pas</option>
+          <option value="Futures">Débutant</option>
+          <option value="FCS1">Intermédiaire</option>
+          <option value="FCS1F">Confirmé</option>
+        </select>
+        <span className="spanDescriptionInput">Niveau requis</span>
+      </div>
+
       {/* //-----------------// Boitier derives//----------------//*/}
       <div className="selectdiv">
         <select
