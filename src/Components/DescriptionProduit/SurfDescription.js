@@ -65,6 +65,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           </option>
           <option value="intermédiaire/confirmé">Intermédiaire/Confirmé</option>
           <option value="confirmé">Confirmé</option>
+          <option value="confirmé">Pro</option>
         </select>
         <span className="spanDescriptionInput">Niveau requis</span>
       </div>
