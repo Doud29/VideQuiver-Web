@@ -2,7 +2,7 @@
 import "./DescriptionProduit.scss";
 
 //--------------// Composent
-import TitleTechnicalInformation from "./TitleTechnicalInformations";
+import TitleTechnicalInformation from "../TitleTechnicalInformations";
 
 //--------------// packages
 // import { Link } from "react-router-dom";

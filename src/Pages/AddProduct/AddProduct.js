@@ -4,12 +4,12 @@ import "./addProduct.scss";
 //--------------// Components
 import ModalCategories from "../../Components/Modal/ModalDiscipline/ModalCategories";
 import SearchBar from "../../Components/SearchBar/SearchBar";
-import SurfDescription from "../../Components/DescriptionProduit/SurfDescription";
+import SurfDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/SurfDescription";
 // import CombinaisonDescription from "../../Components/DescriptionProduit/CombinaisonDescription";
-import DerivesDescription from "../../Components/DescriptionProduit/DeriveDescription";
+import DerivesDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/DeriveDescription";
 import { DescriptionContext } from "../../DescriptionContext";
-import LeashDescription from "../../Components/DescriptionProduit/LeashDescription";
-import PadDescription from "../../Components/DescriptionProduit/PadDescription";
+import LeashDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/LeashDescription";
+import PadDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/PadDescription";
 import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import DragnDrop from "../../Components/DrapNDrop/DragnDrop";
 import SwitchSelection from "../../Components/InformationsComplementaire/SwitchSelection";
@@ -47,7 +47,7 @@ const AddProduct = () => {
   // console.log(Produit);
 
   //-------// State pour récupérer la valeur du modèle renseigné
-  const [Model, setModelState] = useState("");
+  const [model, setModelState] = useState("");
 
   //-------// State pour récupérer la description du produit renseigné
   const [descriptionState, setDescriptionState] = useState("");
@@ -55,10 +55,11 @@ const AddProduct = () => {
   const [technicalInformations, setTechnicalInformations] = useState({
     Marque: "",
     Dimension: "",
-    Adresse: "",
-    Prix: "",
-    Level: "",
+    // Adresse: "",
+    // Prix: "",
   });
+
+  console.log(technicalInformations);
 
   //------------------------------------------------------//
   //------------------// Contexte //----------------------//
@@ -184,7 +185,7 @@ const AddProduct = () => {
                   onChange={(e) => {
                     setModelState(e.target.value);
                   }}
-                  value={Model}
+                  value={model}
                   id="model"
                   name="model"
                   autoComplete="off"
@@ -194,10 +195,10 @@ const AddProduct = () => {
                 <span
                   className="numberCaracters"
                   style={{
-                    color: getColor(Model),
+                    color: getColor(model),
                   }}
                 >
-                  {numberOfCaractersModel(Model)} caractères restants
+                  {numberOfCaractersModel(model)} caractères restants
                 </span>
               </div>
               <div className="container-input-span">
@@ -246,7 +247,12 @@ const AddProduct = () => {
                 handleChange={handleChange}
               />
             )}
-            {Produit === "Dérives / Ailerons" && <DerivesDescription />}
+            {Produit === "Dérives / Ailerons" && (
+              <DerivesDescription
+                technicalInformations={technicalInformations}
+                handleChange={handleChange}
+              />
+            )}
             {Produit === "Pad" && <PadDescription />}
             {Produit === "Leash" && <LeashDescription />}
             {/*

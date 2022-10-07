@@ -1,5 +1,5 @@
 //--------------// Css
-import "./DescriptionProduit.scss";
+import "../DescriptionProduit.scss";
 
 //--------------// packages
 // import { Link } from "react-router-dom";
@@ -93,15 +93,6 @@ const DerivesDescription = () => {
           <option value="Mauvais Etat">Mauvais Etat</option>
         </select>
       </div>
-
-      {/* //--------------------// Prix //------------------//*/}
-      {/* <input
-        type="text"
-        placeholder="Prix de vente [€]"
-        name="Prix"
-        id="Prix"
-        onChange={handleChange}
-      /> */}
       {JSON.stringify(derivesDescriptionState)}
     </div>
   );

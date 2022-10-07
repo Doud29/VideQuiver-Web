@@ -1,10 +1,17 @@
-//--------------// Composent
-import TitleTechnicalInformation from "./TitleTechnicalInformations";
+//--------------// Surf description css
+import "../DescriptionProduit.scss";
+import Planche from "../../../JSON/MER/SurfDescription/surfDescription.json";
+import DropDownList from "../DropDownList";
 
+//--------------// Composent
+import TitleTechnicalInformation from "../TitleTechnicalInformations";
+import { useState } from "react";
 const SurfDescription = ({ technicalInformations, handleChange }) => {
+  const [selected, setSelected] = useState("");
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
+      <DropDownList selected={selected} setSelected={setSelected} />
       {/* //-----------------// LISTE type de la planche //----------------//*/}
       <div className="selectdiv">
         <select
@@ -15,21 +22,37 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Type"
           required="required"
         >
-          <option value={null}></option>
-          <option value="0">Je ne sais pas</option>
-          <option value="Shortboard">ShortBoard</option>
-          <option value="Longboard">Longboard</option>
-          <option value="MiniMalibu">MiniMalibu</option>
-          <option value="Mousse">Mousse</option>
-          <option value="Fish">Fish</option>
-          <option value="Hybride">Hybride</option>
-          <option value="Egg">Egg</option>
-          <option value="Evolutive">Evolutive</option>
-          <option value="Gun">Gun</option>
-          <option value="Enfant">Enfant</option>
-          <option value="Retro">Retro</option>
+          {Planche.Type.map((data) => {
+            return (
+              <option key={data.id} value={data.value}>
+                {data.content}
+              </option>
+            );
+          })}
         </select>
         <span className="spanDescriptionInput">Type de planche</span>
+      </div>
+
+      {/* //-----------------// Niveau //----------------//*/}
+
+      <div className="selectdiv">
+        <select
+          type="text"
+          value={technicalInformations.Level}
+          onChange={handleChange}
+          name="Level"
+          id="Level"
+          required="required"
+        >
+          {Planche.Level.map((data) => {
+            return (
+              <option key={data.id} value={data.value}>
+                {data.content}
+              </option>
+            );
+          })}
+        </select>
+        <span className="spanDescriptionInput">Niveau requis</span>
       </div>
 
       {/* //-----------------// LISTE des Marques  //----------------------//*/}
@@ -45,30 +68,6 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
         />
         <span className="spanDescriptionInput">Marque</span>
       </div>
-      {/* //-----------------// Niveau //----------------//*/}
-
-      <div className="selectdiv">
-        <select
-          type="text"
-          value={technicalInformations.Level}
-          onChange={handleChange}
-          name="Level"
-          id="Level"
-          required="required"
-        >
-          <option value={null}></option>
-          <option value="0">Je ne sais pas</option>
-          <option value="Futures"> </option>
-          <option value="Débutant">Débutant</option>
-          <option value="débutant/intermédiaire ">
-            Débutant/Intermédiaire
-          </option>
-          <option value="intermédiaire/confirmé">Intermédiaire/Confirmé</option>
-          <option value="confirmé">Confirmé</option>
-          <option value="confirmé">Pro</option>
-        </select>
-        <span className="spanDescriptionInput">Niveau requis</span>
-      </div>
 
       {/* //-----------------// Boitier derives//----------------//*/}
       <div className="selectdiv">
@@ -80,15 +79,13 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Boitier"
           required="required"
         >
-          <option value={null}></option>
-          <option value="0">Je ne sais pas</option>
-          <option value="Futures">Boitier Futures</option>
-          <option value="FCS1">Boitier FCS1</option>
-          <option value="FCS1F">Boitier FCS1 Fusion</option>
-          <option value="FCS2">Boitier FCS2 </option>
-          <option value="us">Boitier U.S</option>
-          <option value="Tuttle">Boitier Tuttle</option>
-          <option value="Soft">Boitier SoftBoard</option>
+          {Planche.Boitier.map((data) => {
+            return (
+              <option key={data.id} value={data.value}>
+                {data.content}
+              </option>
+            );
+          })}
         </select>
         <span className="spanDescriptionInput">Type de boitier</span>
       </div>
@@ -102,15 +99,13 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Derives"
           required="required"
         >
-          <option value={null}></option>
-          <option value="0">Je ne sais pas</option>
-          <option value="Single">Single(1)</option>
-          <option value="Twin">Twin(2)</option>
-          <option value="Thruster">Thruster(3)</option>
-          <option value="Quad">Quad(4)</option>
-          <option value="Combo">Combo(5)</option>
-          <option value="Boitier US 2+1">Boitier US 2+1</option>
-          <option value="Boitier US 4+1">Boitier US 4+1</option>
+          {Planche.Dérives.map((data) => {
+            return (
+              <option key={data.id} value={data.value}>
+                {data.content}
+              </option>
+            );
+          })}
         </select>
         <span className="spanDescriptionInput">Type de Dérives</span>
       </div>
@@ -123,12 +118,13 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Etat"
           required="required"
         >
-          <option value={null}></option>
-          <option value="Neuf">Neuf</option>
-          <option value="Très bon état">Très bon état</option>
-          <option value="Bon état">Bon état</option>
-          <option value="Etat correct">Etat correct</option>
-          <option value="Mauvais Etat">Mauvais Etat</option>
+          {Planche.Etat.map((data) => {
+            return (
+              <option key={data.id} value={data.value}>
+                {data.content}
+              </option>
+            );
+          })}
         </select>
         <span className="spanDescriptionInput">Etat de la planche</span>
       </div>
@@ -161,60 +157,15 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
             id="Volume"
             required="required"
           >
-            <option value={null}></option>
-            <option value="0">Je ne sais pas</option>
-            <option value="14L">14L</option>
-            <option value="15L">15L</option>
-            <option value="16L">16L</option>
-            <option value="17L">17L</option>
-            <option value="18L">18L</option>
-            <option value="19L">19L</option>
-            <option value="20L">20L</option>
-            <option value="21L">21L</option>
-            <option value="22L">22L</option>
-            <option value="23L">23L</option>
-            <option value="24L">24L</option>
-            <option value="25L">25L</option>
-            <option value="26L">26L</option>
-            <option value="27L">27L</option>
-            <option value="28L">28L</option>
-            <option value="29L">29L</option>
-            <option value="30L">30L</option>
-            <option value="31L">31L</option>
-            <option value="32L">32L</option>
-            <option value="33L">33L</option>
-            <option value="34L">34L</option>
-            <option value="35L">35L</option>
-            <option value="36L">36L</option>
-            <option value="37L">37L</option>
-            <option value="38L">38L</option>
-            <option value="39L">39L</option>
-            <option value="40L">40L</option>
-            <option value="41L">41L</option>
-            <option value="42L">42L</option>
-            <option value="43L">43L</option>
-            <option value="44L">44L</option>
-            <option value="45L">45L</option>
-            <option value="46L">46L</option>
-            <option value="47L">47L</option>
-            <option value="48L">48L</option>
-            <option value="49L">49L</option>
-            <option value="50L">50L</option>
-            <option value="51L">51L</option>
-            <option value="52L">52L</option>
-            <option value="53L">53L</option>
-            <option value="54L">54L</option>
-            <option value="55L">55L</option>
-            <option value="56L">56L</option>
-            <option value="57L">57L</option>
-            <option value="58L">58L</option>
-            <option value="59L">59L</option>
-            <option value="60L">60L</option>
-            <option value="61L">61L</option>
+            {Planche.Litrage.map((data) => {
+              return (
+                <option key={data.id} value={data.value}>
+                  {data.content}
+                </option>
+              );
+            })}
           </select>
-          <span className="spanDescriptionInput">
-            Volume de la planche [Litre]
-          </span>
+          <span className="spanDescriptionInput">Volume de la planche [L]</span>
         </div>
       </div>
     </div>

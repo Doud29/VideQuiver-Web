@@ -1,5 +1,5 @@
 //--------------// Css
-import "./DescriptionProduit.scss";
+import "../DescriptionProduit.scss";
 
 //--------------// packages
 // import { Link } from "react-router-dom";
