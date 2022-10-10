@@ -87,7 +87,7 @@
     font-weight: 600;
     transition: 0.3s;
   }
-  .dropdown-btn:hover:after {
+  .dropdown-btn:active:after {
     transform: rotateZ(-90deg);
   }
 }

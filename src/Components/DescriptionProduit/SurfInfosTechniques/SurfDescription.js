@@ -1,7 +1,7 @@
 //--------------// Surf description css
 import "../DescriptionProduit.scss";
 import Planche from "../../../JSON/MER/SurfDescription/surfDescription.json";
-import DropDownList from "../DropDownList";
+import DropDownSurfBoard from "../DropDownList/Mer/Surf/PlancheSurf/DropDownSurfBoard.js";
 
 //--------------// Composent
 import TitleTechnicalInformation from "../TitleTechnicalInformations";
@@ -11,7 +11,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
-      <DropDownList selected={selected} setSelected={setSelected} />
+      <DropDownSurfBoard selected={selected} setSelected={setSelected} />
       {/* //-----------------// LISTE type de la planche //----------------//*/}
       <div className="selectdiv">
         <select
@@ -22,7 +22,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Type"
           required="required"
         >
-          {Planche.Type.map((data) => {
+          {Planche.MER.Surf["Planche de surf"].Type.map((data) => {
             return (
               <option key={data.id} value={data.value}>
                 {data.content}
@@ -44,7 +44,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Level"
           required="required"
         >
-          {Planche.Level.map((data) => {
+          {Planche.MER.Surf["Planche de surf"].Level.map((data) => {
             return (
               <option key={data.id} value={data.value}>
                 {data.content}
@@ -79,7 +79,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Boitier"
           required="required"
         >
-          {Planche.Boitier.map((data) => {
+          {Planche.MER.Surf["Planche de surf"].Boitier.map((data) => {
             return (
               <option key={data.id} value={data.value}>
                 {data.content}
@@ -99,7 +99,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Derives"
           required="required"
         >
-          {Planche.Dérives.map((data) => {
+          {Planche.MER.Surf["Planche de surf"].Dérives.map((data) => {
             return (
               <option key={data.id} value={data.value}>
                 {data.content}
@@ -118,7 +118,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           id="Etat"
           required="required"
         >
-          {Planche.Etat.map((data) => {
+          {Planche.COMMUN.Etat.map((data) => {
             return (
               <option key={data.id} value={data.value}>
                 {data.content}
@@ -157,7 +157,7 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
             id="Volume"
             required="required"
           >
-            {Planche.Litrage.map((data) => {
+            {Planche.MER.Surf["Planche de surf"].Litrage.map((data) => {
               return (
                 <option key={data.id} value={data.value}>
                   {data.content}

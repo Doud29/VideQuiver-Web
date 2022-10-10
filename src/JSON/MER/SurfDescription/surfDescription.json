@@ -1,474 +1,559 @@
 {
-  "Type": [
-    {
-      "id": 1,
-      "content": "Je ne sais pas",
-      "value": "Je ne sais pas"
-    },
-    {
-      "id": 2,
-      "content": "ShortBoard",
-      "value": "ShortBoard"
-    },
-    {
-      "id": 3,
-      "content": "Longboard",
-      "value": "Longboard"
-    },
-    {
-      "id": 4,
-      "content": "Minimalibu",
-      "value": "Minimalibu"
-    },
-    {
-      "id": 5,
-      "content": "Mousse",
-      "value": "Mousse"
-    },
-    {
-      "id": 6,
-      "content": "Fish",
-      "value": "Fish"
-    },
-    {
-      "id": 7,
-      "content": "Hybride",
-      "value": "Hybride"
-    },
-    {
-      "id": 8,
-      "content": "Egg",
-      "value": "Egg"
-    },
-    {
-      "id": 9,
-      "content": "Evolutive",
-      "value": "Evolutive"
-    },
-    {
-      "id": 10,
-      "content": "Gun",
-      "value": "Gun"
-    },
-    {
-      "id": 11,
-      "content": "Enfant",
-      "value": "Enfant"
-    },
-    {
-      "id": 12,
-      "content": "Retro",
-      "value": "Retro"
+  "MER": {
+    "Surf": {
+      "Planche de surf": {
+        "Type": [
+          {
+            "id": 1,
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": 2,
+            "content": "ShortBoard",
+            "value": "ShortBoard"
+          },
+          {
+            "id": 3,
+            "content": "Longboard",
+            "value": "Longboard"
+          },
+          {
+            "id": 4,
+            "content": "Minimalibu",
+            "value": "Minimalibu"
+          },
+          {
+            "id": 5,
+            "content": "Mousse",
+            "value": "Mousse"
+          },
+          {
+            "id": 6,
+            "content": "Fish",
+            "value": "Fish"
+          },
+          {
+            "id": 7,
+            "content": "Hybride",
+            "value": "Hybride"
+          },
+          {
+            "id": 8,
+            "content": "Egg",
+            "value": "Egg"
+          },
+          {
+            "id": 9,
+            "content": "Evolutive",
+            "value": "Evolutive"
+          },
+          {
+            "id": 10,
+            "content": "Gun",
+            "value": "Gun"
+          },
+          {
+            "id": 11,
+            "content": "Enfant",
+            "value": "Enfant"
+          },
+          {
+            "id": 12,
+            "content": "Retro",
+            "value": "Retro"
+          }
+        ],
+        "Level": [
+          {
+            "id": 0,
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": 1,
+            "content": "Débutant",
+            "value": "Débutant"
+          },
+          {
+            "id": 2,
+            "content": "Débutant/Intermédiaire",
+            "value": "Débutant/Intermédiaire"
+          },
+          {
+            "id": 3,
+            "content": "Intermédiaire/Confirmé",
+            "value": "Intermédiaire/Confirmé"
+          },
+          {
+            "id": 4,
+            "content": "confirmé",
+            "value": "confirmé"
+          },
+          {
+            "id": 5,
+            "content": "Tout niveaux",
+            "value": "Tout niveaux"
+          }
+        ],
+        "Boitier": [
+          {
+            "id": 0,
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": 1,
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": 2,
+            "content": "Boitier Futures",
+            "value": "Boitier Futures"
+          },
+          {
+            "id": 3,
+            "content": "Boitier FCS1",
+            "value": "Boitier FCS1"
+          },
+          {
+            "id": 4,
+            "content": "Boitier FCS1 Fusion",
+            "value": "Boitier FCS1 Fusion"
+          },
+          {
+            "id": 5,
+            "content": "Boitier FCS2",
+            "value": "Boitier FCS2"
+          },
+          {
+            "id": 6,
+            "content": "Boitier U.S",
+            "value": "Boitier U.S"
+          },
+          {
+            "id": 7,
+            "content": "Boitier Tuttle",
+            "value": "Boitier Tuttle"
+          },
+          {
+            "id": 8,
+            "content": "Boitier SoftBoard",
+            "value": "Boitier SoftBoard"
+          }
+        ],
+        "Dérives": [
+          {
+            "id": 0,
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": 1,
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": 2,
+            "content": "Single(1)",
+            "value": "Single(1)"
+          },
+          {
+            "id": 3,
+            "content": "Twin(2)",
+            "value": "Twin(2)"
+          },
+          {
+            "id": 4,
+            "content": "Thruster(3)",
+            "value": "Thruster(3)"
+          },
+          {
+            "id": 5,
+            "content": "Quad(4)",
+            "value": "Quad(4)"
+          },
+          {
+            "id": 6,
+            "content": "Combo(5)",
+            "value": "Combo(5)"
+          },
+          {
+            "id": 7,
+            "content": "Boitier US 2+1",
+            "value": "Boitier US 2+1"
+          },
+          {
+            "id": 8,
+            "content": "Boitier US 4+1",
+            "value": "Boitier US 4+1"
+          }
+        ],
+        "Litrage": [
+          {
+            "id": 0,
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": 1,
+            "content": "16L",
+            "value": "16L"
+          },
+          {
+            "id": 2,
+            "content": "17L",
+            "value": "17L"
+          },
+          {
+            "id": 3,
+            "content": "18L",
+            "value": "18L"
+          },
+          {
+            "id": 4,
+            "content": "19L",
+            "value": "19L"
+          },
+          {
+            "id": 5,
+            "content": "20L",
+            "value": "20L"
+          },
+          {
+            "id": 6,
+            "content": "20L",
+            "value": "20L"
+          },
+          {
+            "id": 7,
+            "content": "21L",
+            "value": "21L"
+          },
+          {
+            "id": 8,
+            "content": "22L",
+            "value": "22L"
+          },
+          {
+            "id": 9,
+            "content": "23L",
+            "value": "23L"
+          },
+          {
+            "id": 10,
+            "content": "24L",
+            "value": "24L"
+          },
+          {
+            "id": 11,
+            "content": "25L",
+            "value": "25L"
+          },
+          {
+            "id": 12,
+            "content": "26L",
+            "value": "26L"
+          },
+          {
+            "id": 13,
+            "content": "27L",
+            "value": "27L"
+          },
+          {
+            "id": 14,
+            "content": "28L",
+            "value": "28L"
+          },
+          {
+            "id": 15,
+            "content": "29L",
+            "value": "29L"
+          },
+          {
+            "id": 16,
+            "content": "30L",
+            "value": "30L"
+          },
+          {
+            "id": 17,
+            "content": "31L",
+            "value": "31L"
+          },
+          {
+            "id": 18,
+            "content": "32L",
+            "value": "32L"
+          },
+          {
+            "id": 19,
+            "content": "33L",
+            "value": "33L"
+          },
+          {
+            "id": 20,
+            "content": "34L",
+            "value": "34L"
+          },
+          {
+            "id": 21,
+            "content": "35L",
+            "value": "35L"
+          },
+          {
+            "id": 22,
+            "content": "36L",
+            "value": "36L"
+          },
+          {
+            "id": 23,
+            "content": "37L",
+            "value": "37L"
+          },
+          {
+            "id": 24,
+            "content": "38L",
+            "value": "38L"
+          },
+          {
+            "id": 25,
+            "content": "39L",
+            "value": "39L"
+          },
+          {
+            "id": 26,
+            "content": "40L",
+            "value": "40L"
+          },
+          {
+            "id": 27,
+            "content": "41L",
+            "value": "41L"
+          },
+          {
+            "id": 28,
+            "content": "41",
+            "value": "41"
+          },
+          {
+            "id": 29,
+            "content": "43L",
+            "value": "43L"
+          },
+          {
+            "id": 30,
+            "content": "44L",
+            "value": "44L"
+          },
+          {
+            "id": 31,
+            "content": "45L",
+            "value": "45L"
+          },
+          {
+            "id": 32,
+            "content": "46L",
+            "value": "46L"
+          },
+          {
+            "id": 33,
+            "content": "47L",
+            "value": "47L"
+          },
+          {
+            "id": 34,
+            "content": "48L",
+            "value": "48L"
+          },
+          {
+            "id": 35,
+            "content": "49L",
+            "value": "49L"
+          },
+          {
+            "id": 36,
+            "content": "50L",
+            "value": "50L"
+          },
+          {
+            "id": 37,
+            "content": "51L",
+            "value": "51L"
+          },
+          {
+            "id": 38,
+            "content": "52L",
+            "value": "52L"
+          },
+          {
+            "id": 39,
+            "content": "53L",
+            "value": "53L"
+          },
+          {
+            "id": 40,
+            "content": "54L",
+            "value": "54L"
+          },
+          {
+            "id": 41,
+            "content": "55L",
+            "value": "55L"
+          },
+          {
+            "id": 42,
+            "content": "56L",
+            "value": "56L"
+          },
+          {
+            "id": 43,
+            "content": "57L",
+            "value": "57L"
+          },
+          {
+            "id": 44,
+            "content": "58L",
+            "value": "58L"
+          },
+          {
+            "id": 45,
+            "content": "59L",
+            "value": "59L"
+          },
+          {
+            "id": 46,
+            "content": "60L",
+            "value": "60L"
+          },
+          {
+            "id": 47,
+            "content": "61L",
+            "value": "61L"
+          },
+          {
+            "id": 48,
+            "content": "62L",
+            "value": "62L"
+          },
+          {
+            "id": 49,
+            "content": "63L",
+            "value": "63L"
+          }
+        ]
+      },
+      "Dérives/Ailerons": {
+        "Système de dérives": [
+          {
+            "id": 1,
+            "content": "Boitier Future",
+            "value": "Boitier Future"
+          },
+          {
+            "id": 2,
+            "content": "Boitier FCS1",
+            "value": "Boitier FCS1"
+          },
+
+          {
+            "id": 3,
+            "content": "Boitier FCS1 Fusion",
+            "value": "Boitier FCS1 Fusion"
+          },
+          {
+            "id": 4,
+            "content": "Boitier FCS2 ",
+            "value": "Boitier FCS2 "
+          },
+          {
+            "id": 5,
+            "content": "Boitier U.S",
+            "value": "Boitier U.S"
+          },
+          {
+            "id": 6,
+            "content": "Boitier Tuttle",
+            "value": "Boitier Tuttle"
+          },
+          {
+            "id": 7,
+            "content": "Boitier SoftBoard",
+            "value": "Boitier SoftBoard"
+          }
+        ],
+        "Types de dérives": [
+          {
+            "id": 1,
+            "content": "Single(1)",
+            "value": "Single(1)"
+          },
+          {
+            "id": 2,
+            "content": "Twin(2)",
+            "value": "Twin(2)"
+          },
+          {
+            "id": 3,
+            "content": "Thruster(3)",
+            "value": "Thruster(3)"
+          },
+          {
+            "id": 4,
+            "content": "Quad(4)",
+            "value": "Quad(4)"
+          },
+          {
+            "id": 5,
+            "content": "Combo(5)",
+            "value": "Combo(5)"
+          },
+          {
+            "id": 6,
+            "content": "Boitier US 2+1",
+            "value": "Boitier US 2+1"
+          },
+          {
+            "id": 7,
+            "content": "Boitier US 4+1",
+            "value": "Boitier US 4+1"
+          }
+        ]
+      }
     }
-  ],
-  "Level": [
-    {
-      "id": 0,
-      "content": " ",
-      "value": null
-    },
-    {
-      "id": 1,
-      "content": "Débutant",
-      "value": "Débutant"
-    },
-    {
-      "id": 2,
-      "content": "Débutant/Intermédiaire",
-      "value": "Débutant/Intermédiaire"
-    },
-    {
-      "id": 3,
-      "content": "Intermédiaire/Confirmé",
-      "value": "Intermédiaire/Confirmé"
-    },
-    {
-      "id": 4,
-      "content": "confirmé",
-      "value": "confirmé"
-    },
-    {
-      "id": 5,
-      "content": "Tout niveaux",
-      "value": "Tout niveaux"
-    }
-  ],
-  "Boitier": [
-    {
-      "id": 0,
-      "content": " ",
-      "value": null
-    },
-    {
-      "id": 1,
-      "content": "Je ne sais pas",
-      "value": "Je ne sais pas"
-    },
-    {
-      "id": 2,
-      "content": "Boitier Futures",
-      "value": "Boitier Futures"
-    },
-    {
-      "id": 3,
-      "content": "Boitier FCS1",
-      "value": "Boitier FCS1"
-    },
-    {
-      "id": 4,
-      "content": "Boitier FCS1 Fusion",
-      "value": "Boitier FCS1 Fusion"
-    },
-    {
-      "id": 5,
-      "content": "Boitier FCS2",
-      "value": "Boitier FCS2"
-    },
-    {
-      "id": 6,
-      "content": "Boitier U.S",
-      "value": "Boitier U.S"
-    },
-    {
-      "id": 7,
-      "content": "Boitier Tuttle",
-      "value": "Boitier Tuttle"
-    },
-    {
-      "id": 8,
-      "content": "Boitier SoftBoard",
-      "value": "Boitier SoftBoard"
-    }
-  ],
-  "Dérives": [
-    {
-      "id": 0,
-      "content": " ",
-      "value": null
-    },
-    {
-      "id": 1,
-      "content": "Je ne sais pas",
-      "value": "Je ne sais pas"
-    },
-    {
-      "id": 2,
-      "content": "Single(1)",
-      "value": "Single(1)"
-    },
-    {
-      "id": 3,
-      "content": "Twin(2)",
-      "value": "Twin(2)"
-    },
-    {
-      "id": 4,
-      "content": "Thruster(3)",
-      "value": "Thruster(3)"
-    },
-    {
-      "id": 5,
-      "content": "Quad(4)",
-      "value": "Quad(4)"
-    },
-    {
-      "id": 6,
-      "content": "Combo(5)",
-      "value": "Combo(5)"
-    },
-    {
-      "id": 7,
-      "content": "Boitier US 2+1",
-      "value": "Boitier US 2+1"
-    },
-    {
-      "id": 8,
-      "content": "Boitier US 4+1",
-      "value": "Boitier US 4+1"
-    }
-  ],
-  "Etat": [
-    {
-      "id": 0,
-      "content": " ",
-      "value": null
-    },
-    {
-      "id": 1,
-      "content": "Neuf",
-      "value": "Neuf"
-    },
-    {
-      "id": 2,
-      "content": "Très Bon état",
-      "value": "Très Bon état"
-    },
-    {
-      "id": 3,
-      "content": "Bon état",
-      "value": "Bon état"
-    },
-    {
-      "id": 4,
-      "content": "Etat Correct",
-      "value": "Etat Correct"
-    },
-    {
-      "id": 5,
-      "content": "Mauvais Etat",
-      "value": "Mauvais Etat"
-    }
-  ],
-  "Litrage": [
-    {
-      "id": 0,
-      "content": " ",
-      "value": null
-    },
-    {
-      "id": 1,
-      "content": "16L",
-      "value": "16L"
-    },
-    {
-      "id": 2,
-      "content": "17L",
-      "value": "17L"
-    },
-    {
-      "id": 3,
-      "content": "18L",
-      "value": "18L"
-    },
-    {
-      "id": 4,
-      "content": "19L",
-      "value": "19L"
-    },
-    {
-      "id": 5,
-      "content": "20L",
-      "value": "20L"
-    },
-    {
-      "id": 6,
-      "content": "20L",
-      "value": "20L"
-    },
-    {
-      "id": 7,
-      "content": "21L",
-      "value": "21L"
-    },
-    {
-      "id": 8,
-      "content": "22L",
-      "value": "22L"
-    },
-    {
-      "id": 9,
-      "content": "23L",
-      "value": "23L"
-    },
-    {
-      "id": 10,
-      "content": "24L",
-      "value": "24L"
-    },
-    {
-      "id": 11,
-      "content": "25L",
-      "value": "25L"
-    },
-    {
-      "id": 12,
-      "content": "26L",
-      "value": "26L"
-    },
-    {
-      "id": 13,
-      "content": "27L",
-      "value": "27L"
-    },
-    {
-      "id": 14,
-      "content": "28L",
-      "value": "28L"
-    },
-    {
-      "id": 15,
-      "content": "29L",
-      "value": "29L"
-    },
-    {
-      "id": 16,
-      "content": "30L",
-      "value": "30L"
-    },
-    {
-      "id": 17,
-      "content": "31L",
-      "value": "31L"
-    },
-    {
-      "id": 18,
-      "content": "32L",
-      "value": "32L"
-    },
-    {
-      "id": 19,
-      "content": "33L",
-      "value": "33L"
-    },
-    {
-      "id": 20,
-      "content": "34L",
-      "value": "34L"
-    },
-    {
-      "id": 21,
-      "content": "35L",
-      "value": "35L"
-    },
-    {
-      "id": 22,
-      "content": "36L",
-      "value": "36L"
-    },
-    {
-      "id": 23,
-      "content": "37L",
-      "value": "37L"
-    },
-    {
-      "id": 24,
-      "content": "38L",
-      "value": "38L"
-    },
-    {
-      "id": 25,
-      "content": "39L",
-      "value": "39L"
-    },
-    {
-      "id": 26,
-      "content": "40L",
-      "value": "40L"
-    },
-    {
-      "id": 27,
-      "content": "41L",
-      "value": "41L"
-    },
-    {
-      "id": 28,
-      "content": "41",
-      "value": "41"
-    },
-    {
-      "id": 29,
-      "content": "43L",
-      "value": "43L"
-    },
-    {
-      "id": 30,
-      "content": "44L",
-      "value": "44L"
-    },
-    {
-      "id": 31,
-      "content": "45L",
-      "value": "45L"
-    },
-    {
-      "id": 32,
-      "content": "46L",
-      "value": "46L"
-    },
-    {
-      "id": 33,
-      "content": "47L",
-      "value": "47L"
-    },
-    {
-      "id": 34,
-      "content": "48L",
-      "value": "48L"
-    },
-    {
-      "id": 35,
-      "content": "49L",
-      "value": "49L"
-    },
-    {
-      "id": 36,
-      "content": "50L",
-      "value": "50L"
-    },
-    {
-      "id": 37,
-      "content": "51L",
-      "value": "51L"
-    },
-    {
-      "id": 38,
-      "content": "52L",
-      "value": "52L"
-    },
-    {
-      "id": 39,
-      "content": "53L",
-      "value": "53L"
-    },
-    {
-      "id": 40,
-      "content": "54L",
-      "value": "54L"
-    },
-    {
-      "id": 41,
-      "content": "55L",
-      "value": "55L"
-    },
-    {
-      "id": 42,
-      "content": "56L",
-      "value": "56L"
-    },
-    {
-      "id": 43,
-      "content": "57L",
-      "value": "57L"
-    },
-    {
-      "id": 44,
-      "content": "58L",
-      "value": "58L"
-    },
-    {
-      "id": 45,
-      "content": "59L",
-      "value": "59L"
-    },
-    {
-      "id": 46,
-      "content": "60L",
-      "value": "60L"
-    },
-    {
-      "id": 47,
-      "content": "61L",
-      "value": "61L"
-    },
-    {
-      "id": 48,
-      "content": "62L",
-      "value": "62L"
-    },
-    {
-      "id": 49,
-      "content": "63L",
-      "value": "63L"
-    }
-  ]
+  },
+  "COMMUN": {
+    "Etat": [
+      {
+        "id": 0,
+        "content": " ",
+        "value": null
+      },
+      {
+        "id": 1,
+        "content": "Neuf",
+        "value": "Neuf"
+      },
+      {
+        "id": 2,
+        "content": "Très Bon état",
+        "value": "Très Bon état"
+      },
+      {
+        "id": 3,
+        "content": "Bon état",
+        "value": "Bon état"
+      },
+      {
+        "id": 4,
+        "content": "Etat Correct",
+        "value": "Etat Correct"
+      },
+      {
+        "id": 5,
+        "content": "Mauvais Etat",
+        "value": "Mauvais Etat"
+      }
+    ]
+  }
 }

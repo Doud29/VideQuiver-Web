@@ -1,12 +1,12 @@
 //---------// Css
-import "./dropdownlist.scss";
+import "../../../dropdownlist.scss";
 //---------// React
 import { useState } from "react";
 
 //---------//JSON
-import Planche from "../../JSON/MER/SurfDescription/surfDescription.json";
+import dropDownValue from "../../../../../../JSON/MER/SurfDescription/surfDescription.json";
 
-const DropDownList = ({ selected, setSelected }) => {
+const DropDownSurfBoard = ({ selected, setSelected }) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <div className="dropdown">
@@ -22,7 +22,7 @@ const DropDownList = ({ selected, setSelected }) => {
       </div>
       {isActive && (
         <div className="dropdown-content">
-          {Planche.Type.map((data) => {
+          {dropDownValue.MER.Surf["Planche de surf"].Type.map((data) => {
             return (
               <div
                 className="dropdown-item"
@@ -42,4 +42,4 @@ const DropDownList = ({ selected, setSelected }) => {
   );
 };
 
-export default DropDownList;
+export default DropDownSurfBoard;
