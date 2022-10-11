@@ -23,14 +23,40 @@ const SignIn = () => {
           </Link>
         </div>
       </div>
-      <div className="container-inputs">
-        <input type="email" placeholder="Email" />
-        <input type="password" placeholder="Mot de passe" />
-        <button>Se connecter</button>
-        <Link to="/signup" style={{ textDecoration: "none", marginTop: 10 }}>
-          <span>Pas de compte? Cliqué ici</span>
+      <form action="" className="container-inputs">
+        {/* //-----------------// Email  //----------------------//*/}
+        <div className="inputdiv">
+          <input
+            type="email"
+            placeholder=" "
+            // value={}
+            name="email"
+            id="email"
+            required
+            // onChange={handleChange}
+            autoComplete="off"
+          />
+          <span className="spanDescriptionInput">Email</span>
+        </div>
+        {/* //-----------------// Password //----------------------//*/}
+        <div className="inputdiv">
+          <input
+            type="password"
+            placeholder=" "
+            required
+            // value={}
+            name="password"
+            id="password"
+            // onChange={handleChange}
+            autoComplete="off"
+          />
+          <span className="spanDescriptionInput">Password</span>
+        </div>
+        <input type="submit" id="button" />
+        <Link to="/signup" style={{ textDecoration: "none", color: "black" }}>
+          <div className="no-account">Pas de compte? Cliqué ici</div>
         </Link>
-      </div>
+      </form>
     </div>
   );
 };

@@ -37,70 +37,55 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    padding: 15px;
+    .inputdiv {
+      position: relative;
+      width: 100%;
+      margin-bottom: 10px;
+      max-width: 400px;
+    }
     input {
       height: 50px;
-      outline: none;
-      width: 90%;
       padding-left: 10px;
-      border-radius: 5px;
-      border: none;
-      margin-top: 15px;
-      color: rgb(42, 40, 40);
-      background-color: rgb(245, 241, 241);
+      border-radius: 8px;
+      border: 1px solid grey;
+      margin-bottom: 15px;
+      color: #555555;
+      width: 100%;
+      outline: none;
+      box-sizing: border-box;
     }
-    button {
-      height: 40px;
-      width: 90%;
-      margin-top: 15px;
-      color: white;
-      border-radius: 5px;
-      background: #508ae2;
-      border: none;
+    .spanDescriptionInput {
+      position: absolute;
+      top: 15px;
+      left: 10px;
+      font-size: 15px;
+      pointer-events: none;
+      transition: 0.5s;
     }
-    span {
+    #password:focus ~ .spanDescriptionInput,
+    #password:not(:placeholder-shown)#password:not(:focus)
+      ~ .spanDescriptionInput {
       color: #508ae2;
-      font-size: 12px;
+      transform: translateX(15px) translateY(-25px);
+      background: white;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    #email:focus ~ .spanDescriptionInput,
+    #email:not(:placeholder-shown)#email:not(:focus) ~ .spanDescriptionInput {
+      color: #508ae2;
+      transform: translateX(15px) translateY(-25px);
+      background: white;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    #button {
+      background: #508ae2;
+      color: white;
+      border: none;
+      cursor: pointer;
+      max-width: 400px;
     }
   }
 }
-
-/* Medium devices (tablets, 768px and up) */
-// @media (min-width: 768px) {
-//   .container-signIn {
-//     .container-inputs {
-//       height: 400px;
-//       max-width: 520px;
-//       input {
-//         height: 50px;
-//         width: 300px;
-//         font-size: 25px;
-//       }
-//       button {
-//         height: 50px;
-//         width: 300px;
-//         font-size: 25px;
-//       }
-//     }
-//   }
-// }
-
-// @media (min-width: 1200px) {
-//   .container-signIn {
-//     .container-inputs {
-//       height: 500px;
-//       input {
-//         height: 80px;
-//         font-size: 30px;
-//         width: 500px;
-//       }
-//       button {
-//         height: 80px;
-//         width: 500px;
-//       }
-//       span {
-//         color: white;
-//         font-size: 25px;
-//       }
-//     }
-//   }
-// }
