@@ -12,6 +12,7 @@ import SignUp from "./Pages/SignUp/SignUp.js";
 import Welcome from "./Pages/Welcome/Welcome.js";
 import AddProduct from "./Pages/AddProduct/AddProduct";
 import Product from "./Pages/Product/Product";
+import { UserContextProvider } from "./Context/UserContext";
 
 function App() {
   return (
@@ -20,8 +21,22 @@ function App() {
         <Routes>
           <Route path="/" element={<Intro />} />
           <Route path="/home" element={<Home />} />
-          <Route path="/signin" element={<SignIn />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route
+            path="/signin"
+            element={
+              <UserContextProvider>
+                <SignIn />
+              </UserContextProvider>
+            }
+          />
+          <Route
+            path="/signup"
+            element={
+              <UserContextProvider>
+                <SignUp />
+              </UserContextProvider>
+            }
+          />
           <Route path="/welcome" element={<Welcome />} />
           <Route path="/addProduct" element={<AddProduct />} />
           <Route path="/product" element={<Product />} />

@@ -7,7 +7,7 @@ import SearchBar from "../../Components/SearchBar/SearchBar";
 import SurfDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/SurfDescription";
 // import CombinaisonDescription from "../../Components/DescriptionProduit/CombinaisonDescription";
 import DerivesDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/DeriveDescription";
-import { DescriptionContext } from "../../DescriptionContext";
+import { DescriptionContext } from "../../Context/DescriptionContext";
 import LeashDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/LeashDescription";
 import PadDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/PadDescription";
 import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";

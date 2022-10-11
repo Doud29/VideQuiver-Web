@@ -52,6 +52,7 @@ const SignIn = () => {
           />
           <span className="spanDescriptionInput">Password</span>
         </div>
+        <div className="validation">Validation</div>
         <input type="submit" id="button" />
         <Link to="/signup" style={{ textDecoration: "none", color: "black" }}>
           <div className="no-account">Pas de compte? Cliqué ici</div>
