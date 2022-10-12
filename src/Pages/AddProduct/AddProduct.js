@@ -65,7 +65,7 @@ const AddProduct = () => {
   //------------------// Contexte //----------------------//
   //------------------------------------------------------//
 
-  //------// Cet objet doit ressembler trait pour trait à l'objet que l'on a créé dans DescriptionContext
+  //------// DescriptionContext
   const contextValue = {
     Produit,
     updateInpute: setProduct,

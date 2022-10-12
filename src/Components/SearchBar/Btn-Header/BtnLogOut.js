@@ -1,20 +1,17 @@
 //-----------------// Css
 
 //-----------------// Packages
-import { Link } from "react-router-dom";
 
 //-----------------// Components
-
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRightFromBracket } from "@fortawesome/free-solid-svg-icons";
-
-const logout = <FontAwesomeIcon icon={faArrowRightFromBracket} />;
+import { useContext } from "react";
+import { UserContext } from "../../../Context/UserContext";
 
 const BtnSignIn = () => {
+  const { logout } = useContext(UserContext);
+
   return (
-    <div className="container-btn user">
-      <Link to="/home">{logout}</Link>
+    <div className="container-btn user" onClick={logout}>
+      <ion-icon name="log-out-outline"></ion-icon>
       <span>Logout</span>
     </div>
   );

@@ -2,6 +2,8 @@
 
 //-----------------// Packages
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { UserContext } from "../../../Context/UserContext";
 //-----------------// Components
 
 //---------------// icones
@@ -11,11 +13,18 @@ import { faSquarePlus } from "@fortawesome/free-solid-svg-icons";
 const sale = <FontAwesomeIcon icon={faSquarePlus} />;
 
 const BtnSale = () => {
+  const { currentUser } = useContext(UserContext);
   return (
     <div className="container-btn sale">
-      <Link to="/addProduct">
-        <div className="header-image">{sale}</div>
-      </Link>
+      {currentUser ? (
+        <Link to="/addProduct">
+          <div className="header-image">{sale}</div>
+        </Link>
+      ) : (
+        <Link to="/welcome">
+          <div className="header-image">{sale}</div>
+        </Link>
+      )}
       <span>Vendre</span>
     </div>
   );

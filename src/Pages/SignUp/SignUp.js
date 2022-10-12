@@ -4,6 +4,7 @@ import "./SignUp.scss";
 //--------------// packages
 import React, { useRef, useState, useContext } from "react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router";
 
 //--------------// Components && Méthodes
 import { UserContext } from "../../Context/UserContext";
@@ -15,12 +16,12 @@ import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 
 const SignUp = () => {
-  const { Signup, currentUser, data } = useContext(UserContext);
+  const { createUser } = useContext(UserContext);
   //-----------------------------//States //------------------------------//
   const [validation, setValidation] = useState("");
   //-------------//On reset les valeur de notre formulaire //-------------//
   const formRef = useRef();
-  // const navigate = Navigate();
+  const navigate = useNavigate();
 
   //----------------------------------------------------------------------//
   //-------------//On récupére la valeur de nos inputs //-----------------//
@@ -35,8 +36,6 @@ const SignUp = () => {
     }
   };
 
-  console.log(inputs);
-
   //----------------------------------------------------------------------//
   //------//Soumission du formulaire et vérification côté front//---------//
   //----------------------------------------------------------------------//
@@ -45,20 +44,25 @@ const SignUp = () => {
     e.preventDefault();
     //vérification matching mot de passe
     if (inputs.current[2].value !== inputs.current[3].value) {
-      return setValidation("* Vous devez rentrer un mot de passe identique");
+      setValidation("* Vous devez rentrer un mot de passe identique");
+      return;
     }
     //vérification longeur des mots de passes
-    // if (inputs.current[2].value.length || inputs.current[3].value.length < 6) {
-    //   return setValidation("* 6 caracteres min pour votre mot de passe");
-    // }
-
+    else if (
+      (inputs.current[2].value.length || inputs.current[3].value.length) < 6
+    ) {
+      setValidation("* 6 caracteres min pour votre mot de passe");
+      return;
+    }
     try {
-      const cred = await Signup(
+      const cred = await createUser(
         inputs.current[1].value,
         inputs.current[2].value
       );
       formRef.current.reset();
+      // console.log(cred);
       setValidation("");
+      navigate("/home");
     } catch (error) {
       console.log(error);
       if ((error.code = "auth/email-already-in-use")) {
@@ -80,6 +84,7 @@ const SignUp = () => {
           </Link>
         </div>
       </div>
+
       <form onSubmit={handleForm} className="container-inputs" ref={formRef}>
         <div className="inputdiv">
           <input
@@ -133,9 +138,16 @@ const SignUp = () => {
           <span className="spanDescriptionInput">Confirme mot de passe</span>
         </div>
         <div className="validation">{validation}</div>
-        <input type="Submit" id="button" />
 
-        <Link to="/signin" style={{ textDecoration: "none", color: "black" }}>
+        <span className="infospwd">
+          ! Votre mot de passe doit contenir au moins 6 caractéres
+        </span>
+
+        <input type="Submit" id="button" />
+        <Link
+          to="/signin"
+          style={{ textDecoration: "none", color: "black", fontSize: "12px" }}
+        >
           <div>Déjà un compte? Clique ici</div>
         </Link>
       </form>
