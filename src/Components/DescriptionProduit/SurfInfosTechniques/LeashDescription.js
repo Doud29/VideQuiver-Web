@@ -78,7 +78,7 @@ const LeashDescription = () => {
         name="Epaisseur"
         id="Epaisseur"
       >
-        <option>Etat du leash</option>
+        <option>Epaisseur</option>
         <option value="4mm">3/5" - 4mm</option>
         <option value="5.5mm">3/16" - 5.5mm</option>
         <option value="5mm">7/32" - 5mm</option>

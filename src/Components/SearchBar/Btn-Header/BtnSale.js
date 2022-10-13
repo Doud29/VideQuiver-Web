@@ -14,11 +14,11 @@ const BtnSale = () => {
     <div className="container-btn sale">
       {currentUser ? (
         <Link to="/addProduct">
-          <ion-icon name="bag-add-outline"></ion-icon>
+          <ion-icon name="play-outline"></ion-icon>
         </Link>
       ) : (
         <Link to="/welcome">
-          <ion-icon name="bag-add-outline"></ion-icon>
+          <ion-icon name="play-outline"></ion-icon>
         </Link>
       )}
       <span>Vendre</span>

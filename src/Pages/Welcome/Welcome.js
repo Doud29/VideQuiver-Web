@@ -2,7 +2,7 @@
 import "./welcome.scss";
 //--------------// Components
 import { UserContext } from "../../Context/UserContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router";
 //--------------// packages
 import { Link } from "react-router-dom";
@@ -15,18 +15,23 @@ const xMark = <FontAwesomeIcon icon={faXmark} />;
 
 const Welcome = () => {
   //Déstructuration
-  const { connectGoogleUser } = useContext(UserContext);
+  const { connectGoogleUser, currentUser } = useContext(UserContext);
   //instanciation de notre useHook
   const navigate = useNavigate();
   //Call API
   const handleGoogle = async () => {
     try {
       await connectGoogleUser();
-      navigate("/home");
     } catch (error) {
       console.dir(error.message);
     }
   };
+
+  useEffect(() => {
+    if (currentUser !== null) {
+      navigate("/home");
+    }
+  }, [currentUser]);
 
   return (
     <div className="container-welcome">
@@ -63,8 +68,8 @@ const Welcome = () => {
             <p>Continuer avec une adresse e-mail</p>
           </Link>
         </div>
-        <div className="bloc-inscription-email google">
-          <div className="enveloppe" onClick={handleGoogle}>
+        <div className="bloc-inscription-email google" onClick={handleGoogle}>
+          <div className="enveloppe">
             <ion-icon name="logo-google"></ion-icon>
           </div>
           <p>Continuer avec Google </p>
@@ -74,7 +79,7 @@ const Welcome = () => {
           <div className="enveloppe">
             <ion-icon name="logo-facebook"></ion-icon>
           </div>
-          <p>facebook</p>{" "}
+          <p>Continuer avec Facebook</p>{" "}
         </div>
       </div>
     </div>

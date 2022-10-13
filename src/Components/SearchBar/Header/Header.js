@@ -26,7 +26,8 @@ const Header = ({ setIsSearchBarexisting, isSearchBarexisting }) => {
         setIsSearchBarexisting={setIsSearchBarexisting}
         isSearchBarexisting={isSearchBarexisting}
       /> */}
-      {currentUser ? <BtnLogOut /> : <BtnProfil />}
+      <BtnProfil />
+      {currentUser && <BtnLogOut />}
     </div>
   );
 };

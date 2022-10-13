@@ -519,6 +519,246 @@
             "value": "Boitier US 4+1"
           }
         ]
+      },
+      "Pad": {
+        "Nombre de pièces": [
+          {
+            "id": 0,
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": 1,
+            "content": "1 pièce",
+            "value": "1 pièce"
+          },
+          {
+            "id": 2,
+            "content": "2 pièces",
+            "value": "2 pièces"
+          },
+          {
+            "id": 3,
+            "content": "3 pièces",
+            "value": "3 pièces"
+          },
+          {
+            "id": 4,
+            "content": "4 pièces",
+            "value": "4 pièces"
+          },
+          {
+            "id": 5,
+            "content": "5 pièces",
+            "value": "5 pièces"
+          },
+          {
+            "id": 6,
+            "content": "6 pièces",
+            "value": "6 pièces"
+          },
+          {
+            "id": 7,
+            "content": "7 pièces",
+            "value": "7 pièces"
+          },
+          {
+            "id": 8,
+            "content": "8 pièces",
+            "value": "8 pièces"
+          }
+        ]
+      },
+      "Leash": {
+        "Type de maintien": [
+          {
+            "id": 0,
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": 1,
+            "content": "Genou",
+            "value": "Genou"
+          },
+          {
+            "id": 2,
+            "content": "Cheville",
+            "value": "Cheville"
+          }
+        ],
+        "Epaisseur": [
+          {
+            "id": 0,
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": 1,
+            "content": "3/5 - 4mm",
+            "value": "3/5 - 4mm"
+          },
+          {
+            "id": 2,
+            "content": "3/16 - 4mm",
+            "value": "3/16 - 4mm"
+          },
+          {
+            "id": 3,
+            "content": "7/32 - 5mm",
+            "value": "7/32 - 5mm"
+          },
+          {
+            "id": 4,
+            "content": "1/4 - 6mm",
+            "value": "1/4 - 6mm"
+          },
+          {
+            "id": 5,
+            "content": "5/16 - 7mm",
+            "value": "5/16 - 7mm"
+          },
+          {
+            "id": 6,
+            "content": "9/32 - 7mm",
+            "value": "9/32 - 7mm"
+          },
+          {
+            "id": 7,
+            "content": "3/8 - 9mm",
+            "value": "3/8 - 9mm"
+          },
+          {
+            "id": 8,
+            "content": "1/4",
+            "value": "1/4"
+          },
+          {
+            "id": 9,
+            "content": "6mm",
+            "value": "6mm"
+          },
+          {
+            "id": 10,
+            "content": "7mm",
+            "value": "7mm"
+          },
+          {
+            "id": 11,
+            "content": "8mm",
+            "value": "8mm"
+          }
+        ]
+      },
+      "Casque": {},
+      "Bagagerie": {
+        "Taille": [
+          {
+            "id": 0,
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": 1,
+            "content": "4'0 / 122 cm",
+            "value": "4'0 / 122 cm"
+          },
+          {
+            "id": 2,
+            "content": "4'4 / 132 cm",
+            "value": "4'4 / 132 cm"
+          },
+          {
+            "id": 3,
+            "content": "4'5 / 135 cm",
+            "value": "4'5 / 135 cm"
+          },
+          {
+            "id": 4,
+            "content": "4'8 / 142 cm",
+            "value": "4'8 / 142 cm"
+          },
+          {
+            "id": 5,
+            "content": "4'10 / 147 cm",
+            "value": "4'10 / 147 cm"
+          },
+          {
+            "id": 6,
+            "content": "4'11 / 150 cm",
+            "value": "4'11 / 150 cm"
+          },
+          {
+            "id": 7,
+            "content": "5'3 / 159 cm",
+            "value": "5'3 / 159 cm"
+          },
+          {
+            "id": 8,
+            "content": "5'4 / 162 cm",
+            "value": "5'4 / 162 cm"
+          },
+          {
+            "id": 9,
+            "content": "5'6 / 167 cm",
+            "value": "5'6 / 167 cm"
+          },
+          {
+            "id": 10,
+            "content": "5'7 / 170 cm",
+            "value": "5'7 / 170 cm"
+          },
+          {
+            "id": 11,
+            "content": "5'8 / 172 cm",
+            "value": "5'8 / 172 cm"
+          },
+          {
+            "id": 12,
+            "content": "5'9 / 175 cm",
+            "value": "5'9 / 175 cm"
+          },
+          {
+            "id": 13,
+            "content": "5'10 / 177m",
+            "value": "5'10 / 177m"
+          },
+          {
+            "id": 14,
+            "content": "6'0 / 183m",
+            "value": "6'0 / 183m"
+          },
+          {
+            "id": 15,
+            "content": "6'1 / 185m",
+            "value": "6'1 / 185m"
+          },
+          {
+            "id": 16,
+            "content": "6'2 / 188m",
+            "value": "6'2 / 188m"
+          },
+          {
+            "id": 17,
+            "content": "6'3 / 190m",
+            "value": "6'3 / 190m"
+          },
+          {
+            "id": 18,
+            "content": "6'4 / 193m",
+            "value": "6'4 / 193m"
+          },
+          {
+            "id": 19,
+            "content": "6'6 / 198m",
+            "value": "6'6 / 198m"
+          },
+          {
+            "id": 20,
+            "content": "6'7 / 201m",
+            "value": "6'7 / 201m"
+          }
+        ]
       }
     }
   },
