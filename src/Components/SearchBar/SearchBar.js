@@ -4,7 +4,6 @@ import "./SearchBar.scss";
 //---------------// icones
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 import { faMessage } from "@fortawesome/free-solid-svg-icons";
 
@@ -16,7 +15,6 @@ import { Link } from "react-router-dom";
 
 //---------------// Déclaration des constantes
 const user = <FontAwesomeIcon icon={faUser} />;
-const maginFyingGlass = <FontAwesomeIcon icon={faMagnifyingGlass} />;
 const message = <FontAwesomeIcon icon={faMessage} />;
 const panier = <FontAwesomeIcon icon={faCartShopping} />;
 
@@ -30,7 +28,9 @@ const SearchBar = () => {
 
       <div className="container-input-glass">
         <input type="search" placeholder="Rechercher" />
-        <div className="glass">{maginFyingGlass}</div>
+        <div className="glass">
+          <ion-icon name="search-outline"></ion-icon>
+        </div>
       </div>
       <div className="container-searchBar-profil">
         {/* <p>Mon compte</p> */}

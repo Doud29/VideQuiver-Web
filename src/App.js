@@ -11,6 +11,7 @@ import SignIn from "./Pages/SignIn/SignIn.js";
 import SignUp from "./Pages/SignUp/SignUp.js";
 import Welcome from "./Pages/Welcome/Welcome.js";
 import AddProduct from "./Pages/AddProduct/AddProduct";
+import ProtectedRoute from "./Pages/Protected/ProtectedRoute";
 import Product from "./Pages/Product/Product";
 import { UserContextProvider } from "./Context/UserContext";
 
@@ -25,7 +26,14 @@ function App() {
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/welcome" element={<Welcome />} />
-            <Route path="/addProduct" element={<AddProduct />} />
+            <Route
+              path="/addProduct"
+              element={
+                <ProtectedRoute>
+                  <AddProduct />
+                </ProtectedRoute>
+              }
+            />
             <Route path="/product" element={<Product />} />
           </Routes>
         </div>

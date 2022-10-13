@@ -9,20 +9,33 @@ import { useContext, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 
 const SignIn = () => {
+  //récupération de nos méthodes depuis notre contect
   const { connectUser, resetPassword } = useContext(UserContext);
+  //state error
   const [validation, setValidation] = useState("");
+  //Hook navigate
   const navigate = useNavigate();
+  //référancement des inputs et du formulaire
   const inputsRef = useRef([]);
   const formRef = useRef();
-
+  //on récupéra la valeur des inputs
   const addinputs = (el) => {
     if (el && !inputsRef.current.includes(el)) {
       inputsRef.current.push(el);
     }
   };
 
+  //Reset password
+  const handleReset = async () => {
+    try {
+      const reset = await resetPassword(inputsRef.current[0].value);
+      console.log(reset);
+    } catch (error) {}
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+    //Call API Firebase
     try {
       const request = await connectUser(
         inputsRef.current[0].value,
@@ -86,10 +99,22 @@ const SignIn = () => {
         <input type="submit" id="button" />
         <Link
           to="/signup"
-          style={{ textDecoration: "none", color: "black", fontSize: "12px" }}
+          style={{ textDecoration: "none", color: "black", fontSize: "13px" }}
         >
           <div className="no-account">Pas de compte? Cliqué ici</div>
         </Link>
+        <div
+          className="no-account"
+          style={{
+            textDecoration: "none",
+            color: "black",
+            fontSize: "12px",
+            marginTop: "10px",
+          }}
+          onClick={handleReset}
+        >
+          Mot de passe oublié?
+        </div>
       </form>
     </div>
   );
