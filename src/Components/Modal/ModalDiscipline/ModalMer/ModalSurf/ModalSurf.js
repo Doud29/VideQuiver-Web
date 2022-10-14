@@ -22,13 +22,6 @@ const ModalSurf = ({ setsurfState, setChoiceValidatedForSellState }) => {
         setChoiceValidatedForSellState(true);
       }, 500);
     }
-    // const name = e.target.name;
-    // let value = e.target.value;
-
-    // updateInpute((prevalue) => {
-    //   return { ...prevalue, [name]: value };
-    // });
-
     updateInpute(e.target.value);
   };
 

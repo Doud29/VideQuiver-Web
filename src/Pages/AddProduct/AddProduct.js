@@ -5,7 +5,6 @@ import "./addProduct.scss";
 import ModalCategories from "../../Components/Modal/ModalDiscipline/ModalCategories";
 import SearchBar from "../../Components/SearchBar/SearchBar";
 import SurfDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/SurfDescription";
-// import CombinaisonDescription from "../../Components/DescriptionProduit/CombinaisonDescription";
 import DerivesDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/DeriveDescription";
 import { DescriptionContext } from "../../Context/DescriptionContext";
 import LeashDescription from "../../Components/DescriptionProduit/SurfInfosTechniques/LeashDescription";
@@ -22,6 +21,8 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+
+//---------------// Context
 
 const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
 const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
@@ -59,7 +60,7 @@ const AddProduct = () => {
     // Prix: "",
   });
 
-  console.log(technicalInformations);
+  // console.log(technicalInformations);
 
   //------------------------------------------------------//
   //------------------// Contexte //----------------------//

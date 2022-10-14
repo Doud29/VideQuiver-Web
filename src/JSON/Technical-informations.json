@@ -64,7 +64,7 @@
             "value": "Retro"
           }
         ],
-        "Level": [
+        "Niveau": [
           {
             "id": 0,
             "content": " ",
@@ -755,8 +755,18 @@
           },
           {
             "id": 20,
-            "content": "6'7 / 201m",
-            "value": "6'7 / 201m"
+            "content": "6'8 / 203m",
+            "value": "6'8 / 203m"
+          },
+          {
+            "id": 21,
+            "content": "6'10 / 208m",
+            "value": "6'10 / 208m"
+          },
+          {
+            "id": 22,
+            "content": "6'10 / 208m",
+            "value": "6'10 / 208m"
           }
         ]
       }

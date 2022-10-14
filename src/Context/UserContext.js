@@ -15,11 +15,12 @@ export const UserContext = createContext();
 //création du provider [composant d'ordre supérieur] qui va pouvoir lui même retourné le usercontext.provider.
 //Celui qui va apporter le contenu les données à tout ceux qu'il va entouré. En l'occurence props.children
 export const UserContextProvider = (props) => {
+  //-------------------------------------------------------//
+  //--------------------// Connexion //--------------------//
+  //-------------------------------------------------------//
+
   //state User
   const [currentUser, setCurrentUser] = useState({});
-
-  console.log(currentUser);
-
   //inscription
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -50,6 +51,18 @@ export const UserContextProvider = (props) => {
     return unscribe;
   }, []);
 
+  //-------------------------------------------------------//
+  //-----------------// Data add Product //----------------//
+  //-------------------------------------------------------//
+
+  const [createOffer, setCreateOffer] = useState({
+    ["Technical informations"]: [],
+    ["Offer Description"]: [],
+    ["Sale/Rent/Exchange"]: [],
+  });
+
+  console.log(createOffer);
+
   return (
     <UserContext.Provider
       value={{
@@ -59,6 +72,8 @@ export const UserContextProvider = (props) => {
         currentUser,
         resetPassword,
         connectGoogleUser,
+        createOffer,
+        setCreateOffer,
       }}
     >
       {props.children}

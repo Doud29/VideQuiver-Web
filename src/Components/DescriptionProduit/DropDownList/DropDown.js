@@ -1,13 +1,20 @@
 //---------// Css
-import "../../../dropdownlist.scss";
+import "./dropdownlist.scss";
 //---------// React
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { UserContext } from "../../../Context/UserContext";
+import { useEffect } from "react";
 
-//---------//JSON
-import dropDownValue from "../../../../../../JSON/MER/SurfDescription/surfDescription.json";
-
-const DropDownSurfBoard = ({ selected, setSelected }) => {
+const DropDown = ({ data, name }) => {
   const [isActive, setIsActive] = useState(false);
+  const [selected, setSelected] = useState("");
+
+  const { createOffer, setCreateOffer } = useContext(UserContext);
+
+  useEffect(() => {
+    setCreateOffer({ ...{ createOffer }, ...{ [name]: selected } });
+  }, [selected]);
+
   return (
     <div className="dropdown">
       <div
@@ -18,11 +25,11 @@ const DropDownSurfBoard = ({ selected, setSelected }) => {
         id="dropdown"
       >
         <span>{selected}</span>
-        <label className="titre-dropdwon">Type de planche</label>
+        <label className="titre-dropdwon">{name}</label>
       </div>
       {isActive && (
         <div className="dropdown-content">
-          {dropDownValue.MER.Surf["Planche de surf"].Type.map((data) => {
+          {data.map((data) => {
             return (
               <div
                 className="dropdown-item"
@@ -42,4 +49,4 @@ const DropDownSurfBoard = ({ selected, setSelected }) => {
   );
 };
 
-export default DropDownSurfBoard;
+export default DropDown;

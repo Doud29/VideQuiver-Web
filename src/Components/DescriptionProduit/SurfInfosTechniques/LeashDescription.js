@@ -82,10 +82,10 @@ const LeashDescription = () => {
         <option value="4mm">3/5" - 4mm</option>
         <option value="5.5mm">3/16" - 5.5mm</option>
         <option value="5mm">7/32" - 5mm</option>
-        <option value="6mm">1/4" - 6mm</option>
+        <option value="6mm">1/4 - 6mm</option>
         <option value="7mm">5/16" - 7mm</option>
-        <option value="7mm">9/32" - 7mm</option>
-        <option value="9mm">3/8" - 9mm</option>
+        <option value="7mm">9/32 - 7mm</option>
+        <option value="9mm">3/8 - 9mm</option>
         <option value="1/4">1/4"</option>
         <option value="6mm">6mm</option>
         <option value="7mm">7mm</option>
