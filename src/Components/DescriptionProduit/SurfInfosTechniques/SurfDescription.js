@@ -10,22 +10,27 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
+      {/* //---- Type de Planche */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Type}
         name="Type de planche"
       />
+      {/* //---- Level */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Niveau}
         name="Niveau requis"
       />
+      {/* //---- Boitier dérives */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Boitier}
         name="Type de boitier"
       />
+      {/* //---- Types de dérives */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Dérives}
         name="Type de Dérives"
       />
+      {/* //---- Volume */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Litrage}
         name="Volume de la planche [L]"

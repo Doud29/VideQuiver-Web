@@ -56,10 +56,20 @@ export const UserContextProvider = (props) => {
   //-------------------------------------------------------//
 
   const [createOffer, setCreateOffer] = useState({
-    ["Technical informations"]: [],
     ["Offer Description"]: [],
+    ["Technical informations"]: [],
     ["Sale/Rent/Exchange"]: [],
   });
+
+  let addTechnicalData = (name, value) => {
+    let newOffer = { ...createOffer };
+    let toto = { ...createOffer };
+    newOffer["Technical informations"].push({
+      [name]: { value: value },
+    });
+
+    setCreateOffer(newOffer);
+  };
 
   console.log(createOffer);
 
@@ -72,8 +82,8 @@ export const UserContextProvider = (props) => {
         currentUser,
         resetPassword,
         connectGoogleUser,
-        createOffer,
-        setCreateOffer,
+        // createOffer,
+        addTechnicalData,
       }}
     >
       {props.children}

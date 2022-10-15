@@ -9,11 +9,12 @@ const DropDown = ({ data, name }) => {
   const [isActive, setIsActive] = useState(false);
   const [selected, setSelected] = useState("");
 
-  const { createOffer, setCreateOffer } = useContext(UserContext);
+  const { addTechnicalData } = useContext(UserContext);
 
-  useEffect(() => {
-    setCreateOffer({ ...{ createOffer }, ...{ [name]: selected } });
-  }, [selected]);
+  // useEffect(() => {
+  //   let value = createOffer["Technical informations"];
+  //   setCreateOffer({ ...{ value }, ...{ [name]: selected } });
+  // }, [selected]);
 
   return (
     <div className="dropdown">
@@ -37,6 +38,7 @@ const DropDown = ({ data, name }) => {
                 onClick={() => {
                   setSelected(data.value);
                   setIsActive(false);
+                  addTechnicalData(name, data.value);
                 }}
               >
                 {data.content}
