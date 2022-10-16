@@ -63,7 +63,6 @@ export const UserContextProvider = (props) => {
 
   let addTechnicalData = (name, value) => {
     let newOffer = { ...createOffer };
-    let toto = { ...createOffer };
     newOffer["Technical informations"].push({
       [name]: { value: value },
     });
