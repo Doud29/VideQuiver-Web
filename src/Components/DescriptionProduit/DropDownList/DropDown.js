@@ -30,15 +30,15 @@ const DropDown = ({ data, name }) => {
       </div>
       {isActive && (
         <div className="dropdown-content">
-          {data.map((data) => {
+          {data.map((data, index) => {
             return (
               <div
                 className="dropdown-item"
-                key={data.id}
+                key={index}
                 onClick={() => {
                   setSelected(data.value);
                   setIsActive(false);
-                  addTechnicalData(name, data.value);
+                  addTechnicalData(name, data.value, data.Theme);
                 }}
               >
                 {data.content}

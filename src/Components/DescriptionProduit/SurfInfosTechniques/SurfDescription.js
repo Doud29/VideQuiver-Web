@@ -6,7 +6,7 @@ import TechnicalValue from "../../../JSON/Technical-informations.json";
 //--------------// Composent
 import TitleTechnicalInformation from "../TitleTechnicalInformations";
 
-const SurfDescription = ({ technicalInformations, handleChange }) => {
+const SurfDescription = ({ technicalInformations }) => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
@@ -35,15 +35,17 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
         data={TechnicalValue.MER.Surf["Planche de surf"].Litrage}
         name="Volume de la planche [L]"
       />
+      {/* //---- Etat */}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //-----------------// LISTE des Marques  //----------------------//*/}
       <div className="inputdiv">
         <input
           type="text"
           placeholder=" "
-          value={technicalInformations.Marque}
+          // value={technicalInformations.Marque}
           name="Marque"
           id="Marque"
-          onChange={handleChange}
+          // onChange={handleChange}
           autoComplete="off"
         />
         <span className="spanDescriptionInput">Marque</span>
@@ -55,10 +57,10 @@ const SurfDescription = ({ technicalInformations, handleChange }) => {
           <input
             type="text"
             placeholder=" "
-            value={technicalInformations.Dimension}
+            // value={technicalInformations.Dimension}
             name="Dimension"
             id="Dimension"
-            onChange={handleChange}
+            // onChange={handleChange}
             autoComplete="off"
           />
           <span className="spanDescriptionInput">Dimensions</span>

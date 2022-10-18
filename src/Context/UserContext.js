@@ -55,22 +55,36 @@ export const UserContextProvider = (props) => {
   //-----------------// Data add Product //----------------//
   //-------------------------------------------------------//
 
+  //state global pour ajouter les datas
   const [createOffer, setCreateOffer] = useState({
     ["Offer Description"]: [],
     ["Technical informations"]: [],
     ["Sale/Rent/Exchange"]: [],
   });
 
-  let addTechnicalData = (name, value) => {
-    let newOffer = { ...createOffer };
-    newOffer["Technical informations"].push({
-      [name]: { value: value },
-    });
+  console.log(createOffer);
 
+  //add + check + update technical data
+  const addTechnicalData = (name, value, Theme) => {
+    //copie du state
+    let newOffer = { ...createOffer };
+    //on récupére nos valeurs dans une varibale
+    let ObjAdded = { [name]: value, Type: Theme };
+    //on vérifie que nos valeurs
+    let index = newOffer["Technical informations"].findIndex(
+      (obj) => obj.Type === Theme
+    );
+    //si l'obj n'existe pas, on push
+    if (index === -1) {
+      newOffer["Technical informations"].push(ObjAdded);
+      //si l'obj existe, on supprime l'existant et on push le nouvel
+    } else if (index !== -1) {
+      newOffer["Technical informations"].splice(index, 1);
+      newOffer["Technical informations"].push(ObjAdded);
+    }
+    //MAJ state
     setCreateOffer(newOffer);
   };
-
-  console.log(createOffer);
 
   return (
     <UserContext.Provider
