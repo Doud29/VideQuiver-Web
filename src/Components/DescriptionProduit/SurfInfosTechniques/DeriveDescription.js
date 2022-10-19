@@ -2,6 +2,7 @@
 import "../DescriptionProduit.scss";
 import DropDown from "../DropDownList/DropDown.js";
 import TechnicalValue from "../../../JSON/Technical-informations.json";
+import InputField from "../InputField/InputField";
 
 //--------------// Composent
 import TitleTechnicalInformation from "../TitleTechnicalInformations";
@@ -23,12 +24,14 @@ const DerivesDescription = () => {
       {/* //---// Etat derives */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //----// Marque*/}
-      <input
+      <InputField
         type="text"
-        placeholder="Marque"
         name="Marque"
         id="Marque"
-        // onChange={handleChange}
+        // value={Marque}
+        // onChange={onChange}
+        placeholder=" "
+        autoComplete="off"
       />
     </div>
   );

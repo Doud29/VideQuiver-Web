@@ -658,81 +658,176 @@
       "Leash": {
         "Type de maintien": [
           {
-            "id": 0,
+            "id": "Maintien-leash0",
+            "Theme": "maintient-leash",
             "content": " ",
             "value": null
           },
           {
-            "id": 1,
+            "id": "Maintien-leash1",
+            "Theme": "maintient-leash",
             "content": "Genou",
             "value": "Genou"
           },
           {
-            "id": 2,
+            "id": "Maintien-leash2",
+            "Theme": "maintient-leash",
             "content": "Cheville",
             "value": "Cheville"
           }
         ],
         "Epaisseur": [
           {
-            "id": 0,
+            "id": "Epaisseur-0",
+            "Theme": "Epaisseur-leash",
             "content": " ",
             "value": null
           },
           {
-            "id": 1,
+            "id": "Epaisseur-1",
+            "Theme": "Epaisseur-leash",
             "content": "3/5 - 4mm",
             "value": "3/5 - 4mm"
           },
           {
-            "id": 2,
+            "id": "Epaisseur-2",
+            "Theme": "Epaisseur-leash",
             "content": "3/16 - 4mm",
             "value": "3/16 - 4mm"
           },
           {
-            "id": 3,
+            "id": "Epaisseur-3",
+            "Theme": "Epaisseur-leash",
             "content": "7/32 - 5mm",
             "value": "7/32 - 5mm"
           },
           {
-            "id": 4,
+            "id": "Epaisseur-4",
+            "Theme": "Epaisseur-leash",
             "content": "1/4 - 6mm",
             "value": "1/4 - 6mm"
           },
           {
-            "id": 5,
+            "id": "Epaisseur-5",
+            "Theme": "Epaisseur-leash",
             "content": "5/16 - 7mm",
             "value": "5/16 - 7mm"
           },
           {
-            "id": 6,
+            "id": "Epaisseur-6",
+            "Theme": "Epaisseur-leash",
             "content": "9/32 - 7mm",
             "value": "9/32 - 7mm"
           },
           {
-            "id": 7,
+            "id": "Epaisseur-7",
+            "Theme": "Epaisseur-leash",
             "content": "3/8 - 9mm",
             "value": "3/8 - 9mm"
           },
           {
-            "id": 8,
+            "id": "Epaisseur-8",
+            "Theme": "Epaisseur-leash",
             "content": "1/4",
             "value": "1/4"
           },
           {
-            "id": 9,
+            "id": "Epaisseur-9",
+            "Theme": "Epaisseur-leash",
             "content": "6mm",
             "value": "6mm"
           },
           {
-            "id": 10,
+            "id": "Epaisseur-10",
+            "Theme": "Epaisseur-leash",
             "content": "7mm",
             "value": "7mm"
           },
           {
-            "id": 11,
+            "id": "Epaisseur-11",
+            "Theme": "Epaisseur-leash",
             "content": "8mm",
             "value": "8mm"
+          }
+        ],
+        "Longueur": [
+          {
+            "id": "Longueur-0",
+            "Theme": "Longueur-leash",
+            "content": "5'0'' / 152 cm",
+            "value": "5'0'' / 152 cm"
+          },
+          {
+            "id": "Longueur-1",
+            "Theme": "Longueur-leash",
+            "content": "6'' / 15.25 cm",
+            "value": "6'' / 15.25 cm"
+          },
+          {
+            "id": "Longueur-2",
+            "Theme": "Longueur-leash",
+            "content": "5'0'' / 152 cm",
+            "value": "5'0'' / 152 cm"
+          },
+          {
+            "id": "Longueur-3",
+            "Theme": "Longueur-leash",
+            "content": "5'6'' / 167 cm",
+            "value": "5'6'' / 167 cm"
+          },
+          {
+            "id": "Longueur-4",
+            "Theme": "Longueur-leash",
+            "content": "6'6'' / 198 cm",
+            "value": "6'6'' / 198 cm"
+          },
+          {
+            "id": "Longueur-5",
+            "Theme": "Longueur-leash",
+            "content": "7'0'' / 213 cm",
+            "value": "7'0'' / 213 cm"
+          },
+          {
+            "id": "Longueur-6",
+            "Theme": "Longueur-leash",
+            "content": "8'0'' / 244 cm",
+            "value": "8'0'' / 244 cm"
+          },
+          {
+            "id": "Longueur-7",
+            "Theme": "Longueur-leash",
+            "content": "9'0'' / 274 cm",
+            "value": "9'0'' / 274 cm"
+          },
+          {
+            "id": "Longueur-8",
+            "Theme": "Longueur-leash",
+            "content": "9'6'' / 289 cm",
+            "value": "9'6'' / 289 cm"
+          },
+          {
+            "id": "Longueur-9",
+            "Theme": "Longueur-leash",
+            "content": "10'0'' / 305 cm",
+            "value": "10'0'' / 305 cm"
+          },
+          {
+            "id": "Longueur-10",
+            "Theme": "Longueur-leash",
+            "content": "11'0'' / 335 cm",
+            "value": "11'0'' / 335 cm"
+          },
+          {
+            "id": "Longueur-11",
+            "Theme": "Longueur-leash",
+            "content": "12'0'' / 366 cm",
+            "value": "12'0'' / 366 cm"
+          },
+          {
+            "id": "Longueur-12",
+            "Theme": "Longueur-leash",
+            "content": "15'0'' / 460 cm",
+            "value": "15'0'' / 460 cm"
           }
         ]
       },

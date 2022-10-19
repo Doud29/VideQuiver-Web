@@ -1,10 +1,12 @@
 //--------------// Surf description css
 import "../DescriptionProduit.scss";
-import DropDown from "../DropDownList/DropDown.js";
+
 import TechnicalValue from "../../../JSON/Technical-informations.json";
 
 //--------------// Composent
 import TitleTechnicalInformation from "../TitleTechnicalInformations";
+import DropDown from "../DropDownList/DropDown.js";
+import InputField from "../InputField/InputField";
 
 const SurfDescription = ({ technicalInformations }) => {
   return (
@@ -37,41 +39,33 @@ const SurfDescription = ({ technicalInformations }) => {
       />
       {/* //---- Etat */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
-      {/* //-----------------// LISTE des Marques  //----------------------//*/}
-      <div className="inputdiv">
-        <input
-          type="text"
-          placeholder=" "
-          // value={technicalInformations.Marque}
-          name="Marque"
-          id="Marque"
-          // onChange={handleChange}
-          autoComplete="off"
-        />
-        <span className="spanDescriptionInput">Marque</span>
-      </div>
+      {/* //---- Marque */}
+      <InputField
+        type="text"
+        name="Marque"
+        id="Marque"
+        // value={Marque}
+        // onChange={onChange}
+        placeholder=" "
+        autoComplete="off"
+      />
 
-      <div className="container-dimension">
-        {/* //--------------------------// Dimension //------------------------//*/}
-        <div className="inputdiv">
-          <input
-            type="text"
-            placeholder=" "
-            // value={technicalInformations.Dimension}
-            name="Dimension"
-            id="Dimension"
-            // onChange={handleChange}
-            autoComplete="off"
-          />
-          <span className="spanDescriptionInput">Dimensions</span>
-          <div>
-            <ion-icon
-              style={{ color: "grey" }}
-              name="information-circle-outline"
-            ></ion-icon>
-          </div>
-        </div>
-      </div>
+      {/* //-----// Dimension */}
+      <InputField
+        type="text"
+        name="Dimensions"
+        id="Dimensions"
+        // value={Marque}
+        // onChange={onChange}
+        placeholder=" "
+        autoComplete="off"
+      />
+      {/* <div>
+        <ion-icon
+          style={{ color: "grey" }}
+          name="information-circle-outline"
+        ></ion-icon>
+      </div> */}
     </div>
   );
 };

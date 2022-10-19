@@ -1,98 +1,44 @@
 //--------------// Composent
 import TitleTechnicalInformation from "../TitleTechnicalInformations";
+import DropDown from "../DropDownList/DropDown.js";
+import InputField from "../InputField/InputField";
+import TechnicalValue from "../../../JSON/Technical-informations.json";
 
 //--------------// packages
-// import { Link } from "react-router-dom";
-import { useState } from "react";
 
 const PadDescription = () => {
-  const [padDescription, setPadDescription] = useState({
-    Couleur: "",
-    Marque: "",
-    Nombredepieces: "",
-    Etat: "",
-  });
-
   // console.log(surfDescriptionState);
 
-  const handleChange = (event) => {
-    let value = event.target.value;
-    let name = event.target.name;
-
-    setPadDescription((prevalue) => {
-      return {
-        ...prevalue, // Spread Operator
-        [name]: value,
-      };
-    });
-  };
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
-
-      {/* //-----------------// Couleur type de la planche //----------------//*/}
-      <input
-        type="text"
-        placeholder="Couleur du Pad"
-        name="couleur"
-        id="couleur"
-        value={padDescription.Couleur}
-        onChange={handleChange}
+      {/* //---- Volume */}
+      <DropDown
+        data={TechnicalValue.MER.Surf.Pad["Nombre de pièces"]}
+        name="Nombre de pièce"
       />
-      {/* //-----------------// Nombre de pièces sur le pad //----------------//*/}
-      <div className="selectdiv ">
-        <select
-          type="text"
-          value={padDescription.Nombredepieces}
-          onChange={handleChange}
-          name="nombre de pièces"
-          id="pièces"
-        >
-          <option>Nombre de pièces</option>
-          <option value="1">1 pièces</option>
-          <option value="2">2 pièces</option>
-          <option value="3">3 pièces</option>
-          <option value="4">4 pièces</option>
-          <option value="5">5 pièces</option>
-          <option value="6">6 pièces</option>
-          <option value="7">7 pièces</option>
-          <option value="8">8 pièces</option>
-        </select>
-      </div>
-      {/* //-----------------// Marque du pad //----------------//*/}
-      <input
+      {/* //---- Etat */}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
+      {/* //----// Couleur */}
+      <InputField
         type="text"
-        placeholder="Marque du Pad"
+        name="Couleur"
+        id="Couleur"
+        // value={Marque}
+        // onChange={onChange}
+        placeholder=" "
+        autoComplete="off"
+      />
+      {/* //---- Marque */}
+      <InputField
+        type="text"
         name="Marque"
         id="Marque"
-        value={padDescription.Marque}
-        onChange={handleChange}
+        // value={Marque}
+        // onChange={onChange}
+        placeholder=" "
+        autoComplete="off"
       />
-      {/* //-----------------// Etat du pad //----------------//*/}
-      <div className="selectdiv ">
-        <select
-          value={padDescription.Etat}
-          onChange={handleChange}
-          name="Etat"
-          id="Etat"
-        >
-          <option>Etat du pad</option>
-          <option value="Neuf">Neuf</option>
-          <option value="Très bon état">Très bon état</option>
-          <option value="Bon état">Bon état</option>
-          <option value="Etat correct">Etat correct</option>
-          <option value="Mauvais Etat">Mauvais Etat</option>
-        </select>
-      </div>
-      {/* //-----------------// Prix du pad //----------------//*/}
-      {/* <input
-        type="text"
-        placeholder="prix du Pad"
-        name="Prix"
-        id="Prix"
-        value={padDescription.Prix}
-        onChange={handleChange}
-      /> */}
     </div>
   );
 };
