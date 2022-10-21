@@ -1,0 +1,182 @@
+.container-description {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 15px;
+
+  //------------------------------------------------------------------------//
+  //-------------------// BLOC TITRE "INFORMATIONS TECHNIQUES//-------------//
+  //------------------------------------------------------------------------//
+
+  .container-titre {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    height: 40px;
+    margin-bottom: 10px;
+    .line {
+      box-sizing: border-box;
+      border: 0.5px solid #508ae2;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+    h3 {
+      font-size: 15px;
+      padding-left: 10px;
+      padding-right: 10px;
+      position: absolute;
+      top: -15%;
+      color: #555555;
+      margin-left: 30px;
+      background-color: white;
+      z-index: 1;
+    }
+  }
+
+  //------------------------------------------------------------------------//
+  //-----------------------// LISTE DEROULANTES ET CHAMPS//-----------------//
+  //------------------------------------------------------------------------//
+
+  input,
+  select {
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    color: #555555;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+  }
+  ion-icon {
+    font-size: 25px;
+    position: absolute;
+    right: 7px;
+    top: 12px;
+  }
+
+  .container-dimension {
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  //------------------------------------------------------------------------//
+  //-------------------// Dimensionnement des listes INPUTS //--------------//
+  //------------------------------------------------------------------------//
+
+  .inputdiv,
+  .selectdiv {
+    position: relative;
+    width: 100%;
+  }
+  .spanDescriptionInput {
+    position: absolute;
+    top: 15px;
+    left: 10px;
+    font-size: 15px;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+  #Marque:focus ~ .spanDescriptionInput,
+  #Marque:not(:placeholder-shown)#Marque:not(:focus) ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #Dimension:focus ~ .spanDescriptionInput,
+  #Dimension:not(:placeholder-shown)#Dimension:not(:focus)
+    ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  #Adresse:focus ~ .spanDescriptionInput,
+  #Adresse:not(:placeholder-shown)#Adresse:not(:focus) ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  #Prix:focus ~ .spanDescriptionInput,
+  #Prix:not(:placeholder-shown)#Prix:not(:focus) ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  select:valid ~ .spanDescriptionInput {
+    color: #508ae2;
+    transform: translateX(15px) translateY(-25px);
+    background: white;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  //------------------------------------------------------------------------//
+  //-----------------// Dimensionnement des listes déroulantes //-----------//
+  //------------------------------------------------------------------------//
+
+  .selectdiv:after {
+    content: "\22C1";
+    color: #508ae2;
+    right: 0;
+    top: 0;
+    border: 1px solid grey;
+    border-left: none;
+    border-bottom-right-radius: 8px;
+    border-top-right-radius: 8px;
+    height: 50px;
+    width: 35px;
+    position: absolute;
+    pointer-events: none;
+    box-sizing: border-box;
+    background: white;
+    font-size: 20px;
+    padding: 10px 5px 5px 5px;
+    font-weight: 600;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  select {
+    appearance: none;
+  }
+
+  /* style the items (options), including the selected item: */
+  // .select-items div,
+  .selectdiv-selected {
+    color: #ffffff;
+    padding: 8px 16px;
+    border: 1px solid transparent;
+    border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+    cursor: pointer;
+  }
+
+  .select-items {
+    position: absolute;
+    background-color: DodgerBlue;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 99;
+  }
+}

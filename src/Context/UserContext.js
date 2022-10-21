@@ -51,6 +51,145 @@ export const UserContextProvider = (props) => {
     return unscribe;
   }, []);
 
+  //--------------------------------------------------//
+  //-------------// Navigation Modaux //--------------//
+  //--------------------------------------------------//
+
+  //-------// State pour ouvrir et fermer les modals modal
+
+  const [openModalState, setOpenModalState] = useState({
+    modalCategorie: false,
+    modalSurf: false,
+    modalBodyBoard: false,
+    modalSup: false,
+    modalWindSurf: false,
+    modalkiteSurf: false,
+    modalNeoprene: false,
+    modalBodySurf: false,
+    modalApnee: false,
+  });
+
+  const ToggleModal = (modal) => {
+    if (modal === "Catégories") {
+      setOpenModalState({
+        modalCategorie: true,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+    if (modal === "Surf") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalSurf: true,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+
+    if (modal === "BodyBoard") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalSurf: false,
+        modalBodyBoard: true,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+    if (modal === "SUP") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: true,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+    if (modal === "WindSurf") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: true,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+    if (modal === "KiteSurf") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: true,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+    if (modal === "Neoprene") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: true,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+    if (modal === "BodySurf") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: true,
+        modalApnee: false,
+      });
+    }
+    if (modal === "Apnée") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: true,
+      });
+    }
+  };
+
   //-------------------------------------------------------//
   //-----------------// Data add Product //----------------//
   //-------------------------------------------------------//
@@ -62,9 +201,9 @@ export const UserContextProvider = (props) => {
     ["Sale/Rent/Exchange"]: [],
   });
 
-  console.log(createOffer);
+  // console.log(createOffer);
 
-  //add + check + update technical data
+  //add + check + update technical data forDropdownList
   const addTechnicalData = (name, value, Theme) => {
     //copie du state
     let newOffer = { ...createOffer };
@@ -97,6 +236,9 @@ export const UserContextProvider = (props) => {
         connectGoogleUser,
         // createOffer,
         addTechnicalData,
+        openModalState,
+        setOpenModalState,
+        ToggleModal,
       }}
     >
       {props.children}

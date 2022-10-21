@@ -3,7 +3,7 @@ import "./modalCategories.scss";
 
 //--------------// Components
 import ModalMer from "./ModalMer/ModalMer";
-
+import CategorieButton from "./TechnicalComponents/CategorieButton";
 //--------------// packages
 // import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -39,8 +39,6 @@ const ModalCategories = ({
           setChoiceValidatedForSellState={setChoiceValidatedForSellState}
         />
       ) : null}
-
-      {/* //-----------------------------//Overlay  */}
       <div
         className="overlay-modal-trigger"
         onClick={() => {
@@ -60,40 +58,7 @@ const ModalCategories = ({
             {arrowLeft}
           </div>
         </div>
-        <div className="container-button">
-          <div
-            onClick={() => {
-              setModalState(true);
-            }}
-          >
-            <span>Mer</span>
-            <div className="chevronRight">{chevronRigth}</div>
-          </div>{" "}
-          <div
-          // onClick={() => {
-          //   setMontagneState(!montagneState);
-          // }}
-          >
-            <span>Montagne</span>
-            <div className="chevronRight">{chevronRigth}</div>
-          </div>
-          <div
-          // onClick={() => {
-          //   setVolState(!volState);
-          // }}
-          >
-            <span>Vol</span>
-            <div className="chevronRight">{chevronRigth}</div>
-          </div>
-          <div
-          // onClick={() => {
-          //   setStreetState(!streetState);
-          // }}
-          >
-            <span>Street</span>
-            <div className="chevronRight">{chevronRigth}</div>
-          </div>
-        </div>
+        <CategorieButton />
       </div>
     </div>
   );
