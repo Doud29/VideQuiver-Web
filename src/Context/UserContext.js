@@ -52,13 +52,17 @@ export const UserContextProvider = (props) => {
   }, []);
 
   //--------------------------------------------------//
-  //-------------// Navigation Modaux //--------------//
+  //---------------// Toggle Modaux //----------------//
   //--------------------------------------------------//
 
   //-------// State pour ouvrir et fermer les modals modal
 
   const [openModalState, setOpenModalState] = useState({
     modalCategorie: false,
+    modalMer: false,
+    modalMountain: false,
+    modalStreet: false,
+    modalAir: false,
     modalSurf: false,
     modalBodyBoard: false,
     modalSup: false,
@@ -69,10 +73,16 @@ export const UserContextProvider = (props) => {
     modalApnee: false,
   });
 
+  console.log(openModalState.modalSurf);
+
   const ToggleModal = (modal) => {
-    if (modal === "Catégories") {
-      setOpenModalState({
+    if (modal === "categories") {
+      return setOpenModalState({
         modalCategorie: true,
+        modalMer: false,
+        modalMountain: false,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: false,
         modalBodyBoard: false,
         modalSup: false,
@@ -83,9 +93,50 @@ export const UserContextProvider = (props) => {
         modalApnee: false,
       });
     }
+
+    if (modal === "Sea") {
+      return setOpenModalState({
+        modalCategorie: false,
+        modalMer: true,
+        modalMountain: false,
+        modalStreet: false,
+        modalAir: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+
+    if (modal === "Mountain") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
+        modalSurf: true,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+
     if (modal === "Surf") {
       setOpenModalState({
         modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: true,
         modalBodyBoard: false,
         modalSup: false,
@@ -100,6 +151,10 @@ export const UserContextProvider = (props) => {
     if (modal === "BodyBoard") {
       setOpenModalState({
         modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: false,
         modalBodyBoard: true,
         modalSup: false,
@@ -113,6 +168,10 @@ export const UserContextProvider = (props) => {
     if (modal === "SUP") {
       setOpenModalState({
         modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: false,
         modalBodyBoard: false,
         modalSup: true,
@@ -126,6 +185,10 @@ export const UserContextProvider = (props) => {
     if (modal === "WindSurf") {
       setOpenModalState({
         modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: false,
         modalBodyBoard: false,
         modalSup: false,
@@ -139,6 +202,10 @@ export const UserContextProvider = (props) => {
     if (modal === "KiteSurf") {
       setOpenModalState({
         modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: false,
         modalBodyBoard: false,
         modalSup: false,
@@ -152,6 +219,10 @@ export const UserContextProvider = (props) => {
     if (modal === "Neoprene") {
       setOpenModalState({
         modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: false,
         modalBodyBoard: false,
         modalSup: false,
@@ -165,6 +236,10 @@ export const UserContextProvider = (props) => {
     if (modal === "BodySurf") {
       setOpenModalState({
         modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: false,
         modalBodyBoard: false,
         modalSup: false,
@@ -178,6 +253,10 @@ export const UserContextProvider = (props) => {
     if (modal === "Apnée") {
       setOpenModalState({
         modalCategorie: false,
+        modalMer: false,
+        modalMountain: true,
+        modalStreet: false,
+        modalAir: false,
         modalSurf: false,
         modalBodyBoard: false,
         modalSup: false,
@@ -188,6 +267,23 @@ export const UserContextProvider = (props) => {
         modalApnee: true,
       });
     }
+    if (modal === "closeAll") {
+      setOpenModalState({
+        modalCategorie: false,
+        modalMer: false,
+        modalMountain: false,
+        modalStreet: false,
+        modalAir: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
   };
 
   //-------------------------------------------------------//
@@ -196,6 +292,7 @@ export const UserContextProvider = (props) => {
 
   //state global pour ajouter les datas
   const [createOffer, setCreateOffer] = useState({
+    Product: "",
     ["Offer Description"]: [],
     ["Technical informations"]: [],
     ["Sale/Rent/Exchange"]: [],
@@ -234,7 +331,8 @@ export const UserContextProvider = (props) => {
         currentUser,
         resetPassword,
         connectGoogleUser,
-        // createOffer,
+        createOffer,
+        setCreateOffer,
         addTechnicalData,
         openModalState,
         setOpenModalState,

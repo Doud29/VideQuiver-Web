@@ -2,48 +2,22 @@
 import "./modalCategories.scss";
 
 //--------------// Components
-import ModalMer from "./ModalMer/ModalMer";
 import CategorieButton from "./TechnicalComponents/CategorieButton";
 //--------------// packages
 // import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../../../Context/UserContext";
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+const ModalCategories = ({}) => {
+  const { ToggleModal } = useContext(UserContext);
 
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
-
-const ModalCategories = ({
-  closeModalCategorie,
-  choiceValidatedForSellState,
-  setChoiceValidatedForSellState,
-}) => {
-  //------------------// States Modal Discipline Aquatique [Permettent d'acceder à la pa suivante]
-  const [ModalState, setModalState] = useState(false);
-  // const [volState, setVolState] = useState(false);
-  // const [montagneState, setMontagneState] = useState(false);
-  // const [streetState, setStreetState] = useState(false);
-
-  // console.log(ModalState);
   return (
     //-----------------------------//Container Modal
     <div className="container-modal">
       {/* //-----------------------// Condition pour faire apparaitre ModalMer avec l'ensemble des sport aquatiques //------------// */}
-      {ModalState === true && choiceValidatedForSellState === false ? (
-        <ModalMer
-          setModalState={setModalState}
-          choiceValidatedForSellState={choiceValidatedForSellState}
-          setChoiceValidatedForSellState={setChoiceValidatedForSellState}
-        />
-      ) : null}
       <div
         className="overlay-modal-trigger"
-        onClick={() => {
-          closeModalCategorie(false);
-        }}
+        onClick={() => ToggleModal("closeAll")}
       ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
@@ -51,11 +25,9 @@ const ModalCategories = ({
           <p>Catégories</p>
           <div
             className="bloc-arrowLeft"
-            onClick={() => {
-              closeModalCategorie(false);
-            }}
+            onClick={() => ToggleModal("closeAll")}
           >
-            {arrowLeft}
+            <ion-icon name="arrow-back-outline"></ion-icon>{" "}
           </div>
         </div>
         <CategorieButton />

@@ -1,21 +1,18 @@
+import { useContext } from "react";
+import { UserContext } from "../../../../Context/UserContext";
+
 const CategorieButton = () => {
+  const { ToggleModal } = useContext(UserContext);
+
   return (
     <div className="container-button">
-      <div
-        onClick={() => {
-          setModalState(true);
-        }}
-      >
+      <div onClick={() => ToggleModal("Sea")}>
         <span>Mer</span>
-        <div className="chevronRight">{chevronRigth}</div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
       </div>{" "}
-      <div
-      // onClick={() => {
-      //   setMontagneState(!montagneState);
-      // }}
-      >
+      <div onClick={() => ToggleModal("Mountain")}>
         <span>Montagne</span>
-        <div className="chevronRight">{chevronRigth}</div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
       </div>
       <div
       // onClick={() => {
@@ -23,7 +20,7 @@ const CategorieButton = () => {
       // }}
       >
         <span>Vol</span>
-        <div className="chevronRight">{chevronRigth}</div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
       </div>
       <div
       // onClick={() => {
@@ -31,7 +28,7 @@ const CategorieButton = () => {
       // }}
       >
         <span>Street</span>
-        <div className="chevronRight">{chevronRigth}</div>
+        <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
       </div>
     </div>
   );

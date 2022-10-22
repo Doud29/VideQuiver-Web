@@ -2,72 +2,22 @@
 // import "./modalmer.scss";
 
 //--------------// Components
-import ModalSurf from "./ModalSurf/ModalSurf";
-import ModalBodyBoard from "./ModalBodyBoard/ModalBodyBoard";
-import ModalSup from "./ModalSup/ModalSup";
-import ModalWindSurf from "./ModalWindSurf/ModalWindSurf";
-// import ModalFoil from "./ModalFoil/ModalFoil";
-import ModalKiteSurf from "./ModalKiteSurf/ModalKiteSurf";
-import ModalNeoprene from "./ModalNeoprene/ModalNeoprene";
-import ModalBodySurf from "./ModalBodySurf/ModalBodySurf";
-import ModalApnee from "./ModalApnee/ModalApnee";
+import { UserContext } from "../../../../Context/UserContext";
 
 //--------------// packages
 // import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useContext } from "react";
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-const chevronRigth = <FontAwesomeIcon icon={faChevronRight} />;
-
-const ModalMer = ({
-  setModalState,
-  choiceValidatedForSellState,
-  setChoiceValidatedForSellState,
-}) => {
-  //------------------// State Modal Discipline Aquatique
-  const [surfState, setsurfState] = useState(false);
-  const [bodyBoardState, setbodyBoardState] = useState(false);
-  const [standUpPaddleState, setStandUpPaddleState] = useState(false);
-  const [windState, setWindState] = useState(false);
-  // const [foilState, setfoilState] = useState(false);
-  const [kiteSurfState, setKiteSurfState] = useState(false);
-  const [combinaisonState, setCombinaisonStaTe] = useState(false);
-  const [bodySurfState, setBodySurfState] = useState(false);
-  const [apneeState, setApneeState] = useState(false);
+const ModalMer = ({}) => {
+  const { ToggleModal } = useContext(UserContext);
 
   return (
     //-----------------------------//Container Modal
     <div className="container-modal">
-      {/* {surfState && <ModalSurf setsurfState={setsurfState} />} */}
-
-      {surfState === true && choiceValidatedForSellState === false ? (
-        <ModalSurf
-          setsurfState={setsurfState}
-          setChoiceValidatedForSellState={setChoiceValidatedForSellState}
-        />
-      ) : null}
-
-      {bodyBoardState && <ModalBodyBoard closeModal={setbodyBoardState} />}
-      {standUpPaddleState && <ModalSup closeModal={setStandUpPaddleState} />}
-      {windState && <ModalWindSurf closeModal={setWindState} />}
-      {kiteSurfState && <ModalKiteSurf closeModal={setKiteSurfState} />}
-      {combinaisonState && <ModalNeoprene closeModal={setCombinaisonStaTe} />}
-      {bodySurfState && <ModalBodySurf closeModal={setBodySurfState} />}
-      {apneeState && <ModalApnee closeModal={setApneeState} />}
-
-      {/* {kiteSurfState && <ModalKiteSurf closeModal={setBodySurfState} />} */}
-
       {/* //-----------------------------//Overlay  */}
       <div
         className="overlay-modal-trigger"
-        onClick={() => {
-          setModalState(false);
-        }}
+        onClick={() => ToggleModal("closeAll")}
       ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
@@ -75,65 +25,52 @@ const ModalMer = ({
           <p>Disciplines</p>
           <div
             className="bloc-arrowLeft"
-            onClick={() => {
-              setModalState(false);
-            }}
+            onClick={() => ToggleModal("categories")}
           >
-            {arrowLeft}
+            <ion-icon name="arrow-back-outline"></ion-icon>{" "}
           </div>
         </div>
         <div className="container-button">
           <div
             onClick={() => {
-              setCombinaisonStaTe(true);
+              // setCombinaisonStaTe(true);
             }}
           >
             <span>Néoprène </span>
-            <div className="chevronRight">{chevronRigth}</div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>
-          <div onClick={() => setsurfState(true)}>
+          <div onClick={() => ToggleModal("Surf")}>
             <span>Surf</span>
-            <div className="chevronRight">{chevronRigth}</div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>{" "}
-          <div onClick={() => setbodyBoardState(true)}>
+          <div onClick={() => ToggleModal("BodyBoard")}>
             <span>BodyBoard</span>
-            <div className="chevronRight">{chevronRigth}</div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>{" "}
-          <div onClick={() => setBodySurfState(true)}>
+          <div onClick={() => ToggleModal("BodySurf")}>
             <span>BodySurf</span>
-            <div className="chevronRight">{chevronRigth}</div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>{" "}
           {/* <div onClick={() => setfoilState(true)}>
             <span>Foil</span>
-            <div className="chevronRight">{chevronRigth}</div>
+                    <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
+
           </div> */}
-          <div onClick={() => setKiteSurfState(true)}>
+          <div onClick={() => ToggleModal("KiteSurf")}>
             <span>KiteSurf</span>
-            <div className="chevronRight">{chevronRigth}</div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>
-          <div
-            onClick={() => {
-              setWindState(true);
-            }}
-          >
+          <div onClick={() => ToggleModal("WindSurf")}>
             <span>WindSurf</span>
-            <div className="chevronRight">{chevronRigth}</div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>
-          <div
-            onClick={() => {
-              setStandUpPaddleState(true);
-            }}
-          >
+          <div onClick={() => ToggleModal("SUP")}>
             <span>StandUpPaddle</span>
-            <div className="chevronRight">{chevronRigth}</div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>
-          <div
-            onClick={() => {
-              setApneeState(true);
-            }}
-          >
+          <div onClick={() => ToggleModal("Apnee")}>
             <span>Apnée</span>
-            <div className="chevronRight">{chevronRigth}</div>
+            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>
         </div>
       </div>

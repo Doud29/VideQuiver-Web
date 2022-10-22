@@ -1,45 +1,36 @@
-//--------------// Components
-// import ModalMer from "../ModalMer/ModalMer";
-
 //--------------// packages
 
 import React, { useContext } from "react";
-import { DescriptionContext } from "../../../../../Context/DescriptionContext";
+import { UserContext } from "../../../../../Context/UserContext";
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-
-const ModalSurf = ({ setsurfState, setChoiceValidatedForSellState }) => {
+const ModalSurf = ({ Produit }) => {
   //---------// on récupére et on destrucure notre context[Objet] pour une meilleure lecture du code
-  const { Produit, updateInpute } = useContext(DescriptionContext);
+
+  const { ToggleModal } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
     if (e.target.value !== "") {
       setTimeout(() => {
-        setChoiceValidatedForSellState(true);
+        ToggleModal("closeAll");
       }, 500);
     }
-    updateInpute(e.target.value);
+    // updateInpute(e.target.value);
+    // setCreateOffer("Planche de Surf");
   };
 
   return (
     <div className="container-modal">
       {/* //-----------------------------//Overlay  */}
-      <div className="overlay-modal-trigger"></div>
+      <div
+        className="overlay-modal-trigger"
+        onClick={() => ToggleModal("closeAll")}
+      ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
         <div className="bloc-header">
           <p>Surf</p>
-          <div
-            className="bloc-arrowLeft"
-            onClick={() => {
-              setsurfState(false);
-            }}
-          >
-            {arrowLeft}
+          <div className="bloc-arrowLeft" onClick={() => ToggleModal("Sea")}>
+            <ion-icon name="arrow-back-outline"></ion-icon>{" "}
           </div>
         </div>
         <div className="container-button">

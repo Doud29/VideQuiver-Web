@@ -1,44 +1,45 @@
 //--------------// Css
 import "./addProduct.scss";
 
-//--------------// Components
+//----------// Modaux //------------//
 import ModalCategories from "../../Components/Modal/ModalDiscipline/ModalCategories";
+import ModalMer from "../../Components/Modal/ModalDiscipline/ModalMer/ModalMer";
+import ModalSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalSurf/ModalSurf";
+import ModalApnee from "../../Components/Modal/ModalDiscipline/ModalMer/ModalApnee/ModalApnee";
+import ModalBodyBoard from "../../Components/Modal/ModalDiscipline/ModalMer/ModalBodyBoard/ModalBodyBoard";
+import ModalKiteSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalKiteSurf/ModalKiteSurf";
+import ModalBodySurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalBodySurf/ModalBodySurf";
+import ModalSup from "../../Components/Modal/ModalDiscipline/ModalMer/ModalSup/ModalSup";
+import ModalWindSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalWindSurf/ModalWindSurf";
+//----------// Technical Components //------------//
 import SurfDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/SurfDescription";
 import DerivesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/DeriveDescription";
-import { DescriptionContext } from "../../Context/DescriptionContext";
+// import { DescriptionContext } from "../../Context/DescriptionContext";
 import LeashDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/LeashDescription";
 import PadDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/PadDescription";
 import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
+import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
+//----------// Components //------------//
 import DragnDrop from "../../Components/AddProduct/1-DrapNDrop/DragnDrop";
 import SwitchSelection from "../../Components/InformationsComplementaire/SwitchSelection";
 import OfferDescription from "../../Components/AddProduct/2-DescriptionOffre/OfferDescription";
-import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
+//---------// Context
 import { UserContext } from "../../Context/UserContext";
-
 //--------------// packages
 import { useState, useContext } from "react";
 
 const AddProduct = () => {
   //-------// STATES
 
-  //-------// State pour valider le choix de l'input et fermer l'ensemble des modaux lors de la validation
-  const [choiceValidatedForSellState, setChoiceValidatedForSellState] =
-    useState(false);
-
   //--------// Add Photos
   const [files, setfiles] = useState([]);
 
   //-------// State pour connaitre quel produit choisi
   const [Produit, setProduct] = useState([]);
-  console.log(Produit);
+  // console.log(Produit);
 
   //------// CONTEXT
   const { openModalState } = useContext(UserContext);
-
-  const contextValue = {
-    Produit,
-    updateInpute: setProduct,
-  };
 
   //------// fonction pour soumetre la demande de vente
   const handlAddProduct = (event) => {
@@ -48,94 +49,93 @@ const AddProduct = () => {
   };
 
   return (
-    <DescriptionContext.Provider value={contextValue}>
-      <>
-        <div className="container-addProduct">
-          {/* //----// ModalDiscipline */}
-          {openModalState.modalCategorie === true &&
-          choiceValidatedForSellState === false ? (
-            <ModalCategories
-              // closeModalCategorie={setOpenModalState}
-              choiceValidatedForSellState={choiceValidatedForSellState}
-              setChoiceValidatedForSellState={setChoiceValidatedForSellState}
-            />
-          ) : null}
-          <HeaderAddProduct />
-          <form onSubmit={handlAddProduct}>
-            <DragnDrop files={files} setfiles={setfiles} />
-            <OfferDescription
-              // setOpenModalState={setOpenModalState}
-              Produit={Produit}
-              setChoiceValidatedForSellState={setChoiceValidatedForSellState}
-            />
-            {/* 
+    <>
+      <div className="container-addProduct">
+        {/* //----// Disciplines */}
+        {openModalState.modalCategorie && <ModalCategories />}
+        {/* //----// Catégories */}
+        {openModalState.modalMer && <ModalMer />}
+        {/* //----// SportMer */}
+        {openModalState.modalSurf && <ModalSurf />}
+        {openModalState.modalBodyBoard && <ModalBodyBoard />}
+        {openModalState.modalSup && <ModalSup />}
+        {openModalState.modalWindSurf && <ModalWindSurf />}
+        {openModalState.modalKiteSurf && <ModalKiteSurf />}
+        {/* {openModalState.N && <ModalNeoprene  />} */}
+        {openModalState.modalBodySurf && <ModalBodySurf />}
+        {openModalState.modalApnee && <ModalApnee />}
+
+        <HeaderAddProduct />
+        <form onSubmit={handlAddProduct}>
+          <DragnDrop files={files} setfiles={setfiles} />
+          <OfferDescription Produit={Produit} />
+          {/* 
 //------------// MER 
 //------------// Composents Surf 
            */}
-            {Produit === "Planche de surf" && <SurfDescription />}
-            {Produit === "Dérives / Ailerons" && <DerivesDescription />}
-            {Produit === "Pad" && <PadDescription />}
-            {Produit === "Leash" && <LeashDescription />}
-            {/*
+          {Produit === "Planche de surf" && <SurfDescription />}
+          {Produit === "Dérives / Ailerons" && <DerivesDescription />}
+          {Produit === "Pad" && <PadDescription />}
+          {Produit === "Leash" && <LeashDescription />}
+          {/*
 
 //-----------// Composents Néopréne*/}
 
-            {/*
+          {/*
 //----------------------------------------------//  
 //-----------// Composents BodyBoard //---------// 
 //----------------------------------------------//   */}
 
-            {/*
+          {/*
 //----------------------------------------------//  
 //-----------// Composents BodySurf //----------// 
 //----------------------------------------------//   */}
 
-            {/*
+          {/*
 //----------------------------------------------//  
 //-----------// Composents Kite Surf //---------// 
 //----------------------------------------------//   */}
 
-            {/*
+          {/*
 //----------------------------------------------//  
 //-----------// Composents Windsurf //----------// 
 //----------------------------------------------//   */}
 
-            {/*
+          {/*
 //----------------------------------------------//  
 //--------// Composents StandUpPaddle //--------// 
 //----------------------------------------------//   */}
 
-            {/*
+          {/*
 //----------------------------------------------//  
 //----------// Composents Apnée //--------------// 
 //----------------------------------------------//   */}
 
-            {/* 
+          {/* 
 //----------------------------------------------//  
 //------------------// MONTAGNE //--------------//
 //----------------------------------------------//   */}
-            {/* 
+          {/* 
 //----------------------------------------------//  
 //----------------//Type D'ANNONCE //-----------//
 //----------------------------------------------// */}
 
-            {choiceValidatedForSellState === true && (
-              <SwitchSelection
-              //
-              // handleChange={handleChange}
-              />
-            )}
-            {/* 
+          {/* {choiceValidatedForSellState === true && (
+            <SwitchSelection
+            
+            handleChange={handleChange}
+            />
+          )} */}
+          {/* 
 //----------------------------------------------//  
 //----------//INFORMATIONS COMPLEMENTAIRE //----//
 //----------------------------------------------// */}
-            {/* {choiceValidatedForSellState === true && (
+          {/* {choiceValidatedForSellState === true && (
               <InformationsComplémentaire />
             )} */}
-          </form>
-        </div>
-      </>
-    </DescriptionContext.Provider>
+        </form>
+      </div>
+    </>
   );
 };
 
