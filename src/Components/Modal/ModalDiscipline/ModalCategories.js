@@ -8,7 +8,7 @@ import CategorieButton from "./TechnicalComponents/CategorieButton";
 import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext";
 
-const ModalCategories = ({}) => {
+const ModalCategories = () => {
   const { ToggleModal } = useContext(UserContext);
 
   return (

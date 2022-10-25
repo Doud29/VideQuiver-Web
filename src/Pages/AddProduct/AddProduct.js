@@ -34,12 +34,8 @@ const AddProduct = () => {
   //--------// Add Photos
   const [files, setfiles] = useState([]);
 
-  //-------// State pour connaitre quel produit choisi
-  const [Produit, setProduct] = useState([]);
-  // console.log(Produit);
-
   //------// CONTEXT
-  const { openModalState } = useContext(UserContext);
+  const { openModalState, createOffer } = useContext(UserContext);
 
   //------// fonction pour soumetre la demande de vente
   const handlAddProduct = (event) => {
@@ -68,15 +64,17 @@ const AddProduct = () => {
         <HeaderAddProduct />
         <form onSubmit={handlAddProduct}>
           <DragnDrop files={files} setfiles={setfiles} />
-          <OfferDescription Produit={Produit} />
+          <OfferDescription />
           {/* 
 //------------// MER 
 //------------// Composents Surf 
            */}
-          {Produit === "Planche de surf" && <SurfDescription />}
-          {Produit === "Dérives / Ailerons" && <DerivesDescription />}
-          {Produit === "Pad" && <PadDescription />}
-          {Produit === "Leash" && <LeashDescription />}
+          {createOffer.Produit === "Planche de Surf" && <SurfDescription />}
+          {createOffer.Produit === "Dérives / Ailerons" && (
+            <DerivesDescription />
+          )}
+          {createOffer.Produit === "Pad" && <PadDescription />}
+          {createOffer.Produit === "Leash" && <LeashDescription />}
           {/*
 
 //-----------// Composents Néopréne*/}

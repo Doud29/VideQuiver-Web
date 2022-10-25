@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../../../../Context/UserContext";
 
 const TexteAeraField = () => {
-  //-------// State pour récupérer la description du produit renseigné
-  const [descriptionState, setDescriptionState] = useState("");
+  const { createOffer, setCreateOffer, ToggleModal } = useContext(UserContext);
 
   //------// connaitre le nombre de caractére restant
   const numberOfCaractersDescription = (valueInput) => {
@@ -21,15 +21,22 @@ const TexteAeraField = () => {
     return color;
   };
 
+  const handleCheckBox = (e) => {
+    if (e.target.value !== "") {
+      setTimeout(() => {
+        ToggleModal("closeAll");
+      }, 500);
+    }
+    setCreateOffer({ ...createOffer, DescriptionOffer: e.target.value });
+  };
+
   return (
     <div className="container-input-span">
       <textarea
         type="text"
-        value={descriptionState}
+        value={createOffer.DescriptionOffer}
         placeholder=" "
-        onChange={(e) => {
-          setDescriptionState(e.target.value);
-        }}
+        onChange={(e) => handleCheckBox(e)}
         name="description"
         id="description"
         maxLength={300}
@@ -39,10 +46,11 @@ const TexteAeraField = () => {
       <span
         className="numberCaracterstextaera"
         style={{
-          color: getColorDescription(descriptionState),
+          color: getColorDescription(createOffer.DescriptionOffer),
         }}
       >
-        {numberOfCaractersDescription(descriptionState)} caractères restants
+        {numberOfCaractersDescription(createOffer.DescriptionOffer)} caractères
+        restants
       </span>
     </div>
   );

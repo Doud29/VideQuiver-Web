@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useContext } from "react";
+import { UserContext } from "../../../../Context/UserContext";
 
 const InputFieldSpan = () => {
-  //-------// State pour récupérer la valeur du modèle renseigné
-  const [model, setModelState] = useState("");
+  const { createOffer, setCreateOffer, ToggleModal } = useContext(UserContext);
 
   //------// fonction pour afficher le nombre de caractere restant dans l'input Modèle
   const numberOfCaractersModel = (valueInput) => {
@@ -21,15 +21,23 @@ const InputFieldSpan = () => {
     }
     return color1;
   };
+
+  const handleCheckBox = (e) => {
+    if (e.target.value !== "") {
+      setTimeout(() => {
+        ToggleModal("closeAll");
+      }, 500);
+    }
+    setCreateOffer({ ...createOffer, Model: e.target.value });
+  };
+
   return (
     <div className="container-input-span">
       <input
         type="text"
         placeholder=" "
-        onChange={(e) => {
-          setModelState(e.target.value);
-        }}
-        value={model}
+        onChange={(e) => handleCheckBox(e)}
+        value={createOffer.Model}
         id="model"
         name="model"
         autoComplete="off"
@@ -39,10 +47,10 @@ const InputFieldSpan = () => {
       <span
         className="numberCaracters"
         style={{
-          color: getColor(model),
+          color: getColor(createOffer.Model),
         }}
       >
-        {numberOfCaractersModel(model)} caractères restants
+        {numberOfCaractersModel(createOffer.Model)} caractères restants
       </span>
     </div>
   );

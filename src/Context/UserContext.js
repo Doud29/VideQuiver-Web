@@ -169,7 +169,7 @@ export const UserContextProvider = (props) => {
       setOpenModalState({
         modalCategorie: false,
         modalMer: false,
-        modalMountain: true,
+        modalMountain: false,
         modalStreet: false,
         modalAir: false,
         modalSurf: false,
@@ -186,7 +186,7 @@ export const UserContextProvider = (props) => {
       setOpenModalState({
         modalCategorie: false,
         modalMer: false,
-        modalMountain: true,
+        modalMountain: false,
         modalStreet: false,
         modalAir: false,
         modalSurf: false,
@@ -203,7 +203,7 @@ export const UserContextProvider = (props) => {
       setOpenModalState({
         modalCategorie: false,
         modalMer: false,
-        modalMountain: true,
+        modalMountain: false,
         modalStreet: false,
         modalAir: false,
         modalSurf: false,
@@ -220,7 +220,7 @@ export const UserContextProvider = (props) => {
       setOpenModalState({
         modalCategorie: false,
         modalMer: false,
-        modalMountain: true,
+        modalMountain: false,
         modalStreet: false,
         modalAir: false,
         modalSurf: false,
@@ -237,7 +237,7 @@ export const UserContextProvider = (props) => {
       setOpenModalState({
         modalCategorie: false,
         modalMer: false,
-        modalMountain: true,
+        modalMountain: false,
         modalStreet: false,
         modalAir: false,
         modalSurf: false,
@@ -254,7 +254,7 @@ export const UserContextProvider = (props) => {
       setOpenModalState({
         modalCategorie: false,
         modalMer: false,
-        modalMountain: true,
+        modalMountain: false,
         modalStreet: false,
         modalAir: false,
         modalSurf: false,
@@ -292,13 +292,13 @@ export const UserContextProvider = (props) => {
 
   //state global pour ajouter les datas
   const [createOffer, setCreateOffer] = useState({
-    Product: "",
-    ["Offer Description"]: [],
+    Model: "",
+    DescriptionOffer: "",
     ["Technical informations"]: [],
     ["Sale/Rent/Exchange"]: [],
   });
 
-  // console.log(createOffer);
+  console.log(createOffer);
 
   //add + check + update technical data forDropdownList
   const addTechnicalData = (name, value, Theme) => {

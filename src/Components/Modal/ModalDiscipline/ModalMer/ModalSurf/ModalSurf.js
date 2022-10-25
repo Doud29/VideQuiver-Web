@@ -2,20 +2,24 @@
 
 import React, { useContext } from "react";
 import { UserContext } from "../../../../../Context/UserContext";
+import InputRadio from "../../ComposantModal/InputRadio";
+import TitleModal from "../../ComposantModal/TitleModal";
 
-const ModalSurf = ({ Produit }) => {
+const ModalSurf = () => {
   //---------// on récupére et on destrucure notre context[Objet] pour une meilleure lecture du code
 
-  const { ToggleModal } = useContext(UserContext);
+  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
+
     if (e.target.value !== "") {
       setTimeout(() => {
         ToggleModal("closeAll");
       }, 500);
     }
-    // updateInpute(e.target.value);
-    // setCreateOffer("Planche de Surf");
+    setCreateOffer({ ...createOffer, [name]: value });
   };
 
   return (
@@ -27,94 +31,64 @@ const ModalSurf = ({ Produit }) => {
       ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
-        <div className="bloc-header">
-          <p>Surf</p>
-          <div className="bloc-arrowLeft" onClick={() => ToggleModal("Sea")}>
-            <ion-icon name="arrow-back-outline"></ion-icon>{" "}
-          </div>
-        </div>
+        <TitleModal title="Surf" modal="Sea" />
         <div className="container-button">
-          <div>
-            <label htmlFor="planche">Planches de surf</label>
-            <input
-              type="radio"
-              onChange={handleCheckBox}
-              value="Planche de surf"
-              id="Planche"
-              name="Produit"
-            />
-          </div>{" "}
-          <div>
-            <label htmlFor="dérives">Dérives/Ailerons </label>
-            <input
-              onChange={handleCheckBox}
-              type="radio"
-              value="Dérives / Ailerons"
-              id="Dérives"
-              name="Produit"
-            />{" "}
-          </div>{" "}
-          <div>
-            <label htmlFor="pad">Pad </label>
-            <input
-              onChange={handleCheckBox}
-              type="radio"
-              value="Pad"
-              id="Pad"
-              name="Produit"
-            />{" "}
-          </div>{" "}
-          <div>
-            <label htmlFor="leash">Leash</label>
-            <input
-              onChange={handleCheckBox}
-              type="radio"
-              value="Leash"
-              id="Leash"
-              name="Produit"
-            />{" "}
-          </div>{" "}
-          <div>
-            <label htmlFor="casque">Casque</label>
-            <input
-              onChange={handleCheckBox}
-              type="radio"
-              value="Casque"
-              id="Casque"
-              name="Produit"
-            />{" "}
-          </div>{" "}
-          <div>
-            <label htmlFor="gilet">Gilet Impact</label>
-            <input
-              onChange={handleCheckBox}
-              type="radio"
-              value="Gilet"
-              id="Gilet"
-              name="Produit"
-            />{" "}
-          </div>{" "}
-          <div>
-            <label htmlFor="accessoires">Accessoires </label>
-            <input
-              onChange={handleCheckBox}
-              type="radio"
-              value="Accessoires"
-              id="Accessoires"
-              name="Produit"
-            />{" "}
-          </div>{" "}
-          <div>
-            <label htmlFor="bagagerie">Bagagerie Surf </label>
-            <input
-              onChange={handleCheckBox}
-              type="radio"
-              value="Bagagerie"
-              id="Bagagerie"
-              name="Produit"
-            />{" "}
-          </div>{" "}
-          {JSON.stringify(Produit)}
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Planche"
+            name="Produit"
+            value="Planche de Surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Dérives"
+            name="Produit"
+            value="Dérives / Ailerons"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Pad"
+            name="Produit"
+            value="Pad"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Leash"
+            name="Produit"
+            value="Leash"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Casque"
+            name="Produit"
+            value="Casque"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Gilet Impact"
+            name="Produit"
+            value="Gilet Impact"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Accessoires"
+            name="Produit"
+            value="Accessoires"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Bagagerie"
+            name="Produit"
+            value="Bagagerie"
+          />
         </div>
       </div>
     </div>

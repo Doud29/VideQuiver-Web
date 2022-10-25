@@ -3,16 +3,9 @@ import { UserContext } from "../../../../Context/UserContext";
 
 const ButtonDiscipline = () => {
   const { ToggleModal, createOffer } = useContext(UserContext);
-
-  console.log(ToggleModal);
+  console.log(createOffer);
   return (
-    <button
-      className="Discipline"
-      onClick={
-        () => ToggleModal("categories")
-        // setChoiceValidatedForSellState(false);
-      }
-    >
+    <button className="Discipline" onClick={() => ToggleModal("categories")}>
       <span>Produit</span>
       <div>
         <span id="product">{createOffer.Produit}</span>

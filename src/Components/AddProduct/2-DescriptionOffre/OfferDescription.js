@@ -4,19 +4,11 @@ import TitleOfferDescription from "./1-Title/TitleOfferDescription";
 import ButtonDiscipline from "./2-TechnicalComponents/ButtonDiscipline";
 import InputFieldSpan from "./2-TechnicalComponents/InputFieldSpan";
 
-const OfferDescription = ({
-  setOpenModalState,
-  Produit,
-  setChoiceValidatedForSellState,
-}) => {
+const OfferDescription = () => {
   return (
     <div className="container-input-button">
       <TitleOfferDescription />
-      <ButtonDiscipline
-        setOpenModalState={setOpenModalState}
-        setChoiceValidatedForSellState={setChoiceValidatedForSellState}
-        Produit={Produit}
-      />
+      <ButtonDiscipline />
       <InputFieldSpan />
       <TexteAeraField />
     </div>
