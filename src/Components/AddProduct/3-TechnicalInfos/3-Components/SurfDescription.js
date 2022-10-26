@@ -7,21 +7,8 @@ import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../JSON/Technical-informations.json";
 import InputField from "../2-TechnicalComponents/InputField/InputField";
 
-import { useState } from "react";
-
 const SurfDescription = ({}) => {
   //add + check + update technical data Inputdata
-
-  const [inputValue, setInputValue] = useState({});
-
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setInputValue((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
 
   return (
     <div className="container-description">
@@ -49,37 +36,29 @@ const SurfDescription = ({}) => {
       {/* //---- Volume */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Litrage}
-        name="Volume de la planche [L]"
+        name="Volume de la planche"
       />
       {/* //---- Etat */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
+      {/* //---- Longueur */}
+      <DropDown data={TechnicalValue.COMMUN.Longeur} name="Longueur planche" />
+      {/* //---- Largeur */}
+      <DropDown data={TechnicalValue.COMMUN.Largeur} name="Largeur planche" />
+      {/* //---- Epaisseur */}
+      <DropDown
+        data={TechnicalValue.COMMUN.Epaisseur}
+        name="Epaisseur planche"
+      />
       {/* //---- Marque */}
       <InputField
         type="text"
         name="Marque"
         id="Marque"
-        value={inputValue.Marque}
-        onChange={handleChange}
+        // value={Marque}
+        // onChange={onChange}
         placeholder=" "
         autoComplete="off"
       />
-
-      {/* //-----// Dimension */}
-      <InputField
-        type="text"
-        name="Dimensions"
-        id="Dimensions"
-        value={inputValue.Dimensions}
-        onChange={handleChange}
-        placeholder=" "
-        autoComplete="off"
-      />
-      {/* <div>
-        <ion-icon
-          style={{ color: "grey" }}
-          name="information-circle-outline"
-        ></ion-icon>
-      </div> */}
     </div>
   );
 };
