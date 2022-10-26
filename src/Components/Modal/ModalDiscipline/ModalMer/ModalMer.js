@@ -32,9 +32,8 @@ const ModalMer = ({}) => {
         </div>
         <div className="container-button">
           <div
-            onClick={() => {
-              // setCombinaisonStaTe(true);
-            }}
+          // onClick={() => {
+          // }}
           >
             <span>Néoprène </span>
             <ion-icon name="chevron-forward-outline"></ion-icon>{" "}

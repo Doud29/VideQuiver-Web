@@ -3,7 +3,6 @@ import { UserContext } from "../../../../Context/UserContext";
 
 const ButtonDiscipline = () => {
   const { ToggleModal, createOffer } = useContext(UserContext);
-  console.log(createOffer);
   return (
     <button className="Discipline" onClick={() => ToggleModal("categories")}>
       <span>Produit</span>

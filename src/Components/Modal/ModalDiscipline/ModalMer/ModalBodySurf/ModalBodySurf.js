@@ -1,82 +1,76 @@
 //--------------// packages
+import React, { useContext } from "react";
+import { UserContext } from "../../../../../Context/UserContext";
+import InputRadio from "../../ComposantModal/InputRadio";
+import TitleModal from "../../ComposantModal/TitleModal";
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+const ModalBodySurf = () => {
+  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-
-const ModalBodySurf = ({ closeModal }) => {
   const handleCheckBox = (e) => {
-    console.log(e.target.value);
+    const value = e.target.value;
+    const name = e.target.name;
+    if (e.target.value !== "") {
+      setTimeout(() => {
+        ToggleModal("closeAll");
+      }, 500);
+    }
+    setCreateOffer({ ...createOffer, [name]: value });
   };
 
   return (
     <div className="container-modal">
       {/* //-----------------------------//Overlay  */}
-      <div className="overlay-modal-trigger"></div>
+      <div
+        className="overlay-modal-trigger"
+        onClick={() => ToggleModal("closeAll")}
+      ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
-        <div className="bloc-header">
-          <p>BodySurf</p>
-          <div
-            className="bloc-arrowLeft"
-            onClick={() => {
-              closeModal(false);
-            }}
-          >
-            {arrowLeft}
-          </div>
-        </div>
+        <TitleModal title="BodySurf" modal="Sea" />
         <div className="container-button">
-          <div>
-            <span>Palmes</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="palme"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Leash </span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="leash"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>HandPlane</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="handplane"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Casque</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="casque"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Accessoires </span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="accessoire"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Bagagerie BodySurf </span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="bagagerie"
-            />{" "}
-          </div>{" "}
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Palmes"
+            name="Produit"
+            value="Palmes de bodysurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Leash"
+            name="Produit"
+            value="Leash de bodysurf "
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="HandPlane"
+            name="Produit"
+            value="HandPlane de bodysurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Casque"
+            name="Produit"
+            value="Casque de bodysurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Accessoires"
+            name="Produit"
+            value="Accessoires de bodysurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Bagagerie Bodysurf"
+            name="Produit"
+            value="Bagagerie de bodysurf"
+          />
         </div>
       </div>
     </div>

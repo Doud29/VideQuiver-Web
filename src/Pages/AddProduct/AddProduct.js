@@ -56,7 +56,7 @@ const AddProduct = () => {
         {openModalState.modalBodyBoard && <ModalBodyBoard />}
         {openModalState.modalSup && <ModalSup />}
         {openModalState.modalWindSurf && <ModalWindSurf />}
-        {openModalState.modalKiteSurf && <ModalKiteSurf />}
+        {openModalState.modalkiteSurf && <ModalKiteSurf />}
         {/* {openModalState.N && <ModalNeoprene  />} */}
         {openModalState.modalBodySurf && <ModalBodySurf />}
         {openModalState.modalApnee && <ModalApnee />}

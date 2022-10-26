@@ -1,92 +1,92 @@
 //--------------// Components
 
 //--------------// packages
+import React, { useContext } from "react";
+import { UserContext } from "../../../../../Context/UserContext";
+import InputRadio from "../../ComposantModal/InputRadio";
+import TitleModal from "../../ComposantModal/TitleModal";
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+const ModalWindSurf = () => {
+  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-
-const ModalWindSurf = ({ closeModal }) => {
   const handleCheckBox = (e) => {
-    console.log(e.target.value);
+    const value = e.target.value;
+    const name = e.target.name;
+    if (e.target.value !== "") {
+      setTimeout(() => {
+        ToggleModal("closeAll");
+      }, 500);
+    }
+    setCreateOffer({ ...createOffer, [name]: value });
   };
 
   return (
     <div className="container-modal">
       {/* //-----------------------------//Overlay  */}
-      <div className="overlay-modal-trigger"></div>
+      <div
+        className="overlay-modal-trigger"
+        onClick={() => ToggleModal("closeAll")}
+      ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
-        <div className="bloc-header">
-          <p>WindSurf</p>
-          <div
-            className="bloc-arrowLeft"
-            onClick={() => {
-              closeModal(false);
-            }}
-          >
-            {arrowLeft}
-          </div>
-        </div>
+        <TitleModal title="WindSurf" modal="Sea" />
         <div className="container-button">
-          <button>
-            <span>Flotteur</span>
-            <input onChange={handleCheckBox} type="checkbox" value="flotteur" />
-          </button>{" "}
-          <button>
-            <span>Voile</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="voile"
-            />{" "}
-          </button>{" "}
-          <button>
-            <span>Whisbone</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="whisbone"
-            />{" "}
-          </button>{" "}
-          <button>
-            <span>Mats</span>
-            <input onChange={handleCheckBox} type="checkbox" value="mat" />{" "}
-          </button>{" "}
-          <button>
-            <span>Dérives/Ailerons </span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="ailerons"
-            />{" "}
-          </button>{" "}
-          <button>
-            <span>Pied de mat / Plaquette / Rallonge</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="pied"
-            />{" "}
-          </button>{" "}
-          <button>
-            <span>Accessoires </span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="accessoire"
-            />{" "}
-          </button>{" "}
-          <button>
-            <span>Bagagerie Wind Surf </span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="bagagerie"
-            />{" "}
-          </button>{" "}
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Flotteur"
+            name="Produit"
+            value="Flotteur de Windsurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Voile"
+            name="Produit"
+            value="Voile de WindSurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Whisbone"
+            name="Produit"
+            value="Whisbone de Winsurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Mat"
+            name="Produit"
+            value="Mat de Winsurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Dérives/Ailerons"
+            name="Produit"
+            value="Dérives/Ailerons de Winsurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Pied de mat / Plaquette / Rallonge"
+            name="Produit"
+            value="Pied de mat / Plaquette / Rallonge"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Accessoires"
+            name="Produit"
+            value="Accessoires de Winsurf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Bagagerie"
+            name="Produit"
+            value="Bagagerie Wind Surf"
+          />
         </div>
       </div>
     </div>

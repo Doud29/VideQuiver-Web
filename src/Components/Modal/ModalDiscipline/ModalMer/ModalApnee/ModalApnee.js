@@ -1,79 +1,76 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+//--------------// packages
+import React, { useContext } from "react";
+import { UserContext } from "../../../../../Context/UserContext";
+import InputRadio from "../../ComposantModal/InputRadio";
+import TitleModal from "../../ComposantModal/TitleModal";
 
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
+const ModalApnee = () => {
+  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
-const ModalApnee = ({ closeModal }) => {
   const handleCheckBox = (e) => {
-    console.log(e.target.value);
+    const value = e.target.value;
+    const name = e.target.name;
+    if (e.target.value !== "") {
+      setTimeout(() => {
+        ToggleModal("closeAll");
+      }, 500);
+    }
+    setCreateOffer({ ...createOffer, [name]: value });
   };
 
   return (
     <div className="container-modal">
-      {/* //-----------------------------//Overlay  */}
-      <div className="overlay-modal-trigger"></div>
-      {/* //-----------------------------//Modal et son contenu */}
+      {/* //-----//Overlay  */}
+      <div
+        className="overlay-modal-trigger"
+        onClick={() => ToggleModal("closeAll")}
+      ></div>{" "}
+      {/* //-----//Modal et son contenu */}
       <div className="modal">
-        <div className="bloc-header">
-          <p>Apnée</p>
-          <div
-            className="bloc-arrowLeft"
-            onClick={() => {
-              closeModal(false);
-            }}
-          >
-            {arrowLeft}
-          </div>
-        </div>
+        <TitleModal title="Apnée" modal="Sea" />
         <div className="container-button">
-          <div>
-            <span>Palmes Polymères</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="palmes"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Palmes Carbonnes</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="palmes"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Tubas</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="tuba"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Masques</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="masque"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Accessoires </span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="accessoire"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Bagagerie Apnée</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="bagagerie"
-            />{" "}
-          </div>{" "}
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Palmes polymères"
+            name="Produit"
+            value="Palmes polymères d'apnée"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Palmes carbonnes"
+            name="Produit"
+            value="Palmes carbonnes d'apnée"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Tubas"
+            name="Produit"
+            value="Tubas d'apnée"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Masques"
+            name="Produit"
+            value="Masques d'apnée"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Accessoires"
+            name="Produit"
+            value="Accessoires d'apnée"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Bagagerie"
+            name="Produit"
+            value="Bagagerie Apnée"
+          />
         </div>
       </div>
     </div>

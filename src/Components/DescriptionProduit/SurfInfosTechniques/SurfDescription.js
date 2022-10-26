@@ -8,7 +8,8 @@ import TitleTechnicalInformation from "../TitleTechnicalInformations";
 import DropDown from "../DropDownList/DropDown.js";
 import InputField from "../InputField/InputField";
 
-const SurfDescription = ({ technicalInformations }) => {
+const SurfDescription = () => {
+  console.log("blabla");
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
@@ -35,10 +36,19 @@ const SurfDescription = ({ technicalInformations }) => {
       {/* //---- Volume */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Litrage}
-        name="Volume de la planche [L]"
+        name="Volume de la planche"
       />
       {/* //---- Etat */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
+      {/* //---- Longueur */}
+      <DropDown data={TechnicalValue.COMMUN.Longeur} name="Longueur planche" />
+      {/* //---- Largeur */}
+      <DropDown data={TechnicalValue.COMMUN.Largeur} name="Largeur planche" />
+      {/* //---- Epaisseur */}
+      <DropDown
+        data={TechnicalValue.COMMUN.Epaisseur}
+        name="Epaisseur planche"
+      />
       {/* //---- Marque */}
       <InputField
         type="text"

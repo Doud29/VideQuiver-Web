@@ -7,24 +7,27 @@ import InputRadio from "../../ComposantModal/InputRadio";
 import TitleModal from "../../ComposantModal/TitleModal";
 
 const ModalSup = () => {
-  const { ToggleModal } = useContext(UserContext);
+  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
+    const value = e.target.value;
+    const name = e.target.name;
     if (e.target.value !== "") {
       setTimeout(() => {
         ToggleModal("closeAll");
       }, 500);
     }
+    setCreateOffer({ ...createOffer, [name]: value });
   };
 
   return (
     <div className="container-modal">
-      {/* //-----------------------------//Overlay  */}
+      {/* //-------//Overlay  */}
       <div
         className="overlay-modal-trigger"
         onClick={() => ToggleModal("closeAll")}
       ></div>
-      {/* //-----------------------------//Modal et son contenu */}
+      {/* //-------//Modal et son contenu */}
       <div className="modal">
         <TitleModal title="Stand Up Paddle" modal="Sea" />
         <div className="container-button">

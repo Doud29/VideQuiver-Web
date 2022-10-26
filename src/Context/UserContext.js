@@ -73,7 +73,7 @@ export const UserContextProvider = (props) => {
     modalApnee: false,
   });
 
-  console.log(openModalState.modalSurf);
+  // console.log(openModalState.modalWindSurf);
 
   const ToggleModal = (modal) => {
     if (modal === "categories") {
@@ -298,7 +298,7 @@ export const UserContextProvider = (props) => {
     ["Sale/Rent/Exchange"]: [],
   });
 
-  console.log(createOffer);
+  // console.log(createOffer);
 
   //add + check + update technical data forDropdownList
   const addTechnicalData = (name, value, Theme) => {

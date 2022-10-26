@@ -1,110 +1,104 @@
 //--------------// packages
+import React, { useContext } from "react";
+import { UserContext } from "../../../../../Context/UserContext";
+import InputRadio from "../../ComposantModal/InputRadio";
+import TitleModal from "../../ComposantModal/TitleModal";
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+const ModalKiteSurf = () => {
+  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-
-const ModalKiteSurf = ({ closeModal }) => {
   const handleCheckBox = (e) => {
-    console.log(e.target.value);
+    const value = e.target.value;
+    const name = e.target.name;
+    if (e.target.value !== "") {
+      setTimeout(() => {
+        ToggleModal("closeAll");
+      }, 500);
+    }
+    setCreateOffer({ ...createOffer, [name]: value });
   };
 
   return (
     <div className="container-modal">
-      {/* //-----------------------------//Overlay  */}
-      <div className="overlay-modal-trigger"></div>
-      {/* //-----------------------------//Modal et son contenu */}
+      {/* //-------//Overlay  */}
+      <div
+        className="overlay-modal-trigger"
+        onClick={() => ToggleModal("closeAll")}
+      ></div>
+      {/* //------//Modal et son contenu */}
       <div className="modal">
-        <div className="bloc-header">
-          <p>Kite Surf</p>
-          <div
-            className="bloc-arrowLeft"
-            onClick={() => {
-              closeModal(false);
-            }}
-          >
-            {arrowLeft}
-          </div>
-        </div>
+        <TitleModal title="KiteSurf" modal="Sea" />
         <div className="container-button">
-          <div>
-            <span>Aile</span>
-            <input onChange={handleCheckBox} type="checkbox" value="aile" />
-          </div>{" "}
-          <div>
-            <span>Barre</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="barre"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Twin-Tip</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="twin-tip"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Planche directionnelle</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="directionnelle"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Planche de Kite foil</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="kitefoil"
-            />{" "}
-          </div>
-          <div>
-            <span>Foil Kitesurf</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="foil"
-            />{" "}
-          </div>
-          <div>
-            <span>Harnais</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="harnais"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Casque / Gilet </span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="casque"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Accessoires [Ailes / Barres / Planches]</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="accessoire"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Bagagerie KitSurf</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="bagagerie"
-            />{" "}
-          </div>{" "}
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Aile"
+            name="Produit"
+            value="Aile de Kite Surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Barre"
+            name="Produit"
+            value="Barre de Kite Surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Twin-Tip"
+            name="Produit"
+            value="Twin-Tip de Kite Surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Planche directionnelle"
+            name="Produit"
+            value="Planche directionnelle de Kite Surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Planche de Kite foil"
+            name="Produit"
+            value="Planche de Kite foil"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Foil kiteSurf"
+            name="Produit"
+            value="Foil de Kite Surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Harnais"
+            name="Produit"
+            value="Harnais de Kite Surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Casque / Gilet"
+            name="Produit"
+            value="Casque / Gilet de Kite Surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Accessoires [Ailes / Barres / Planches]"
+            name="Produit"
+            value="Accessoires [Ailes / Barres / Planches]"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Bagagerie"
+            name="Produit"
+            value="Bagagerie"
+          />
         </div>
       </div>
     </div>

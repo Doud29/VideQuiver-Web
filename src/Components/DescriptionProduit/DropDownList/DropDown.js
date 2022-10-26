@@ -11,11 +11,6 @@ const DropDown = ({ data, name }) => {
 
   const { addTechnicalData } = useContext(UserContext);
 
-  // useEffect(() => {
-  //   let value = createOffer["Technical informations"];
-  //   setCreateOffer({ ...{ value }, ...{ [name]: selected } });
-  // }, [selected]);
-
   return (
     <div className="dropdown">
       <div
