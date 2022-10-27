@@ -11,13 +11,19 @@ import ModalKiteSurf from "../../Components/Modal/ModalDiscipline/ModalMer/Modal
 import ModalBodySurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalBodySurf/ModalBodySurf";
 import ModalSup from "../../Components/Modal/ModalDiscipline/ModalMer/ModalSup/ModalSup";
 import ModalWindSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalWindSurf/ModalWindSurf";
-//----------// Technical Components //------------//
+//----------// Technical Surf Components //------------//
 import SurfDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/SurfDescription";
 import DerivesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/DeriveDescription";
 // import { DescriptionContext } from "../../Context/DescriptionContext";
 import LeashDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/LeashDescription";
 import PadDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/PadDescription";
 import GiletImpact from "../../Components/AddProduct/3-TechnicalInfos/3-Components/GiletImpact";
+import AccessoriesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/AccessoriesDescription";
+import SurfLuggageDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/SurfLuggageDescription";
+
+//----------// Technical Bodyboard Components //------------//
+import FinBodyboardDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/FinBodyBoardDescription";
+
 // import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
 //----------// Components //------------//
@@ -61,7 +67,6 @@ const AddProduct = () => {
         {/* {openModalState.N && <ModalNeoprene  />} */}
         {openModalState.modalBodySurf && <ModalBodySurf />}
         {openModalState.modalApnee && <ModalApnee />}
-
         <HeaderAddProduct />
         <form onSubmit={handlAddProduct}>
           <DragnDrop files={files} setfiles={setfiles} />
@@ -71,20 +76,28 @@ const AddProduct = () => {
 //------------// Composents Surf 
            */}
           {createOffer.Produit === "Planche de Surf" && <SurfDescription />}
-          {createOffer.Produit === "Dérives / Ailerons" && (
-            <DerivesDescription />
+          {createOffer.Produit === "Dérives de surf" && <DerivesDescription />}
+          {createOffer.Produit === "Gilet Impact de surf" && <GiletImpact />}
+          {createOffer.Produit === "Pad de surf" && <PadDescription />}
+          {createOffer.Produit === "Leash de surf" && <LeashDescription />}
+          {createOffer.Produit === "Accessoires de surf" && (
+            <AccessoriesDescription />
           )}
-          {createOffer.Produit === "Gilet Impact" && <GiletImpact />}
-          {createOffer.Produit === "Pad" && <PadDescription />}
-          {createOffer.Produit === "Leash" && <LeashDescription />}
-          {/*
-
-//-----------// Composents Néopréne*/}
+          {createOffer.Produit === "Bagagerie de surf" && (
+            <SurfLuggageDescription />
+          )}
 
           {/*
-//----------------------------------------------//  
-//-----------// Composents BodyBoard //---------// 
-//----------------------------------------------//   */}
+//-----------// Composents BodyBoard */}
+          {createOffer.Produit === "Palmes de bodyboard" && (
+            <FinBodyboardDescription />
+          )}
+          {createOffer.Produit === "Bagagerie de bodyboard" && (
+            <FinBodyboardDescription />
+          )}
+          {/*
+//-----------// Composents BodyBoard 
+  */}
 
           {/*
 //----------------------------------------------//  

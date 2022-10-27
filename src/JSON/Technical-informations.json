@@ -4,6 +4,12 @@
       "Planche de surf": {
         "Type": [
           {
+            "id": "Type-0",
+            "Theme": "type de planche",
+            "content": " ",
+            "value": null
+          },
+          {
             "id": "Type-1",
             "Theme": "type de planche",
             "content": "Je ne sais pas",
@@ -114,259 +120,90 @@
             "value": "Tout niveaux"
           }
         ],
-        "Boitier": [
+        "Materiaux": [
           {
-            "id": 0,
-            "Theme": "Boitier",
+            "id": "matériaux-planche-surf-0",
+            "Theme": "matériaux",
             "content": " ",
             "value": null
           },
           {
-            "id": 1,
-            "Theme": "Boitier",
+            "id": "matériaux-planche-surf-1",
+            "Theme": "matériaux",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
-            "id": 2,
-            "Theme": "Boitier",
-            "content": "Boitier Futures",
-            "value": "Boitier Futures"
+            "id": "matériaux-planche-surf-2",
+            "Theme": "matériaux",
+            "content": "mousse polyuréthane (PU)",
+            "value": "mousse polyuréthane (PU)"
           },
           {
-            "id": 3,
-            "Theme": "Boitier",
-            "content": "Boitier FCS1",
-            "value": "Boitier FCS1"
+            "id": "matériaux-planche-surf-4",
+            "Theme": "matériaux",
+            "content": "mousse polystyrène (EPS)",
+            "value": "mousse polystyrène (EPS)"
           },
           {
-            "id": 4,
-            "Theme": "Boitier",
-            "content": "Boitier FCS1 Fusion",
-            "value": "Boitier FCS1 Fusion"
-          },
-          {
-            "id": 5,
-            "Theme": "Boitier",
-            "content": "Boitier FCS2",
-            "value": "Boitier FCS2"
-          },
-          {
-            "id": 6,
-            "Theme": "Boitier",
-            "content": "Boitier U.S",
-            "value": "Boitier U.S"
-          },
-          {
-            "id": 7,
-            "Theme": "Boitier",
-            "content": "Boitier Tuttle",
-            "value": "Boitier Tuttle"
-          },
-          {
-            "id": 8,
-            "Theme": "Boitier",
-            "content": "Boitier SoftBoard",
-            "value": "Boitier SoftBoard"
-          }
-        ],
-        "Dérives": [
-          {
-            "id": 0,
-            "Theme": "Dérives",
-            "content": " ",
-            "value": null
-          },
-          {
-            "id": 1,
-            "Theme": "Dérives",
-            "content": "Je ne sais pas",
-            "value": "Je ne sais pas"
-          },
-          {
-            "id": 2,
-            "Theme": "Dérives",
-            "content": "Single(1)",
-            "value": "Single(1)"
-          },
-          {
-            "id": 3,
-            "Theme": "Dérives",
-            "content": "Twin(2)",
-            "value": "Twin(2)"
-          },
-          {
-            "id": 4,
-            "Theme": "Dérives",
-            "content": "Thruster(3)",
-            "value": "Thruster(3)"
-          },
-          {
-            "id": 5,
-            "Theme": "Dérives",
-            "content": "Quad(4)",
-            "value": "Quad(4)"
-          },
-          {
-            "id": 6,
-            "Theme": "Dérives",
-            "content": "Combo(5)",
-            "value": "Combo(5)"
-          },
-          {
-            "id": 7,
-            "Theme": "Dérives",
-            "content": "Boitier US 2+1",
-            "value": "Boitier US 2+1"
-          },
-          {
-            "id": 8,
-            "Theme": "Dérives",
-            "content": "Boitier US 4+1",
-            "value": "Boitier US 4+1"
-          }
-        ]
-      },
-      "Dérives/Ailerons": {
-        "Système de dérives": [
-          {
-            "id": 1,
-            "content": "Boitier Future",
-            "value": "Boitier Future"
-          },
-          {
-            "id": 2,
-            "content": "Boitier FCS1",
-            "value": "Boitier FCS1"
-          },
-
-          {
-            "id": 3,
-            "content": "Boitier FCS1 Fusion",
-            "value": "Boitier FCS1 Fusion"
-          },
-          {
-            "id": 4,
-            "content": "Boitier FCS2 ",
-            "value": "Boitier FCS2 "
-          },
-          {
-            "id": 5,
-            "content": "Boitier U.S",
-            "value": "Boitier U.S"
-          },
-          {
-            "id": 6,
-            "content": "Boitier Tuttle",
-            "value": "Boitier Tuttle"
-          },
-          {
-            "id": 7,
-            "content": "Boitier SoftBoard",
-            "value": "Boitier SoftBoard"
-          }
-        ],
-        "Configuration ailerons": [
-          {
-            "id": "configuration-0",
-            "Theme": "configuration-aileron",
-            "content": " ",
-            "value": null
-          },
-          {
-            "id": "configuration-01",
-            "Theme": "configuration-aileron",
-            "content": "Je ne sais pas",
-            "value": "Je ne sais pas"
-          },
-          {
-            "id": "configuration-1",
-            "Theme": "configuration-aileron",
-            "content": "Single(1)",
-            "value": "Single(1)"
-          },
-          {
-            "id": "configuration-2",
-            "Theme": "configuration-aileron",
-            "content": "Twin(2)",
-            "value": "Twin(2)"
-          },
-          {
-            "id": "configuration-3",
-            "Theme": "configuration-aileron",
-            "content": "Thruster(3)",
-            "value": "Thruster(3)"
-          },
-          {
-            "id": "configuration-4",
-            "Theme": "configuration-aileron",
-            "content": "Quad(4)",
-            "value": "Quad(4)"
-          },
-          {
-            "id": "configuration-5",
-            "Theme": "configuration-aileron",
-            "content": "Combo(5)",
-            "value": "Combo(5)"
-          },
-          {
-            "id": "configuration-6",
-            "Theme": "configuration-aileron",
-            "content": "Boitier US 2+1",
-            "value": "Boitier US 2+1"
-          },
-          {
-            "id": "configuration-7",
-            "Theme": "configuration-aileron",
-            "content": "Boitier US 4+1",
-            "value": "Boitier US 4+1"
+            "id": "matériaux-planche-surf-3",
+            "Theme": "matériaux",
+            "content": "Bois",
+            "value": "Bois"
           }
         ]
       },
       "Pad": {
         "Nombre de pièces": [
           {
-            "id": 0,
+            "id": "nombre-de-pièces-0",
+            "Theme": "nbr de pièces",
             "content": " ",
             "value": null
           },
           {
-            "id": 1,
+            "id": "nombre-de-pièces-1",
+            "Theme": "nbr de pièces",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "nombre-de-pièces-2",
             "content": "1 pièce",
             "value": "1 pièce"
           },
           {
-            "id": 2,
+            "id": "nombre-de-pièces-3",
             "content": "2 pièces",
             "value": "2 pièces"
           },
           {
-            "id": 3,
+            "id": "nombre-de-pièces-4",
             "content": "3 pièces",
             "value": "3 pièces"
           },
           {
-            "id": 4,
+            "id": "nombre-de-pièces-5",
             "content": "4 pièces",
             "value": "4 pièces"
           },
           {
-            "id": 5,
+            "id": "nombre-de-pièces-6",
             "content": "5 pièces",
             "value": "5 pièces"
           },
           {
-            "id": 6,
+            "id": "nombre-de-pièces-7",
             "content": "6 pièces",
             "value": "6 pièces"
           },
           {
-            "id": 7,
+            "id": "nombre-de-pièces-8",
             "content": "7 pièces",
             "value": "7 pièces"
           },
           {
-            "id": 8,
+            "id": "nombre-de-pièces-9",
             "content": "8 pièces",
             "value": "8 pièces"
           }
@@ -379,6 +216,12 @@
             "Theme": "maintient-leash",
             "content": " ",
             "value": null
+          },
+          {
+            "id": "Maintien-leash01",
+            "Theme": "maintient-leash",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
           },
           {
             "id": "Maintien-leash1",
@@ -403,68 +246,62 @@
           {
             "id": "Epaisseur-Leash-1",
             "Theme": "Epaisseur-leash",
-            "content": "3/5 - 4mm",
-            "value": "3/5 - 4mm"
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
           },
           {
             "id": "Epaisseur-Leash-2",
             "Theme": "Epaisseur-leash",
-            "content": "3/16 - 4mm",
-            "value": "3/16 - 4mm"
+            "content": "4 mm",
+            "value": "4 mm"
           },
           {
             "id": "Epaisseur-Leash-3",
             "Theme": "Epaisseur-leash",
-            "content": "7/32 - 5mm",
-            "value": "7/32 - 5mm"
+            "content": "5 mm",
+            "value": "5 mm"
           },
           {
             "id": "Epaisseur-Leash-4",
             "Theme": "Epaisseur-leash",
-            "content": "1/4 - 6mm",
-            "value": "1/4 - 6mm"
+            "content": "6 mm",
+            "value": "6 mm"
           },
           {
             "id": "Epaisseur-Leash-5",
             "Theme": "Epaisseur-leash",
-            "content": "5/16 - 7mm",
-            "value": "5/16 - 7mm"
+            "content": "7 mm",
+            "value": "7 mm"
           },
           {
             "id": "Epaisseur-Leash-6",
             "Theme": "Epaisseur-leash",
-            "content": "9/32 - 7mm",
-            "value": "9/32 - 7mm"
+            "content": "8 mm",
+            "value": "8 mm"
           },
           {
             "id": "Epaisseur-Leash-7",
             "Theme": "Epaisseur-leash",
-            "content": "3/8 - 9mm",
-            "value": "3/8 - 9mm"
+            "content": "9 mm",
+            "value": "9 mm"
           },
           {
             "id": "Epaisseur-Leash-8",
             "Theme": "Epaisseur-leash",
-            "content": "1/4",
-            "value": "1/4"
+            "content": "10 mm",
+            "value": "10 mm"
           },
           {
             "id": "Epaisseur-Leash-9",
             "Theme": "Epaisseur-leash",
-            "content": "6mm",
-            "value": "6mm"
+            "content": "11 mm",
+            "value": "11 mm"
           },
           {
             "id": "Epaisseur-Leash-10",
             "Theme": "Epaisseur-leash",
-            "content": "7mm",
-            "value": "7mm"
-          },
-          {
-            "id": "Epaisseur-Leash-11",
-            "Theme": "Epaisseur-leash",
-            "content": "8mm",
-            "value": "8mm"
+            "content": "12 mm",
+            "value": "12 mm"
           }
         ],
         "Longueur": [
@@ -548,7 +385,6 @@
           }
         ]
       },
-      "Casque": {},
       "Bagagerie": {
         "Epaisseur-Bagagerie": [
           {
@@ -646,6 +482,112 @@
           }
         ]
       }
+    },
+    "BodyBoard": {
+      "Planche de BodyBoard": {
+        "Longueur": [
+          {
+            "id": "longueur-bodyboard-0",
+            "Theme": "longueur",
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": "longueur-bodyboard-01",
+            "Theme": "longueur",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "longueur-bodyboard-2",
+            "Theme": "longueur",
+            "content": "36 pouces - 91.44 cm",
+            "value": "36 pouces - 91.44 cm"
+          },
+          {
+            "id": "longueur-bodyboard-3",
+            "Theme": "longueur",
+            "content": "37 pouces - 93.98 cm",
+            "value": "37 pouces - 93.98 cm"
+          },
+          {
+            "id": "longueur-bodyboard-4",
+            "Theme": "longueur",
+            "content": "38 pouces - 96,52 cm",
+            "value": "38 pouces - 96,52 cm"
+          },
+          {
+            "id": "longueur-bodyboard-5",
+            "Theme": "longueur",
+            "content": "39 pouces - 99,06 cm",
+            "value": "39 pouces - 99,06 cm"
+          },
+          {
+            "id": "longueur-bodyboard-6",
+            "Theme": "longueur",
+            "content": "40 pouces - 101,6 cm",
+            "value": "40 pouces - 101,6 cm"
+          },
+          {
+            "id": "longueur-bodyboard-7",
+            "Theme": "longueur",
+            "content": "40.5 pouces - 102,87 cm",
+            "value": "40.5 pouces - 102,87 cm"
+          },
+          {
+            "id": "longueur-bodyboard-8",
+            "Theme": "longueur",
+            "content": "41 pouces - 104,14 cm",
+            "value": "41 pouces - 104,14 cm"
+          },
+          {
+            "id": "longueur-bodyboard-9",
+            "Theme": "longueur",
+            "content": "41.5 pouces - 105,41 cm",
+            "value": "41.5 pouces - 105,41 cm"
+          },
+          {
+            "id": "longueur-bodyboard-10",
+            "Theme": "longueur",
+            "content": "42 pouces - 106,68 cm",
+            "value": "42 pouces - 106,68 cm"
+          },
+          {
+            "id": "longueur-bodyboard-11",
+            "Theme": "longueur",
+            "content": "42.5 pouces - 107,95 cm",
+            "value": "42.5 pouces - 107,95 cm"
+          },
+          {
+            "id": "longueur-bodyboard-12",
+            "Theme": "longueur",
+            "content": "43 pouces - 109,22 cm",
+            "value": "43 pouces - 109,22 cm"
+          },
+          {
+            "id": "longueur-bodyboard-13",
+            "Theme": "longueur",
+            "content": "44 pouces - 111,76 cm",
+            "value": "44 pouces - 111,76 cm"
+          },
+          {
+            "id": "longueur-bodyboard-14",
+            "Theme": "longueur",
+            "content": "45 pouces - 114,3 cm",
+            "value": "45 pouces - 114,3 cm"
+          },
+          {
+            "id": "longueur-bodyboard-15",
+            "Theme": "longueur",
+            "content": "46 pouces - 116,84 cm",
+            "value": "46 pouces - 116,84 cm"
+          }
+        ]
+      },
+      "Palmes de BodyBoard": {},
+      "Leash": {},
+      "Accessoires": {},
+      "Bagagerie": {}
     }
   },
   "COMMUN": {
@@ -2055,6 +1997,118 @@
         "Theme": "Accessories",
         "content": "Adaptateurs",
         "value": "Adaptateurs"
+      }
+    ],
+    "Configuration ailerons": [
+      {
+        "id": "configuration-0",
+        "Theme": "configuration-aileron",
+        "content": " ",
+        "value": null
+      },
+      {
+        "id": "configuration-01",
+        "Theme": "configuration-aileron",
+        "content": "Je ne sais pas",
+        "value": "Je ne sais pas"
+      },
+      {
+        "id": "configuration-1",
+        "Theme": "configuration-aileron",
+        "content": "Single(1)",
+        "value": "Single(1)"
+      },
+      {
+        "id": "configuration-2",
+        "Theme": "configuration-aileron",
+        "content": "Twin(2)",
+        "value": "Twin(2)"
+      },
+      {
+        "id": "configuration-3",
+        "Theme": "configuration-aileron",
+        "content": "Thruster(3)",
+        "value": "Thruster(3)"
+      },
+      {
+        "id": "configuration-4",
+        "Theme": "configuration-aileron",
+        "content": "Quad(4)",
+        "value": "Quad(4)"
+      },
+      {
+        "id": "configuration-5",
+        "Theme": "configuration-aileron",
+        "content": "Combo(5)",
+        "value": "Combo(5)"
+      },
+      {
+        "id": "configuration-6",
+        "Theme": "configuration-aileron",
+        "content": "Boitier US 2+1",
+        "value": "Boitier US 2+1"
+      },
+      {
+        "id": "configuration-7",
+        "Theme": "configuration-aileron",
+        "content": "Boitier US 4+1",
+        "value": "Boitier US 4+1"
+      }
+    ],
+    "Boitier": [
+      {
+        "id": "Boitier-dérives0",
+        "Theme": "Boitier",
+        "content": " ",
+        "value": null
+      },
+      {
+        "id": "Boitier-dérives1",
+        "Theme": "Boitier",
+        "content": "Je ne sais pas",
+        "value": "Je ne sais pas"
+      },
+      {
+        "id": "Boitier-dérives2",
+        "Theme": "Boitier",
+        "content": "Boitier Futures",
+        "value": "Boitier Futures"
+      },
+      {
+        "id": "Boitier-dérives3",
+        "Theme": "Boitier",
+        "content": "Boitier FCS1",
+        "value": "Boitier FCS1"
+      },
+      {
+        "id": "Boitier-dérives4",
+        "Theme": "Boitier",
+        "content": "Boitier FCS1 Fusion",
+        "value": "Boitier FCS1 Fusion"
+      },
+      {
+        "id": "Boitier-dérives5",
+        "Theme": "Boitier",
+        "content": "Boitier FCS2",
+        "value": "Boitier FCS2"
+      },
+      {
+        "id": "Boitier-dérives6",
+        "Theme": "Boitier",
+        "content": "Boitier U.S",
+        "value": "Boitier U.S"
+      },
+      {
+        "id": "Boitier-dérives7",
+        "Theme": "Boitier",
+        "content": "Boitier Tuttle",
+        "value": "Boitier Tuttle"
+      },
+      {
+        "id": "Boitier-dérives8",
+        "Theme": "Boitier",
+        "content": "Boitier SoftBoard",
+        "value": "Boitier SoftBoard"
       }
     ]
   }

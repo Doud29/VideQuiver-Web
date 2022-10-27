@@ -1,30 +1,21 @@
-//--------------// Surf description css
-import "../../DescriptionProduit.scss";
-
 //--------------// Composent
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
 import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../JSON/Technical-informations.json";
 import InputField from "../2-TechnicalComponents/InputField/InputField";
 
-const DerivesDescription = () => {
+const BodyBoardLuggageDescription = () => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
-      {/* //----// Boitier derives*/}
+      {/* //---// Longueur */}
       <DropDown
-        data={TechnicalValue.COMMUN.Boitier}
-        name="Système de dérives"
+        data={TechnicalValue.COMMUN.Longeur}
+        name="Longueur de la housse"
       />
-      {/* //----// type dérives*/}
-      <DropDown
-        data={TechnicalValue.COMMUN["Configuration ailerons"]}
-        name="Configuration"
-      />
-      <DropDown data={TechnicalValue.COMMUN.Construction} name="Construction" />
-      {/* //---// Etat derives */}
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
-      {/* //----// Marque*/}
+      {/* //---// Etat */}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="état" />
+      {/* //---- Marque */}
       <InputField
         type="text"
         name="Marque"
@@ -38,4 +29,4 @@ const DerivesDescription = () => {
   );
 };
 
-export default DerivesDescription;
+export default BodyBoardLuggageDescription;

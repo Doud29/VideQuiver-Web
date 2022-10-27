@@ -45,42 +45,42 @@ const ModalSurf = () => {
             onChange={handleCheckBox}
             id="Dérives"
             name="Produit"
-            value="Dérives / Ailerons"
+            value="Dérives de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Pad"
             name="Produit"
-            value="Pad"
+            value="Pad de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Leash"
             name="Produit"
-            value="Leash"
+            value="Leash de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Gilet Impact"
             name="Produit"
-            value="Gilet Impact"
+            value="Gilet Impact de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Accessoires"
             name="Produit"
-            value="Accessoires"
+            value="Accessoires de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Bagagerie"
             name="Produit"
-            value="Bagagerie"
+            value="Bagagerie de surf"
           />
         </div>
       </div>

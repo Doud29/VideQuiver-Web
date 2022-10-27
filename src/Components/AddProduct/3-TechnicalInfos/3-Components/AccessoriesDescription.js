@@ -7,8 +7,8 @@ const AccessoriesDescription = () => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
-      {/* //---// Etat Taille */}
-      <DropDown data={TechnicalValue.COMMUN.Taille} name="Taille" />
+      {/* //---// détails */}
+      <DropDown data={TechnicalValue.COMMUN.Accessory} name="Détails" />
     </div>
   );
 };

@@ -18,6 +18,11 @@ const SurfDescription = () => {
         data={TechnicalValue.MER.Surf["Planche de surf"].Type}
         name="Type de planche"
       />
+      {/* //---- Construction */}
+      <DropDown
+        data={TechnicalValue.MER.Surf["Planche de surf"].Materiaux}
+        name="Materiaux"
+      />
       {/* //---- Etat */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //---- Level */}
@@ -26,14 +31,11 @@ const SurfDescription = () => {
         name="Niveau requis"
       />
       {/* //---- Boitier dérives */}
+      <DropDown data={TechnicalValue.COMMUN.Boitier} name="Type de boitier" />
+      {/* //---- Configuration */}
       <DropDown
-        data={TechnicalValue.MER.Surf["Planche de surf"].Boitier}
-        name="Type de boitier"
-      />
-      {/* //---- Types de dérives */}
-      <DropDown
-        data={TechnicalValue.MER.Surf["Planche de surf"].Dérives}
-        name="Type de Dérives"
+        data={TechnicalValue.COMMUN["Configuration ailerons"]}
+        name="Configuration"
       />
       {/* //---- Volume */}
       <DropDown
