@@ -18,16 +18,7 @@ const PadDescription = () => {
       />
       {/* //---- Etat */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
-      {/* //----// Couleur */}
-      <InputField
-        type="text"
-        name="Couleur"
-        id="Couleur"
-        // value={Marque}
-        // onChange={onChange}
-        placeholder=" "
-        autoComplete="off"
-      />
+
       {/* //---- Marque */}
       <InputField
         type="text"

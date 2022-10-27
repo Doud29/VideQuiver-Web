@@ -64,13 +64,6 @@ const ModalSurf = () => {
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Casque"
-            name="Produit"
-            value="Casque"
-          />
-          <InputRadio
-            type="radio"
-            onChange={handleCheckBox}
             id="Gilet Impact"
             name="Produit"
             value="Gilet Impact"

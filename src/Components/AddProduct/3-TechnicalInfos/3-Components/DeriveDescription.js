@@ -18,9 +18,12 @@ const DerivesDescription = () => {
       />
       {/* //----// type dérives*/}
       <DropDown
-        data={TechnicalValue.MER.Surf["Dérives/Ailerons"]["Types de dérives"]}
-        name="Types de dérives"
+        data={
+          TechnicalValue.MER.Surf["Dérives/Ailerons"]["Configuration ailerons"]
+        }
+        name="Configuration"
       />
+      <DropDown data={TechnicalValue.COMMUN.Construction} name="Construction" />
       {/* //---// Etat derives */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //----// Marque*/}

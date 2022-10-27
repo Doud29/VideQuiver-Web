@@ -7,7 +7,7 @@ import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../JSON/Technical-informations.json";
 import InputField from "../2-TechnicalComponents/InputField/InputField";
 
-const SurfDescription = ({}) => {
+const SurfDescription = () => {
   //add + check + update technical data Inputdata
 
   return (
@@ -18,6 +18,8 @@ const SurfDescription = ({}) => {
         data={TechnicalValue.MER.Surf["Planche de surf"].Type}
         name="Type de planche"
       />
+      {/* //---- Etat */}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //---- Level */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Niveau}
@@ -35,11 +37,9 @@ const SurfDescription = ({}) => {
       />
       {/* //---- Volume */}
       <DropDown
-        data={TechnicalValue.MER.Surf["Planche de surf"].Litrage}
+        data={TechnicalValue.COMMUN.Litrage}
         name="Volume de la planche"
       />
-      {/* //---- Etat */}
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //---- Longueur */}
       <DropDown data={TechnicalValue.COMMUN.Longeur} name="Longueur planche" />
       {/* //---- Largeur */}

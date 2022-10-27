@@ -17,11 +17,12 @@ import DerivesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-C
 // import { DescriptionContext } from "../../Context/DescriptionContext";
 import LeashDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/LeashDescription";
 import PadDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/PadDescription";
-import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
+import GiletImpact from "../../Components/AddProduct/3-TechnicalInfos/3-Components/GiletImpact";
+// import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
 //----------// Components //------------//
 import DragnDrop from "../../Components/AddProduct/1-DrapNDrop/DragnDrop";
-import SwitchSelection from "../../Components/InformationsComplementaire/SwitchSelection";
+// import SwitchSelection from "../../Components/InformationsComplementaire/SwitchSelection";
 import OfferDescription from "../../Components/AddProduct/2-DescriptionOffre/OfferDescription";
 //---------// Context
 import { UserContext } from "../../Context/UserContext";
@@ -73,6 +74,7 @@ const AddProduct = () => {
           {createOffer.Produit === "Dérives / Ailerons" && (
             <DerivesDescription />
           )}
+          {createOffer.Produit === "Gilet Impact" && <GiletImpact />}
           {createOffer.Produit === "Pad" && <PadDescription />}
           {createOffer.Produit === "Leash" && <LeashDescription />}
           {/*
