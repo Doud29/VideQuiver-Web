@@ -8,7 +8,7 @@ const FinBodyboardDescription = () => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
-      <DropDown data={TechnicalValue.COMMUN.Taille} name="Taille" />
+      <DropDown data={TechnicalValue.COMMUN.Pointure} name="Pointure" />
       {/* //---// Etat  */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //----// Marque*/}

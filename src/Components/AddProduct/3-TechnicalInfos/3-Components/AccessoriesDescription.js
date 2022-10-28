@@ -9,7 +9,15 @@ const AccessoriesDescription = () => {
     <div className="container-description">
       <TitleTechnicalInformation />
       {/* //---// détails */}
-      <DropDown data={TechnicalValue.COMMUN.Accessory} name="Détails" />
+      <InputField
+        type="text"
+        name="Type d'acessoire"
+        id="Type d'acessoire"
+        // value={Marque}
+        // onChange={onChange}
+        placeholder=" "
+        autoComplete="off"
+      />
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //----// Marque*/}
       <InputField

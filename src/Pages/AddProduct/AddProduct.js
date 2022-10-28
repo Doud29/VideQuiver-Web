@@ -81,7 +81,8 @@ const AddProduct = () => {
           {createOffer.Produit === "Gilet Impact de surf" && <GiletImpact />}
           {createOffer.Produit === "Pad de surf" && <PadDescription />}
           {createOffer.Produit === "Leash de surf" && <LeashDescription />}
-          {createOffer.Produit === "Accessoires de surf" && (
+          {(createOffer.Produit === "Accessoires de surf" ||
+            createOffer.Produit === "Accessoires de bodyboard") && (
             <AccessoriesDescription />
           )}
           {createOffer.Produit === "Bagagerie de surf" && (
