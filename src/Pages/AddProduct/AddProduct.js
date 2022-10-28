@@ -20,10 +20,11 @@ import PadDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Compo
 import GiletImpact from "../../Components/AddProduct/3-TechnicalInfos/3-Components/GiletImpact";
 import AccessoriesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/AccessoriesDescription";
 import SurfLuggageDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/SurfLuggageDescription";
-
+import BodyBoardDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/BodyBoardDescription";
 //----------// Technical Bodyboard Components //------------//
 import FinBodyboardDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/FinBodyBoardDescription";
-
+import BodyBoardLuggageDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/BodyBoardLuggageDescription";
+import LeashBodyBoardDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/LeashBodyBoardDescription";
 // import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
 //----------// Components //------------//
@@ -86,14 +87,19 @@ const AddProduct = () => {
           {createOffer.Produit === "Bagagerie de surf" && (
             <SurfLuggageDescription />
           )}
-
           {/*
 //-----------// Composents BodyBoard */}
+          {createOffer.Produit === "Planche de bodyboard" && (
+            <BodyBoardDescription />
+          )}
           {createOffer.Produit === "Palmes de bodyboard" && (
             <FinBodyboardDescription />
           )}
           {createOffer.Produit === "Bagagerie de bodyboard" && (
-            <FinBodyboardDescription />
+            <BodyBoardLuggageDescription />
+          )}
+          {createOffer.Produit === "Leash coil" && (
+            <LeashBodyBoardDescription />
           )}
           {/*
 //-----------// Composents BodyBoard 

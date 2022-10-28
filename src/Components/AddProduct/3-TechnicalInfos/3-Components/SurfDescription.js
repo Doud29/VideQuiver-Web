@@ -26,10 +26,7 @@ const SurfDescription = () => {
       {/* //---- Etat */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //---- Level */}
-      <DropDown
-        data={TechnicalValue.MER.Surf["Planche de surf"].Niveau}
-        name="Niveau requis"
-      />
+      <DropDown data={TechnicalValue.COMMUN.Niveau} name="Niveau requis" />
       {/* //---- Boitier dérives */}
       <DropDown data={TechnicalValue.COMMUN.Boitier} name="Type de boitier" />
       {/* //---- Configuration */}

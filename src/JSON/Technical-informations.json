@@ -82,44 +82,7 @@
             "value": "Retro"
           }
         ],
-        "Niveau": [
-          {
-            "id": "Level-0",
-            "Theme": "niveau requis",
-            "content": " ",
-            "value": null
-          },
-          {
-            "id": "Level-1",
-            "Theme": "niveau requis",
-            "content": "Débutant",
-            "value": "Débutant"
-          },
-          {
-            "id": "Level-2",
-            "Theme": "niveau requis",
-            "content": "Débutant/Intermédiaire",
-            "value": "Débutant/Intermédiaire"
-          },
-          {
-            "id": "Level-3",
-            "Theme": "niveau requis",
-            "content": "Intermédiaire/Confirmé",
-            "value": "Intermédiaire/Confirmé"
-          },
-          {
-            "id": "Level-4",
-            "Theme": "niveau requis",
-            "content": "confirmé",
-            "value": "confirmé"
-          },
-          {
-            "id": "Level-5",
-            "Theme": "niveau requis",
-            "content": "Tout niveaux",
-            "value": "Tout niveaux"
-          }
-        ],
+
         "Materiaux": [
           {
             "id": "matériaux-planche-surf-0",
@@ -587,7 +550,46 @@
       "Palmes de BodyBoard": {},
       "Leash": {},
       "Accessoires": {},
-      "Bagagerie": {}
+      "Bagagerie": {
+        "Nombre de planche": [
+          {
+            "id": "nombre-de-planche-0",
+            "Theme": "nombre de planche",
+            "content": " ",
+            "value": null
+          },
+          {
+            "id": "nombre-de-planche-1",
+            "Theme": "nombre de planche",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "nombre-de-planche-2",
+            "Theme": "nombre de planche",
+            "content": "1 planche",
+            "value": "1 planche"
+          },
+          {
+            "id": "nombre-de-planche-3",
+            "Theme": "nombre de planche",
+            "content": "2 planches",
+            "value": "2 planches"
+          },
+          {
+            "id": "nombre-de-planche-4",
+            "Theme": "nombre de planche",
+            "content": "3 planches",
+            "value": "3 planches"
+          },
+          {
+            "id": "nombre-de-planche-5",
+            "Theme": "nombre de planche",
+            "content": "4 planches",
+            "value": "4 planches"
+          }
+        ]
+      }
     }
   },
   "COMMUN": {
@@ -2109,6 +2111,293 @@
         "Theme": "Boitier",
         "content": "Boitier SoftBoard",
         "value": "Boitier SoftBoard"
+      }
+    ],
+    "Niveau": [
+      {
+        "id": "Level-0",
+        "Theme": "niveau requis",
+        "content": " ",
+        "value": null
+      },
+      {
+        "id": "Level-1",
+        "Theme": "niveau requis",
+        "content": "Débutant",
+        "value": "Débutant"
+      },
+      {
+        "id": "Level-2",
+        "Theme": "niveau requis",
+        "content": "Débutant/Intermédiaire",
+        "value": "Débutant/Intermédiaire"
+      },
+      {
+        "id": "Level-3",
+        "Theme": "niveau requis",
+        "content": "Intermédiaire/Confirmé",
+        "value": "Intermédiaire/Confirmé"
+      },
+      {
+        "id": "Level-4",
+        "Theme": "niveau requis",
+        "content": "confirmé",
+        "value": "confirmé"
+      },
+      {
+        "id": "Level-5",
+        "Theme": "niveau requis",
+        "content": "Tout niveaux",
+        "value": "Tout niveaux"
+      }
+    ],
+    "Taille de pied": [
+      {
+        "id": "taille-pied-0",
+        "Theme": "taille-pied",
+        "content": " ",
+        "value": null
+      },
+      {
+        "id": "taille-pied-1",
+        "Theme": "taille-pied",
+        "content": "Je ne sais pas",
+        "value": "Je ne sais pas"
+      },
+      {
+        "id": "taille-pied-2",
+        "Theme": "taille-pied",
+        "content": "17 -",
+        "value": "17 -"
+      },
+      {
+        "id": "taille-pied-3",
+        "Theme": "taille-pied",
+        "content": "18",
+        "value": "18"
+      },
+      {
+        "id": "taille-pied-4",
+        "Theme": "taille-pied",
+        "content": "19",
+        "value": "19"
+      },
+      {
+        "id": "taille-pied-5",
+        "Theme": "taille-pied",
+        "content": "20",
+        "value": "20"
+      },
+      {
+        "id": "taille-pied-6",
+        "Theme": "taille-pied",
+        "content": "21 -",
+        "value": "21 -"
+      },
+      {
+        "id": "taille-pied-7",
+        "Theme": "taille-pied",
+        "content": "22",
+        "value": "22"
+      },
+      {
+        "id": "taille-pied-8",
+        "Theme": "taille-pied",
+        "content": "23 -",
+        "value": "23 -"
+      },
+      {
+        "id": "taille-pied-9",
+        "Theme": "taille-pied",
+        "content": "24",
+        "value": "24"
+      },
+      {
+        "id": "taille-pied-10",
+        "Theme": "taille-pied",
+        "content": "25 -",
+        "value": "25 -"
+      },
+      {
+        "id": "taille-pied-11",
+        "Theme": "taille-pied",
+        "content": "26",
+        "value": "26"
+      },
+      {
+        "id": "taille-pied-12",
+        "Theme": "taille-pied",
+        "content": "27 -",
+        "value": "27 -"
+      },
+      {
+        "id": "taille-pied-13",
+        "Theme": "taille-pied",
+        "content": "28",
+        "value": "28"
+      },
+      {
+        "id": "taille-pied-14",
+        "Theme": "taille-pied",
+        "content": "29 -",
+        "value": "29 -"
+      },
+      {
+        "id": "taille-pied-15",
+        "Theme": "taille-pied",
+        "content": "30",
+        "value": "30"
+      },
+      {
+        "id": "taille-pied-16",
+        "Theme": "taille-pied",
+        "content": "31 -",
+        "value": "31 -"
+      },
+      {
+        "id": "taille-pied-17",
+        "Theme": "taille-pied",
+        "content": "32",
+        "value": "32"
+      },
+      {
+        "id": "taille-pied-18",
+        "Theme": "taille-pied",
+        "content": "33 -",
+        "value": "33 -"
+      },
+      {
+        "id": "taille-pied-19",
+        "Theme": "taille-pied",
+        "content": "34",
+        "value": "34"
+      },
+      {
+        "id": "taille-pied-20",
+        "Theme": "taille-pied",
+        "content": "35 -",
+        "value": "35 -"
+      },
+      {
+        "id": "taille-pied-21",
+        "Theme": "taille-pied",
+        "content": "36",
+        "value": "36"
+      },
+      {
+        "id": "taille-pied-22",
+        "Theme": "taille-pied",
+        "content": "37 -",
+        "value": "37 -"
+      },
+      {
+        "id": "taille-pied-23",
+        "Theme": "taille-pied",
+        "content": "38",
+        "value": "38"
+      },
+
+      {
+        "id": "taille-pied-24",
+        "Theme": "taille-pied",
+        "content": "39",
+        "value": "39"
+      },
+      {
+        "id": "taille-pied-25",
+        "Theme": "taille-pied",
+        "content": "40",
+        "value": "40"
+      },
+      {
+        "id": "taille-pied-26",
+        "Theme": "taille-pied",
+        "content": "41",
+        "value": "41"
+      },
+      {
+        "id": "taille-pied-27",
+        "Theme": "taille-pied",
+        "content": "42",
+        "value": "42"
+      },
+      {
+        "id": "taille-pied-28",
+        "Theme": "taille-pied",
+        "content": "43",
+        "value": "43"
+      },
+      {
+        "id": "taille-pied-29",
+        "Theme": "taille-pied",
+        "content": "44",
+        "value": "44"
+      },
+      {
+        "id": "taille-pied-30",
+        "Theme": "taille-pied",
+        "content": "45",
+        "value": "45"
+      },
+      {
+        "id": "taille-pied-31",
+        "Theme": "taille-pied",
+        "content": "46",
+        "value": "46"
+      },
+      {
+        "id": "taille-pied-32",
+        "Theme": "taille-pied",
+        "content": "47",
+        "value": "47"
+      },
+      {
+        "id": "taille-pied-33",
+        "Theme": "taille-pied",
+        "content": "49",
+        "value": "49"
+      },
+      {
+        "id": "taille-pied-33",
+        "Theme": "taille-pied",
+        "content": "50",
+        "value": "50"
+      },
+      {
+        "id": "taille-pied-34",
+        "Theme": "taille-pied",
+        "content": "51",
+        "value": "51"
+      },
+      {
+        "id": "taille-pied-35",
+        "Theme": "taille-pied",
+        "content": "52",
+        "value": "52"
+      },
+      {
+        "id": "taille-pied-36",
+        "Theme": "taille-pied",
+        "content": "53",
+        "value": "53"
+      },
+      {
+        "id": "taille-pied-37",
+        "Theme": "taille-pied",
+        "content": "54",
+        "value": "54"
+      },
+      {
+        "id": "taille-pied-38",
+        "Theme": "taille-pied",
+        "content": "55",
+        "value": "55"
+      },
+      {
+        "id": "taille-pied-39",
+        "Theme": "taille-pied",
+        "content": "56",
+        "value": "56"
       }
     ]
   }
