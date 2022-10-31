@@ -4,7 +4,7 @@ import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../JSON/Technical-informations.json";
 import InputField from "../2-TechnicalComponents/InputField/InputField";
 
-const JacketDescription = () => {
+const SocksDescription = () => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
@@ -14,9 +14,7 @@ const JacketDescription = () => {
         name="Epaisseur"
       />
       {/* //-----------------// Taille combinaisaon*/}
-      <DropDown data={TechnicalValue.COMMUN.Taille} name="Taille" />
-      {/* //--------------------// Genre */}
-      <DropDown data={TechnicalValue.COMMUN.Genre} name="Genre" />
+      <DropDown data={TechnicalValue.COMMUN.Pointure} name="Pointure" />
       {/* //-----------------// Etat*/}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //---- Marque */}
@@ -33,4 +31,4 @@ const JacketDescription = () => {
   );
 };
 
-export default JacketDescription;
+export default SocksDescription;

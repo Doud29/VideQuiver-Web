@@ -717,6 +717,12 @@
           "Theme": "Epaisseur-Jacket",
           "content": "4 mm",
           "value": "4 mm"
+        },
+        {
+          "id": "Epaisseur-Jacket-4",
+          "Theme": "Epaisseur-Jacket",
+          "content": "5 mm",
+          "value": "5 mm"
         }
       ]
     }

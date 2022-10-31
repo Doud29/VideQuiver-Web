@@ -29,6 +29,8 @@ import LeashBodyBoardDescription from "../../Components/AddProduct/3-TechnicalIn
 //----------// Technical Neoprene Components //------------//
 import JacketDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/JacketDescription";
 import WetSuitDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/WetSuitDescription";
+import SocksDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/SocksDescription";
+import BalaclavaDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/BalaclavaDescription";
 // import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
 //----------// Components //------------//
@@ -113,7 +115,10 @@ const AddProduct = () => {
             <WetSuitDescription />
           )}
           {createOffer.Produit === "Veste néopréne" && <JacketDescription />}
-
+          {createOffer.Produit === "Chaussons néopréne" && <SocksDescription />}
+          {createOffer.Produit === "Cagoules / Bonnets néopréne" && (
+            <BalaclavaDescription />
+          )}
           {/*
 //----------------------------------------------//  
 //-----------// Composents BodySurf //----------// 

@@ -4,7 +4,7 @@ import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../JSON/Technical-informations.json";
 import InputField from "../2-TechnicalComponents/InputField/InputField";
 
-const JacketDescription = () => {
+const BalaclavaDescription = () => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
@@ -33,4 +33,4 @@ const JacketDescription = () => {
   );
 };
 
-export default JacketDescription;
+export default BalaclavaDescription;

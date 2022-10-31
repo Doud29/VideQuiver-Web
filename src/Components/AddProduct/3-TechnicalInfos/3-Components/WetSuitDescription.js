@@ -14,7 +14,7 @@ const CombinaisonDescription = () => {
       <DropDown data={TechnicalValue.MER.Néopréne.Fermeture} name="Fermeture" />
       {/* //-----------------// Taille combinaisaon*/}
       <DropDown data={TechnicalValue.COMMUN.Taille} name="Taille" />
-      {/* //--------------------// Genre */}
+      {/* //-----------------// Genre */}
       <DropDown data={TechnicalValue.COMMUN.Genre} name="Genre" />
       {/* //-----------------// Etat*/}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
