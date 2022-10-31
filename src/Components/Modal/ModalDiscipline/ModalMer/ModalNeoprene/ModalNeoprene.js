@@ -35,56 +35,56 @@ const ModalNeoprene = () => {
             type="radio"
             onChange={handleCheckBox}
             id="Intégral"
-            name="Porduit"
-            value="Combinaison Intégral"
+            name="Produit"
+            value="Combinaison intégrale"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Shorty"
-            name="Porduit"
+            name="Produit"
             value="Combinaison shorty"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Lycra"
-            name="Porduit"
+            name="Produit"
             value="Lycra / Top"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Pants"
-            name="Porduit"
-            value="Pants"
+            id="Long John"
+            name="Produit"
+            value="Long John"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Veste néopréne"
-            name="Porduit"
+            name="Produit"
             value="Veste néopréne"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Chaussons"
-            name="Porduit"
+            name="Produit"
             value="Chaussons néopréne"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Cagoules / Bonnets"
-            name="Porduit"
+            name="Produit"
             value="Cagoules / Bonnets néopréne"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Gants"
-            name="Porduit"
+            name="Produit"
             value="Gants néopréne"
           />
         </div>

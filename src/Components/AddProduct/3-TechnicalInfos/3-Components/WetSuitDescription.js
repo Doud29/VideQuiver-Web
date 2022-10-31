@@ -1,6 +1,3 @@
-//--------------// Css
-import "./DescriptionProduit.scss";
-
 //--------------// Composent
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
 import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
@@ -12,113 +9,25 @@ const CombinaisonDescription = () => {
     <div className="container-description">
       <TitleTechnicalInformation />
       {/* //---------// Epaisseur combinaisaon*/}
-      <DropDown
-        data={TechnicalValue.MER.Néopréne.Epaisseur}
-        name="Epaisseur de la combinaison"
-      />
-      {/* <select
+      <DropDown data={TechnicalValue.MER.Néopréne.Epaisseur} name="Epaisseur" />
+      {/* //-----------------// Zip combinaisaon*/}
+      <DropDown data={TechnicalValue.MER.Néopréne.Fermeture} name="Fermeture" />
+      {/* //-----------------// Taille combinaisaon*/}
+      <DropDown data={TechnicalValue.COMMUN.Taille} name="Taille" />
+      {/* //--------------------// Genre */}
+      <DropDown data={TechnicalValue.COMMUN.Genre} name="Genre" />
+      {/* //-----------------// Etat*/}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
+      {/* //---- Marque */}
+      <InputField
         type="text"
-        value={wetsuitDescriptionState.Epaisseur}
-        onChange={handleChange}
-        name="Epaisseur"
-        id="Epaisseur"
-      >
-        <option>Epaisseur de la combinaison</option>
-        <option value="5/3">5/3</option>
-        <option value="4/3">4/3</option>
-        <option value="3/2">3/2</option>
-        <option value="0/5">0/5</option>
-        <option value="1/1">1/1</option>
-        <option value="2/2">2/2</option>
-        <option value="1/5">1/5</option>
-        <option value="5/4/3">5/4/3</option>
-        <option value="6/4">6/4</option>
-      </select> */}
-
-      {/* //-----------------// Zip combinaisaon //----------------//*/}
-
-      <select
-        type="text"
-        value={wetsuitDescriptionState.Zip}
-        onChange={handleChange}
-        name="Zip"
-        id="Zip"
-      >
-        <option>Fermeture</option>
-        <option value="Front">Front Zip</option>
-        <option value="Back">Back Zip</option>
-        <option value="Nozip">No zip</option>
-      </select>
-
-      {/* //-----------------// Taille combinaisaon //----------------//*/}
-
-      <select
-        type="text"
-        value={wetsuitDescriptionState.Taille}
-        onChange={handleChange}
-        name="Taille"
-        id="Taille"
-      >
-        <option>Taille de la combinaison</option>
-        <option value="2XS">2XS</option>
-        <option value="XS">XS</option>
-        <option value="S">S</option>
-        <option value="M">M</option>
-        <option value="L">L</option>
-        <option value="XL">XL</option>
-        <option value="XXL">XXL</option>
-      </select>
-
-      {/* //--------------------// Genre //------------------//*/}
-
-      <select
-        type="text"
-        value={wetsuitDescriptionState.Genre}
-        onChange={handleChange}
-        name="Taille"
-        id="Taille"
-      >
-        <option>Genre</option>
-        <option value="Homme">Homme</option>
-        <option value="Femme">Femme</option>
-        <option value="Junior">Enfant</option>
-      </select>
-
-      {/* //--------------------// Marque //------------------//*/}
-
-      <input
-        type="text"
-        placeholder="Marque"
         name="Marque"
         id="Marque"
-        onChange={handleChange}
+        // value={Marque}
+        // onChange={onChange}
+        placeholder=" "
+        autoComplete="off"
       />
-
-      {/* //-----------------// Etat Combinaison //----------------------//*/}
-      <select
-        value={wetsuitDescriptionState.Etat}
-        onChange={handleChange}
-        name="Etat"
-        id="Etat"
-      >
-        <option>Etat de la combinaison</option>
-        <option value="Neuf">Neuf</option>
-        <option value="Très bon état">Très bon état</option>
-        <option value="Bon état">Bon état</option>
-        <option value="Etat correct">Etat correct</option>
-        <option value="Mauvais Etat">Mauvais Etat</option>
-      </select>
-
-      {/* //-----------------// Prix //----------------------//*/}
-
-      {/* <input
-        type="text"
-        placeholder="Prix de vente [€]"
-        name="Prix"
-        id="Prix"
-        onChange={handleChange}
-      /> */}
-      {JSON.stringify(wetsuitDescriptionState)}
     </div>
   );
 };

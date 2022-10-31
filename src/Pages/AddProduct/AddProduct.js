@@ -26,6 +26,9 @@ import BodyBoardDescription from "../../Components/AddProduct/3-TechnicalInfos/3
 import FinBodyboardDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/FinBodyBoardDescription";
 import BodyBoardLuggageDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/BodyBoardLuggageDescription";
 import LeashBodyBoardDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/LeashBodyBoardDescription";
+//----------// Technical Neoprene Components //------------//
+import JacketDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/JacketDescription";
+import WetSuitDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/WetSuitDescription";
 // import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
 //----------// Components //------------//
@@ -105,8 +108,11 @@ const AddProduct = () => {
             <LeashBodyBoardDescription />
           )}
           {/*
-//-----------// Composents BodyBoard 
-  */}
+//-----------// Composents Neoprene */}
+          {createOffer.Produit === "Combinaison intégrale" && (
+            <WetSuitDescription />
+          )}
+          {createOffer.Produit === "Veste néopréne" && <JacketDescription />}
 
           {/*
 //----------------------------------------------//  

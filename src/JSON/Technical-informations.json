@@ -656,21 +656,104 @@
       ],
       "Fermeture": [
         {
-          "id": "Epaisseur-combinaison-0",
-          "Theme": "Epaisseur-combinaison",
+          "id": "Fermeture-0",
+          "Theme": "Fermeture",
           "content": " ",
           "value": null
         },
         {
-          "id": "Epaisseur-combinaison-1",
-          "Theme": "Epaisseur-combinaison",
+          "id": "Fermeture-1",
+          "Theme": "Fermeture",
           "content": "Je ne sais pas",
           "value": "Je ne sais pas"
+        },
+        {
+          "id": "Fermeture-1",
+          "Theme": "Fermeture",
+          "content": "Front-zip",
+          "value": "Front-zip"
+        },
+        {
+          "id": "Fermeture-2",
+          "Theme": "Fermeture",
+          "content": "Back-zip",
+          "value": "Back-zip"
+        },
+        {
+          "id": "Fermeture-3",
+          "Theme": "Fermeture",
+          "content": "No zip",
+          "value": "No zip"
+        }
+      ],
+      "Epaisseur Jacket": [
+        {
+          "id": "Epaisseur-Jacket-0",
+          "Theme": "Epaisseur-Jacket",
+          "content": " ",
+          "value": null
+        },
+        {
+          "id": "Epaisseur-Jacket-1",
+          "Theme": "Epaisseur-Jacket",
+          "content": "Je ne sais pas",
+          "value": "Je ne sais pas"
+        },
+
+        {
+          "id": "Epaisseur-Jacket-1",
+          "Theme": "Epaisseur-Jacket",
+          "content": "2 mm",
+          "value": "2 mm"
+        },
+        {
+          "id": "Epaisseur-Jacket-2",
+          "Theme": "Epaisseur-Jacket",
+          "content": "3 mm",
+          "value": "3 mm"
+        },
+        {
+          "id": "Epaisseur-Jacket-3",
+          "Theme": "Epaisseur-Jacket",
+          "content": "4 mm",
+          "value": "4 mm"
         }
       ]
     }
   },
   "COMMUN": {
+    "Genre": [
+      {
+        "id": "Genre-0",
+        "Theme": "Genre",
+        "content": " ",
+        "value": null
+      },
+      {
+        "id": "Genre-1",
+        "Theme": "Genre",
+        "content": "Je ne sais pas",
+        "value": "Je ne sais pas"
+      },
+      {
+        "id": "Genre-2",
+        "Theme": "Genre",
+        "content": "Homme",
+        "value": "Homme"
+      },
+      {
+        "id": "Genre-3",
+        "Theme": "Genre",
+        "content": "Femme",
+        "value": "Femme"
+      },
+      {
+        "id": "Genre-4",
+        "Theme": "Genre",
+        "content": "Enfant",
+        "value": "Enfant"
+      }
+    ],
     "Etat": [
       {
         "id": "etat-0",
