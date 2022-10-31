@@ -5,12 +5,10 @@
 import { UserContext } from "../../../../Context/UserContext";
 
 //--------------// packages
-// import { Link } from "react-router-dom";
 import { useContext } from "react";
 
-const ModalMer = ({}) => {
+const ModalMer = () => {
   const { ToggleModal } = useContext(UserContext);
-
   return (
     //-----------------------------//Container Modal
     <div className="container-modal">
@@ -31,10 +29,7 @@ const ModalMer = ({}) => {
           </div>
         </div>
         <div className="container-button">
-          <div
-          // onClick={() => {
-          // }}
-          >
+          <div onClick={() => ToggleModal("Neoprene")}>
             <span>Néoprène </span>
             <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
           </div>

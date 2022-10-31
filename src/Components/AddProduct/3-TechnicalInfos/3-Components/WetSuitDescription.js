@@ -2,40 +2,21 @@
 import "./DescriptionProduit.scss";
 
 //--------------// Composent
-import TitleTechnicalInformation from "../TitleTechnicalInformations";
-
-//--------------// packages
-// import { Link } from "react-router-dom";
-import { useState } from "react";
+import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
+import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
+import TechnicalValue from "../../../../JSON/Technical-informations.json";
+import InputField from "../2-TechnicalComponents/InputField/InputField";
 
 const CombinaisonDescription = () => {
-  const [wetsuitDescriptionState, setWetsuitDescriptionState] = useState({
-    Epaisseur: "",
-    Zip: "",
-    Taille: "",
-    Marque: "",
-    Genre: "",
-    Etat: "",
-  });
-
-  // console.log(wetsuitDescriptionState);
-
-  const handleChange = (event) => {
-    let value = event.target.value;
-    let name = event.target.name;
-
-    setWetsuitDescriptionState((prevalue) => {
-      return {
-        ...prevalue, // Spread Operator
-        [name]: value,
-      };
-    });
-  };
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
-      {/* //-----------------// Epaisseur combinaisaon //----------------//*/}
-      <select
+      {/* //---------// Epaisseur combinaisaon*/}
+      <DropDown
+        data={TechnicalValue.MER.Néopréne.Epaisseur}
+        name="Epaisseur de la combinaison"
+      />
+      {/* <select
         type="text"
         value={wetsuitDescriptionState.Epaisseur}
         onChange={handleChange}
@@ -52,7 +33,7 @@ const CombinaisonDescription = () => {
         <option value="1/5">1/5</option>
         <option value="5/4/3">5/4/3</option>
         <option value="6/4">6/4</option>
-      </select>
+      </select> */}
 
       {/* //-----------------// Zip combinaisaon //----------------//*/}
 
@@ -100,7 +81,7 @@ const CombinaisonDescription = () => {
         <option>Genre</option>
         <option value="Homme">Homme</option>
         <option value="Femme">Femme</option>
-        <option value="Junior">Junior</option>
+        <option value="Junior">Enfant</option>
       </select>
 
       {/* //--------------------// Marque //------------------//*/}

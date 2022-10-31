@@ -1,98 +1,92 @@
 //--------------// packages
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import React, { useContext } from "react";
+import { UserContext } from "../../../../../Context/UserContext";
+import InputRadio from "../../ComposantModal/InputRadio";
+import TitleModal from "../../ComposantModal/TitleModal";
 
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
+const ModalNeoprene = () => {
+  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
-const ModalNeoprene = ({ closeModal }) => {
   const handleCheckBox = (e) => {
-    // console.log(e.target.value);
+    const value = e.target.value;
+    const name = e.target.name;
+
+    if (e.target.value !== "") {
+      setTimeout(() => {
+        ToggleModal("closeAll");
+      }, 500);
+    }
+    setCreateOffer({ ...createOffer, [name]: value });
   };
 
   return (
     <div className="container-modal">
       {/* //-----------------------------//Overlay  */}
-      <div className="overlay-modal-trigger"></div>
+      <div
+        className="overlay-modal-trigger"
+        onClick={() => ToggleModal("closeAll")}
+      ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
-        <div className="bloc-header">
-          <p>Néoprène</p>
-          <div
-            className="bloc-arrowLeft"
-            onClick={() => {
-              closeModal(false);
-            }}
-          >
-            {arrowLeft}
-          </div>
-        </div>
+        <TitleModal title="Néopréne" modal="Sea" />
         <div className="container-button">
-          <div>
-            <span>Integrale</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="integrale"
-            />
-          </div>{" "}
-          <div>
-            <span>Shorty</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="shorty"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Lycra / Top</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="lycra"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Pants / Long John</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="pant"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Veste Néoprène</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="veste"
-            />{" "}
-          </div>
-          <div>
-            <span>Chaussons</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="chaussons"
-            />{" "}
-          </div>
-          <div>
-            <span>Cagoules / Bonnets</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="cagoule"
-            />{" "}
-          </div>{" "}
-          <div>
-            <span>Gants</span>
-            <input
-              onChange={handleCheckBox}
-              type="checkbox"
-              value="gant"
-            />{" "}
-          </div>{" "}
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Intégral"
+            name="Porduit"
+            value="Combinaison Intégral"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Shorty"
+            name="Porduit"
+            value="Combinaison shorty"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Lycra"
+            name="Porduit"
+            value="Lycra / Top"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Pants"
+            name="Porduit"
+            value="Pants"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Veste néopréne"
+            name="Porduit"
+            value="Veste néopréne"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Chaussons"
+            name="Porduit"
+            value="Chaussons néopréne"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Cagoules / Bonnets"
+            name="Porduit"
+            value="Cagoules / Bonnets néopréne"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Gants"
+            name="Porduit"
+            value="Gants néopréne"
+          />
         </div>
       </div>
     </div>

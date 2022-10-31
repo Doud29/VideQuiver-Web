@@ -11,6 +11,7 @@ import ModalKiteSurf from "../../Components/Modal/ModalDiscipline/ModalMer/Modal
 import ModalBodySurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalBodySurf/ModalBodySurf";
 import ModalSup from "../../Components/Modal/ModalDiscipline/ModalMer/ModalSup/ModalSup";
 import ModalWindSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalWindSurf/ModalWindSurf";
+import ModalNeoprene from "../../Components/Modal/ModalDiscipline/ModalMer/ModalNeoprene/ModalNeoprene";
 //----------// Technical Surf Components //------------//
 import SurfDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/SurfDescription";
 import DerivesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/DeriveDescription";
@@ -68,6 +69,7 @@ const AddProduct = () => {
         {/* {openModalState.N && <ModalNeoprene  />} */}
         {openModalState.modalBodySurf && <ModalBodySurf />}
         {openModalState.modalApnee && <ModalApnee />}
+        {openModalState.modalNeoprene && <ModalNeoprene />}
         <HeaderAddProduct />
         <form onSubmit={handlAddProduct}>
           <DragnDrop files={files} setfiles={setfiles} />

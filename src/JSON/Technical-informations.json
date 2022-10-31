@@ -589,6 +589,85 @@
           }
         ]
       }
+    },
+    "Néopréne": {
+      "Epaisseur": [
+        {
+          "id": "Epaisseur-combinaison-0",
+          "Theme": "Epaisseur-combinaison",
+          "content": " ",
+          "value": null
+        },
+        {
+          "id": "Epaisseur-combinaison-1",
+          "Theme": "Epaisseur-combinaison",
+          "content": "Je ne sais pas",
+          "value": "Je ne sais pas"
+        },
+        {
+          "id": "Epaisseur-combinaison-2",
+          "Theme": "Epaisseur-combinaison",
+          "content": "Je ne sais pas",
+          "value": "Je ne sais pas"
+        },
+
+        {
+          "id": "Epaisseur-combinaison-3",
+          "Theme": "Epaisseur-combinaison",
+          "content": "6/4 mm",
+          "value": "6/4 mm"
+        },
+        {
+          "id": "Epaisseur-combinaison-4",
+          "Theme": "Epaisseur-combinaison",
+          "content": "5/4/3 mm",
+          "value": "5/4/3 mm"
+        },
+        {
+          "id": "Epaisseur-combinaison-5",
+          "Theme": "Epaisseur-combinaison",
+          "content": "5/3 mm",
+          "value": "5/3 mm"
+        },
+        {
+          "id": "Epaisseur-combinaison-6",
+          "Theme": "Epaisseur-combinaison",
+          "content": "4/3 mm",
+          "value": "4/3 mm"
+        },
+        {
+          "id": "Epaisseur-combinaison-7",
+          "Theme": "Epaisseur-combinaison",
+          "content": "3/2 mm",
+          "value": "3/2 mm"
+        },
+        {
+          "id": "Epaisseur-combinaison-8",
+          "Theme": "Epaisseur-combinaison",
+          "content": "2 mm",
+          "value": "2 mm"
+        },
+        {
+          "id": "Epaisseur-combinaison-9",
+          "Theme": "Epaisseur-combinaison",
+          "content": "1 mm",
+          "value": "1 mm"
+        }
+      ],
+      "Fermeture": [
+        {
+          "id": "Epaisseur-combinaison-0",
+          "Theme": "Epaisseur-combinaison",
+          "content": " ",
+          "value": null
+        },
+        {
+          "id": "Epaisseur-combinaison-1",
+          "Theme": "Epaisseur-combinaison",
+          "content": "Je ne sais pas",
+          "value": "Je ne sais pas"
+        }
+      ]
     }
   },
   "COMMUN": {

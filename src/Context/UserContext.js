@@ -73,7 +73,7 @@ export const UserContextProvider = (props) => {
     modalApnee: false,
   });
 
-  // console.log(openModalState.modalWindSurf);
+  console.log(openModalState.modalNeoprene);
 
   const ToggleModal = (modal) => {
     if (modal === "categories") {

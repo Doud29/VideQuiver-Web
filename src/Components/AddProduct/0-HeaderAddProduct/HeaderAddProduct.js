@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { UserContext } from "../../../Context/UserContext";
 
 const HeaderAddProduct = () => {
+  const { setCreateOffer, createOffer } = useContext(UserContext);
+
   return (
     <div className="bloc-header">
       <p>Vendre un article</p>
@@ -9,6 +13,13 @@ const HeaderAddProduct = () => {
           <ion-icon
             name="arrow-back-outline"
             style={{ fontSize: "25px" }}
+            onClick={() => {
+              createOffer !== null &&
+                alert(
+                  "Attention, l'essemble de votre annonce ne sera pas enregistré!"
+                );
+              setCreateOffer({ Model: "", DescriptionOffer: "" });
+            }}
           ></ion-icon>
         </Link>
       </div>
