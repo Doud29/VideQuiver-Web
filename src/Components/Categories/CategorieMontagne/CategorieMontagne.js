@@ -1,32 +1,17 @@
 import "../../Categories/categorie.scss";
 
+//---------------// Composent
+import ImgCategorie from "../ImgCategori";
+
 const CategorieMontagne = () => {
   return (
     <div className="container-categorie">
-      <div className="categorie">
-        <img src="" alt="" />
-        <p>Snow</p>
-      </div>
-      <div className="categorie">
-        <img src="" alt="" />
-        <p>Ski</p>
-      </div>
-      <div className="categorie">
-        <img src="" alt="" />
-        <p>Randonnée</p>
-      </div>
-      <div className="categorie">
-        <img src="" alt="" />
-        <p>Trail</p>
-      </div>
-      <div className="categorie">
-        <img src="" alt="" />
-        <p>Alpinisme </p>
-      </div>
-      <div className="categorie">
-        <img src="" alt="" />
-        <p>VTT</p>
-      </div>
+      <ImgCategorie source="" name="Snow" alt="" />
+      <ImgCategorie source="" name="Ski" alt="" />
+      <ImgCategorie source="" name="Randonée" alt="" />
+      <ImgCategorie source="" name="Trail" alt="" />
+      <ImgCategorie source="" name="Alpinisme" alt="" />
+      <ImgCategorie source="" name="VTT" alt="" />
     </div>
   );
 };

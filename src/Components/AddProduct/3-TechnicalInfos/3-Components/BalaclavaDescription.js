@@ -15,8 +15,6 @@ const BalaclavaDescription = () => {
       />
       {/* //-----------------// Taille combinaisaon*/}
       <DropDown data={TechnicalValue.COMMUN.Taille} name="Taille" />
-      {/* //--------------------// Genre */}
-      <DropDown data={TechnicalValue.COMMUN.Genre} name="Genre" />
       {/* //-----------------// Etat*/}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
       {/* //---- Marque */}

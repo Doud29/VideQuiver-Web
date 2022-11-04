@@ -9,10 +9,13 @@ import { Link } from "react-router-dom";
 
 const BtnProfil = () => {
   const { currentUser } = useContext(UserContext);
+
   return (
     <div className="container-btn user">
       {currentUser ? (
-        <ion-icon name="settings-outline"></ion-icon>
+        <Link to="/myProfil">
+          <ion-icon name="settings-outline"></ion-icon>
+        </Link>
       ) : (
         <Link to="/welcome">
           <ion-icon name="person-add-outline"></ion-icon>{" "}

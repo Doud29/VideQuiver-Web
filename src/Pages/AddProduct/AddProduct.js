@@ -53,8 +53,10 @@ const AddProduct = () => {
 
   //------// fonction pour soumetre la demande de vente
   const handlAddProduct = (event) => {
+    event.preventDefault();
     try {
-      event.preventDefault();
+      if ((createOffer.Model || createOffer.DescriptionOffer) === "") {
+      }
     } catch (error) {}
   };
 
@@ -116,9 +118,10 @@ const AddProduct = () => {
           )}
           {createOffer.Produit === "Veste néopréne" && <JacketDescription />}
           {createOffer.Produit === "Chaussons néopréne" && <SocksDescription />}
-          {createOffer.Produit === "Cagoules / Bonnets néopréne" && (
+          {createOffer.Produit === "Cagoules / Bonnets" && (
             <BalaclavaDescription />
           )}
+
           {/*
 //----------------------------------------------//  
 //-----------// Composents BodySurf //----------// 

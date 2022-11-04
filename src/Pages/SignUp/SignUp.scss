@@ -4,7 +4,6 @@
   box-sizing: border-box;
   background: white;
   min-width: 320px;
-  position: relative;
   .bloc-header {
     height: 55px;
     width: 100%;
@@ -29,22 +28,17 @@
       transform: translate(-50%, -50%);
     }
   }
-
   .container-inputs {
     box-sizing: border-box;
     width: 100%;
+    padding: 15px;
+    max-width: 500px;
+    height: auto;
     text-align: center;
-    height: 87%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
-    max-width: 500px;
-    position: absolute;
-    top: 70px;
-    left: 50%;
-    transform: translateX(-50%);
     background: white;
     .inputdiv {
       position: relative;

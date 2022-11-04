@@ -7,6 +7,8 @@ import {
   signOut,
   GoogleAuthProvider,
   signInWithRedirect,
+  updateProfile,
+  // updatePhoneNumber,
 } from "firebase/auth";
 import { auth } from "../firebase-config";
 //création du context
@@ -21,9 +23,14 @@ export const UserContextProvider = (props) => {
 
   //state User
   const [currentUser, setCurrentUser] = useState({});
+  // console.log(currentUser);
   //inscription
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
+  };
+  //Pseudo utilisateur
+  const completeProfile = (obj) => {
+    return updateProfile(auth.currentUser, obj);
   };
   //connexion avec Google
   const connectGoogleUser = () => {
@@ -72,8 +79,6 @@ export const UserContextProvider = (props) => {
     modalBodySurf: false,
     modalApnee: false,
   });
-
-  console.log(openModalState.modalNeoprene);
 
   const ToggleModal = (modal) => {
     if (modal === "categories") {
@@ -298,7 +303,7 @@ export const UserContextProvider = (props) => {
     ["Sale/Rent/Exchange"]: [],
   });
 
-  // console.log(createOffer);
+  console.log(createOffer);
 
   //add + check + update technical data forDropdownList
   const addTechnicalData = (name, value, Theme) => {
@@ -326,6 +331,7 @@ export const UserContextProvider = (props) => {
     <UserContext.Provider
       value={{
         createUser,
+        completeProfile,
         connectUser,
         logout,
         currentUser,

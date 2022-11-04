@@ -14,10 +14,13 @@ const HeaderAddProduct = () => {
             name="arrow-back-outline"
             style={{ fontSize: "25px" }}
             onClick={() => {
-              createOffer !== null &&
-                alert(
-                  "Attention, l'essemble de votre annonce ne sera pas enregistré!"
-                );
+              createOffer.Model ||
+                createOffer.DescriptionOffer ||
+                createOffer["Technical informations"] ||
+                (createOffer["Sale/Rent/Exchange"] !== "" &&
+                  alert(
+                    "Attention, l'essemble de votre annonce ne sera pas enregistré!"
+                  ));
               setCreateOffer({ Model: "", DescriptionOffer: "" });
             }}
           ></ion-icon>

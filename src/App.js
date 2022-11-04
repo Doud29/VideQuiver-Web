@@ -13,6 +13,7 @@ import Welcome from "./Pages/Welcome/Welcome.js";
 import AddProduct from "./Pages/AddProduct/AddProduct";
 import ProtectedRoute from "./Pages/Protected/ProtectedRoute";
 import Product from "./Pages/Product/Product";
+import MyProfile from "./Pages/Profile/MyProfile";
 import { UserContextProvider } from "./Context/UserContext";
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
               }
             />
             <Route path="/product" element={<Product />} />
+            <Route path="/myProfil" element={<MyProfile />} />
           </Routes>
         </div>
       </Router>

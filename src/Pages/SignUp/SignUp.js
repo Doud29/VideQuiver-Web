@@ -9,25 +9,18 @@ import { useNavigate } from "react-router";
 //--------------// Components && Méthodes
 import { UserContext } from "../../Context/UserContext";
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-
-const arrowLeft = <FontAwesomeIcon icon={faArrowLeft} />;
-
 const SignUp = () => {
-  const { createUser } = useContext(UserContext);
-  //-----------------------------//States //------------------------------//
+  //----// Context
+  const { createUser, completeProfile } = useContext(UserContext);
+  //----//States
   const [validation, setValidation] = useState("");
-  //-------------//On reset les valeur de notre formulaire //-------------//
+  const [moreInfo, setmoreInfos] = useState(null);
+
+  //-----//Rest formulaire
   const formRef = useRef();
   const navigate = useNavigate();
 
-  //----------------------------------------------------------------------//
-  //-------------//On récupére la valeur de nos inputs //-----------------//
-  //----------------------------------------------------------------------//
-
-  //Il faut prendre en référence l'ensemble de nos inputs,
+  //-----//Valeur input
   const inputs = useRef([]);
   const addInputs = (el) => {
     //Si l'élément existe et qu'il n'est pas déjà dans le tableau
@@ -36,39 +29,59 @@ const SignUp = () => {
     }
   };
 
-  //----------------------------------------------------------------------//
-  //------//Soumission du formulaire et vérification côté front//---------//
-  //----------------------------------------------------------------------//
+  const handleInput = (e) => {
+    if (e.target.value !== "") {
+      setmoreInfos({ ...moreInfo, [e.target.name]: e.target.value });
+    }
+    if (e.target.value === "") {
+      setmoreInfos({});
+    }
+  };
 
+  //-----//Soumission formulaire
   const handleForm = async (e) => {
     e.preventDefault();
-    //vérification matching mot de passe
-    if (inputs.current[2].value !== inputs.current[3].value) {
+    //----//Pseudo existant
+    if (moreInfo === null) {
+      setValidation("* Veuillez définir un pseudo");
+      return;
+    }
+    //----//Longueur pseudo
+    if (moreInfo.Pseudo.length < 4) {
+      setValidation("* Votre pseudo doit avoir 4 lettres minimum");
+      return;
+    }
+    //----//Matchching MDP
+    if (inputs.current[1].value !== inputs.current[2].value) {
       setValidation("* Vous devez rentrer un mot de passe identique");
       return;
     }
-    //vérification longeur des mots de passes
-    else if (
-      (inputs.current[2].value.length || inputs.current[3].value.length) < 6
+    //----//Vérification MDP
+    if (
+      (inputs.current[1].value.length || inputs.current[2].value.length) < 6
     ) {
       setValidation("* 6 caracteres min pour votre mot de passe");
       return;
     }
+    //----// Soumission FireBase
     try {
       const cred = await createUser(
-        inputs.current[1].value,
-        inputs.current[2].value
-      );
+        inputs.current[0].value,
+        inputs.current[1].value
+      ).then(async () => {
+        await completeProfile({
+          displayName: moreInfo.Pseudo,
+        });
+      });
       formRef.current.reset();
-      // console.log(cred);
       setValidation("");
       navigate("/home");
     } catch (error) {
-      console.log(error);
-      if ((error.code = "auth/email-already-in-use")) {
+      console.dir(error);
+      if (error.code === "auth/email-already-in-use") {
         setValidation("* Email Déjà utilisé");
       }
-      if ((error.code = "auth/invalid-email")) {
+      if (error.code === "auth/invalid-email") {
         setValidation("* Format de l'email invalide");
       }
     }
@@ -80,7 +93,7 @@ const SignUp = () => {
         <p>inscription ou connexion</p>
         <div className="bloc-arrowLeft">
           <Link to="/welcome" style={{ color: "grey" }}>
-            {arrowLeft}
+            <ion-icon name="arrow-back-outline"></ion-icon>{" "}
           </Link>
         </div>
       </div>
@@ -89,22 +102,19 @@ const SignUp = () => {
         <div className="inputdiv">
           <input
             type="text"
-            ref={addInputs}
+            onChange={handleInput}
             placeholder=" "
             name="Pseudo"
             id="Pseudo"
-            required
             autoComplete="off"
           />
           <span className="spanDescriptionInput">Pseudo</span>
         </div>
-        {/* //-----------------// Password //----------------------//*/}
         <div className="inputdiv">
           <input
             type="email"
             ref={addInputs}
             placeholder=" "
-            required
             name="email"
             id="email"
             autoComplete="off"
@@ -117,7 +127,6 @@ const SignUp = () => {
             type="password"
             ref={addInputs}
             placeholder=" "
-            required
             name="password"
             id="password"
             autoComplete="off"
@@ -130,7 +139,6 @@ const SignUp = () => {
             type="password"
             ref={addInputs}
             placeholder=" "
-            required
             name="password"
             id="repeat-password"
             autoComplete="off"

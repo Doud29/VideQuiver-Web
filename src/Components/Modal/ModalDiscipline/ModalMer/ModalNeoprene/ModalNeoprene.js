@@ -78,7 +78,7 @@ const ModalNeoprene = () => {
             onChange={handleCheckBox}
             id="Cagoules / Bonnets"
             name="Produit"
-            value="Cagoules / Bonnets néopréne"
+            value="Cagoules / Bonnets"
           />
           <InputRadio
             type="radio"

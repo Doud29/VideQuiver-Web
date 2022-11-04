@@ -1,6 +1,9 @@
 //------------// Css
 import "../Categories/categorie.scss";
 
+//---------------// Composent
+// import ImgCategorie from "../Categories/ImgCategori";
+
 const Disciplines = ({
   montagneState,
   setMontagneState,
@@ -9,6 +12,26 @@ const Disciplines = ({
 }) => {
   return (
     <div className="container-categorie">
+      {/* <ImgCategorie
+        source=""
+        name="Mer"
+        alt=""
+        // onClick={() => {
+        //   setMerState(!merState);
+        //   setMontagneState(false);
+        // }}
+      />
+      <ImgCategorie
+        source=""
+        name="Montagne"
+        alt=""
+        // onClick={() => {
+        //   setMontagneState(!montagneState);
+        //   setMerState(false);
+        // }}
+      />
+      <ImgCategorie source="" name="Air" alt="" /> */}
+
       <div
         className="categorie"
         onClick={() => {
