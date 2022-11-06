@@ -303,7 +303,7 @@ export const UserContextProvider = (props) => {
     ["Sale/Rent/Exchange"]: [],
   });
 
-  console.log(createOffer);
+  // console.log(createOffer);
 
   //add + check + update technical data forDropdownList
   const addTechnicalData = (name, value, Theme) => {

@@ -35,7 +35,7 @@ import BalaclavaDescription from "../../Components/AddProduct/3-TechnicalInfos/3
 import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
 //----------// Components //------------//
 import DragnDrop from "../../Components/AddProduct/1-DrapNDrop/DragnDrop";
-// import SwitchSelection from "../../Components/InformationsComplementaire/SwitchSelection";
+import SwitchSelection from "../../Components/AddProduct/5-SwicthSelection/SwitchSelection";
 import OfferDescription from "../../Components/AddProduct/2-DescriptionOffre/OfferDescription";
 //---------// Context
 import { UserContext } from "../../Context/UserContext";
@@ -156,12 +156,8 @@ const AddProduct = () => {
 //----------------//Type D'ANNONCE //-----------//
 //----------------------------------------------// */}
 
-          {/* {choiceValidatedForSellState === true && (
-            <SwitchSelection
-            
-            handleChange={handleChange}
-            />
-          )} */}
+          <SwitchSelection />
+
           {/* 
 //----------------------------------------------//  
 //----------//INFORMATIONS COMPLEMENTAIRE //----//

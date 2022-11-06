@@ -4,12 +4,39 @@ import "./switchSelection.scss";
 //----------// Packages
 import { useState } from "react";
 
+//------// Components
+import RadioButton from "./RadioButton";
+
 const SwitchSelection = () => {
   const [toggle, settoggle] = useState({
     sell: false,
     exchange: false,
     rent: false,
   });
+
+  const toggleToggle = () => {
+    if (toggle.sell === true) {
+      settoggle({
+        sell: true,
+        exchange: true,
+        rent: false,
+      });
+    }
+    if (toggle.exchange === true) {
+      settoggle({
+        sell: false,
+        exchange: false,
+        rent: true,
+      });
+    }
+    if (toggle.exchange === false) {
+      settoggle({
+        sell: false,
+        exchange: false,
+        rent: true,
+      });
+    }
+  };
 
   const handleToggle = (e) => {
     let name = e.target.name;
@@ -24,21 +51,28 @@ const SwitchSelection = () => {
     <div className="container-switch">
       <div className="container-titre">
         <div className="line"></div>
-        <h3>Type d'offre</h3>
+        <h3>Annonce </h3>
       </div>
-      <div className="bloc-switch">
-        <span>Vente : </span>
-        <label className="switch">
-          <input
-            type="checkbox"
-            onChange={handleToggle}
-            checked={toggle.sell}
-            name="sell"
-          />
-          <span className="slider"></span>
-        </label>
-      </div>
-      {toggle.sell === true ? (
+      <RadioButton
+        title="Vente :"
+        name="sell"
+        onChange={handleToggle}
+        value={toggle.sell}
+      />
+      <RadioButton
+        title="Location :"
+        name="rent"
+        onChange={handleToggle}
+        value={toggle.rent}
+      />
+      <RadioButton
+        title="Echange :"
+        name="exchange"
+        onChange={handleToggle}
+        value={toggle.exchange}
+      />
+
+      {/* {toggle.sell === true ? (
         <div className="bloc-switch">
           <span>Echange Possible : </span>
           <label className="switch">
@@ -53,9 +87,8 @@ const SwitchSelection = () => {
         </div>
       ) : (
         <>{null}</>
-      )}
-
-      <div className="bloc-switch location">
+      )} */}
+      {/* <div className="bloc-switch location">
         <span>Location : </span>
         <label className="switch">
           <input
@@ -66,8 +99,7 @@ const SwitchSelection = () => {
           />
           <span className="slider"></span>
         </label>
-      </div>
-      {JSON.stringify(toggle)}
+      </div> */}
     </div>
   );
 };

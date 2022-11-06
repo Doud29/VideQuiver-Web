@@ -8,7 +8,7 @@ const InformationsComplémentaire = ({
         <div className="line"></div>
         <h3>Prix et Livraison</h3>
       </div>
-      <div className="inputdiv">
+      {/* <div className="inputdiv">
         <input
           type="text"
           placeholder=" "
@@ -19,8 +19,8 @@ const InformationsComplémentaire = ({
           autoComplete="off"
         />
         <span className="spanDescriptionInput">Prix de l'annonce</span>
-      </div>
-      <div className="inputdiv">
+      </div> */}
+      {/* <div className="inputdiv">
         <input
           type="text"
           placeholder=" "
@@ -31,7 +31,7 @@ const InformationsComplémentaire = ({
           autoComplete="off"
         />
         <span className="spanDescriptionInput"></span>
-      </div>
+      </div> */}
     </div>
   );
 };
