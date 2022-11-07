@@ -13,16 +13,6 @@ const HeaderAddProduct = () => {
           <ion-icon
             name="arrow-back-outline"
             style={{ fontSize: "25px" }}
-            onClick={() => {
-              createOffer.Model ||
-                createOffer.DescriptionOffer ||
-                createOffer["Technical informations"] ||
-                (createOffer["Sale/Rent/Exchange"] !== "" &&
-                  alert(
-                    "Attention, l'essemble de votre annonce ne sera pas enregistré!"
-                  ));
-              setCreateOffer({ Model: "", DescriptionOffer: "" });
-            }}
           ></ion-icon>
         </Link>
       </div>

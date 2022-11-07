@@ -299,11 +299,13 @@ export const UserContextProvider = (props) => {
   const [createOffer, setCreateOffer] = useState({
     Model: "",
     DescriptionOffer: "",
+    Price: "",
+    sell: false,
+    rent: false,
     ["Technical informations"]: [],
-    ["Sale/Rent/Exchange"]: [],
   });
 
-  // console.log(createOffer);
+  console.log(createOffer);
 
   //add + check + update technical data forDropdownList
   const addTechnicalData = (name, value, Theme) => {

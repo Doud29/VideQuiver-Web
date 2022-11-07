@@ -35,11 +35,10 @@
   .container-input-button {
     box-sizing: border-box;
     width: 100%;
-    border-top: 0.5px solid grey;
     display: flex;
     flex-direction: column;
     height: auto;
-    padding: 15px;
+    padding: 0 15px 15px 15px;
     .container-titre {
       width: 100%;
       box-sizing: border-box;
@@ -49,7 +48,6 @@
 
       .line {
         box-sizing: border-box;
-
         border: 0.5px solid #508ae2;
         width: 100%;
         position: absolute;

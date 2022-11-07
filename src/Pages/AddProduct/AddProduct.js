@@ -37,27 +37,44 @@ import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/Hea
 import DragnDrop from "../../Components/AddProduct/1-DrapNDrop/DragnDrop";
 import SwitchSelection from "../../Components/AddProduct/5-SwicthSelection/SwitchSelection";
 import OfferDescription from "../../Components/AddProduct/2-DescriptionOffre/OfferDescription";
+import AdditionalInformation from "../../Components/AddProduct/6-additional information/AdditionalInformation";
+import SubmitButton from "../../Components/AddProduct/7-SubmitButton/SubmitButton";
 //---------// Context
 import { UserContext } from "../../Context/UserContext";
 //--------------// packages
 import { useState, useContext } from "react";
+import { db } from "../../firebase-config";
+import { collection, addDoc } from "firebase/firestore";
 
 const AddProduct = () => {
   //-------// STATES
 
   //--------// Add Photos
   const [files, setfiles] = useState([]);
-
   //------// CONTEXT
   const { openModalState, createOffer } = useContext(UserContext);
 
+  const newProductCollectionRef = collection(db, "newOffer");
+
   //------// fonction pour soumetre la demande de vente
-  const handlAddProduct = (event) => {
-    event.preventDefault();
+  const handlAddProduct = (e) => {
+    e.preventDefault();
     try {
-      if ((createOffer.Model || createOffer.DescriptionOffer) === "") {
-      }
-    } catch (error) {}
+      const addProduct = async () => {
+        await addDoc(newProductCollectionRef, {
+          Product: createOffer.Produit,
+          Model: createOffer.Model,
+          Description: createOffer.DescriptionOffer,
+          Price: createOffer.Price,
+          sell: createOffer.sell,
+          rent: createOffer.rent,
+        });
+        console.log("data envoyé");
+      };
+      addProduct();
+    } catch (error) {
+      console.dir(error);
+    }
   };
 
   return (
@@ -80,7 +97,9 @@ const AddProduct = () => {
         <HeaderAddProduct />
         <form onSubmit={handlAddProduct}>
           <DragnDrop files={files} setfiles={setfiles} />
+          <SwitchSelection />
           <OfferDescription />
+
           {/* 
 //------------// MER 
 //------------// Composents Surf 
@@ -152,19 +171,13 @@ const AddProduct = () => {
 //------------------// MONTAGNE //--------------//
 //----------------------------------------------//   */}
           {/* 
-//----------------------------------------------//  
-//----------------//Type D'ANNONCE //-----------//
-//----------------------------------------------// */}
-
-          <SwitchSelection />
 
           {/* 
 //----------------------------------------------//  
 //----------//INFORMATIONS COMPLEMENTAIRE //----//
 //----------------------------------------------// */}
-          {/* {choiceValidatedForSellState === true && (
-              <InformationsComplémentaire />
-            )} */}
+          <AdditionalInformation />
+          <SubmitButton />
         </form>
       </div>
     </>

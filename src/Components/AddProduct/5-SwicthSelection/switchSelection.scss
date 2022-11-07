@@ -2,11 +2,14 @@
   box-sizing: border-box;
   width: 100%;
   padding: 0 15px;
+  border-top: 0.5px solid grey;
   .container-titre {
     width: 100%;
     box-sizing: border-box;
     position: relative;
     height: 40px;
+    margin-top: 15px;
+
     .line {
       box-sizing: border-box;
       border: 0.5px solid #508ae2;
@@ -35,7 +38,7 @@
     justify-content: space-between;
     display: flex;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
 
   // .location {
