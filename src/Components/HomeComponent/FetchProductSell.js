@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
-const FetchProduct = () => {
+const FetchProductSell = () => {
   const [data, setdata] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
 
@@ -56,4 +56,4 @@ const FetchProduct = () => {
   );
 };
 
-export default FetchProduct;
+export default FetchProductSell;

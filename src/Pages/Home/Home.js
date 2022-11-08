@@ -8,7 +8,7 @@ import CategorieGlisse from "../../Components/Categories/CategorieGlisse/Categor
 import CategorieMontagne from "../../Components/Categories/CategorieMontagne/CategorieMontagne";
 import Disciplines from "../../Components/Disciplines/Disciplines";
 // import Infos from "../../Components/Infos/Infos";
-import FetchProduct from "../../Components/HomeComponent/FetchProduct";
+import FetchProductSell from "../../Components/HomeComponent/FetchProductSell";
 
 //--------------// packages
 // import { Link } from "react-router-dom";
@@ -48,8 +48,9 @@ const Home = () => {
       />
       {wichCategorie(montagneState, merState)}
       {/* <Infos /> */}
-      <h3>Nouveautés</h3>
-      <FetchProduct />
+      <h3>Nouveautés vente</h3>
+      <FetchProductSell />
+      <h3>Nouveautés location</h3>
     </div>
   );
 };

@@ -48,30 +48,70 @@ import { collection, addDoc } from "firebase/firestore";
 
 const AddProduct = () => {
   //-------// STATES
-
-  //--------// Add Photos
+  //-------// Add Photos
   const [files, setfiles] = useState([]);
+  //-------// Erro Message
+  const [errorMessage, setErrorMessage] = useState("");
   //------// CONTEXT
   const { openModalState, createOffer } = useContext(UserContext);
 
-  const newProductCollectionRef = collection(db, "newOffer");
+  const newProductForSellCollectionRef = collection(db, "newOfferForSell");
+  const newProductForRentCollectionRef = collection(db, "newOfferForRent");
 
-  //------// fonction pour soumetre la demande de vente
+  //------// fonction pour soumetre la demande de vente et location
   const handlAddProduct = (e) => {
     e.preventDefault();
     try {
-      const addProduct = async () => {
-        await addDoc(newProductCollectionRef, {
-          Product: createOffer.Produit,
-          Model: createOffer.Model,
-          Description: createOffer.DescriptionOffer,
-          Price: createOffer.Price,
-          sell: createOffer.sell,
-          rent: createOffer.rent,
-        });
-        console.log("data envoyé");
-      };
-      addProduct();
+      if (createOffer.sell === false && createOffer.rent === false) {
+        setErrorMessage("* S'agit-il d'une vente ou d'une location?");
+        return;
+      }
+      if (createOffer.Produit === undefined) {
+        setErrorMessage("* Vous devez choisir un produit");
+        return;
+      }
+      if (createOffer.Model === "") {
+        setErrorMessage("* Vous avez oubliez le modèle");
+        return;
+      }
+      if (createOffer.DescriptionOffer === "") {
+        setErrorMessage("* Veuillez Décrire votre produit");
+        return;
+      }
+      if (createOffer.Price === "") {
+        setErrorMessage("* Veuillez renseigner le prix");
+        return;
+      }
+
+      if (createOffer.sell === true && createOffer.rent === false) {
+        console.log("condition de vente respecté");
+        const addProductForSell = async () => {
+          await addDoc(newProductForSellCollectionRef, {
+            Product: createOffer.Produit,
+            Model: createOffer.Model,
+            Description: createOffer.DescriptionOffer,
+            Price: createOffer.Price,
+            sell: createOffer.sell,
+            rent: createOffer.rent,
+          });
+          console.log("data envoyé");
+        };
+        addProductForSell();
+      }
+      if (createOffer.sell === false && createOffer.rent === true) {
+        const addProductForRent = async () => {
+          await addDoc(newProductForRentCollectionRef, {
+            Product: createOffer.Produit,
+            Model: createOffer.Model,
+            Description: createOffer.DescriptionOffer,
+            Price: createOffer.Price,
+            sell: createOffer.sell,
+            rent: createOffer.rent,
+          });
+          console.log("data rent envoyé");
+        };
+        addProductForRent();
+      }
     } catch (error) {
       console.dir(error);
     }
@@ -177,7 +217,7 @@ const AddProduct = () => {
 //----------//INFORMATIONS COMPLEMENTAIRE //----//
 //----------------------------------------------// */}
           <AdditionalInformation />
-          <SubmitButton />
+          <SubmitButton errorMessage={errorMessage} />
         </form>
       </div>
     </>
