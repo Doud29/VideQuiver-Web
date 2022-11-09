@@ -49,15 +49,15 @@ const SurfDescription = () => {
         name="Epaisseur planche"
       />
       {/* //---- Marque */}
-      <InputField
+      {/* <InputField
         type="text"
         name="Marque"
         id="Marque"
-        // value={Marque}
-        // onChange={onChange}
+        value={Marque}
+        onChange={onChange}
         placeholder=" "
         autoComplete="off"
-      />
+      /> */}
     </div>
   );
 };

@@ -12,7 +12,7 @@ const FetchProductSell = () => {
   const [data, setdata] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
 
-  const addProductCollectionRef = collection(db, "addProduct");
+  const addProductCollectionRef = collection(db, "newOfferForSell");
 
   useEffect(() => {
     try {
@@ -31,7 +31,9 @@ const FetchProductSell = () => {
   return (
     <div className="container-home-produit">
       {isFetching === false ? (
-        <p>En Chargement...</p>
+        <div className="container-produit-description">
+          <p>En Chargement...</p>
+        </div>
       ) : (
         <>
           {data.map((data, index) => {

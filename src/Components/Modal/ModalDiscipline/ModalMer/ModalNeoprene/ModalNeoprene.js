@@ -10,14 +10,13 @@ const ModalNeoprene = () => {
 
   const handleCheckBox = (e) => {
     const value = e.target.value;
-    const name = e.target.name;
 
     if (e.target.value !== "") {
       setTimeout(() => {
         ToggleModal("closeAll");
       }, 500);
     }
-    setCreateOffer({ ...createOffer, [name]: value });
+    setCreateOffer({ ...createOffer, Product: value });
   };
 
   return (

@@ -1,8 +1,10 @@
+import "./submitbutton.scss";
+
 const SubmitButton = ({ errorMessage }) => {
   return (
-    <div>
-      <p style={{ color: "red" }}>{errorMessage}</p>
-      <input type="submit" value="Déposer mon annonce" />
+    <div className="container-input-submit">
+      <span style={{ color: "red" }}>{errorMessage}</span>
+      <input type="submit" value="Valider mon annonce" />
     </div>
   );
 };

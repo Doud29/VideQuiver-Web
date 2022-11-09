@@ -45,69 +45,64 @@ import { UserContext } from "../../Context/UserContext";
 import { useState, useContext } from "react";
 import { db } from "../../firebase-config";
 import { collection, addDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
-  //-------// STATES
-  //-------// Add Photos
+  //----// STATES
+  //----// Add Photos
   const [files, setfiles] = useState([]);
-  //-------// Erro Message
+  //----// Erro Message
   const [errorMessage, setErrorMessage] = useState("");
-  //------// CONTEXT
+  //---// Context
   const { openModalState, createOffer } = useContext(UserContext);
-
+  //---// Ref db
   const newProductForSellCollectionRef = collection(db, "newOfferForSell");
   const newProductForRentCollectionRef = collection(db, "newOfferForRent");
+  //---// Navigate
+  const navigate = useNavigate();
 
-  //------// fonction pour soumetre la demande de vente et location
+  //---// fonction pour soumetre la demande de vente et location
   const handlAddProduct = (e) => {
     e.preventDefault();
-    try {
-      if (createOffer.sell === false && createOffer.rent === false) {
-        setErrorMessage("* S'agit-il d'une vente ou d'une location?");
-        return;
-      }
-      if (createOffer.Produit === undefined) {
-        setErrorMessage("* Vous devez choisir un produit");
-        return;
-      }
-      if (createOffer.Model === "") {
-        setErrorMessage("* Vous avez oubliez le modèle");
-        return;
-      }
-      if (createOffer.DescriptionOffer === "") {
-        setErrorMessage("* Veuillez Décrire votre produit");
-        return;
-      }
-      if (createOffer.Price === "") {
-        setErrorMessage("* Veuillez renseigner le prix");
-        return;
-      }
 
+    if (createOffer.sell === false && createOffer.rent === false) {
+      setErrorMessage("* S'agit-il d'une vente ou d'une location?");
+      return;
+    }
+    if (createOffer.Product === " ") {
+      setErrorMessage("* Vous devez choisir un produit");
+      return;
+    }
+    if (createOffer.Model === " ") {
+      setErrorMessage("* Vous avez oubliez le modèle");
+      return;
+    }
+    if (createOffer.DescriptionOffer === " ") {
+      setErrorMessage("* Veuillez Décrire votre produit");
+      return;
+    }
+    if (createOffer.Price === " ") {
+      setErrorMessage("* Veuillez renseigner le prix");
+      return;
+    }
+
+    try {
+      //----// Sell
       if (createOffer.sell === true && createOffer.rent === false) {
         console.log("condition de vente respecté");
         const addProductForSell = async () => {
-          await addDoc(newProductForSellCollectionRef, {
-            Product: createOffer.Produit,
-            Model: createOffer.Model,
-            Description: createOffer.DescriptionOffer,
-            Price: createOffer.Price,
-            sell: createOffer.sell,
-            rent: createOffer.rent,
-          });
+          await addDoc(newProductForSellCollectionRef, createOffer);
           console.log("data envoyé");
+          setErrorMessage("");
+          navigate("/home");
         };
         addProductForSell();
       }
+
+      //----// Rent
       if (createOffer.sell === false && createOffer.rent === true) {
         const addProductForRent = async () => {
-          await addDoc(newProductForRentCollectionRef, {
-            Product: createOffer.Produit,
-            Model: createOffer.Model,
-            Description: createOffer.DescriptionOffer,
-            Price: createOffer.Price,
-            sell: createOffer.sell,
-            rent: createOffer.rent,
-          });
+          await addDoc(newProductForRentCollectionRef, createOffer);
           console.log("data rent envoyé");
         };
         addProductForRent();
@@ -144,40 +139,40 @@ const AddProduct = () => {
 //------------// MER 
 //------------// Composents Surf 
            */}
-          {createOffer.Produit === "Planche de Surf" && <SurfDescription />}
-          {createOffer.Produit === "Dérives de surf" && <DerivesDescription />}
-          {createOffer.Produit === "Gilet Impact de surf" && <GiletImpact />}
-          {createOffer.Produit === "Pad de surf" && <PadDescription />}
-          {createOffer.Produit === "Leash de surf" && <LeashDescription />}
-          {(createOffer.Produit === "Accessoires de surf" ||
-            createOffer.Produit === "Accessoires de bodyboard") && (
+          {createOffer.Product === "Planche de Surf" && <SurfDescription />}
+          {createOffer.Product === "Dérives de surf" && <DerivesDescription />}
+          {createOffer.Product === "Gilet Impact de surf" && <GiletImpact />}
+          {createOffer.Product === "Pad de surf" && <PadDescription />}
+          {createOffer.Product === "Leash de surf" && <LeashDescription />}
+          {(createOffer.Product === "Accessoires de surf" ||
+            createOffer.Product === "Accessoires de bodyboard") && (
             <AccessoriesDescription />
           )}
-          {createOffer.Produit === "Bagagerie de surf" && (
+          {createOffer.Product === "Bagagerie de surf" && (
             <SurfLuggageDescription />
           )}
           {/*
 //-----------// Composents BodyBoard */}
-          {createOffer.Produit === "Planche de bodyboard" && (
+          {createOffer.Product === "Planche de bodyboard" && (
             <BodyBoardDescription />
           )}
-          {createOffer.Produit === "Palmes de bodyboard" && (
+          {createOffer.Product === "Palmes de bodyboard" && (
             <FinBodyboardDescription />
           )}
-          {createOffer.Produit === "Bagagerie de bodyboard" && (
+          {createOffer.Product === "Bagagerie de bodyboard" && (
             <BodyBoardLuggageDescription />
           )}
-          {createOffer.Produit === "Leash coil" && (
+          {createOffer.Product === "Leash coil" && (
             <LeashBodyBoardDescription />
           )}
           {/*
 //-----------// Composents Neoprene */}
-          {createOffer.Produit === "Combinaison intégrale" && (
+          {createOffer.Product === "Combinaison intégrale" && (
             <WetSuitDescription />
           )}
-          {createOffer.Produit === "Veste néopréne" && <JacketDescription />}
-          {createOffer.Produit === "Chaussons néopréne" && <SocksDescription />}
-          {createOffer.Produit === "Cagoules / Bonnets" && (
+          {createOffer.Product === "Veste néopréne" && <JacketDescription />}
+          {createOffer.Product === "Chaussons néopréne" && <SocksDescription />}
+          {createOffer.Product === "Cagoules / Bonnets" && (
             <BalaclavaDescription />
           )}
 

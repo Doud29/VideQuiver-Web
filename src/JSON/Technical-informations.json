@@ -82,7 +82,6 @@
             "value": "Retro"
           }
         ],
-
         "Materiaux": [
           {
             "id": "matériaux-planche-surf-0",
@@ -1236,291 +1235,349 @@
     "Largeur": [
       {
         "id": "Largeur-0",
+        "Theme": "Largeur",
         "content": " ",
         "value": null
       },
       {
         "id": "Largeur-0",
+        "Theme": "Largeur",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "Largeur-1",
+        "Theme": "Largeur",
         "content": "17 0 - 43.18 cm",
         "value": "17 0 - 43.18 cm"
       },
       {
         "id": "Largeur-3",
+        "Theme": "Largeur",
         "content": "17 1/8 - 43.50 cm",
         "value": "17 1/8 - 43.50 cm"
       },
       {
         "id": "Largeur-3",
+        "Theme": "Largeur",
         "content": "17 1/4 - 43.82 cm",
         "value": "17 1/4 - 43.82 cm"
       },
       {
         "id": "Largeur-4",
+        "Theme": "Largeur",
         "content": "17 3/8 - 44.13 cm",
         "value": "17 3/8 - 44.13  cm"
       },
       {
         "id": "Largeur-5",
+        "Theme": "Largeur",
         "content": "17 1/2 - 44.45 cm",
         "value": "17 1/2 - 44.45 cm"
       },
       {
         "id": "Largeur-6",
+        "Theme": "Largeur",
         "content": "17 5/8 - 44.77 cm",
         "value": "17 5/8 - 44.77 cm"
       },
       {
         "id": "Largeur-7",
+        "Theme": "Largeur",
         "content": "17 3/4 - 45.09 cm",
         "value": "17 3/4 - 45.09 cm"
       },
       {
         "id": "Largeur-8",
+        "Theme": "Largeur",
         "content": "17 7/8 - 45.40 cm",
         "value": "17 7/8 - 45.40 cm"
       },
       {
         "id": "Largeur-9",
+        "Theme": "Largeur",
         "content": "18 0 - 45.72 cm",
         "value": "18 0 - 45.72 cm"
       },
       {
         "id": "Largeur-10",
+        "Theme": "Largeur",
         "content": "18 1/8 - 46.04 cm",
         "value": "18 1/8 - 46.04 cm"
       },
       {
         "id": "Largeur-11",
+        "Theme": "Largeur",
         "content": "18 1/4 - 46.36 cm",
         "value": "18 1/4 - 46.36 cm"
       },
       {
         "id": "Largeur-12",
+        "Theme": "Largeur",
         "content": "18 3/8 - 46.67 cm",
         "value": "18 3/8 - 46.67 cm"
       },
       {
         "id": "Largeur-13",
+        "Theme": "Largeur",
         "content": "18 1/2 - 46.99 cm",
         "value": "18 1/2 - 46.99 cm"
       },
       {
         "id": "Largeur-14",
+        "Theme": "Largeur",
         "content": "18 5/8 - 47.31 cm",
         "value": "18 5/8 - 47.31 cm"
       },
       {
         "id": "Largeur-15",
+        "Theme": "Largeur",
         "content": "18 3/4 - 47.63 cm",
         "value": "18 3/4 - 47.63 cm"
       },
       {
         "id": "Largeur-16",
+        "Theme": "Largeur",
         "content": "18 7/8 - 47.94 cm",
         "value": "18 7/8 - 47.94 cm"
       },
       {
         "id": "Largeur-17",
+        "Theme": "Largeur",
         "content": "19 0 - 48.26 cm",
         "value": "19 0 - 48.26 cm"
       },
       {
         "id": "Largeur-18",
+        "Theme": "Largeur",
         "content": "19 1/8 - 48.58 cm",
         "value": "19 1/8 - 48.58 cm"
       },
       {
         "id": "Largeur-19",
+        "Theme": "Largeur",
         "content": "19 1/4 - 48.90 cm",
         "value": "19 1/4 - 48.90 cm"
       },
       {
         "id": "Largeur-20",
+        "Theme": "Largeur",
         "content": "19 3/8 - 49.21 cm",
         "value": "19 3/8 - 49.21 cm"
       },
       {
         "id": "Largeur-21",
+        "Theme": "Largeur",
         "content": "19 1/2 - 49.53 cm",
         "value": "19 1/2 - 49.53 cm"
       },
       {
         "id": "Largeur-22",
+        "Theme": "Largeur",
         "content": "19 5/8 - 49.85 cm",
         "value": "19 5/8  - 49.85 cm"
       },
       {
         "id": "Largeur-23",
+        "Theme": "Largeur",
         "content": "19 3/4 - 50.17cm",
         "value": "19 3/4 - 50.17cm"
       },
       {
         "id": "Largeur-24",
+        "Theme": "Largeur",
         "content": "19 7/8 - 50.48 cm",
         "value": "19 7/8 - 50.48 cm"
       },
       {
         "id": "Largeur-25",
+        "Theme": "Largeur",
         "content": "20 0 - 50.80 cm",
         "value": "20 0 - 50.80 cm"
       },
       {
         "id": "Largeur-26",
+        "Theme": "Largeur",
         "content": "20 1/8 - 51.12 cm",
         "value": "20 1/8 -  51.12 cm"
       },
       {
         "id": "Largeur-27",
+        "Theme": "Largeur",
         "content": "20 1/4 - 51.44 cm",
         "value": "20 1/4 -  51.44 cm"
       },
       {
         "id": "Largeur-28",
+        "Theme": "Largeur",
         "content": "20 3/8 - 51.75 cm",
         "value": "20 3/8 - 51.75 cm"
       },
       {
         "id": "Largeur-30",
+        "Theme": "Largeur",
         "content": "20 1/2 - 52.07 cm",
         "value": "20 1/2 - 52.07 cm"
       },
       {
         "id": "Largeur-31",
+        "Theme": "Largeur",
         "content": "20 5/8 - 52.39 cm",
         "value": "20 5/8 - 52.39 cm"
       },
       {
         "id": "Largeur-32",
+        "Theme": "Largeur",
         "content": "20 3/4 - 52.71 cm",
         "value": "20 3/4 - 52.71 cm"
       },
       {
         "id": "Largeur-33",
+        "Theme": "Largeur",
         "content": "20 7/8 - 53.02 cm",
         "value": "20 7/8 - 53.02 cm"
       },
       {
         "id": "Largeur-34",
+        "Theme": "Largeur",
         "content": "21 0 - 53.34 cm",
         "value": "21 0 - 53.34 cm"
       },
       {
         "id": "Largeur-35",
+        "Theme": "Largeur",
         "content": "21 1/8 - 53.66 cm",
         "value": "21 1/8 - 53.66 cm"
       },
       {
         "id": "Largeur-36",
+        "Theme": "Largeur",
         "content": "21 1/4 - 53.98 cm",
         "value": "21 1/4 - 53.98 cm"
       },
       {
         "id": "Largeur-37",
+        "Theme": "Largeur",
         "content": "21 3/8 - 54.29 cm",
         "value": "21 3/8 - 54.29 cm"
       },
       {
         "id": "Largeur-38",
+        "Theme": "Largeur",
         "content": "21 1/2 - 54.61 cm",
         "value": "21 1/2 - 54.61 cm"
       },
       {
         "id": "Largeur-39",
+        "Theme": "Largeur",
         "content": "21 5/8 - 54.93 cm",
         "value": "21 5/8 - 54.93 cm"
       },
       {
         "id": "Largeur-40",
+        "Theme": "Largeur",
         "content": "21 3/4 - 55.25 cm",
         "value": "21 3/4 - 55.25 cm"
       },
       {
         "id": "Largeur-41",
+        "Theme": "Largeur",
         "content": "21 7/8 - 55.56 cm",
         "value": "21 7/8 - 55.56 cm"
       },
       {
         "id": "Largeur-42",
+        "Theme": "Largeur",
         "content": "22 0 - 55.88 cm",
         "value": "22 0 - 55.88 cm"
       },
       {
         "id": "Largeur-43",
+        "Theme": "Largeur",
         "content": "22 1/8 - 56.20 cm",
         "value": "22 1/8 -  56.20 cm"
       },
       {
         "id": "Largeur-44",
+        "Theme": "Largeur",
         "content": "22 1/4 -  56.52 cm",
         "value": "22 1/4 -  56.52 cm"
       },
       {
         "id": "Largeur-45",
+        "Theme": "Largeur",
         "content": "22 3/8 - 56.83 cm",
         "value": "22 3/8 - 56.83 cm"
       },
       {
         "id": "Largeur-46",
+        "Theme": "Largeur",
         "content": "22 1/2 - 57.15 cm",
         "value": "22 1/2 - 57.15 cm"
       },
       {
         "id": "Largeur-47",
+        "Theme": "Largeur",
         "content": "22 5/8 - 57.47 cm",
         "value": "22 5/8 - 57.47 cm"
       },
       {
         "id": "Largeur-48",
+        "Theme": "Largeur",
         "content": "22 3/4 - 57.79 cm",
         "value": "22 3/4 - 57.79 cm"
       },
       {
         "id": "Largeur-49",
+        "Theme": "Largeur",
         "content": "22 7/8 - 58.10 cm",
         "value": "22 7/8 - 58.10 cm"
       },
       {
         "id": "Largeur-50",
+        "Theme": "Largeur",
         "content": "23 0 - 58.42 cm",
         "value": "23 0 - 58.42 cm"
       },
       {
         "id": "Largeur-51",
+        "Theme": "Largeur",
         "content": "23 1/8 - 58.74 cm",
         "value": "23 1/8 - 58.74 cm"
       },
       {
         "id": "Largeur-52",
+        "Theme": "Largeur",
         "content": "23 1/4 - 59.06 cm",
         "value": "23 1/4 - 59.06 cm"
       },
       {
         "id": "Largeur-53",
+        "Theme": "Largeur",
         "content": "23 3/8 - 59.37 cm",
         "value": "23 3/8 - 59.37 cm"
       },
       {
         "id": "Largeur-54",
+        "Theme": "Largeur",
         "content": "23 1/2 - 59.69 cm",
         "value": "23 1/2 - 59.69 cm"
       },
       {
         "id": "Largeur-55",
+        "Theme": "Largeur",
         "content": "23 5/8 - 60.01cm",
         "value": "23 5/8 - 60.01cm"
       },
       {
         "id": "Largeur-56",
+        "Theme": "Largeur",
         "content": "23 3/4 - 60.33 cm",
         "value": "23 3/4 - 60.33 cm"
       },
       {
         "id": "Largeur-57",
+        "Theme": "Largeur",
         "content": "23 7/8 -  60.64 cm",
         "value": "23 7/8 -  60.64 cm"
       }
@@ -1528,196 +1585,235 @@
     "Epaisseur": [
       {
         "id": "Epaisseur-0",
+        "Theme": "epaisseur",
         "content": " ",
         "value": null
       },
       {
         "id": "Epaisseur-1",
+        "Theme": "epaisseur",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "Epaisseur-2",
+        "Theme": "epaisseur",
         "content": "2 / 5.08 cm",
         "value": "2 / 5.08 cm"
       },
       {
         "id": "Epaisseur-3",
+        "Theme": "epaisseur",
         "content": "2 1/16 - 5.24 cm",
         "value": "2 1/16 -  5.24 cm"
       },
       {
         "id": "Epaisseur-4",
+        "Theme": "epaisseur",
         "content": "2 1/8 - 5.40 cm",
         "value": "2 1/8 - 5.40 cm"
       },
       {
         "id": "Epaisseur-5",
+        "Theme": "epaisseur",
         "content": "2 3/16 - 5.56 cm",
         "value": "2 3/16 - 5.56 cm"
       },
       {
         "id": "Epaisseur-6",
+        "Theme": "epaisseur",
         "content": "2 1/4 - 5.72 cm",
         "value": "2 1/4 - 5.72 cm"
       },
       {
         "id": "Epaisseur-7",
+        "Theme": "epaisseur",
         "content": "2 5/16 - 5.87 cm",
         "value": "2 5/16 - 5.87 cm"
       },
       {
         "id": "Epaisseur-8",
+        "Theme": "epaisseur",
         "content": "2 3/8 - 6.03 cm",
         "value": "2 3/8 - 6.03 cm"
       },
       {
         "id": "Epaisseur-9",
+        "Theme": "epaisseur",
         "content": "2 7/16 - 6.19 cm",
         "value": "2 7/16 - 6.19 cm"
       },
       {
         "id": "Epaisseur-10",
+        "Theme": "epaisseur",
         "content": "2 1/2 - 6.35 cm",
         "value": "2 1/2 - 6.35 cm"
       },
       {
         "id": "Epaisseur-11",
+        "Theme": "epaisseur",
         "content": "2 9/16 - 6.51 cm",
         "value": "2 9/16 - 6.51 cm"
       },
       {
         "id": "Epaisseur-12",
+        "Theme": "epaisseur",
         "content": "2 5/8 - 6.67 cm",
         "value": "2 5/8 - 6.67 cm"
       },
       {
         "id": "Epaisseur-13",
+        "Theme": "epaisseur",
         "content": "2 11/16 - 6.83 cm",
         "value": "2 11/16 - 6.83 cm"
       },
       {
         "id": "Epaisseur-14",
+        "Theme": "epaisseur",
         "content": "2 3/4 - 6.99 cm",
         "value": "2 3/4 - 6.99 cm"
       },
       {
         "id": "Epaisseur-15",
+        "Theme": "epaisseur",
         "content": "2 13/16 - 7.14 cm",
         "value": "2 13/16 - 7.14 cm"
       },
       {
         "id": "Epaisseur-16",
+        "Theme": "epaisseur",
         "content": "2 7/8 - 7.30 cm",
         "value": "2 7/8 - 7.30 cm"
       },
       {
         "id": "Epaisseur-17",
+        "Theme": "epaisseur",
         "content": "2 15/16 - 7.46 cm",
         "value": "2 15/16 - 7.46 cm"
       },
       {
         "id": "Epaisseur-18",
+        "Theme": "epaisseur",
         "content": "3 0- 7.62 cm",
         "value": "3 0- 7.62 cm"
       },
       {
         "id": "Epaisseur-19",
+        "Theme": "epaisseur",
         "content": "3 1/16 - 7.78 cm",
         "value": "3 1/16 - 7.78 cm"
       },
       {
         "id": "Epaisseur-20",
+        "Theme": "epaisseur",
         "content": "3 1/2 - 8.89 cm",
         "value": "3 1/2 - 8.89 cm"
       },
       {
         "id": "Epaisseur-21",
+        "Theme": "epaisseur",
         "content": "3 9/16 - 9.05 cm",
         "value": "3 9/16 - 9.05 cm"
       },
       {
         "id": "Epaisseur-22",
+        "Theme": "epaisseur",
         "content": "3 5/8 - 9.21 cm",
         "value": "3 5/8 - 9.21 cm"
       },
       {
         "id": "Epaisseur-23",
+        "Theme": "epaisseur",
         "content": "3 11/16 - 9.37 cm",
         "value": "3 11/16 - 9.37 cm"
       },
       {
         "id": "Epaisseur-24",
+        "Theme": "epaisseur",
         "content": "3 3/4 - 9.53 cm",
         "value": "3 3/4 - 9.53 cm"
       },
       {
         "id": "Epaisseur-25",
+        "Theme": "epaisseur",
         "content": "3 13/16 - 9.68 cm",
         "value": "3 13/16 - 9.68 cm"
       },
       {
         "id": "Epaisseur-26",
+        "Theme": "epaisseur",
         "content": "3 7/8 - 9.84 cm",
         "value": "3 7/8 - 9.84 cm"
       },
       {
         "id": "Epaisseur-27",
+        "Theme": "epaisseur",
         "content": "3 15/16 - 10 cm",
         "value": "3 15/16 - 10 cm"
       },
       {
         "id": "Epaisseur-28",
+        "Theme": "epaisseur",
         "content": "4 0 - 10.16 cm",
         "value": "4 0 - 10.16 cm"
       },
       {
         "id": "Epaisseur-29",
+        "Theme": "epaisseur",
         "content": "4 1/16 - 10.32 cm",
         "value": "4 1/16 - 10.32 cm"
       },
       {
         "id": "Epaisseur-30",
+        "Theme": "epaisseur",
         "content": "4 1/8 - 10.48 cm",
         "value": "4 1/8 - 10.48 cm"
       },
       {
         "id": "Epaisseur-31",
+        "Theme": "epaisseur",
         "content": "4 3/16 - 10.64 cm",
         "value": "4 3/16 - 10.64 cm"
       },
       {
         "id": "Epaisseur-32",
+        "Theme": "epaisseur",
         "content": "4 5/16 - 10.95 cm",
         "value": "4 5/16 - 10.95 cm"
       },
       {
         "id": "Epaisseur-33",
+        "Theme": "epaisseur",
         "content": "4 3/8 - 11.11 cm",
         "value": "4 3/8 - 11.11 cm"
       },
       {
         "id": "Epaisseur-34",
+        "Theme": "epaisseur",
         "content": "4 7/16 - 11.27 cm",
         "value": "4 7/16 - 11.27 cm"
       },
       {
         "id": "Epaisseur-35",
+        "Theme": "epaisseur",
         "content": "4 3/4 - 12.22 cm",
         "value": "4 3/4 - 12.22 cm"
       },
       {
         "id": "Epaisseur-36",
+        "Theme": "epaisseur",
         "content": "4 13/16 - 12.22 cm",
         "value": "4 13/16 - 12.22 cm"
       },
       {
         "id": "Epaisseur-37",
+        "Theme": "epaisseur",
         "content": "4 7/8 - 12.38 cm",
         "value": "4 7/8 - 12.38 cm"
       },
       {
         "id": "Epaisseur-38",
+        "Theme": "epaisseur",
         "content": "4 15/16 - 12.54 cm",
         "value": "4 7/8 - 12.54 cm"
       }
@@ -2095,31 +2191,37 @@
     "Construction": [
       {
         "id": "construction-derives-1",
+        "Theme": "construction-derives",
         "content": "",
         "value": null
       },
       {
         "id": "construction-derives-2",
+        "Theme": "construction-derives",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "construction-derives-3",
+        "Theme": "construction-derives",
         "content": "Fibres",
         "value": "Fibres"
       },
       {
         "id": "construction-derives-4",
+        "Theme": "construction-derives",
         "content": "Carbonne",
         "value": "Carbonne"
       },
       {
         "id": "construction-derives-5",
+        "Theme": "construction-derives",
         "content": "Fixe",
         "value": "Fixe"
       },
       {
         "id": "construction-derives-6",
+        "Theme": "construction-derives",
         "content": "Soft (souple)",
         "value": "Soft (souple)"
       }
