@@ -49,8 +49,7 @@ import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   //----// STATES
-  //----// Add Photos
-  const [files, setfiles] = useState([]);
+
   //----// Erro Message
   const [errorMessage, setErrorMessage] = useState("");
   //---// Context
@@ -62,9 +61,8 @@ const AddProduct = () => {
   const navigate = useNavigate();
 
   //---// fonction pour soumetre la demande de vente et location
-  const handlAddProduct = (e) => {
+  const handlAddProduct = async (e) => {
     e.preventDefault();
-
     if (createOffer.sell === false && createOffer.rent === false) {
       setErrorMessage("* S'agit-il d'une vente ou d'une location?");
       return;
@@ -85,27 +83,19 @@ const AddProduct = () => {
       setErrorMessage("* Veuillez renseigner le prix");
       return;
     }
-
     try {
       //----// Sell
       if (createOffer.sell === true && createOffer.rent === false) {
         console.log("condition de vente respecté");
-        const addProductForSell = async () => {
-          await addDoc(newProductForSellCollectionRef, createOffer);
-          console.log("data envoyé");
-          setErrorMessage("");
-          navigate("/home");
-        };
-        addProductForSell();
+        await addDoc(newProductForSellCollectionRef, createOffer);
+        console.log("data envoyé");
+        setErrorMessage("");
+        navigate("/home");
       }
-
       //----// Rent
       if (createOffer.sell === false && createOffer.rent === true) {
-        const addProductForRent = async () => {
-          await addDoc(newProductForRentCollectionRef, createOffer);
-          console.log("data rent envoyé");
-        };
-        addProductForRent();
+        await addDoc(newProductForRentCollectionRef, createOffer);
+        console.log("data rent envoyé");
       }
     } catch (error) {
       console.dir(error);
@@ -131,7 +121,10 @@ const AddProduct = () => {
         {openModalState.modalNeoprene && <ModalNeoprene />}
         <HeaderAddProduct />
         <form onSubmit={handlAddProduct}>
-          <DragnDrop files={files} setfiles={setfiles} />
+          <DragnDrop
+          // imageUpload={imageUpload}
+          // setImageUpload={setImageUpload}
+          />
           <SwitchSelection />
           <OfferDescription />
 

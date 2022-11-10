@@ -1,84 +1,55 @@
 //-----------// CSS
 import "./dragnDrop.scss";
 //--------------// packages
-import { useDropzone } from "react-dropzone";
+// import { useDropzone } from "react-dropzone";
 import React from "react";
+import { useState } from "react";
 
-//--------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faImage } from "@fortawesome/free-solid-svg-icons";
+const DragnDrop = () => {
+  //----// Add Photos
+  const [imageUpload, setImageUpload] = useState(null);
 
-const addimage = <FontAwesomeIcon icon={faImage} />;
-
-const DragnDrop = ({ setfiles, files }) => {
-  const { getRootProps, getInputProps } = useDropzone({
-    //on accept seulement Jpeg/png
-    accept: {
-      "image/jpeg": [],
-      "image/png": [],
-      "image/jpg": [],
-    },
-    onDrop: (acceptedfiles) => {
-      setfiles(
-        acceptedfiles.map((file) =>
-          Object.assign(file, {
-            preview: URL.createObjectURL(file),
-          })
-        )
-      );
-      // console.log(acceptedfiles);
-    },
-    maxFiles: 10,
-    multiple: true,
-    minSize: 0,
-    maxSize: Infinity,
-    noKeyboard: true,
-    noDrag: true,
-  });
-
-  //------------// fonction pour supprimer un élément du tableau
-
-  const removeFile = (file) => {
-    // console.log(file);
-    let newFiles = [...files];
-    console.log(newFiles);
-    newFiles.splice(newFiles.indexOf(file), 1);
-    console.log(newFiles);
-    setfiles(newFiles);
+  //add
+  const handelFile = (e) => {
+    if (e.target.files && e.target.files[0]) {
+      setImageUpload(URL.createObjectURL(e.target.files[0]));
+    }
   };
-
-  //------------// composant image
-
-  const images = files.map((file) => {
-    return (
-      <div key={file.path} className="bloc-choosen-image">
-        <img src={file.preview} id="image" alt="contenuvente" />
-        <div
-          className="trash"
-          onClick={() => {
-            removeFile(file);
-          }}
-        >
-          <ion-icon
-            style={{ fontSize: "20px" }}
-            name="trash-outline"
-          ></ion-icon>
-        </div>
-      </div>
-    );
-  });
 
   return (
     <div className="bloc-photo">
-      <div {...getRootProps()}>
-        <input {...getInputProps()} id="addImage" />
-        <label htmlFor="image" id="image-file">
-          <div className="container-ajoutimage">{addimage}</div>
-          <span>Ajouter des photos</span>
-          <span>10 photos max</span>
-        </label>
-      </div>
-      {images}
+      <input
+        type="file"
+        id="addImage"
+        multiple
+        onChange={handelFile}
+        accept="image/png, image/jpeg"
+      />
+      <label htmlFor="image" id="image-file">
+        <ion-icon
+          style={{ fontSize: "60px", marginBottom: "15px", color: "#508ae2" }}
+          name="images-outline"
+        ></ion-icon>
+        <span>Ajouter des photos</span>
+        <span>10 photos max</span>
+      </label>
+      {imageUpload !== null && (
+        <div className="bloc-choosen-image">
+          <img src={imageUpload} alt="" />
+          <div
+            className="trash"
+            onClick={() => {
+              setImageUpload(null);
+            }}
+          >
+            <ion-icon
+              style={{ fontSize: "20px" }}
+              name="trash-outline"
+            ></ion-icon>
+          </div>
+        </div>
+      )}
+
       <div className="addPhoto"></div>
     </div>
   );

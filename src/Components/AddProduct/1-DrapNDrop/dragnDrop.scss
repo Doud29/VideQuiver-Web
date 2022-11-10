@@ -1,6 +1,6 @@
 .bloc-photo {
   box-sizing: border-box;
-  width: auto;
+  width: 100%;
   height: 230px;
   display: flex;
   padding-left: 15px;
@@ -10,6 +10,9 @@
   overflow: hidden;
   overflow-x: scroll;
   background-color: rgb(245, 241, 241);
+  input {
+    border: 1px solid red;
+  }
   #image-file {
     border: 0.5px solid grey;
     border-radius: 8px;

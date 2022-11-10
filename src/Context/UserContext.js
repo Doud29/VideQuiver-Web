@@ -23,7 +23,7 @@ export const UserContextProvider = (props) => {
 
   //state User
   const [currentUser, setCurrentUser] = useState({});
-  console.log(currentUser);
+  // console.log(currentUser);
   // console.log(currentUser);
   //inscription
   const createUser = (email, password) => {
@@ -308,7 +308,7 @@ export const UserContextProvider = (props) => {
     ["Technical informations"]: [],
   });
 
-  console.log(createOffer);
+  // console.log(createOffer);
 
   //add + check + update technical data forDropdownList
   const addTechnicalData = (name, value, Theme) => {
