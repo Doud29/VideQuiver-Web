@@ -3,19 +3,15 @@ import "./dragnDrop.scss";
 //--------------// packages
 // import { useDropzone } from "react-dropzone";
 import React, { useState } from "react";
-
 import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext";
 
-const DragnDrop = ({ setImageUpload, imageUpload }) => {
-  // const { setCreateOffer, currentUser } = useContext(UserContext);
-  //add
-  // console.log(imageUpload);
+const DragnDrop = ({ imageUpload, setImageUpload }) => {
+  const { setCreateOffer, currentUser } = useContext(UserContext);
 
-  // console.log(imageUpload);
-
-  const [numberOfImages, setNumberOfImages] = useState(10);
-
+  //DISPLAY-IMAGES
+  const [displayImages, setDisplayImages] = useState([]);
+  console.log(displayImages);
   //LIMIT IMAGES
   const NumberOfImages = (longueur) => {
     let lengthArray = longueur;
@@ -26,20 +22,24 @@ const DragnDrop = ({ setImageUpload, imageUpload }) => {
 
   //DELETE IMAGE
   const deleteImage = (url) => {
-    let imageToDelete = [...imageUpload];
-    setImageUpload(imageToDelete.filter((el) => el.url !== url));
+    let imageToDelete = [...displayImages];
+    setDisplayImages(imageToDelete.filter((el) => el !== url));
+    setImageUpload(imageToDelete.filter((el) => el !== url));
   };
 
   //ADD IMAGE
   const handelFile = (e) => {
     e.preventDefault();
     const files = e.target.files;
+    // console.log(files);
+    if (!files) return;
     const newFiles = [];
     for (let i = 0; i < files.length; i++) {
       console.log(files[i]);
-      newFiles.push({ url: URL.createObjectURL(files[i]) });
+      newFiles.push(URL.createObjectURL(files[i]));
     }
-    setImageUpload(newFiles);
+    setDisplayImages(newFiles);
+    setImageUpload(files);
   };
 
   return (
@@ -57,20 +57,25 @@ const DragnDrop = ({ setImageUpload, imageUpload }) => {
           name="images-outline"
         ></ion-icon>
         <span>Ajouter des photos</span>
-        <span>{NumberOfImages(imageUpload.length)} photos restantes</span>
+        <span>{NumberOfImages(displayImages.length)} photos restantes</span>
       </label>
-      {imageUpload.length !== 0 ? (
+
+      {displayImages.length !== 0 ? (
         <>
-          {imageUpload.map((src, index) => {
+          {displayImages.map((src, index) => {
             return (
               <div key={index} className="bloc-choosen-image">
-                <img src={src.url} alt="sport-watter" />
-                <div className="trash" onClick={() => deleteImage(src.url)}>
-                  <ion-icon
-                    name="close-outline"
-                    style={{ fontSize: "20px" }}
-                  ></ion-icon>
-                </div>
+                {src && (
+                  <>
+                    <img src={src} alt="sport-watter" />
+                    <div className="trash" onClick={() => deleteImage(src)}>
+                      <ion-icon
+                        name="close-outline"
+                        style={{ fontSize: "20px" }}
+                      ></ion-icon>
+                    </div>
+                  </>
+                )}
               </div>
             );
           })}

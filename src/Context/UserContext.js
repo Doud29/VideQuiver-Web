@@ -303,7 +303,7 @@ export const UserContextProvider = (props) => {
     userId: "",
     Price: "",
     Product: "",
-    url: "",
+    urls: [],
     sell: false,
     rent: false,
     ["Technical informations"]: [],

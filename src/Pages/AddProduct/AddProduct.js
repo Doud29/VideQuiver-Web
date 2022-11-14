@@ -48,43 +48,39 @@ import { db } from "../../firebase-config";
 import { collection, addDoc } from "firebase/firestore";
 import { storage } from "../../firebase-config";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
-  //----// STATES
-  //----// Add Photos
-  const [imageUpload, setImageUpload] = useState([]);
-  // console.log(imageUpload);
+  //----// Erro MESSAGE
+  const [errorMessage, setErrorMessage] = useState([]);
 
-  //----// Erro Message
-  const [errorMessage, setErrorMessage] = useState("");
-
-  //---// Context
+  //---// CONTEXT
   const { openModalState, createOffer, currentUser, setCreateOffer } =
     useContext(UserContext);
 
+  //DISPLAY IMAGES
+  const [imageUpload, setImageUpload] = useState([]);
+  console.log(imageUpload);
   // console.log(createOffer);
-  //---// Ref db firebase Sell & rent
+
+  //---//REF DB FIRESTORE
   const newProductForSellCollectionRef = collection(db, "newOfferForSell");
   const newProductForRentCollectionRef = collection(db, "newOfferForRent");
-  // ref à firebase storage & path
-  const imageRef = ref(storage, `Images/${currentUser.uid}`);
 
   //---// Navigate
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   //---// fonction pour soumetre la demande de vente et location
-  const SubmitOffer = async (e) => {
+  const SubmitOffer = (e) => {
     e.preventDefault();
     // if (createOffer.sell === false && createOffer.rent === false) {
     //   setErrorMessage("* S'agit-il d'une vente ou d'une location?");
     //   return;
     // }
-    // if (createOffer.Product === " ") {
-    //   setErrorMessage("* Vous devez choisir un produit");
-    //   return;
-    // }
+    if (createOffer.Product === " ") {
+      setErrorMessage("* Vous devez choisir un produit");
+      return;
+    }
     // if (createOffer.Model === " ") {
     //   setErrorMessage("* Vous avez oubliez le modèle");
     //   return;
@@ -105,53 +101,46 @@ const AddProduct = () => {
 
     //----//UPLOAD ON FIREBASE
 
-    uploadBytes(imageRef, imageUpload.url).then((snapshot) => {
-      console.log(snapshot);
-      getDownloadURL(snapshot.ref)
-        .then((downloardUrl) => {
-          console.log("image reçu", downloardUrl);
-          setCreateOffer((prev) => {
-            return { ...prev, url: downloardUrl };
-          });
-          //fonction
-        })
-        .then(() => {
-          sendata();
-        });
-    });
-
-    const sendata = async () => {
+    const uploadMultipleImagesAndAddOffer = async () => {
+      const photos = [];
       try {
-        //----// Sell
-        if (
-          createOffer.sell === true &&
-          createOffer.rent === false
-          // &&
-          // createOffer.url !== ""
-        ) {
-          console.log("condition de vente respecté");
-          await addDoc(newProductForSellCollectionRef, createOffer);
-          console.log("data sell envoyé");
-          setErrorMessage("");
+        for (let i = 0; i < imageUpload.length; i++) {
+          console.log(imageUpload[i]);
+          let file = imageUpload[i];
+          // REF DB FIREBASE
+          const imageRef = ref(
+            storage,
+            `Images/${currentUser.uid}/${createOffer.Product}/${file.name}`
+          );
 
-          // navigate("/home");
+          // SNAPSHOT
+          const snapshot = await uploadBytes(imageRef, file);
+          //URL FIREBASE
+          const downloadURL = await getDownloadURL(snapshot.ref);
+          //ARRAY
+          photos.push(downloadURL);
         }
-        //----// Rent
-        if (
-          createOffer.sell === false &&
-          createOffer.rent === true
-          //  &&
-          // createOffer.url !== ""
-        ) {
-          await addDoc(newProductForRentCollectionRef, createOffer);
-          // window.location.reload(false);
-          console.log("data rent envoyé");
-          // navigate("/home");
-        }
+        console.log(photos);
+        // SELL
+        // if (createOffer.sell === true && createOffer.rent === false) {
+        //   console.log("condition de vente respecté");
+        //   await addDoc(newProductForSellCollectionRef, createOffer);
+        // console.log("data sell envoyé");
+        //     setErrorMessage("");
+        // navigate("/home");
+        // }
+        //RENT
+        // if (createOffer.sell === false && createOffer.rent === true) {
+        //   await addDoc(newProductForRentCollectionRef, createOffer);
+        //   // window.location.reload(false);
+        //   console.log("data rent envoyé");
+        //   // navigate("/home");
+        // }
       } catch (error) {
-        console.dir(error);
+        console.log(error);
       }
     };
+    uploadMultipleImagesAndAddOffer();
   };
 
   return (
