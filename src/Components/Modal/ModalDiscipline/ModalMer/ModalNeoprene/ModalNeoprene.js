@@ -9,6 +9,7 @@ const ModalNeoprene = () => {
   const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
+    e.preventDefault();
     const value = e.target.value;
 
     if (e.target.value !== "") {
@@ -16,7 +17,9 @@ const ModalNeoprene = () => {
         ToggleModal("closeAll");
       }, 500);
     }
-    setCreateOffer({ ...createOffer, Product: value });
+    setCreateOffer((prev) => {
+      return { ...prev, Product: value };
+    });
   };
 
   return (

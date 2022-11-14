@@ -8,17 +8,19 @@ import TitleModal from "../../ComposantModal/TitleModal";
 const ModalSurf = () => {
   //---------// on récupére et on destrucure notre context[Objet] pour une meilleure lecture du code
 
-  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
+  const { ToggleModal, setCreateOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
+    e.preventDefault();
     const value = e.target.value;
-
     if (e.target.value !== "") {
       setTimeout(() => {
         ToggleModal("closeAll");
       }, 500);
     }
-    setCreateOffer({ ...createOffer, Product: value });
+    setCreateOffer((prev) => {
+      return { ...prev, Product: value };
+    });
   };
 
   return (

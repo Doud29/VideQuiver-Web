@@ -2,25 +2,51 @@
 import "./dragnDrop.scss";
 //--------------// packages
 // import { useDropzone } from "react-dropzone";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
-const DragnDrop = () => {
-  //----// Add Photos
-  const [imageUpload, setImageUpload] = useState(null);
+import { useContext } from "react";
+import { UserContext } from "../../../Context/UserContext";
 
+const DragnDrop = ({ setImageUpload, imageUpload }) => {
+  // const { setCreateOffer, currentUser } = useContext(UserContext);
   //add
+  // console.log(imageUpload);
+
+  // console.log(imageUpload);
+
+  const [numberOfImages, setNumberOfImages] = useState(10);
+
+  //LIMIT IMAGES
+  const NumberOfImages = (longueur) => {
+    let lengthArray = longueur;
+    const Limit = 10;
+    let counter = Limit - lengthArray;
+    return counter;
+  };
+
+  //DELETE IMAGE
+  const deleteImage = (url) => {
+    let imageToDelete = [...imageUpload];
+    setImageUpload(imageToDelete.filter((el) => el.url !== url));
+  };
+
+  //ADD IMAGE
   const handelFile = (e) => {
-    if (e.target.files && e.target.files[0]) {
-      setImageUpload(URL.createObjectURL(e.target.files[0]));
+    e.preventDefault();
+    const files = e.target.files;
+    const newFiles = [];
+    for (let i = 0; i < files.length; i++) {
+      console.log(files[i]);
+      newFiles.push({ url: URL.createObjectURL(files[i]) });
     }
+    setImageUpload(newFiles);
   };
 
   return (
     <div className="bloc-photo">
       <input
         type="file"
-        id="addImage"
+        id="image"
         multiple
         onChange={handelFile}
         accept="image/png, image/jpeg"
@@ -31,26 +57,27 @@ const DragnDrop = () => {
           name="images-outline"
         ></ion-icon>
         <span>Ajouter des photos</span>
-        <span>10 photos max</span>
+        <span>{NumberOfImages(imageUpload.length)} photos restantes</span>
       </label>
-      {imageUpload !== null && (
-        <div className="bloc-choosen-image">
-          <img src={imageUpload} alt="" />
-          <div
-            className="trash"
-            onClick={() => {
-              setImageUpload(null);
-            }}
-          >
-            <ion-icon
-              style={{ fontSize: "20px" }}
-              name="trash-outline"
-            ></ion-icon>
-          </div>
-        </div>
-      )}
+      {imageUpload.length !== 0 ? (
+        <>
+          {imageUpload.map((src, index) => {
+            return (
+              <div key={index} className="bloc-choosen-image">
+                <img src={src.url} alt="sport-watter" />
+                <div className="trash" onClick={() => deleteImage(src.url)}>
+                  <ion-icon
+                    name="close-outline"
+                    style={{ fontSize: "20px" }}
+                  ></ion-icon>
+                </div>
+              </div>
+            );
+          })}
+        </>
+      ) : null}
 
-      <div className="addPhoto"></div>
+      {/* <div className="addPhoto"></div> */}
     </div>
   );
 };

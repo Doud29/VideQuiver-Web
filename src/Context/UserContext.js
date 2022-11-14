@@ -82,7 +82,7 @@ export const UserContextProvider = (props) => {
   });
 
   const ToggleModal = (modal) => {
-    if (modal === "categories") {
+    if (modal === "Allcategories") {
       return setOpenModalState({
         modalCategorie: true,
         modalMer: false,
@@ -303,6 +303,7 @@ export const UserContextProvider = (props) => {
     userId: "",
     Price: "",
     Product: "",
+    url: "",
     sell: false,
     rent: false,
     ["Technical informations"]: [],

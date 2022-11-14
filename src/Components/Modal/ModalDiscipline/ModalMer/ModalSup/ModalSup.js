@@ -7,9 +7,11 @@ import InputRadio from "../../ComposantModal/InputRadio";
 import TitleModal from "../../ComposantModal/TitleModal";
 
 const ModalSup = () => {
-  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
+  const { ToggleModal, setCreateOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
+    e.preventDefault();
+
     const value = e.target.value;
 
     if (e.target.value !== "") {
@@ -17,7 +19,9 @@ const ModalSup = () => {
         ToggleModal("closeAll");
       }, 500);
     }
-    setCreateOffer({ ...createOffer, Product: value });
+    setCreateOffer((prev) => {
+      return { ...prev, Product: value };
+    });
   };
   return (
     <div className="container-modal">

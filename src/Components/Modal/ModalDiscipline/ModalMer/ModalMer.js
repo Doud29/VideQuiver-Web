@@ -23,7 +23,7 @@ const ModalMer = () => {
           <p>Disciplines</p>
           <div
             className="bloc-arrowLeft"
-            onClick={() => ToggleModal("categories")}
+            onClick={() => ToggleModal("Allcategories")}
           >
             <ion-icon name="arrow-back-outline"></ion-icon>{" "}
           </div>
