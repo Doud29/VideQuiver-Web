@@ -60,7 +60,7 @@ const AddProduct = () => {
 
   //DISPLAY IMAGES
   const [imageUpload, setImageUpload] = useState([]);
-  console.log(imageUpload);
+  // console.log(imageUpload);
   // console.log(createOffer);
 
   //---//REF DB FIRESTORE
@@ -103,7 +103,9 @@ const AddProduct = () => {
 
     const uploadMultipleImagesAndAddOffer = async () => {
       const photos = [];
+      const newObj = { ...createOffer };
       try {
+        //UPLOAD IMAGE
         for (let i = 0; i < imageUpload.length; i++) {
           console.log(imageUpload[i]);
           let file = imageUpload[i];
@@ -112,30 +114,33 @@ const AddProduct = () => {
             storage,
             `Images/${currentUser.uid}/${createOffer.Product}/${file.name}`
           );
-
           // SNAPSHOT
           const snapshot = await uploadBytes(imageRef, file);
           //URL FIREBASE
           const downloadURL = await getDownloadURL(snapshot.ref);
           //ARRAY
-          photos.push(downloadURL);
+          // photos.push(downloadURL);
+          setCreateOffer({ ...newObj, urls: downloadURL });
         }
         console.log(photos);
+        console.log(createOffer);
+        console.log("images envoyées");
         // SELL
-        // if (createOffer.sell === true && createOffer.rent === false) {
-        //   console.log("condition de vente respecté");
-        //   await addDoc(newProductForSellCollectionRef, createOffer);
-        // console.log("data sell envoyé");
-        //     setErrorMessage("");
-        // navigate("/home");
-        // }
+        if (createOffer.sell === true && createOffer.rent === false) {
+          console.log("condition de vente respecté");
+          await addDoc(newProductForSellCollectionRef, createOffer);
+          console.log("data sell envoyé");
+          setErrorMessage("");
+          // navigate("/home");
+        }
+        console.log("annoncé déposé");
         //RENT
-        // if (createOffer.sell === false && createOffer.rent === true) {
-        //   await addDoc(newProductForRentCollectionRef, createOffer);
-        //   // window.location.reload(false);
-        //   console.log("data rent envoyé");
-        //   // navigate("/home");
-        // }
+        if (createOffer.sell === false && createOffer.rent === true) {
+          await addDoc(newProductForRentCollectionRef, createOffer);
+          // window.location.reload(false);
+          console.log("data rent envoyé");
+          // navigate("/home");
+        }
       } catch (error) {
         console.log(error);
       }
