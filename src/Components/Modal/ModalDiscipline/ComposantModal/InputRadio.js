@@ -1,6 +1,6 @@
 const InputRadio = ({ type, onChange, id, name, value }) => {
   return (
-    <div>
+    <div className="button">
       <label htmlFor={id}>{id}</label>
       <input
         type={type}

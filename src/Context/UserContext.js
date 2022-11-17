@@ -100,6 +100,42 @@ export const UserContextProvider = (props) => {
       });
     }
 
+    if (modal === "Air") {
+      return setOpenModalState({
+        modalCategorie: false,
+        modalMer: false,
+        modalMountain: false,
+        modalStreet: false,
+        modalAir: true,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+
+    if (modal === "Street") {
+      return setOpenModalState({
+        modalCategorie: false,
+        modalMer: false,
+        modalMountain: false,
+        modalStreet: true,
+        modalAir: false,
+        modalSurf: false,
+        modalBodyBoard: false,
+        modalSup: false,
+        modalWindSurf: false,
+        modalkiteSurf: false,
+        modalNeoprene: false,
+        modalBodySurf: false,
+        modalApnee: false,
+      });
+    }
+
     if (modal === "Sea") {
       return setOpenModalState({
         modalCategorie: false,

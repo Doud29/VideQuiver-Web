@@ -1,74 +1,86 @@
-//--------------// packages
+// packages
 import React, { useContext } from "react";
-import { UserContext } from "../../../../../Context/UserContext";
-import InputRadio from "../../ComposantModal/InputRadio";
-import TitleModal from "../../ComposantModal/TitleModal";
+import { UserContext } from "../../../../Context/UserContext";
+import InputRadio from "../ComposantModal/InputRadio";
+import TitleModal from "../ComposantModal/TitleModal";
 
-const ModalApnee = () => {
-  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
+const ModalSurf = () => {
+  //---------// on récupére et on destrucure notre context[Objet] pour une meilleure lecture du code
+
+  const { ToggleModal, setCreateOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
+    e.preventDefault();
     const value = e.target.value;
-
     if (e.target.value !== "") {
       setTimeout(() => {
         ToggleModal("closeAll");
       }, 500);
     }
-    setCreateOffer({ ...createOffer, Product: value });
+    setCreateOffer((prev) => {
+      return { ...prev, Product: value };
+    });
   };
+
   return (
     <div className="container-modal">
-      {/* //-----//Overlay  */}
+      {/* //-----------------------------//Overlay  */}
       <div
         className="overlay-modal-trigger"
         onClick={() => ToggleModal("closeAll")}
-      ></div>{" "}
-      {/* //-----//Modal et son contenu */}
+      ></div>
+      {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
-        <TitleModal title="Apnée" modal="Sea" />
+        <TitleModal title="Surf" modal="Sea" />
         <div className="container-button">
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Palmes polymères"
+            id="Planche"
             name="Produit"
-            value="Palmes polymères d'apnée"
+            value="Planche de Surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Palmes carbonnes"
+            id="Dérives"
             name="Produit"
-            value="Palmes carbonnes d'apnée"
+            value="Dérives de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Tubas"
+            id="Pad"
             name="Produit"
-            value="Tubas d'apnée"
+            value="Pad de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Masques"
+            id="Leash"
             name="Produit"
-            value="Masques d'apnée"
+            value="Leash de surf"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Gilet Impact"
+            name="Produit"
+            value="Gilet Impact de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Accessoires"
             name="Produit"
-            value="Accessoires d'apnée"
+            value="Accessoires de surf"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Bagagerie"
             name="Produit"
-            value="Bagagerie Apnée"
+            value="Bagagerie de surf"
           />
         </div>
       </div>
@@ -76,4 +88,4 @@ const ModalApnee = () => {
   );
 };
 
-export default ModalApnee;
+export default ModalSurf;

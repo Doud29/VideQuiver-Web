@@ -1,8 +1,11 @@
-//--------------// Css
+// Css
 // import "./modalmer.scss";
 
 //--------------// Components
 import { UserContext } from "../../../../Context/UserContext";
+
+//COMPONENTS
+import CategorieButton from "../ComposantModal/CategorieButton";
 
 //--------------// packages
 import { useContext } from "react";
@@ -29,43 +32,15 @@ const ModalMer = () => {
           </div>
         </div>
         <div className="container-button">
-          <div onClick={() => ToggleModal("Neoprene")}>
-            <span>Néoprène </span>
-            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-          </div>
-          <div onClick={() => ToggleModal("Surf")}>
-            <span>Surf</span>
-            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-          </div>{" "}
-          <div onClick={() => ToggleModal("BodyBoard")}>
-            <span>BodyBoard</span>
-            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-          </div>{" "}
-          <div onClick={() => ToggleModal("BodySurf")}>
-            <span>BodySurf</span>
-            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-          </div>{" "}
-          {/* <div onClick={() => setfoilState(true)}>
-            <span>Foil</span>
-                    <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-
-          </div> */}
-          <div onClick={() => ToggleModal("KiteSurf")}>
-            <span>KiteSurf</span>
-            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-          </div>
-          <div onClick={() => ToggleModal("WindSurf")}>
-            <span>WindSurf</span>
-            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-          </div>
-          <div onClick={() => ToggleModal("SUP")}>
-            <span>StandUpPaddle</span>
-            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-          </div>
-          <div onClick={() => ToggleModal("Apnee")}>
-            <span>Apnée</span>
-            <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
-          </div>
+          <CategorieButton modal="Apnee" value="Apnée" />
+          <CategorieButton modal="BodyBoard" value="BodyBoard" />
+          <CategorieButton modal="BodySurf" value="BodySurf" />
+          <CategorieButton modal="Foil" value="Foil" />
+          <CategorieButton modal="KiteSurf" value="KiteSurf" />
+          <CategorieButton modal="Neoprene" value="Néporene" />
+          <CategorieButton modal="Surf" value="Surf" />
+          <CategorieButton modal="SUP" value="SUP" />
+          <CategorieButton modal="WindSurf" value="WindSurf" />
         </div>
       </div>
     </div>

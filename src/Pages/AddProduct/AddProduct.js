@@ -2,16 +2,16 @@
 import "./addProduct.scss";
 
 //----------// Modaux
-import ModalCategories from "../../Components/Modal/ModalDiscipline/ModalCategories";
+import ModalCategories from "../../Components/Modal/ModalDiscipline/ModalCatégories/ModalCategories";
 import ModalMer from "../../Components/Modal/ModalDiscipline/ModalMer/ModalMer";
-import ModalSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalSurf/ModalSurf";
-import ModalApnee from "../../Components/Modal/ModalDiscipline/ModalMer/ModalApnee/ModalApnee";
-import ModalBodyBoard from "../../Components/Modal/ModalDiscipline/ModalMer/ModalBodyBoard/ModalBodyBoard";
-import ModalKiteSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalKiteSurf/ModalKiteSurf";
-import ModalBodySurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalBodySurf/ModalBodySurf";
-import ModalSup from "../../Components/Modal/ModalDiscipline/ModalMer/ModalSup/ModalSup";
-import ModalWindSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalWindSurf/ModalWindSurf";
-import ModalNeoprene from "../../Components/Modal/ModalDiscipline/ModalMer/ModalNeoprene/ModalNeoprene";
+import ModalSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalSurf";
+import ModalApnee from "../../Components/Modal/ModalDiscipline/ModalMer/ModalApnee";
+import ModalBodyBoard from "../../Components/Modal/ModalDiscipline/ModalMer/ModalBodyBoard";
+import ModalKiteSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalKiteSurf";
+import ModalBodySurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalBodySurf";
+import ModalSup from "../../Components/Modal/ModalDiscipline/ModalMer/ModalSup";
+import ModalWindSurf from "../../Components/Modal/ModalDiscipline/ModalMer/ModalWindSurf";
+import ModalNeoprene from "../../Components/Modal/ModalDiscipline/ModalMer/ModalNeoprene";
 //----------// Technical Surf Components
 import SurfDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/SurfDescription";
 import DerivesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/DeriveDescription";
@@ -168,84 +168,88 @@ const AddProduct = () => {
         <HeaderAddProduct />
         {/*  */}
         <DragnDrop imageUpload={imageUpload} setImageUpload={setImageUpload} />
-        <SwitchSelection />
-        <OfferDescription />
-        {/* 
+        <div className="container-descriptionOffer">
+          <SwitchSelection />
+          <OfferDescription />
+          {/* 
 //------------// MER 
 //------------// Composents Surf 
            */}
-        {createOffer.Product === "Planche de Surf" && <SurfDescription />}
-        {createOffer.Product === "Dérives de surf" && <DerivesDescription />}
-        {createOffer.Product === "Gilet Impact de surf" && <GiletImpact />}
-        {createOffer.Product === "Pad de surf" && <PadDescription />}
-        {createOffer.Product === "Leash de surf" && <LeashDescription />}
-        {(createOffer.Product === "Accessoires de surf" ||
-          createOffer.Product === "Accessoires de bodyboard") && (
-          <AccessoriesDescription />
-        )}
-        {createOffer.Product === "Bagagerie de surf" && (
-          <SurfLuggageDescription />
-        )}
-        {/*
+          {createOffer.Product === "Planche de Surf" && <SurfDescription />}
+          {createOffer.Product === "Dérives de surf" && <DerivesDescription />}
+          {createOffer.Product === "Gilet Impact de surf" && <GiletImpact />}
+          {createOffer.Product === "Pad de surf" && <PadDescription />}
+          {createOffer.Product === "Leash de surf" && <LeashDescription />}
+          {(createOffer.Product === "Accessoires de surf" ||
+            createOffer.Product === "Accessoires de bodyboard") && (
+            <AccessoriesDescription />
+          )}
+          {createOffer.Product === "Bagagerie de surf" && (
+            <SurfLuggageDescription />
+          )}
+          {/*
 //-----------// Composents BodyBoard */}
-        {createOffer.Product === "Planche de bodyboard" && (
-          <BodyBoardDescription />
-        )}
-        {createOffer.Product === "Palmes de bodyboard" && (
-          <FinBodyboardDescription />
-        )}
-        {createOffer.Product === "Bagagerie de bodyboard" && (
-          <BodyBoardLuggageDescription />
-        )}
-        {createOffer.Product === "Leash coil" && <LeashBodyBoardDescription />}
-        {/*
+          {createOffer.Product === "Planche de bodyboard" && (
+            <BodyBoardDescription />
+          )}
+          {createOffer.Product === "Palmes de bodyboard" && (
+            <FinBodyboardDescription />
+          )}
+          {createOffer.Product === "Bagagerie de bodyboard" && (
+            <BodyBoardLuggageDescription />
+          )}
+          {createOffer.Product === "Leash coil" && (
+            <LeashBodyBoardDescription />
+          )}
+          {/*
 //-----------// Composents Neoprene */}
-        {createOffer.Product === "Combinaison intégrale" && (
-          <WetSuitDescription />
-        )}
-        {createOffer.Product === "Veste néopréne" && <JacketDescription />}
-        {createOffer.Product === "Chaussons néopréne" && <SocksDescription />}
-        {createOffer.Product === "Cagoules / Bonnets" && (
-          <BalaclavaDescription />
-        )}
+          {createOffer.Product === "Combinaison intégrale" && (
+            <WetSuitDescription />
+          )}
+          {createOffer.Product === "Veste néopréne" && <JacketDescription />}
+          {createOffer.Product === "Chaussons néopréne" && <SocksDescription />}
+          {createOffer.Product === "Cagoules / Bonnets" && (
+            <BalaclavaDescription />
+          )}
 
-        {/*
+          {/*
 //----------------------------------------------//  
 //-----------// Composents BodySurf //----------// 
 //----------------------------------------------//   */}
 
-        {/*
+          {/*
 //----------------------------------------------//  
 //-----------// Composents Kite Surf //---------// 
 //----------------------------------------------//   */}
 
-        {/*
+          {/*
 //----------------------------------------------//  
 //-----------// Composents Windsurf //----------// 
 //----------------------------------------------//   */}
 
-        {/*
+          {/*
 //----------------------------------------------//  
 //--------// Composents StandUpPaddle //--------// 
 //----------------------------------------------//   */}
 
-        {/*
+          {/*
 //----------------------------------------------//  
 //----------// Composents Apnée //--------------// 
 //----------------------------------------------//   */}
 
-        {/* 
+          {/* 
 //----------------------------------------------//  
 //------------------// MONTAGNE //--------------//
 //----------------------------------------------//   */}
-        {/* 
+          {/* 
 
           {/* 
 //----------------------------------------------//  
 //----------//INFORMATIONS COMPLEMENTAIRE //----//
 //----------------------------------------------// */}
-        <AdditionalInformation />
-        <SubmitButton errorMessage={errorMessage} SubmitOffer={SubmitOffer} />
+          <AdditionalInformation />
+          <SubmitButton errorMessage={errorMessage} SubmitOffer={SubmitOffer} />
+        </div>
       </div>
     </>
   );

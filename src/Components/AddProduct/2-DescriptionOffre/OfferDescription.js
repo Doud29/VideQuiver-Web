@@ -1,3 +1,6 @@
+//CSS
+import "./offerDescription.scss";
+
 //-----// Components
 import TexteAeraField from "./2-TechnicalComponents/TextAeraField";
 import TitleOfferDescription from "./1-Title/TitleOfferDescription";

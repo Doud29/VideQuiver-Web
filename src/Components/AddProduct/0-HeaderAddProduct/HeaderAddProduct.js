@@ -1,10 +1,10 @@
+//CSS
+import "./headerAddProduct.scss";
+//COMPONENTS
 import { Link } from "react-router-dom";
-import React, { useContext } from "react";
-import { UserContext } from "../../../Context/UserContext";
+import React from "react";
 
 const HeaderAddProduct = () => {
-  const { setCreateOffer, createOffer } = useContext(UserContext);
-
   return (
     <div className="bloc-header">
       <p>Vendre un article</p>

@@ -1,182 +1,26 @@
-.container-header-addproduct {
-  display: none;
-}
-
 .container-addProduct {
   width: 100%;
   min-width: 320px;
-  background: white;
   height: auto;
   box-sizing: border-box;
-  .bloc-header {
-    height: 55px;
+  border: 1px solid green;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 15px;
+  .container-descriptionOffer {
+    background: white;
     width: 100%;
-    position: relative;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border-bottom: 0.5px solid grey;
-    p {
-      font-size: 15px;
-      color: grey;
-      width: 240px;
-    }
-    .bloc-arrowLeft {
-      position: absolute;
-      font-size: 20px;
-      margin-right: 10px;
-      top: 50%;
-      left: 25px;
-      transform: translate(-50%, -50%);
-    }
-  }
-
-  .container-input-button {
-    box-sizing: border-box;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    height: auto;
-    padding: 0 15px 15px 15px;
-    .container-titre {
-      width: 100%;
-      box-sizing: border-box;
-      position: relative;
-      height: 40px;
-      margin-bottom: 10px;
-
-      .line {
-        box-sizing: border-box;
-        border: 0.5px solid #508ae2;
-        width: 100%;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        right: 0;
-        z-index: 1;
-      }
-      h3 {
-        font-size: 15px;
-        padding-left: 10px;
-        padding-right: 10px;
-        position: absolute;
-        top: -15%;
-        color: #555555;
-        margin-left: 30px;
-        background-color: white;
-        z-index: 1;
-      }
-    }
-    #model,
-    button {
-      height: 50px;
-    }
-    #model,
-    #description,
-    button {
-      outline: none;
-      padding-left: 10px;
-      border-radius: 8px;
-      border: 1px solid grey;
-      width: 100%;
-      box-sizing: border-box;
-    }
-    #model,
-    #description {
-      margin: 15px 0;
-    }
-    #description {
-      height: 100px;
-      resize: vertical;
-      margin: auto;
-      padding: 15px;
-      margin-top: 15px;
-    }
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: white;
-      margin: 0 auto 10px auto;
-    }
-    #product {
-      color: #508ae2;
-      margin-right: 10px;
-      font-size: 15px;
-    }
-    //------------------------------------------------------------------------------------------------//
-    //---------------------// Animation des inputs lors de leur sélection //--------------------------//
-    //------------------------------------------------------------------------------------------------//
-
-    .container-input-span {
-      width: 100%;
-      position: relative;
-
-      .numberCaracters {
-        font-size: 10px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-      }
-      .numberCaracterstextaera {
-        font-size: 10px;
-        position: absolute;
-        bottom: -10px;
-        right: 0;
-      }
-
-      .modèleSpan,
-      .descriptionSpan {
-        position: absolute;
-        top: 30px;
-        left: 10px;
-        font-size: 15px;
-        pointer-events: none;
-        transition: 0.5s;
-      }
-
-      #description:focus ~ .descriptionSpan,
-      #description:not(:placeholder-shown)#description:not(:focus)
-        ~ .descriptionSpan {
-        color: #508ae2;
-        transform: translateX(12px) translateY(-26px);
-        background: white;
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-
-      #model:focus ~ .modèleSpan,
-      #model:not(:placeholder-shown)#model:not(:focus) ~ .modèleSpan {
-        color: #508ae2;
-        transform: translateX(15px) translateY(-25px);
-        background: white;
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-    }
-  }
-  .container-techniques-generales {
-    width: 100%;
-    height: auto;
-    display: none;
+    max-width: 768px;
   }
 }
 
-//------------------------------------------------------------------------------------------------//
-//--------------------------------------------// Média Querys //----------------------------------//
-//------------------------------------------------------------------------------------------------//
-
-@media (min-width: 755px) {
-  .container-header-addproduct {
-    display: block;
-  }
-}
-
-@media (min-width: 1200px) {
-  .container-header-addproduct,
-  .container-addProduct {
-    width: 1200px;
-    margin: auto;
+@media (min-width: 768px) {
+  /* Rules */
+  .container-descriptionOffer {
+    border: 0.5px solid grey;
+    box-shadow: 8px 4px 4px rgb(183, 181, 181);
+    margin-top: 10px;
   }
 }

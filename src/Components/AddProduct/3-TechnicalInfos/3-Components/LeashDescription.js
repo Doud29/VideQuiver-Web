@@ -1,5 +1,5 @@
 //--------------// Css
-import "../../DescriptionProduit.scss";
+import "../DescriptionProduit.scss";
 
 //--------------// Composent
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";

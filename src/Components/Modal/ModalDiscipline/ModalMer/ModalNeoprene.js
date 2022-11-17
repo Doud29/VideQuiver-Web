@@ -1,13 +1,14 @@
 //--------------// packages
 import React, { useContext } from "react";
-import { UserContext } from "../../../../../Context/UserContext";
-import InputRadio from "../../ComposantModal/InputRadio";
-import TitleModal from "../../ComposantModal/TitleModal";
+import { UserContext } from "../../../../Context/UserContext";
+import InputRadio from "../ComposantModal/InputRadio";
+import TitleModal from "../ComposantModal/TitleModal";
 
-const ModalBodySurf = () => {
+const ModalNeoprene = () => {
   const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
+    e.preventDefault();
     const value = e.target.value;
 
     if (e.target.value !== "") {
@@ -15,8 +16,11 @@ const ModalBodySurf = () => {
         ToggleModal("closeAll");
       }, 500);
     }
-    setCreateOffer({ ...createOffer, Product: value });
+    setCreateOffer((prev) => {
+      return { ...prev, Product: value };
+    });
   };
+
   return (
     <div className="container-modal">
       {/* //-----------------------------//Overlay  */}
@@ -26,49 +30,63 @@ const ModalBodySurf = () => {
       ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
-        <TitleModal title="BodySurf" modal="Sea" />
+        <TitleModal title="Néopréne" modal="Sea" />
         <div className="container-button">
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Palmes"
+            id="Intégral"
             name="Produit"
-            value="Palmes de bodysurf"
+            value="Combinaison intégrale"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Leash"
+            id="Shorty"
             name="Produit"
-            value="Leash de bodysurf "
+            value="Combinaison shorty"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="HandPlane"
+            id="Lycra"
             name="Produit"
-            value="HandPlane de bodysurf"
+            value="Lycra / Top"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Casque"
+            id="Long John"
             name="Produit"
-            value="Casque de bodysurf"
+            value="Long John"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Accessoires"
+            id="Veste néopréne"
             name="Produit"
-            value="Accessoires de bodysurf"
+            value="Veste néopréne"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Bagagerie Bodysurf"
+            id="Chaussons"
             name="Produit"
-            value="Bagagerie de bodysurf"
+            value="Chaussons néopréne"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Cagoules / Bonnets"
+            name="Produit"
+            value="Cagoules / Bonnets"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Gants"
+            name="Produit"
+            value="Gants néopréne"
           />
         </div>
       </div>
@@ -76,4 +94,4 @@ const ModalBodySurf = () => {
   );
 };
 
-export default ModalBodySurf;
+export default ModalNeoprene;

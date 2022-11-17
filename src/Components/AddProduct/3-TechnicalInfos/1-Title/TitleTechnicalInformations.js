@@ -1,3 +1,5 @@
+import "./titleTechnicalsInformations.scss";
+
 const TitleTechnicalInformation = () => {
   return (
     <div className="container-titre">

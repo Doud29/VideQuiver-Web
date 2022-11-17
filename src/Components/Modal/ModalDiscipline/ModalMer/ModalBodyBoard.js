@@ -1,12 +1,13 @@
 //--------------// Components
+// import ModalMer from "../ModalMer/ModalMer";
 
 //--------------// packages
 import React, { useContext } from "react";
-import { UserContext } from "../../../../../Context/UserContext";
-import InputRadio from "../../ComposantModal/InputRadio";
-import TitleModal from "../../ComposantModal/TitleModal";
+import { UserContext } from "../../../../Context/UserContext";
+import InputRadio from "../ComposantModal/InputRadio";
+import TitleModal from "../ComposantModal/TitleModal";
 
-const ModalWindSurf = () => {
+const ModalBodyBoard = () => {
   const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
@@ -29,63 +30,42 @@ const ModalWindSurf = () => {
       ></div>
       {/* //-----------------------------//Modal et son contenu */}
       <div className="modal">
-        <TitleModal title="WindSurf" modal="Sea" />
+        <TitleModal title="BodyBoard" modal="Sea" />
         <div className="container-button">
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Flotteur"
+            id="Planche "
             name="Produit"
-            value="Flotteur de Windsurf"
+            value="Planche de bodyboard"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Voile"
+            id="Palmes"
             name="Produit"
-            value="Voile de WindSurf"
+            value="Palmes de bodyboard"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
-            id="Whisbone"
+            id="Leash"
             name="Produit"
-            value="Whisbone de Winsurf"
-          />
-          <InputRadio
-            type="radio"
-            onChange={handleCheckBox}
-            id="Mat"
-            name="Produit"
-            value="Mat de Winsurf"
-          />
-          <InputRadio
-            type="radio"
-            onChange={handleCheckBox}
-            id="Dérives/Ailerons"
-            name="Produit"
-            value="Dérives/Ailerons de Winsurf"
-          />
-          <InputRadio
-            type="radio"
-            onChange={handleCheckBox}
-            id="Pied de mat / Plaquette / Rallonge"
-            name="Produit"
-            value="Pied de mat / Plaquette / Rallonge"
+            value="Leash coil"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Accessoires"
             name="Produit"
-            value="Accessoires de Winsurf"
+            value="Accessoires de bodyboard"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Bagagerie"
             name="Produit"
-            value="Bagagerie Wind Surf"
+            value="Bagagerie de bodyboard"
           />
         </div>
       </div>
@@ -93,4 +73,4 @@ const ModalWindSurf = () => {
   );
 };
 
-export default ModalWindSurf;
+export default ModalBodyBoard;

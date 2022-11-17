@@ -1,3 +1,6 @@
+//CSS
+import "../DescriptionProduit.scss";
+
 //--------------// Composent
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
 import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
@@ -82,10 +85,10 @@ export default CombinaisonDescription;
         <option value="Sen no Sen">Sen no Sen</option>
         <option value="SISSTREVOLUTION">SISSTREVOLUTION</option>
         <option value="Soöruz">Soöruz</option>
-        <option value="Soöruz">Sowe</option>
+        <option value="Sowe">Sowe</option>
         <option value="SRFACE">SRFACE</option>
         <option value="Storm">Storm</option>
-        <option value="Storm">Venice</option>
-        <option value="Storm">Vissla</option>
+        <option value="Venice">Venice</option>
+        <option value="Vissla">Vissla</option>
         <option value="Xcel">Xcel</option>
       </select> */

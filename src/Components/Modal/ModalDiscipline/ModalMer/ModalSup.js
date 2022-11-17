@@ -1,10 +1,12 @@
-//--------------// Components
+//CSS
+import "../ModalCatégories/modalCategories.scss";
 
-//--------------// packages
+//COMPONENTS
+import InputRadio from "../ComposantModal/InputRadio";
+import TitleModal from "../ComposantModal/TitleModal";
+//PACKAGES
 import React, { useContext } from "react";
-import { UserContext } from "../../../../../Context/UserContext";
-import InputRadio from "../../ComposantModal/InputRadio";
-import TitleModal from "../../ComposantModal/TitleModal";
+import { UserContext } from "../../../../Context/UserContext";
 
 const ModalSup = () => {
   const { ToggleModal, setCreateOffer } = useContext(UserContext);

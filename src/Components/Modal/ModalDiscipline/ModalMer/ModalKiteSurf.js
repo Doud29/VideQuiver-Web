@@ -1,8 +1,8 @@
 //--------------// packages
 import React, { useContext } from "react";
-import { UserContext } from "../../../../../Context/UserContext";
-import InputRadio from "../../ComposantModal/InputRadio";
-import TitleModal from "../../ComposantModal/TitleModal";
+import { UserContext } from "../../../../Context/UserContext";
+import InputRadio from "../ComposantModal/InputRadio";
+import TitleModal from "../ComposantModal/TitleModal";
 
 const ModalKiteSurf = () => {
   const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);

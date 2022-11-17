@@ -1,0 +1,27 @@
+//----------------------------------------------------------//
+//---------------------// HEADER ADD PRODUCT//--------------//
+//----------------------------------------------------------//
+
+.bloc-header {
+  height: 55px;
+  width: 100%;
+  position: relative;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 0.5px solid grey;
+  p {
+    font-size: 15px;
+    color: grey;
+    width: 240px;
+  }
+  .bloc-arrowLeft {
+    position: absolute;
+    font-size: 20px;
+    margin-right: 10px;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+  }
+}

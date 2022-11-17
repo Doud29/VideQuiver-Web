@@ -1,3 +1,9 @@
+//CSS
+import "../DescriptionProduit.scss";
+
+//CSS
+import "../DescriptionProduit.scss";
+
 //--------------// Composent
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
 import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";

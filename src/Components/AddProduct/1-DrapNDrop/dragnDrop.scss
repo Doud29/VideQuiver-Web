@@ -1,3 +1,7 @@
+//----------------------------------------------------------//
+//------------------------// DRAG N DROP //-----------------//
+//----------------------------------------------------------//
+
 .bloc-photo {
   box-sizing: border-box;
   width: 100%;
@@ -10,13 +14,12 @@
   overflow: hidden;
   overflow-x: scroll;
   background-color: rgb(245, 241, 241);
+  border-bottom: 0.5px solid;
   input {
-    border: 1px solid red;
     display: none;
   }
   #image-file {
-    border: 0.5px solid grey;
-    border-radius: 8px;
+    box-shadow: 5px 3px 3px rgb(183, 181, 181);
     height: 160px;
     width: 160px;
     min-width: 160px;
@@ -44,36 +47,36 @@
     cursor: pointer;
   }
   .addPhoto {
-    border: 0.5px dashed grey;
     height: 160px;
     width: 160px;
     min-width: 160px;
-    border-radius: 8px;
   }
+  //----------------------------------------------------------//
+  //---------------------// IMAGE AFFICHEE //-----------------//
+  //----------------------------------------------------------//
+
   .bloc-choosen-image {
-    // border: px solid red;
     box-sizing: border-box;
     flex-direction: row;
     height: 160px;
-    width: auto;
-    min-width: 200px;
-    border-radius: 8px;
+    width: 160px;
+    min-width: 160px;
     margin: 0 10px;
     position: relative;
+    box-shadow: 5px 3px 3px rgb(183, 181, 181);
     img {
       height: 100%;
       width: 100%;
       background: white;
-      border-radius: 8px;
       object-fit: cover;
     }
-
     .trash {
       position: absolute;
       top: -12.5px;
       right: -12.5px;
       ion-icon {
-        border: 0.5px solid grey;
+        // border: 0.5px solid grey;
+        box-shadow: 3px 2px 2px rgb(183, 181, 181);
         border-radius: 50%;
         padding: 4px;
         background: white;

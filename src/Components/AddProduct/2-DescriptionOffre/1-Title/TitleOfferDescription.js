@@ -1,3 +1,5 @@
+import "./titleOfferDescription.scss";
+
 const TitleOfferDescription = () => {
   return (
     <div className="container-titre">

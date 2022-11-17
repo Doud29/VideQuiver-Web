@@ -1,0 +1,49 @@
+//------------------------------------------------------------------------//
+//-----------------------------// INPUT //--------------------------------//
+//------------------------------------------------------------------------//
+
+.inputdiv {
+  position: relative;
+  width: 100%;
+  input {
+    height: 50px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 1px solid grey;
+    margin-bottom: 15px;
+    color: #555555;
+    width: 100%;
+    outline: none;
+    box-sizing: border-box;
+  }
+}
+.spanDescriptionInput {
+  position: absolute;
+  top: 15px;
+  left: 10px;
+  font-size: 15px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+//------------------------------------------------------------------------//
+//-----------------------------// ANIMATION //----------------------------//
+//------------------------------------------------------------------------//
+
+#Marque:focus ~ .spanDescriptionInput,
+#Marque:not(:placeholder-shown)#Marque:not(:focus) ~ .spanDescriptionInput {
+  color: #508ae2;
+  transform: translateX(15px) translateY(-25px);
+  background: white;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#Prix:focus ~ .spanDescriptionInput,
+#Prix:not(:placeholder-shown)#Prix:not(:focus) ~ .spanDescriptionInput {
+  color: #508ae2;
+  transform: translateX(15px) translateY(-25px);
+  background: white;
+  padding-left: 5px;
+  padding-right: 5px;
+}

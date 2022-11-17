@@ -15,7 +15,7 @@ import ProtectedRoute from "./Pages/Protected/ProtectedRoute";
 import Product from "./Pages/Product/Product";
 import MyProfile from "./Pages/Profile/MyProfile";
 import { UserContextProvider } from "./Context/UserContext";
-
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <UserContextProvider>
@@ -38,6 +38,7 @@ function App() {
             <Route path="/product" element={<Product />} />
             <Route path="/myProfil" element={<MyProfile />} />
           </Routes>
+          <Footer />
         </div>
       </Router>
     </UserContextProvider>

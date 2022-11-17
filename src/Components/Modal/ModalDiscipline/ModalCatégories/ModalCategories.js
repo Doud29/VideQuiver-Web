@@ -2,11 +2,11 @@
 import "./modalCategories.scss";
 
 //--------------// Components
-import CategorieButton from "./TechnicalComponents/CategorieButton";
+import CategorieButton from "../ComposantModal/CategorieButton";
 //--------------// packages
 // import { Link } from "react-router-dom";
 import { useContext } from "react";
-import { UserContext } from "../../../Context/UserContext";
+import { UserContext } from "../../../../Context/UserContext";
 
 const ModalCategories = () => {
   const { ToggleModal } = useContext(UserContext);
@@ -30,7 +30,12 @@ const ModalCategories = () => {
             <ion-icon name="arrow-back-outline"></ion-icon>{" "}
           </div>
         </div>
-        <CategorieButton />
+        <div className="container-button">
+          <CategorieButton value="Mer" modal="Sea" />
+          <CategorieButton value="Montagne" modal="Mountain" />
+          <CategorieButton value="Air" modal="Air" />
+          <CategorieButton value="Street" modal="Street" />
+        </div>
       </div>
     </div>
   );

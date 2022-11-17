@@ -1,3 +1,6 @@
+//CSS
+import "./inputFields.scss";
+
 const InputField = ({
   value,
   type,

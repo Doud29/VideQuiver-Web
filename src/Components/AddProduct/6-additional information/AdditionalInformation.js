@@ -16,6 +16,7 @@ const AdditionalInformation = () => {
       <TitleAdditionalinformations title="Prix et Livraison" />
       <InputAdditionalInformations
         onChange={handleValue}
+        type="number"
         name="Prix"
         value={createOffer.Price}
       />

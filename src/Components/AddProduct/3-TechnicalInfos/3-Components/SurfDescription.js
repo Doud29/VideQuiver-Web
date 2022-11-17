@@ -1,5 +1,8 @@
+//CSS
+import "../DescriptionProduit.scss";
+
 //--------------// Surf description css
-import "../../DescriptionProduit.scss";
+import "../DescriptionProduit.scss";
 
 //--------------// Composent
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
