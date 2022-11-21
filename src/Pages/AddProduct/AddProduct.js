@@ -102,8 +102,8 @@ const AddProduct = () => {
     //----//UPLOAD ON FIREBASE
 
     const uploadMultipleImagesAndAddOffer = async () => {
-      const photos = [];
       const newObj = { ...createOffer };
+
       try {
         //UPLOAD IMAGE
         for (let i = 0; i < imageUpload.length; i++) {
@@ -118,25 +118,23 @@ const AddProduct = () => {
           const snapshot = await uploadBytes(imageRef, file);
           //URL FIREBASE
           const downloadURL = await getDownloadURL(snapshot.ref);
-          //ARRAY
-          // photos.push(downloadURL);
-          setCreateOffer({ ...newObj, urls: downloadURL });
+          // console.log(downloadURL);
+          newObj.urls.push(downloadURL);
         }
-        console.log(photos);
-        console.log(createOffer);
+        console.log(newObj);
         console.log("images envoyées");
         // SELL
-        if (createOffer.sell === true && createOffer.rent === false) {
+        if (newObj.sell === true && newObj.rent === false) {
           console.log("condition de vente respecté");
-          await addDoc(newProductForSellCollectionRef, createOffer);
+          await addDoc(newProductForSellCollectionRef, newObj);
           console.log("data sell envoyé");
           setErrorMessage("");
           // navigate("/home");
         }
         console.log("annoncé déposé");
         //RENT
-        if (createOffer.sell === false && createOffer.rent === true) {
-          await addDoc(newProductForRentCollectionRef, createOffer);
+        if (newObj.sell === false && newObj.rent === true) {
+          await addDoc(newProductForRentCollectionRef, newObj);
           // window.location.reload(false);
           console.log("data rent envoyé");
           // navigate("/home");
