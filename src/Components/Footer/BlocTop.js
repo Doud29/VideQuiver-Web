@@ -1,10 +1,10 @@
 const BlocTop = () => {
   return (
-    <div className="container-bloc">
+    <div className="container-bloc top">
       <h1>VideQuiver</h1>
       <p>
-        Notre pholosophie : Permettre l'accéssibilité aux sports outdoors à tous
-        pour tous.
+        Vente et location de matériel sportif outdoor de particluier à
+        particulier
       </p>
     </div>
   );
