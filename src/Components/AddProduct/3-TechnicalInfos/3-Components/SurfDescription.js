@@ -18,6 +18,11 @@ const SurfDescription = () => {
       <TitleTechnicalInformation />
       {/* //---- Type de Planche */}
       <DropDown
+        data={TechnicalValue.MER.Surf["Planche de surf"].Marque}
+        name="Marque planche"
+      />
+      {/* //---- Type de Planche */}
+      <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Type}
         name="Type de planche"
       />

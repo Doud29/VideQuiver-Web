@@ -11,15 +11,22 @@
     height: 120px;
     min-width: 320px;
     background: #508ae2;
-    img {
-      height: 40px;
-      margin: 10px;
-      padding: 1px;
-      box-sizing: border-box;
-      margin-bottom: 5px;
+    padding-top: 40px;
+    box-sizing: border-box;
+    // img {
+    //   height: 40px;
+    //   margin: 10px;
+    //   padding: 1px;
+    //   box-sizing: border-box;
+    //   margin-bottom: 5px;
+    //   color: white;
+    //   background-color: white;
+    //   border-radius: 50%;
+    // }
+    h1 {
       color: white;
-      background-color: white;
-      border-radius: 50%;
+      font-size: 28px;
+      margin: 0px 10px 0 10px;
     }
   }
   h2 {
@@ -27,11 +34,7 @@
     margin: 10px 10px 0 10px;
     font-size: 20px;
   }
-  h1 {
-    color: white;
-    font-size: 28px;
-    margin: 0px 10px 0 10px;
-  }
+
   .container-infos {
     display: flex;
     justify-content: space-between;

@@ -7,11 +7,11 @@ const Headerprofile = () => {
   console.log(currentUser);
   return (
     <div className="container-header-profile">
-      {currentUser.photoURL === null ? (
+      {/* {currentUser.photoURL === null ? (
         <img src={UserDefault} alt="photo de profile" />
       ) : (
         <img src={currentUser.photoURL} alt="photo de profile" />
-      )}
+      )} */}
       <h1>{currentUser.displayName}</h1>
     </div>
   );

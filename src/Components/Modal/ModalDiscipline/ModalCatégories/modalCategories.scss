@@ -15,15 +15,16 @@
     height: 0%;
   }
   .modal {
-    height: 100%;
+    height: auto;
     width: 100%;
-    box-sizing: border-box;
     .container-button {
+      height: auto;
+
       width: 100%;
-      height: 55px;
       box-sizing: border-box;
       button,
       .button {
+        border-top: 2px solid red;
         box-sizing: border-box;
         width: 100%;
         height: 55px;
@@ -37,6 +38,11 @@
         background: white;
         padding-left: 10px;
         padding-right: 10px;
+      }
+
+      label,
+      span {
+        font-size: 15px;
       }
       button:hover {
         cursor: pointer;
@@ -65,15 +71,15 @@
       position: absolute;
       top: 50%;
       left: 50%;
-      height: 550px;
+      height: auto;
       transform: translate(-50%, -50%);
       width: 50%;
       max-width: 600px;
       background-color: white;
       box-sizing: border-box;
-      .container-button {
-        border-radius: 8px;
-      }
+      // .container-button {
+      //   border-radius: 8px;
+      // }
     }
   }
 }

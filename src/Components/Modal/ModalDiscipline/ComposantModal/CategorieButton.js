@@ -6,7 +6,7 @@ const CategorieButton = ({ modal, value }) => {
 
   return (
     <button onClick={() => ToggleModal(modal)}>
-      {value}
+      <span>{value}</span>
       <ion-icon
         name="chevron-forward-outline"
         style={{ color: "#508ae2" }}

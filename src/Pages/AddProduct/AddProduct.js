@@ -73,26 +73,36 @@ const AddProduct = () => {
   //---// fonction pour soumetre la demande de vente et location
   const SubmitOffer = (e) => {
     e.preventDefault();
-    // if (createOffer.sell === false && createOffer.rent === false) {
-    //   setErrorMessage("* S'agit-il d'une vente ou d'une location?");
-    //   return;
-    // }
+    if (createOffer.sell === false && createOffer.rent === false) {
+      setErrorMessage("* S'agit-il d'une vente ou d'une location?");
+      return;
+    }
+
     if (createOffer.Product === " ") {
       setErrorMessage("* Vous devez choisir un produit");
       return;
     }
-    // if (createOffer.Model === " ") {
-    //   setErrorMessage("* Vous avez oubliez le modèle");
-    //   return;
-    // }
-    // if (createOffer.DescriptionOffer === " ") {
-    //   setErrorMessage("* Veuillez Décrire votre produit");
-    //   return;
-    // }
-    // if (createOffer.Price === " ") {
-    //   setErrorMessage("* Veuillez renseigner le prix");
-    //   return;
-    // }
+    if (createOffer.Model === " ") {
+      setErrorMessage("* Vous avez oubliez le modèle");
+      return;
+    }
+    if (createOffer.DescriptionOffer === " ") {
+      setErrorMessage("* Veuillez Décrire votre produit");
+      return;
+    }
+
+    if (
+      createOffer["technical informations"].length !== 11 &&
+      createOffer.Product === "Planche de Surf"
+    ) {
+      setErrorMessage("* Informations techniques incomplétes");
+      return;
+    }
+
+    if (createOffer.Price === " ") {
+      setErrorMessage("* Veuillez renseigner le prix");
+      return;
+    }
     //---//upload on firebase
     // if (imageUpload === null) {
     //   setErrorMessage("* Veuillez sélcetionner une photo");

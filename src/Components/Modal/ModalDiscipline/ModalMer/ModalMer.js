@@ -32,7 +32,7 @@ const ModalMer = () => {
           </div>
         </div>
         <div className="container-button">
-          <CategorieButton modal="Apnee" value="Apnée" />
+          <CategorieButton modal="Apnee" value="Apnee" />
           <CategorieButton modal="BodyBoard" value="BodyBoard" />
           <CategorieButton modal="BodySurf" value="BodySurf" />
           <CategorieButton modal="Foil" value="Foil" />

@@ -23,8 +23,7 @@ export const UserContextProvider = (props) => {
 
   //state User
   const [currentUser, setCurrentUser] = useState({});
-  // console.log(currentUser);
-  // console.log(currentUser);
+  console.log(currentUser);
   //inscription
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -292,7 +291,7 @@ export const UserContextProvider = (props) => {
         modalApnee: false,
       });
     }
-    if (modal === "Apnée") {
+    if (modal === "Apnee") {
       setOpenModalState({
         modalCategorie: false,
         modalMer: false,
@@ -343,9 +342,10 @@ export const UserContextProvider = (props) => {
     sell: false,
     rent: false,
     ["Technical informations"]: [],
+    userName: "",
   });
 
-  // console.log(createOffer);
+  console.log(createOffer);
 
   //add + check + update technical data forDropdownList
   const addTechnicalData = (name, value, Theme) => {
