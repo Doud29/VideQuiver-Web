@@ -348,11 +348,11 @@ export const UserContextProvider = (props) => {
   console.log(createOffer);
 
   //add + check + update technical data forDropdownList
-  const addTechnicalData = (name, value, Theme) => {
+  const addTechnicalData = (value, Theme) => {
     //copie du state
     let newOffer = { ...createOffer };
     //on récupére nos valeurs dans une varibale
-    let ObjAdded = { [name]: value, Type: Theme };
+    let ObjAdded = { valeur: value, Type: Theme };
     //on vérifie que nos valeurs
     let index = newOffer["Technical informations"].findIndex(
       (obj) => obj.Type === Theme

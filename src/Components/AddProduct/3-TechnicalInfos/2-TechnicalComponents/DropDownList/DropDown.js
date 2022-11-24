@@ -32,7 +32,7 @@ const DropDown = ({ data, name }) => {
                 onClick={() => {
                   setSelected(data.value);
                   setIsActive(false);
-                  addTechnicalData(name, data.value, data.Theme);
+                  addTechnicalData(data.value, data.Theme);
                 }}
               >
                 {data.content}

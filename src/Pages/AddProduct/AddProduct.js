@@ -91,13 +91,13 @@ const AddProduct = () => {
       return;
     }
 
-    if (
-      createOffer["technical informations"].length !== 11 &&
-      createOffer.Product === "Planche de Surf"
-    ) {
-      setErrorMessage("* Informations techniques incomplétes");
-      return;
-    }
+    // if (
+    //   createOffer["technical informations"].length !== 11 &&
+    //   createOffer.Product === "Planche de Surf"
+    // ) {
+    //   setErrorMessage("* Informations techniques incomplétes");
+    //   return;
+    // }
 
     if (createOffer.Price === " ") {
       setErrorMessage("* Veuillez renseigner le prix");

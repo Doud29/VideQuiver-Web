@@ -3,18 +3,22 @@ import "./produit.scss";
 
 //-----// Librairie
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 //-----// Components
 
 import { db } from "../../firebase-config";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, getDocs, doc, getDoc } from "firebase/firestore";
 
 const FetchProductSell = () => {
+  const navigate = useNavigate();
+
   const [data, setdata] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
 
-  const addProductCollectionRef = collection(db, "newOfferForSell");
-
   useEffect(() => {
+    //REF
+    const addProductCollectionRef = collection(db, "newOfferForSell");
     try {
       const getProduct = async () => {
         const response = await getDocs(addProductCollectionRef);
@@ -39,7 +43,13 @@ const FetchProductSell = () => {
         <>
           {data.map((data, index) => {
             return (
-              <div className="container-produit-description" key={index}>
+              <div
+                className="container-produit-description"
+                key={index}
+                onClick={() => {
+                  navigate(`offer/${data.id}`);
+                }}
+              >
                 <img src={data.urls[0]} alt="" className="image-produit" />
                 <div className="bloc-image-nom">
                   <img src="" alt="" />

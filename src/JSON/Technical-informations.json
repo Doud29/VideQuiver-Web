@@ -5,79 +5,79 @@
         "Type": [
           {
             "id": "Type-0",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": " ",
             "value": null
           },
           {
             "id": "Type-1",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "Type-2",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "ShortBoard",
             "value": "ShortBoard"
           },
           {
             "id": "Type-3",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Longboard",
             "value": "Longboard"
           },
           {
             "id": "Type-4",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Minimalibu",
             "value": "Minimalibu"
           },
           {
             "id": "Type-5",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Mousse",
             "value": "Mousse"
           },
           {
             "id": "Type-6",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Fish",
             "value": "Fish"
           },
           {
             "id": "Type-7",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Hybride",
             "value": "Hybride"
           },
           {
             "id": "Type-8",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Egg",
             "value": "Egg"
           },
           {
             "id": "Type-9",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Evolutive",
             "value": "Evolutive"
           },
           {
             "id": "Type-10",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Gun",
             "value": "Gun"
           },
           {
             "id": "Type-11",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Enfant",
             "value": "Enfant"
           },
           {
             "id": "Type-12",
-            "Theme": "type de planche",
+            "Theme": "Type de planche",
             "content": "Retro",
             "value": "Retro"
           }
@@ -91,25 +91,25 @@
           },
           {
             "id": "matériaux-planche-surf-1",
-            "Theme": "matériaux",
+            "Theme": "Matériau",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "matériaux-planche-surf-2",
-            "Theme": "matériaux",
+            "Theme": "Matériau",
             "content": "mousse polyuréthane (PU)",
             "value": "mousse polyuréthane (PU)"
           },
           {
             "id": "matériaux-planche-surf-4",
-            "Theme": "matériaux",
+            "Theme": "Matériau",
             "content": "mousse polystyrène (EPS)",
             "value": "mousse polystyrène (EPS)"
           },
           {
             "id": "matériaux-planche-surf-3",
-            "Theme": "matériaux",
+            "Theme": "Matériau",
             "content": "Bois",
             "value": "Bois"
           }
@@ -295,53 +295,61 @@
         "Nombre de pièces": [
           {
             "id": "nombre-de-pièces-0",
-            "Theme": "nbr de pièces",
+            "Theme": "Nombre de pièces",
             "content": " ",
             "value": null
           },
           {
             "id": "nombre-de-pièces-1",
-            "Theme": "nbr de pièces",
+            "Theme": "Nombre de pièces",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "nombre-de-pièces-2",
+            "Theme": "Nombre de pièces",
             "content": "1 pièce",
             "value": "1 pièce"
           },
           {
             "id": "nombre-de-pièces-3",
+            "Theme": "Nombre de pièces",
             "content": "2 pièces",
             "value": "2 pièces"
           },
           {
             "id": "nombre-de-pièces-4",
+            "Theme": "Nombre de pièces",
             "content": "3 pièces",
             "value": "3 pièces"
           },
           {
             "id": "nombre-de-pièces-5",
+            "Theme": "Nombre de pièces",
             "content": "4 pièces",
             "value": "4 pièces"
           },
           {
             "id": "nombre-de-pièces-6",
+            "Theme": "Nombre de pièces",
             "content": "5 pièces",
             "value": "5 pièces"
           },
           {
             "id": "nombre-de-pièces-7",
+            "Theme": "Nombre de pièces",
             "content": "6 pièces",
             "value": "6 pièces"
           },
           {
             "id": "nombre-de-pièces-8",
+            "Theme": "Nombre de pièces",
             "content": "7 pièces",
             "value": "7 pièces"
           },
           {
             "id": "nombre-de-pièces-9",
+            "Theme": "Nombre de pièces",
             "content": "8 pièces",
             "value": "8 pièces"
           }
@@ -351,25 +359,25 @@
         "Type de maintien": [
           {
             "id": "Maintien-leash0",
-            "Theme": "maintient-leash",
+            "Theme": "Maintien",
             "content": " ",
             "value": null
           },
           {
             "id": "Maintien-leash01",
-            "Theme": "maintient-leash",
+            "Theme": "Maintien",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "Maintien-leash1",
-            "Theme": "maintient-leash",
+            "Theme": "Maintien",
             "content": "Genou",
             "value": "Genou"
           },
           {
             "id": "Maintien-leash2",
-            "Theme": "maintient-leash",
+            "Theme": "Maintien",
             "content": "Cheville",
             "value": "Cheville"
           }
@@ -377,67 +385,67 @@
         "Epaisseur": [
           {
             "id": "Epaisseur-Leash-0",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": " ",
             "value": null
           },
           {
             "id": "Epaisseur-Leash-1",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "Epaisseur-Leash-2",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "4 mm",
             "value": "4 mm"
           },
           {
             "id": "Epaisseur-Leash-3",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "5 mm",
             "value": "5 mm"
           },
           {
             "id": "Epaisseur-Leash-4",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "6 mm",
             "value": "6 mm"
           },
           {
             "id": "Epaisseur-Leash-5",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "7 mm",
             "value": "7 mm"
           },
           {
             "id": "Epaisseur-Leash-6",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "8 mm",
             "value": "8 mm"
           },
           {
             "id": "Epaisseur-Leash-7",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "9 mm",
             "value": "9 mm"
           },
           {
             "id": "Epaisseur-Leash-8",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "10 mm",
             "value": "10 mm"
           },
           {
             "id": "Epaisseur-Leash-9",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "11 mm",
             "value": "11 mm"
           },
           {
             "id": "Epaisseur-Leash-10",
-            "Theme": "Epaisseur-leash",
+            "Theme": "Diamètre du leash",
             "content": "12 mm",
             "value": "12 mm"
           }
@@ -445,79 +453,79 @@
         "Longueur": [
           {
             "id": "Longueur-0",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "5'0'' / 152 cm",
             "value": "5'0'' / 152 cm"
           },
           {
             "id": "Longueur-1",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "6'' / 15.25 cm",
             "value": "6'' / 15.25 cm"
           },
           {
             "id": "Longueur-2",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "5'0'' / 152 cm",
             "value": "5'0'' / 152 cm"
           },
           {
             "id": "Longueur-3",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "5'6'' / 167 cm",
             "value": "5'6'' / 167 cm"
           },
           {
             "id": "Longueur-4",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "6'6'' / 198 cm",
             "value": "6'6'' / 198 cm"
           },
           {
             "id": "Longueur-5",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "7'0'' / 213 cm",
             "value": "7'0'' / 213 cm"
           },
           {
             "id": "Longueur-6",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "8'0'' / 244 cm",
             "value": "8'0'' / 244 cm"
           },
           {
             "id": "Longueur-7",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "9'0'' / 274 cm",
             "value": "9'0'' / 274 cm"
           },
           {
             "id": "Longueur-8",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "9'6'' / 289 cm",
             "value": "9'6'' / 289 cm"
           },
           {
             "id": "Longueur-9",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "10'0'' / 305 cm",
             "value": "10'0'' / 305 cm"
           },
           {
             "id": "Longueur-10",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "11'0'' / 335 cm",
             "value": "11'0'' / 335 cm"
           },
           {
             "id": "Longueur-11",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "12'0'' / 366 cm",
             "value": "12'0'' / 366 cm"
           },
           {
             "id": "Longueur-12",
-            "Theme": "Longueur-leash",
+            "Theme": "Longueur du leash",
             "content": "15'0'' / 460 cm",
             "value": "15'0'' / 460 cm"
           }
@@ -527,68 +535,68 @@
         "Epaisseur-Bagagerie": [
           {
             "id": "Epaisseur-Bagagerie-0",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": " ",
             "value": null
           },
           {
             "id": "Epaisseur-Bagagerie-1",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "Epaisseur-Bagagerie-2",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "2 mm",
             "value": "2 mm"
           },
           {
             "id": "Epaisseur-Bagagerie-3",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "3 mm",
             "value": "3 mm"
           },
           {
             "id": "Epaisseur-Bagagerie-4",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "4 mm",
             "value": "4 mm"
           },
           {
             "id": "Epaisseur-Bagagerie-5",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "5 mm",
             "value": "5 mm"
           },
 
           {
             "id": "Epaisseur-Bagagerie-6",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "6 mm",
             "value": "6 mm"
           },
           {
             "id": "Epaisseur-Bagagerie-7",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "7 mm",
             "value": "7 mm"
           },
           {
             "id": "Epaisseur-Bagagerie-8",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "8 mm",
             "value": "8 mm"
           },
           {
             "id": "Epaisseur-Bagagerie-9",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "9 mm",
             "value": "9 mm"
           },
           {
             "id": "Epaisseur-Bagagerie-10",
-            "Theme": "epaisseur-bagagerie",
+            "Theme": "Epaisseur bagagerie",
             "content": "10 mm",
             "value": "10 mm"
           }
@@ -596,25 +604,25 @@
         "Construction": [
           {
             "id": "Construction-0",
-            "Theme": "construction-bagagerie",
+            "Theme": "Construction bagagerie",
             "content": " ",
             "value": null
           },
           {
             "id": "Construction-1",
-            "Theme": "construction-bagagerie",
+            "Theme": "Construction bagagerie",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "Construction-2",
-            "Theme": "construction-bagagerie",
+            "Theme": "Construction bagagerie",
             "content": "Roulette",
             "value": "Roulette"
           },
           {
             "id": "Construction-3",
-            "Theme": "construction-bagagerie",
+            "Theme": "Construction bagagerie",
             "content": "Sans roulette",
             "value": "Sans roulette"
           }
@@ -626,97 +634,97 @@
         "Longueur": [
           {
             "id": "longueur-bodyboard-0",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": " ",
             "value": null
           },
           {
             "id": "longueur-bodyboard-01",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "longueur-bodyboard-2",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "36 pouces - 91.44 cm",
             "value": "36 pouces - 91.44 cm"
           },
           {
             "id": "longueur-bodyboard-3",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "37 pouces - 93.98 cm",
             "value": "37 pouces - 93.98 cm"
           },
           {
             "id": "longueur-bodyboard-4",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "38 pouces - 96,52 cm",
             "value": "38 pouces - 96,52 cm"
           },
           {
             "id": "longueur-bodyboard-5",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "39 pouces - 99,06 cm",
             "value": "39 pouces - 99,06 cm"
           },
           {
             "id": "longueur-bodyboard-6",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "40 pouces - 101,6 cm",
             "value": "40 pouces - 101,6 cm"
           },
           {
             "id": "longueur-bodyboard-7",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "40.5 pouces - 102,87 cm",
             "value": "40.5 pouces - 102,87 cm"
           },
           {
             "id": "longueur-bodyboard-8",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "41 pouces - 104,14 cm",
             "value": "41 pouces - 104,14 cm"
           },
           {
             "id": "longueur-bodyboard-9",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "41.5 pouces - 105,41 cm",
             "value": "41.5 pouces - 105,41 cm"
           },
           {
             "id": "longueur-bodyboard-10",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "42 pouces - 106,68 cm",
             "value": "42 pouces - 106,68 cm"
           },
           {
             "id": "longueur-bodyboard-11",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "42.5 pouces - 107,95 cm",
             "value": "42.5 pouces - 107,95 cm"
           },
           {
             "id": "longueur-bodyboard-12",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "43 pouces - 109,22 cm",
             "value": "43 pouces - 109,22 cm"
           },
           {
             "id": "longueur-bodyboard-13",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "44 pouces - 111,76 cm",
             "value": "44 pouces - 111,76 cm"
           },
           {
             "id": "longueur-bodyboard-14",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "45 pouces - 114,3 cm",
             "value": "45 pouces - 114,3 cm"
           },
           {
             "id": "longueur-bodyboard-15",
-            "Theme": "longueur",
+            "Theme": "Longueur",
             "content": "46 pouces - 116,84 cm",
             "value": "46 pouces - 116,84 cm"
           }
@@ -734,31 +742,31 @@
           },
           {
             "id": "nombre-de-planche-1",
-            "Theme": "nombre de planche",
+            "Theme": "Nombre de planche",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
           },
           {
             "id": "nombre-de-planche-2",
-            "Theme": "nombre de planche",
+            "Theme": "Nombre de planche",
             "content": "1 planche",
             "value": "1 planche"
           },
           {
             "id": "nombre-de-planche-3",
-            "Theme": "nombre de planche",
+            "Theme": "Nombre de planche",
             "content": "2 planches",
             "value": "2 planches"
           },
           {
             "id": "nombre-de-planche-4",
-            "Theme": "nombre de planche",
+            "Theme": "Nombre de planche",
             "content": "3 planches",
             "value": "3 planches"
           },
           {
             "id": "nombre-de-planche-5",
-            "Theme": "nombre de planche",
+            "Theme": "Nombre de planche",
             "content": "4 planches",
             "value": "4 planches"
           }
@@ -769,56 +777,56 @@
       "Epaisseur": [
         {
           "id": "Epaisseur-combinaison-0",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": " ",
           "value": null
         },
         {
           "id": "Epaisseur-combinaison-2",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": "Je ne sais pas",
           "value": "Je ne sais pas"
         },
 
         {
           "id": "Epaisseur-combinaison-3",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": "6/4 mm",
           "value": "6/4 mm"
         },
         {
           "id": "Epaisseur-combinaison-4",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": "5/4/3 mm",
           "value": "5/4/3 mm"
         },
         {
           "id": "Epaisseur-combinaison-5",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": "5/3 mm",
           "value": "5/3 mm"
         },
         {
           "id": "Epaisseur-combinaison-6",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": "4/3 mm",
           "value": "4/3 mm"
         },
         {
           "id": "Epaisseur-combinaison-7",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": "3/2 mm",
           "value": "3/2 mm"
         },
         {
           "id": "Epaisseur-combinaison-8",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": "2 mm",
           "value": "2 mm"
         },
         {
           "id": "Epaisseur-combinaison-9",
-          "Theme": "Epaisseur-combinaison",
+          "Theme": "Epaisseur combinaison",
           "content": "1 mm",
           "value": "1 mm"
         }
@@ -858,38 +866,38 @@
       "Epaisseur Jacket": [
         {
           "id": "Epaisseur-Jacket-0",
-          "Theme": "Epaisseur-Jacket",
+          "Theme": "Epaisseur Jacket",
           "content": " ",
           "value": null
         },
         {
           "id": "Epaisseur-Jacket-1",
-          "Theme": "Epaisseur-Jacket",
+          "Theme": "Epaisseur Jacket",
           "content": "Je ne sais pas",
           "value": "Je ne sais pas"
         },
 
         {
           "id": "Epaisseur-Jacket-1",
-          "Theme": "Epaisseur-Jacket",
+          "Theme": "Epaisseur Jacket",
           "content": "2 mm",
           "value": "2 mm"
         },
         {
           "id": "Epaisseur-Jacket-2",
-          "Theme": "Epaisseur-Jacket",
+          "Theme": "Epaisseur Jacket",
           "content": "3 mm",
           "value": "3 mm"
         },
         {
           "id": "Epaisseur-Jacket-3",
-          "Theme": "Epaisseur-Jacket",
+          "Theme": "Epaisseur Jacket",
           "content": "4 mm",
           "value": "4 mm"
         },
         {
           "id": "Epaisseur-Jacket-4",
-          "Theme": "Epaisseur-Jacket",
+          "Theme": "Epaisseur Jacket",
           "content": "5 mm",
           "value": "5 mm"
         }
@@ -932,37 +940,37 @@
     "Etat": [
       {
         "id": "etat-0",
-        "Theme": "Etat",
+        "Theme": "État",
         "content": " ",
         "value": null
       },
       {
         "id": "etat-1",
-        "Theme": "Etat",
+        "Theme": "État",
         "content": "Neuf",
         "value": "Neuf"
       },
       {
         "id": "etat-2",
-        "Theme": "Etat",
+        "Theme": "État",
         "content": "Très Bon état",
         "value": "Très Bon état"
       },
       {
         "id": "etat-3",
-        "Theme": "Etat",
+        "Theme": "État",
         "content": "Bon état",
         "value": "Bon état"
       },
       {
         "id": "etat-4",
-        "Theme": "Etat",
+        "Theme": "État",
         "content": "Etat Correct",
         "value": "Etat Correct"
       },
       {
         "id": "etat-5",
-        "Theme": "Etat",
+        "Theme": "État",
         "content": "Mauvais Etat",
         "value": "Mauvais Etat"
       }
@@ -970,434 +978,434 @@
     "Longeur": [
       {
         "id": "longueur-0",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": " ",
         "value": null
       },
       {
         "id": "longueur-01",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "longueur-1",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "4'0 / 122 cm",
         "value": "4'0 / 122 cm"
       },
       {
         "id": "longueur-3",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "4'4 / 132 cm",
         "value": "4'4 / 132 cm"
       },
       {
         "id": "longueur-3",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "4'5 / 135 cm",
         "value": "4'5 / 135 cm"
       },
       {
         "id": "longueur-4",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "4'8 / 142 cm",
         "value": "4'8 / 142 cm"
       },
       {
         "id": "longueur-5",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "4'10 / 147 cm",
         "value": "4'10 / 147 cm"
       },
       {
         "id": "longueur-6",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "4'11 / 150 cm",
         "value": "4'11 / 150 cm"
       },
       {
         "id": "longueur-7",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'0 / 152.4 cm",
         "value": "5'0 / 152.4 cm"
       },
       {
         "id": "longueur-8",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'1 / 154.94 cm",
         "value": "5'1 / 154.94 cm"
       },
       {
         "id": "longueur-9",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'2 / 157.48 cm",
         "value": "5'2 / 157.48 cm"
       },
       {
         "id": "longueur-10",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'3 / 159 cm",
         "value": "5'3 / 159 cm"
       },
       {
         "id": "longueur-11",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'4 / 162 cm",
         "value": "5'4 / 162 cm"
       },
       {
         "id": "longueur-12",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'5 / 165.1 cm",
         "value": "5'5 / 165.1 cm"
       },
       {
         "id": "longueur-13",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'6 / 167 cm",
         "value": "5'6 / 167 cm"
       },
       {
         "id": "longueur-14",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'7 / 170 cm",
         "value": "5'7 / 170 cm"
       },
       {
         "id": "longueur-15",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'8 / 172 cm",
         "value": "5'8 / 172 cm"
       },
       {
         "id": "longueur-16",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'9 / 175 cm",
         "value": "5'9 / 175 cm"
       },
       {
         "id": "longueur-17",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'10 / 177 cm",
         "value": "5'10 / 177 cm"
       },
       {
         "id": "longueur-18",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "5'11 / 180.34 cm",
         "value": "5'11 / 180.34 cm"
       },
       {
         "id": "longueur-19",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'0 / 183cm",
         "value": "6'0 / 183cm"
       },
       {
         "id": "longueur-20",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'1 / 185cm",
         "value": "6'1 / 185cm"
       },
       {
         "id": "longueur-21",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'2 / 188cm",
         "value": "6'2 / 188cm"
       },
       {
         "id": "longueur-22",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'3 / 190cm",
         "value": "6'3 / 190cm"
       },
       {
         "id": "longueur-23",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'4 / 193cm",
         "value": "6'4 / 193cm"
       },
       {
         "id": "longueur-24",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'5 / 195.58 cm",
         "value": "6'5 / 195.58 cm"
       },
       {
         "id": "longueur-25",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'6 / 198cm",
         "value": "6'6 / 198cm"
       },
       {
         "id": "longueur-26",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'7 / 200.66cm",
         "value": "6'7 /  200.66cm"
       },
       {
         "id": "longueur-27",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'8 / 203cm",
         "value": "6'8 / 203cm"
       },
       {
         "id": "longueur-28",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'9 / 205.74cm",
         "value": "6'9 / 205.74cm"
       },
       {
         "id": "longueur-30",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'10 / 208cm",
         "value": "6'10 / 208cm"
       },
       {
         "id": "longueur-31",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "6'11 / 210.82cm",
         "value": "6'11 / 210.82cm"
       },
       {
         "id": "longueur-32",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'0 / 213cm",
         "value": "7'0 / 213cm"
       },
       {
         "id": "longueur-33",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'1 / 215cm",
         "value": "7'1 / 215cm"
       },
       {
         "id": "longueur-34",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'2 / 218cm",
         "value": "7'2 / 218cm"
       },
       {
         "id": "longueur-35",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'3 / 220.98cm",
         "value": "7'3 / 220.98cm"
       },
       {
         "id": "longueur-36",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'4 / 223.52cm",
         "value": "7'4 / 223.52cm"
       },
       {
         "id": "longueur-37",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'5 / 226.06cm",
         "value": "7'5 / 226.06cm"
       },
       {
         "id": "longueur-38",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'6 / 228cm",
         "value": "7'6 / 228cm"
       },
       {
         "id": "longueur-39",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'7 / 231.14cm",
         "value": "7'7 / 231.14cm"
       },
       {
         "id": "longueur-40",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'8 / 233.68cm",
         "value": "7'8 / 233.68cm"
       },
       {
         "id": "longueur-41",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'9 / 236.22cm",
         "value": "7'9 / 236.22cm"
       },
       {
         "id": "longueur-42",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'10 / 238.76cm",
         "value": "7'10 / 238.76cm"
       },
       {
         "id": "longueur-43",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "7'11 / 241.3cm",
         "value": "7'11 / 241.3cm"
       },
       {
         "id": "longueur-44",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'0 / 243.84cm",
         "value": "8'0 / 243.84cm"
       },
       {
         "id": "longueur-45",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'1 / 246.38cm",
         "value": "8'1 / 246.38cm"
       },
       {
         "id": "longueur-46",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'2 / 248.92cm",
         "value": "8'2 / 248.92cm"
       },
       {
         "id": "longueur-47",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'3 / 251.46cm",
         "value": "8'3 / 251.46cm"
       },
       {
         "id": "longueur-48",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'4 / 254cm",
         "value": "8'4 / 254cm"
       },
       {
         "id": "longueur-49",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'5 / 256.54cm",
         "value": "8'5 / 256.54cm"
       },
       {
         "id": "longueur-50",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'6 / 259cm",
         "value": "8'6 / 259cm"
       },
       {
         "id": "longueur-51",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'7 / 261.62cm",
         "value": "8'7 / 261.62cm"
       },
       {
         "id": "longueur-52",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'8 / 264.16cm",
         "value": "8'8 / 264.16cm"
       },
       {
         "id": "longueur-53",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'9 / 266.7cm",
         "value": "8'9 / 266.7cm"
       },
       {
         "id": "longueur-54",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'10 / 269.24cm",
         "value": "8'10 / 269.24cm"
       },
       {
         "id": "longueur-55",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "8'11 / 271.78cm",
         "value": "8'11 / 271.78cm"
       },
       {
         "id": "longueur-56",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'0 / 274cm",
         "value": "9'0 / 274cm"
       },
       {
         "id": "longueur-57",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'1 / 276.86cm",
         "value": "9'1 / 276.86cm"
       },
       {
         "id": "longueur-59",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'2 / 279cm",
         "value": "9'2 / 279cm"
       },
       {
         "id": "longueur-60",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'3 / 281cm",
         "value": "9'3 / 281cm"
       },
       {
         "id": "longueur-61",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'4 / 284.48cm",
         "value": "9'4 / 284.48cm"
       },
       {
         "id": "longueur-62",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'5 / 287.02cm",
         "value": "9'5 / 287.02cm"
       },
       {
         "id": "longueur-63",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'6 / 289cm",
         "value": "9'6 / 289ccm"
       },
 
       {
         "id": "longueur-64",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'7 / 292.1cm",
         "value": "9'7 / 292.1cm"
       },
       {
         "id": "longueur-65",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'8 / 294cm",
         "value": "9'8 / 294ccm"
       },
       {
         "id": "longueur-66",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'9 / 297.18cm",
         "value": "9'9 / 297.18cm"
       },
       {
         "id": "longueur-67",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'10 / 299.72cm",
         "value": "9'10 / 299.72cm"
       },
       {
         "id": "longueur-68",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "9'11 / 302.72cm",
         "value": "9'11 / 302.72cm"
       },
       {
         "id": "longueur-69",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "10' / 305cm",
         "value": "10' / 305cm"
       },
       {
         "id": "longueur-70",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "10'6 /320cm",
         "value": "10'6 / 320cm"
       },
       {
         "id": "longueur-71",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "10'8 / 325cm",
         "value": "10'8 / 325cm"
       },
       {
         "id": "longueur-72",
-        "Theme": "longueur",
+        "Theme": "Longueur",
         "content": "11'0 / 335cm",
         "value": "11'0 / 335cm"
       }
@@ -1755,235 +1763,235 @@
     "Epaisseur": [
       {
         "id": "Epaisseur-0",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": " ",
         "value": null
       },
       {
         "id": "Epaisseur-1",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "Epaisseur-2",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 / 5.08 cm",
         "value": "2 / 5.08 cm"
       },
       {
         "id": "Epaisseur-3",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 1/16 - 5.24 cm",
         "value": "2 1/16 -  5.24 cm"
       },
       {
         "id": "Epaisseur-4",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 1/8 - 5.40 cm",
         "value": "2 1/8 - 5.40 cm"
       },
       {
         "id": "Epaisseur-5",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 3/16 - 5.56 cm",
         "value": "2 3/16 - 5.56 cm"
       },
       {
         "id": "Epaisseur-6",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 1/4 - 5.72 cm",
         "value": "2 1/4 - 5.72 cm"
       },
       {
         "id": "Epaisseur-7",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 5/16 - 5.87 cm",
         "value": "2 5/16 - 5.87 cm"
       },
       {
         "id": "Epaisseur-8",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 3/8 - 6.03 cm",
         "value": "2 3/8 - 6.03 cm"
       },
       {
         "id": "Epaisseur-9",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 7/16 - 6.19 cm",
         "value": "2 7/16 - 6.19 cm"
       },
       {
         "id": "Epaisseur-10",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 1/2 - 6.35 cm",
         "value": "2 1/2 - 6.35 cm"
       },
       {
         "id": "Epaisseur-11",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 9/16 - 6.51 cm",
         "value": "2 9/16 - 6.51 cm"
       },
       {
         "id": "Epaisseur-12",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 5/8 - 6.67 cm",
         "value": "2 5/8 - 6.67 cm"
       },
       {
         "id": "Epaisseur-13",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 11/16 - 6.83 cm",
         "value": "2 11/16 - 6.83 cm"
       },
       {
         "id": "Epaisseur-14",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 3/4 - 6.99 cm",
         "value": "2 3/4 - 6.99 cm"
       },
       {
         "id": "Epaisseur-15",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 13/16 - 7.14 cm",
         "value": "2 13/16 - 7.14 cm"
       },
       {
         "id": "Epaisseur-16",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 7/8 - 7.30 cm",
         "value": "2 7/8 - 7.30 cm"
       },
       {
         "id": "Epaisseur-17",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "2 15/16 - 7.46 cm",
         "value": "2 15/16 - 7.46 cm"
       },
       {
         "id": "Epaisseur-18",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 0- 7.62 cm",
         "value": "3 0- 7.62 cm"
       },
       {
         "id": "Epaisseur-19",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 1/16 - 7.78 cm",
         "value": "3 1/16 - 7.78 cm"
       },
       {
         "id": "Epaisseur-20",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 1/2 - 8.89 cm",
         "value": "3 1/2 - 8.89 cm"
       },
       {
         "id": "Epaisseur-21",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 9/16 - 9.05 cm",
         "value": "3 9/16 - 9.05 cm"
       },
       {
         "id": "Epaisseur-22",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 5/8 - 9.21 cm",
         "value": "3 5/8 - 9.21 cm"
       },
       {
         "id": "Epaisseur-23",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 11/16 - 9.37 cm",
         "value": "3 11/16 - 9.37 cm"
       },
       {
         "id": "Epaisseur-24",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 3/4 - 9.53 cm",
         "value": "3 3/4 - 9.53 cm"
       },
       {
         "id": "Epaisseur-25",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 13/16 - 9.68 cm",
         "value": "3 13/16 - 9.68 cm"
       },
       {
         "id": "Epaisseur-26",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 7/8 - 9.84 cm",
         "value": "3 7/8 - 9.84 cm"
       },
       {
         "id": "Epaisseur-27",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "3 15/16 - 10 cm",
         "value": "3 15/16 - 10 cm"
       },
       {
         "id": "Epaisseur-28",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 0 - 10.16 cm",
         "value": "4 0 - 10.16 cm"
       },
       {
         "id": "Epaisseur-29",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 1/16 - 10.32 cm",
         "value": "4 1/16 - 10.32 cm"
       },
       {
         "id": "Epaisseur-30",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 1/8 - 10.48 cm",
         "value": "4 1/8 - 10.48 cm"
       },
       {
         "id": "Epaisseur-31",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 3/16 - 10.64 cm",
         "value": "4 3/16 - 10.64 cm"
       },
       {
         "id": "Epaisseur-32",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 5/16 - 10.95 cm",
         "value": "4 5/16 - 10.95 cm"
       },
       {
         "id": "Epaisseur-33",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 3/8 - 11.11 cm",
         "value": "4 3/8 - 11.11 cm"
       },
       {
         "id": "Epaisseur-34",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 7/16 - 11.27 cm",
         "value": "4 7/16 - 11.27 cm"
       },
       {
         "id": "Epaisseur-35",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 3/4 - 12.22 cm",
         "value": "4 3/4 - 12.22 cm"
       },
       {
         "id": "Epaisseur-36",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 13/16 - 12.22 cm",
         "value": "4 13/16 - 12.22 cm"
       },
       {
         "id": "Epaisseur-37",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 7/8 - 12.38 cm",
         "value": "4 7/8 - 12.38 cm"
       },
       {
         "id": "Epaisseur-38",
-        "Theme": "epaisseur",
+        "Theme": "Èpaisseur",
         "content": "4 15/16 - 12.54 cm",
         "value": "4 7/8 - 12.54 cm"
       }
@@ -2361,37 +2369,37 @@
     "Construction": [
       {
         "id": "construction-derives-1",
-        "Theme": "construction-derives",
+        "Theme": "construction",
         "content": "",
         "value": null
       },
       {
         "id": "construction-derives-2",
-        "Theme": "construction-derives",
+        "Theme": "construction",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "construction-derives-3",
-        "Theme": "construction-derives",
+        "Theme": "construction",
         "content": "Fibres",
         "value": "Fibres"
       },
       {
         "id": "construction-derives-4",
-        "Theme": "construction-derives",
+        "Theme": "construction",
         "content": "Carbonne",
         "value": "Carbonne"
       },
       {
         "id": "construction-derives-5",
-        "Theme": "construction-derives",
+        "Theme": "construction",
         "content": "Fixe",
         "value": "Fixe"
       },
       {
         "id": "construction-derives-6",
-        "Theme": "construction-derives",
+        "Theme": "construction",
         "content": "Soft (souple)",
         "value": "Soft (souple)"
       }
@@ -2399,43 +2407,43 @@
     "Accessory": [
       {
         "id": "Accessory-0",
-        "Theme": "Accessories",
+        "Theme": "Accessoires",
         "content": "",
         "value": null
       },
       {
         "id": "Accessory-1",
-        "Theme": "Accessories",
+        "Theme": "Accessoires",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "Accessory-2",
-        "Theme": "Accessories",
+        "Theme": "Accessoires",
         "content": "Outils",
         "value": "Outils"
       },
       {
         "id": "Accessory-3",
-        "Theme": "Accessories",
+        "Theme": "Accessoires",
         "content": "Kit de réparation",
         "value": "Kit de réparation"
       },
       {
         "id": "Accessory-4",
-        "Theme": "Accessories",
+        "Theme": "Accessoires",
         "content": "Peigne / Boite à wax",
         "value": "Peigne / Boite à wax"
       },
       {
         "id": "Accessory-5",
-        "Theme": "Accessories",
+        "Theme": "Accessoires",
         "content": "Visserie",
         "value": "Visserie"
       },
       {
         "id": "Accessory-6",
-        "Theme": "Accessories",
+        "Theme": "Accessoires",
         "content": "Adaptateurs",
         "value": "Adaptateurs"
       }
@@ -2443,55 +2451,55 @@
     "Configuration ailerons": [
       {
         "id": "configuration-0",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": " ",
         "value": null
       },
       {
         "id": "configuration-01",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "configuration-1",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": "Single(1)",
         "value": "Single(1)"
       },
       {
         "id": "configuration-2",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": "Twin(2)",
         "value": "Twin(2)"
       },
       {
         "id": "configuration-3",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": "Thruster(3)",
         "value": "Thruster(3)"
       },
       {
         "id": "configuration-4",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": "Quad(4)",
         "value": "Quad(4)"
       },
       {
         "id": "configuration-5",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": "Combo(5)",
         "value": "Combo(5)"
       },
       {
         "id": "configuration-6",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": "Boitier US 2+1",
         "value": "Boitier US 2+1"
       },
       {
         "id": "configuration-7",
-        "Theme": "configuration-aileron",
+        "Theme": "Configuration",
         "content": "Boitier US 4+1",
         "value": "Boitier US 4+1"
       }
@@ -2561,31 +2569,31 @@
       },
       {
         "id": "Level-1",
-        "Theme": "niveau requis",
+        "Theme": "Niveau requis",
         "content": "Débutant",
         "value": "Débutant"
       },
       {
         "id": "Level-2",
-        "Theme": "niveau requis",
+        "Theme": "Niveau requis",
         "content": "Débutant/Intermédiaire",
         "value": "Débutant/Intermédiaire"
       },
       {
         "id": "Level-3",
-        "Theme": "niveau requis",
+        "Theme": "Niveau requis",
         "content": "Intermédiaire/Confirmé",
         "value": "Intermédiaire/Confirmé"
       },
       {
         "id": "Level-4",
-        "Theme": "niveau requis",
+        "Theme": "Niveau requis",
         "content": "confirmé",
         "value": "confirmé"
       },
       {
         "id": "Level-5",
-        "Theme": "niveau requis",
+        "Theme": "Niveau requis",
         "content": "Tout niveaux",
         "value": "Tout niveaux"
       }
@@ -2593,248 +2601,248 @@
     "Pointure": [
       {
         "id": "taille-pied-0",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": " ",
         "value": null
       },
       {
         "id": "taille-pied-1",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
       {
         "id": "taille-pied-2",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "17",
         "value": "17"
       },
       {
         "id": "taille-pied-3",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "18",
         "value": "18"
       },
       {
         "id": "taille-pied-4",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "19",
         "value": "19"
       },
       {
         "id": "taille-pied-5",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "20",
         "value": "20"
       },
       {
         "id": "taille-pied-6",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "21",
         "value": "21"
       },
       {
         "id": "taille-pied-7",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "22",
         "value": "22"
       },
       {
         "id": "taille-pied-8",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "23",
         "value": "23"
       },
       {
         "id": "taille-pied-9",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "24",
         "value": "24"
       },
       {
         "id": "taille-pied-10",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "25",
         "value": "25"
       },
       {
         "id": "taille-pied-11",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "26",
         "value": "26"
       },
       {
         "id": "taille-pied-12",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "27",
         "value": "27"
       },
       {
         "id": "taille-pied-13",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "28",
         "value": "28"
       },
       {
         "id": "taille-pied-14",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "29",
         "value": "29"
       },
       {
         "id": "taille-pied-15",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "30",
         "value": "30"
       },
       {
         "id": "taille-pied-16",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "31",
         "value": "31"
       },
       {
         "id": "taille-pied-17",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "32",
         "value": "32"
       },
       {
         "id": "taille-pied-18",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "33",
         "value": "33"
       },
       {
         "id": "taille-pied-19",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "34",
         "value": "34"
       },
       {
         "id": "taille-pied-20",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "35",
         "value": "35"
       },
       {
         "id": "taille-pied-21",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "36",
         "value": "36"
       },
       {
         "id": "taille-pied-22",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "37",
         "value": "37"
       },
       {
         "id": "taille-pied-23",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "38",
         "value": "38"
       },
 
       {
         "id": "taille-pied-24",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "39",
         "value": "39"
       },
       {
         "id": "taille-pied-25",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "40",
         "value": "40"
       },
       {
         "id": "taille-pied-26",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "41",
         "value": "41"
       },
       {
         "id": "taille-pied-27",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "42",
         "value": "42"
       },
       {
         "id": "taille-pied-28",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "43",
         "value": "43"
       },
       {
         "id": "taille-pied-29",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "44",
         "value": "44"
       },
       {
         "id": "taille-pied-30",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "45",
         "value": "45"
       },
       {
         "id": "taille-pied-31",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "46",
         "value": "46"
       },
       {
         "id": "taille-pied-32",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "47",
         "value": "47"
       },
       {
         "id": "taille-pied-33",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "49",
         "value": "49"
       },
       {
         "id": "taille-pied-33",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "50",
         "value": "50"
       },
       {
         "id": "taille-pied-34",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "51",
         "value": "51"
       },
       {
         "id": "taille-pied-35",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "52",
         "value": "52"
       },
       {
         "id": "taille-pied-36",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "53",
         "value": "53"
       },
       {
         "id": "taille-pied-37",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "54",
         "value": "54"
       },
       {
         "id": "taille-pied-38",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "55",
         "value": "55"
       },
       {
         "id": "taille-pied-39",
-        "Theme": "taille-pied",
+        "Theme": "Pointure",
         "content": "56",
         "value": "56"
       }

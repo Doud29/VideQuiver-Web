@@ -12,10 +12,11 @@ import SignUp from "./Pages/SignUp/SignUp.js";
 import Welcome from "./Pages/Welcome/Welcome.js";
 import AddProduct from "./Pages/AddProduct/AddProduct";
 import ProtectedRoute from "./Pages/Protected/ProtectedRoute";
-import Product from "./Pages/Product/Product";
+import Offer from "./Pages/Offer/Offer";
 import MyProfile from "./Pages/Profile/MyProfile";
 import { UserContextProvider } from "./Context/UserContext";
 import Footer from "./Components/Footer/Footer";
+
 function App() {
   return (
     <UserContextProvider>
@@ -26,6 +27,7 @@ function App() {
             <Route path="/home" element={<Home />} />
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/home/offer/:id" element={<Offer />} />
             <Route path="/welcome" element={<Welcome />} />
             <Route
               path="/addProduct"
@@ -35,10 +37,8 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route path="/product" element={<Product />} />
             <Route path="/myProfil" element={<MyProfile />} />
           </Routes>
-          <Footer />
         </div>
       </Router>
     </UserContextProvider>
