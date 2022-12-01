@@ -1,23 +1,24 @@
 .container-home-produit {
   width: 100%;
+  height: 320px;
   height: auto;
-  min-height: 320px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-left: 0 auto;
+  justify-content: flex-start;
+  align-items: flex-start;
   box-sizing: border-box;
-  padding: 10px;
+  margin: 0 auto;
   .container-produit-description {
-    height: 400px;
+    height: 100%;
     width: 100%;
+    margin: 0 10px;
     position: relative;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
+    cursor: pointer;
     .image-produit {
-      border: 2px solid green;
       box-sizing: border-box;
       width: 100%;
       height: 320px;
@@ -25,11 +26,10 @@
     }
     .bloc-image-nom {
       width: 100%;
-      height: 30px;
-      border-radius: 10px;
+      height: 100%;
       position: absolute;
       z-index: 5;
-      bottom: 95px;
+      bottom: -40px;
       left: 0px;
       display: flex;
       justify-content: flex-start;
@@ -51,7 +51,6 @@
     .container-titreProduit-description-prix {
       width: 100%;
       padding: 5px;
-
       height: 70px;
       font-size: 15px;
       border: 0.5px solid grey;

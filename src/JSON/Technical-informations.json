@@ -134,157 +134,218 @@
             "value": "Local shaper"
           },
           {
-            "id": "marque-plance-surf-2",
+            "id": "marque-plance-surf-3",
             "Theme": "Marque planche",
             "content": "Autres",
             "value": "Autres"
           },
           {
-            "id": "marque-plance-surf-3",
+            "id": "marque-plance-surf-4",
             "Theme": "Marque planche",
             "content": "Bic",
             "value": "Bic"
           },
           {
-            "id": "marque-plance-surf-4",
+            "id": "marque-plance-surf-5",
             "Theme": "Marque planche",
             "content": "Bing",
             "value": "Bing"
           },
           {
-            "id": "marque-plance-surf-5",
+            "id": "marque-plance-surf-6",
+            "Theme": "Marque planche",
+            "content": "CJ Nelson",
+            "value": "CJ Nelson"
+          },
+          {
+            "id": "marque-plance-surf-7",
+            "Theme": "Marque planche",
+            "content": "Blackwings",
+            "value": "Blackwings"
+          },
+          {
+            "id": "marque-plance-surf-8",
             "Theme": "Marque planche",
             "content": "Bradley Surfboards",
             "value": "Bradley Surfboards"
           },
+
           {
-            "id": "marque-plance-surf-6",
+            "id": "marque-plance-surf-9",
             "Theme": "Marque planche",
             "content": "Catch Surf",
             "value": "Catch Surf"
           },
           {
-            "id": "marque-plance-surf-7",
+            "id": "marque-plance-surf-10",
             "Theme": "Marque planche",
             "content": "Chilli Surfboards",
             "value": "Chilli Surfboards"
           },
           {
-            "id": "marque-plance-surf-8",
+            "id": "marque-plance-surf-11",
             "Theme": "Marque planche",
             "content": "Christenson",
             "value": "Christenson"
           },
           {
-            "id": "marque-plance-surf-9",
+            "id": "marque-plance-surf-12",
             "Theme": "Marque planche",
             "content": "DHD",
             "value": "DHD"
           },
           {
-            "id": "marque-plance-surf-10",
+            "id": "marque-plance-surf-13",
+            "Theme": "Marque planche",
+            "content": "Freaky Toys",
+            "value": "Freaky Toys"
+          },
+          {
+            "id": "marque-plance-surf-14",
+            "Theme": "Marque planche",
+            "content": "Firewire",
+            "value": "Firewire"
+          },
+          {
+            "id": "marque-plance-surf-15",
+            "Theme": "Marque planche",
+            "content": "Hayden Shapes",
+            "value": "Hayden Shapes"
+          },
+          {
+            "id": "marque-plance-surf-16",
             "Theme": "Marque planche",
             "content": "Hurricanes",
             "value": "Hurricanes"
           },
           {
-            "id": "marque-plance-surf-11",
+            "id": "marque-plance-surf-17",
+            "Theme": "Marque planche",
+            "content": "Indio Surfboards",
+            "value": "Indio Surfboards"
+          },
+          {
+            "id": "marque-plance-surf-18",
             "Theme": "Marque planche",
             "content": "JS SurfBoard",
             "value": "JS SurfBoard"
           },
           {
-            "id": "marque-plance-surf-12",
+            "id": "marque-plance-surf-19",
             "Theme": "Marque planche",
             "content": "Lost libTech",
             "value": "Lost libTech"
           },
           {
-            "id": "marque-plance-surf-13",
+            "id": "marque-plance-surf-20",
+            "Theme": "Marque planche",
+            "content": "Lost Mayhem",
+            "value": "Lost Mayhem"
+          },
+          {
+            "id": "marque-plance-surf-21",
             "Theme": "Marque planche",
             "content": "LSD Surfboards",
             "value": "LSD Surfboards"
           },
           {
-            "id": "marque-plance-surf-14",
+            "id": "marque-plance-surf-22",
             "Theme": "Marque planche",
             "content": "Mick Fanning",
             "value": "Mick Fanning"
           },
           {
-            "id": "marque-plance-surf-15",
+            "id": "marque-plance-surf-23",
             "Theme": "Marque planche",
             "content": "Maurice Cole",
             "value": "Maurice Cole"
           },
           {
-            "id": "marque-plance-surf-16",
+            "id": "marque-plance-surf-24",
             "Theme": "Marque planche",
             "content": "Mark Richards",
             "value": "Mark Richards"
           },
           {
-            "id": "marque-plance-surf-17",
+            "id": "marque-plance-surf-25",
             "Theme": "Marque planche",
             "content": "NSP",
             "value": "NSP"
           },
           {
-            "id": "marque-plance-surf-17",
+            "id": "marque-plance-surf-26",
             "Theme": "Marque planche",
             "content": "Ocean & Earth",
             "value": "Ocean & Earth"
           },
           {
-            "id": "marque-plance-surf-18",
+            "id": "marque-plance-surf-27",
             "Theme": "Marque planche",
             "content": "Mark Phillips",
             "value": "Mark Phillips"
           },
           {
-            "id": "marque-plance-surf-18",
+            "id": "marque-plance-surf-28",
             "Theme": "Marque planche",
             "content": "Phil Grace",
             "value": "Phil Grace"
           },
           {
-            "id": "marque-plance-surf-19",
+            "id": "marque-plance-surf-29",
             "Theme": "Marque planche",
             "content": "Prism SurfBoards",
             "value": "Prism SurfBoards"
           },
           {
-            "id": "marque-plance-surf-20",
+            "id": "marque-plance-surf-30",
             "Theme": "Marque planche",
             "content": "Pukas",
             "value": "Pukas"
           },
           {
-            "id": "marque-plance-surf-21",
+            "id": "marque-plance-surf-31",
+            "Theme": "Marque planche",
+            "content": "Pyzel",
+            "value": "Pyzel"
+          },
+          {
+            "id": "marque-plance-surf-32",
             "Theme": "Marque planche",
             "content": "Softeck",
             "value": "Softeck"
           },
           {
-            "id": "marque-plance-surf-22",
+            "id": "marque-plance-surf-33",
             "Theme": "Marque planche",
             "content": "SuperBrand Surfboard",
             "value": "SuperBrand Surfboard"
           },
           {
-            "id": "marque-plance-surf-23",
+            "id": "marque-plance-surf-34",
+            "Theme": "Marque planche",
+            "content": "Surf Rocket",
+            "value": "Surf Rocket"
+          },
+          {
+            "id": "marque-plance-surf-35",
             "Theme": "Marque planche",
             "content": "Takayama",
             "value": "Takayama"
           },
           {
-            "id": "marque-plance-surf-24",
+            "id": "marque-plance-surf-36",
+            "Theme": "Marque planche",
+            "content": "Thunderbolt Ingleby",
+            "value": "Thunderbolt Ingleby"
+          },
+          {
+            "id": "marque-plance-surf-37",
             "Theme": "Marque planche",
             "content": "Torq",
             "value": "Torq"
           },
           {
-            "id": "marque-plance-surf-25",
+            "id": "marque-plance-surf-38",
             "Theme": "Marque planche",
             "content": "Takoro",
             "value": "Takoro"
@@ -774,6 +835,315 @@
       }
     },
     "Néopréne": {
+      "Marque": [
+        {
+          "id": "Marque-combinaison-0",
+          "Theme": "Marque combinaison",
+          "content": " ",
+          "value": null
+        },
+        {
+          "id": "Marque-combinaison-1",
+          "Theme": "Marque combinaison",
+          "content": "Je ne sais pas",
+          "value": "Je ne sais pas"
+        },
+        {
+          "id": "Marque-combinaison-2",
+          "Theme": "Marque combinaison",
+          "content": "Adrenaline",
+          "value": "Adrenaline"
+        },
+        {
+          "id": "Marque-combinaison-3",
+          "Theme": "Marque combinaison",
+          "content": "Artflex",
+          "value": "Artflex"
+        },
+        {
+          "id": "Marque-combinaison-4",
+          "Theme": "Marque combinaison",
+          "content": "AutodidaKt",
+          "value": "AutodidaKt"
+        },
+        {
+          "id": "Marque-combinaison-5",
+          "Theme": "Marque combinaison",
+          "content": "Billabong",
+          "value": "Billabong"
+        },
+        {
+          "id": "Marque-combinaison-6",
+          "Theme": "Marque combinaison",
+          "content": "C-Skins",
+          "value": "C-Skins"
+        },
+        {
+          "id": "Marque-combinaison-7",
+          "Theme": "Marque combinaison",
+          "content": "Chipiron",
+          "value": "Chipiron"
+        },
+        {
+          "id": "Marque-combinaison-8",
+          "Theme": "Marque combinaison",
+          "content": "Coastlines",
+          "value": "Coastlines"
+        },
+        {
+          "id": "Marque-combinaison-9",
+          "Theme": "Marque combinaison",
+          "content": "Coolum Boardroom",
+          "value": "Coolum Boardroom"
+        },
+        {
+          "id": "Marque-combinaison-10",
+          "Theme": "Marque combinaison",
+          "content": "Deeply",
+          "value": "Deeply"
+        },
+        {
+          "id": "Marque-combinaison-11",
+          "Theme": "Marque combinaison",
+          "content": "DHD",
+          "value": "DHD"
+        },
+        {
+          "id": "Marque-combinaison-12",
+          "Theme": "Marque combinaison",
+          "content": "Gyroll",
+          "value": "Gyroll"
+        },
+        {
+          "id": "Marque-combinaison-13",
+          "Theme": "Marque combinaison",
+          "content": "Hurley",
+          "value": "Hurley"
+        },
+        {
+          "id": "Marque-combinaison-14",
+          "Theme": "Marque combinaison",
+          "content": "Hoalen",
+          "value": "Hoalen"
+        },
+        {
+          "id": "Marque-combinaison-15",
+          "Theme": "Marque combinaison",
+          "content": "Isurus",
+          "value": "Isurus"
+        },
+        {
+          "id": "Marque-combinaison-16",
+          "Theme": "Marque combinaison",
+          "content": "Ion",
+          "value": "Ion"
+        },
+        {
+          "id": "Marque-combinaison-17",
+          "Theme": "Marque combinaison",
+          "content": "Kynay",
+          "value": "Kynay"
+        },
+
+        {
+          "id": "Marque-combinaison-18",
+          "Theme": "Marque combinaison",
+          "content": "Manusurf",
+          "value": "Manusurf"
+        },
+        {
+          "id": "Marque-combinaison-19",
+          "Theme": "Marque combinaison",
+          "content": "Mdns",
+          "value": "Mdns"
+        },
+        {
+          "id": "Marque-combinaison-20",
+          "Theme": "Marque combinaison",
+          "content": "Moors",
+          "value": "Moors"
+        },
+        {
+          "id": "Marque-combinaison-21",
+          "Theme": "Marque combinaison",
+          "content": "Mystique",
+          "value": "Mystique"
+        },
+        {
+          "id": "Marque-combinaison-22",
+          "Theme": "Marque combinaison",
+          "content": "Nche",
+          "value": "Nche"
+        },
+        {
+          "id": "Marque-combinaison-23",
+          "Theme": "Marque combinaison",
+          "content": "O'Neil",
+          "value": "O'Neil"
+        },
+        {
+          "id": "Marque-combinaison-24",
+          "Theme": "Marque combinaison",
+          "content": "Oakley",
+          "value": "Oakley"
+        },
+        {
+          "id": "Marque-combinaison-25",
+          "Theme": "Marque combinaison",
+          "content": "Ocean & Earth",
+          "value": "Ocean & Earth"
+        },
+        {
+          "id": "Marque-combinaison-26",
+          "Theme": "Marque combinaison",
+          "content": "Olaian",
+          "value": "Olaian"
+        },
+        {
+          "id": "Marque-combinaison-27",
+          "Theme": "Marque combinaison",
+          "content": "Onda",
+          "value": "Onda"
+        },
+        {
+          "id": "Marque-combinaison-28",
+          "Theme": "Marque combinaison",
+          "content": "Oxbow",
+          "value": "Oxbow"
+        },
+        {
+          "id": "Marque-combinaison-29",
+          "Theme": "Marque combinaison",
+          "content": "Patagonia",
+          "value": "Patagonia"
+        },
+        {
+          "id": "Marque-combinaison-30",
+          "Theme": "Marque combinaison",
+          "content": "Picture",
+          "value": "Picture"
+        },
+        {
+          "id": "Marque-combinaison-31",
+          "Theme": "Marque combinaison",
+          "content": "Prime",
+          "value": "Prime"
+        },
+        {
+          "id": "Marque-combinaison-32",
+          "Theme": "Marque combinaison",
+          "content": "Prolimit",
+          "value": "Prolimit"
+        },
+
+        {
+          "id": "Marque-combinaison-33",
+          "Theme": "Marque combinaison",
+          "content": "Quicksilver",
+          "value": "Quicksilver"
+        },
+        {
+          "id": "Marque-combinaison-34",
+          "Theme": "Marque combinaison",
+          "content": "Radz",
+          "value": "Radz"
+        },
+        {
+          "id": "Marque-combinaison-35",
+          "Theme": "Marque combinaison",
+          "content": "Raw",
+          "value": "Raw"
+        },
+
+        {
+          "id": "Marque-combinaison-36",
+          "Theme": "Marque combinaison",
+          "content": "Prime",
+          "value": "Prime"
+        },
+        {
+          "id": "Marque-combinaison-37",
+          "Theme": "Marque combinaison",
+          "content": "Ripcurl",
+          "value": "Ripcurl"
+        },
+        {
+          "id": "Marque-combinaison-38",
+          "Theme": "Marque combinaison",
+          "content": "Roark",
+          "value": "Roark"
+        },
+
+        {
+          "id": "Marque-combinaison-39",
+          "Theme": "Marque combinaison",
+          "content": "RVCA",
+          "value": "RVCA"
+        },
+        {
+          "id": "Marque-combinaison-40",
+          "Theme": "Marque combinaison",
+          "content": "Sen no Sen",
+          "value": "Sen no Sen"
+        },
+        {
+          "id": "Marque-combinaison-41",
+          "Theme": "Marque combinaison",
+          "content": "SISSTREVOLUTION",
+          "value": "SISSTREVOLUTION"
+        },
+
+        {
+          "id": "Marque-combinaison-42",
+          "Theme": "Marque combinaison",
+          "content": "RVCA",
+          "value": "RVCA"
+        },
+        {
+          "id": "Marque-combinaison-43",
+          "Theme": "Marque combinaison",
+          "content": "Soöruz",
+          "value": "Soöruz"
+        },
+        {
+          "id": "Marque-combinaison-44",
+          "Theme": "Marque combinaison",
+          "content": "Sowe",
+          "value": "Sowe"
+        },
+
+        {
+          "id": "Marque-combinaison-45",
+          "Theme": "Marque combinaison",
+          "content": "SRFACE",
+          "value": "SRFACE"
+        },
+        {
+          "id": "Marque-combinaison-46",
+          "Theme": "Marque combinaison",
+          "content": "Storm",
+          "value": "Storm"
+        },
+        {
+          "id": "Marque-combinaison-47",
+          "Theme": "Marque combinaison",
+          "content": "Venice",
+          "value": "Venice"
+        },
+        {
+          "id": "Marque-combinaison-48",
+          "Theme": "Marque combinaison",
+          "content": "Vissla",
+          "value": "Vissla"
+        },
+        {
+          "id": "Marque-combinaison-49",
+          "Theme": "Marque combinaison",
+          "content": "Xcel",
+          "value": "Xcel"
+        }
+      ],
+
       "Epaisseur": [
         {
           "id": "Epaisseur-combinaison-0",

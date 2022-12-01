@@ -3,6 +3,7 @@
   width: 100vw;
   box-sizing: border-box;
   color: white;
+
   height: auto;
   background: #508ae2;
   display: flex;
@@ -136,6 +137,12 @@
         border-bottom: 1px solid white;
       }
     }
+  }
+}
+
+@media (min-width: 755px) {
+  .container-footer {
+    padding-bottom: none;
   }
 }
 

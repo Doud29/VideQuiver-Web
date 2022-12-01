@@ -1,7 +1,6 @@
 .app {
   width: 100%;
   height: auto;
-  padding-bottom: 58px;
 }
 
 //----------------------------------------------------------------------------//
@@ -10,6 +9,6 @@
 
 @media (min-width: 755px) {
   .app {
-    padding-bottom: 0px;
+    padding-bottom: none;
   }
 }

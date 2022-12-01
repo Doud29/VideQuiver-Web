@@ -5,7 +5,7 @@
   width: 100%;
   height: auto;
   .title {
-    border-bottom: 0.5px solid grey;
+    // border-bottom: 0.5px solid grey;
     height: 40px;
     display: flex;
     justify-content: flex-start;
@@ -17,12 +17,12 @@
     }
   }
 
-  .container-span {
-    padding: 5px 10px;
+  .container-p {
+    padding: 0px 10px;
     border-bottom: 0.5px solid grey;
     font-size: 15px;
-    height: 40px;
     display: flex;
+    text-align: justify;
     justify-content: flex-start;
     align-items: center;
   }

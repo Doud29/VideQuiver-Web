@@ -39,45 +39,48 @@ import SwitchSelection from "../../Components/AddProduct/5-SwicthSelection/Switc
 import OfferDescription from "../../Components/AddProduct/2-DescriptionOffre/OfferDescription";
 import AdditionalInformation from "../../Components/AddProduct/6-additional information/AdditionalInformation";
 import SubmitButton from "../../Components/AddProduct/7-SubmitButton/SubmitButton";
+import Footer from "../../Components/Footer/Footer";
 //---------// Context
 import { UserContext } from "../../Context/UserContext";
 //---------// packages
 import { useState, useContext } from "react";
+import { Oval } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
 // //---------// Firebase
 import { db } from "../../firebase-config";
 import { collection, addDoc } from "firebase/firestore";
 import { storage } from "../../firebase-config";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
-// import { useNavigate } from "react-router-dom";
 
 const AddProduct = () => {
   //----// Erro MESSAGE
   const [errorMessage, setErrorMessage] = useState([]);
-
+  //DISPLAY IMAGES
+  const [imageUpload, setImageUpload] = useState([]);
+  //UPLOAD OFFER
+  // const [isOfferUpload, setIsOfferUpload] = useState(false);
   //---// CONTEXT
   const { openModalState, createOffer, currentUser, setCreateOffer } =
     useContext(UserContext);
-
-  //DISPLAY IMAGES
-  const [imageUpload, setImageUpload] = useState([]);
-  // console.log(imageUpload);
-  // console.log(createOffer);
 
   //---//REF DB FIRESTORE
   const newProductForSellCollectionRef = collection(db, "newOfferForSell");
   const newProductForRentCollectionRef = collection(db, "newOfferForRent");
 
   //---// Navigate
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   //---// fonction pour soumetre la demande de vente et location
   const SubmitOffer = (e) => {
+    // setIsOfferUpload(true);
+    // setTimeout(() => {
+    //   setIsOfferUpload(false);
+    // }, 5000);
     e.preventDefault();
     if (createOffer.sell === false && createOffer.rent === false) {
       setErrorMessage("* S'agit-il d'une vente ou d'une location?");
       return;
     }
-
     if (createOffer.Product === " ") {
       setErrorMessage("* Vous devez choisir un produit");
       return;
@@ -90,30 +93,25 @@ const AddProduct = () => {
       setErrorMessage("* Veuillez Décrire votre produit");
       return;
     }
-
-    // if (
-    //   createOffer["technical informations"].length !== 11 &&
-    //   createOffer.Product === "Planche de Surf"
-    // ) {
-    //   setErrorMessage("* Informations techniques incomplétes");
-    //   return;
-    // }
-
+    if (
+      createOffer["technical informations"].length !== 11 &&
+      createOffer.Product === "Planche de Surf"
+    ) {
+      setErrorMessage("* Informations techniques incomplétes");
+      return;
+    }
     if (createOffer.Price === " ") {
       setErrorMessage("* Veuillez renseigner le prix");
       return;
     }
     //---//upload on firebase
-    // if (imageUpload === null) {
-    //   setErrorMessage("* Veuillez sélcetionner une photo");
-    //   return;
-    // }
-
+    if (imageUpload === null) {
+      setErrorMessage("* Veuillez sélcetionner une photo");
+      return;
+    }
     //----//UPLOAD ON FIREBASE
-
     const uploadMultipleImagesAndAddOffer = async () => {
       const newObj = { ...createOffer };
-
       try {
         //UPLOAD IMAGE
         for (let i = 0; i < imageUpload.length; i++) {
@@ -146,8 +144,9 @@ const AddProduct = () => {
         if (newObj.sell === false && newObj.rent === true) {
           await addDoc(newProductForRentCollectionRef, newObj);
           // window.location.reload(false);
-          console.log("data rent envoyé");
-          // navigate("/home");
+          // console.log("data rent envoyé");
+          // setIsOfferUpload(true);
+          navigate("/home");
         }
       } catch (error) {
         console.log(error);
@@ -159,6 +158,23 @@ const AddProduct = () => {
   return (
     <>
       <div className="container-addProduct">
+        {/* {isOfferUpload && (
+          <div className="oval">
+            {" "}
+            <Oval
+              height={40}
+              width={40}
+              color="#508ae2"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+              ariaLabel="oval-loading"
+              secondaryColor="#555555"
+              strokeWidth={3}
+              strokeWidthSecondary={3}
+            />
+          </div>
+        )} */}
         {/* //----// Disciplines */}
         {openModalState.modalCategorie && <ModalCategories />}
         {/* //----// Catégories */}
@@ -258,6 +274,7 @@ const AddProduct = () => {
           <AdditionalInformation />
           <SubmitButton errorMessage={errorMessage} SubmitOffer={SubmitOffer} />
         </div>
+        <Footer />
       </div>
     </>
   );

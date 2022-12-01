@@ -15,7 +15,6 @@ import ProtectedRoute from "./Pages/Protected/ProtectedRoute";
 import Offer from "./Pages/Offer/Offer";
 import MyProfile from "./Pages/Profile/MyProfile";
 import { UserContextProvider } from "./Context/UserContext";
-import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (

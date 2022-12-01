@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 //-----// Components
 
 import { db } from "../../firebase-config";
-import { collection, getDocs, doc, getDoc } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 
 const FetchProductSell = () => {
   const navigate = useNavigate();
@@ -23,9 +23,8 @@ const FetchProductSell = () => {
       const getProduct = async () => {
         const response = await getDocs(addProductCollectionRef);
         setdata(response.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-        console.log(data);
+        // console.log(data);
         setIsFetching(true);
-        console.log(data);
       };
       getProduct();
     } catch (error) {

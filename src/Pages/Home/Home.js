@@ -9,7 +9,7 @@ import CategorieMontagne from "../../Components/Categories/CategorieMontagne/Cat
 import Disciplines from "../../Components/Disciplines/Disciplines";
 // import Infos from "../../Components/Infos/Infos";
 import FetchProductSell from "../../Components/HomeComponent/FetchProductSell";
-
+import Footer from "../../Components/Footer/Footer";
 //--------------// packages
 // import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -51,6 +51,7 @@ const Home = () => {
       <h3>Nouveautés vente</h3>
       <FetchProductSell />
       <h3>Nouveautés location</h3>
+      <Footer />
     </div>
   );
 };

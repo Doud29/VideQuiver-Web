@@ -8,17 +8,24 @@
   padding-bottom: 55px;
   h3 {
     padding-left: 10px;
-    color: grey;
+    color: black;
     margin-top: 5px;
   }
 }
+
 //----------------------------------------------------------------------------//
 //-----------------------------// MEDIA QUERY //------------------------------//
 //----------------------------------------------------------------------------//
 
+@media (min-width: 755px) {
+  .container-home {
+    padding-bottom: 0px;
+  }
+}
+
 @media (min-width: 1200px) {
   .container-home {
     width: 1200px;
-    margin: auto;
+    margin: 0 auto;
   }
 }

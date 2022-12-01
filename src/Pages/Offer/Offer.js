@@ -39,7 +39,7 @@ const Offer = () => {
   return (
     <>
       {isLoading === false ? (
-        <div className="container-ring">
+        <div className="oval">
           {" "}
           <Oval
             height={40}
