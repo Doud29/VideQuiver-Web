@@ -1,3 +1,5 @@
+@import "../../sass/variables.scss";
+
 .container-carroussel {
   width: 100%;
   box-sizing: border-box;
@@ -19,7 +21,7 @@
   .container-dot {
     position: absolute;
     color: white;
-    font-size: 17px;
+    font-size: 15px;
     display: flex;
     bottom: 10px;
     left: 50%;
@@ -46,5 +48,19 @@
   .arrow-right {
     right: 5px;
     transform: translate(0, -50%);
+  }
+}
+
+//-----------------------------------------------------------//
+//--------------------// QUIERIES //-------------------------//
+//-----------------------------------------------------------//
+
+@media #{$medium-up-768} {
+  /* Rules */
+  .container-carroussel {
+    .carrousselIner {
+      border-top-left-radius: $borderRadius;
+      border-top-right-radius: $borderRadius;
+    }
   }
 }

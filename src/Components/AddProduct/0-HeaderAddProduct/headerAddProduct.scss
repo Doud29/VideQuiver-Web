@@ -2,6 +2,8 @@
 //---------------------// HEADER ADD PRODUCT//--------------//
 //----------------------------------------------------------//
 
+@import "../../../sass/variables.scss";
+
 .bloc-header {
   height: 55px;
   width: 100%;
@@ -10,11 +12,14 @@
   display: flex;
   justify-content: center;
   text-align: center;
-  border-bottom: 0.5px solid grey;
   p {
     font-size: 15px;
-    color: grey;
+    color: black;
     width: 240px;
+  }
+  ion-icon {
+    color: $primeryColor;
+    font-size: "20px";
   }
   .bloc-arrowLeft {
     position: absolute;

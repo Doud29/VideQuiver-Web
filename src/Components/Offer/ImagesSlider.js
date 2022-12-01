@@ -35,7 +35,9 @@ const ImagesSlider = ({ slides }) => {
 
       <div
         className="carrousselIner"
-        style={{ backgroundImage: `url(${slides[currentIndex]})` }}
+        style={{
+          backgroundImage: `url(${slides[currentIndex]})`,
+        }}
       ></div>
       <div className="container-dot">
         {" "}

@@ -2,6 +2,8 @@
 //---------------------// DESCRIPTION OFFERT //-------------//
 //----------------------------------------------------------//
 
+@import "../../../sass/variables.scss";
+
 .container-input-button {
   box-sizing: border-box;
   width: 100%;
@@ -15,7 +17,6 @@
   //---------------------------------------------------------//
   #model,
   button {
-    border: 1px solid green;
     height: 50px;
   }
   #model,
@@ -23,11 +24,14 @@
   button {
     outline: none;
     padding-left: 10px;
-    border-radius: 8px;
+    border-radius: $borderRadius;
     border: 1px solid grey;
     width: 100%;
     box-sizing: border-box;
+    cursor: pointer;
   }
+  // box-shadow: $boxShadowBloc;
+
   #model,
   #description {
     margin: 15px 0;
@@ -47,7 +51,7 @@
     margin: 0 auto 10px auto;
   }
   #product {
-    color: #508ae2;
+    color: $primeryColor;
     margin-right: 10px;
     font-size: 15px;
   }
@@ -85,7 +89,7 @@
     #description:focus ~ .descriptionSpan,
     #description:not(:placeholder-shown)#description:not(:focus)
       ~ .descriptionSpan {
-      color: #508ae2;
+      color: $primeryColor;
       transform: translateX(12px) translateY(-26px);
       background: white;
       padding-left: 5px;
@@ -94,11 +98,23 @@
 
     #model:focus ~ .modèleSpan,
     #model:not(:placeholder-shown)#model:not(:focus) ~ .modèleSpan {
-      color: #508ae2;
+      color: $primeryColor;
       transform: translateX(15px) translateY(-25px);
       background: white;
       padding-left: 5px;
       padding-right: 5px;
     }
   }
+}
+
+#model:hover {
+  box-shadow: $boxShadowInut;
+}
+
+#description:hover {
+  box-shadow: $boxShadowInut;
+}
+
+button:hover {
+  box-shadow: $boxShadowInut;
 }

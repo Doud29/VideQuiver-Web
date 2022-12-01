@@ -1,10 +1,13 @@
+@import "../../sass/variables.scss";
+
 .container-searchBar {
   box-sizing: border-box;
-  border-bottom: 0.8px solid grey;
-  width: 100%;
+  border-bottom: 0.1px solid grey;
   position: fixed;
   z-index: 10;
   top: 0;
+  left: 0;
+  right: 0;
   height: 55px;
   padding-left: 10px;
   justify-content: center;
@@ -63,9 +66,11 @@
 //-----------------------------// MEDIA QUERY //------------------------------//
 //----------------------------------------------------------------------------//
 
-@media (min-width: 755px) {
+@media #{$medium-up-768} {
   .container-searchBar {
-    margin: auto;
+    // box-shadow: 1px 1px 1px 1px rgb(203, 201, 201);
+    margin: 0 auto;
+
     h2 {
       font-size: 25px;
       display: block;
@@ -118,7 +123,7 @@
 
 @media (min-width: 1200px) {
   .container-searchBar {
-    width: 1200px;
+    // width: 1200px;
     margin: auto;
   }
 }

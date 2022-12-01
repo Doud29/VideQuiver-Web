@@ -1,0 +1,22 @@
+//DIMENSIONNEMENT
+
+//Color Primaire
+$primeryColor: #508ae2;
+//Box-shaddow pour les composants parents
+$boxShadowBloc: 2px 2px 2px 2px rgb(183, 181, 181);
+//Box-shaddow pour les inputs
+$boxShadowInut: 1px 1px 1px 1px rgb(183, 181, 181);
+//Border radius pour tous les composants
+$borderRadius: 8px;
+//Background-App
+$backGroundApp: rgb(252, 252, 252);
+//Min-With Bloc
+$minWidthBloc: 320px;
+//text-color
+$text-color: white;
+//Font-size
+$fontSizeText: 15px;
+
+//MEDIA QUERIES
+$medium-up-768: "(min-width: 768px)";
+$medium-up-1200: "(min-width: 1200px)";

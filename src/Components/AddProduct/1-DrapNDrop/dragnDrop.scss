@@ -2,6 +2,8 @@
 //------------------------// DRAG N DROP //-----------------//
 //----------------------------------------------------------//
 
+@import "../../../sass/variables.scss";
+
 .bloc-photo {
   box-sizing: border-box;
   width: 100%;
@@ -13,13 +15,11 @@
   align-items: center;
   overflow: hidden;
   overflow-x: scroll;
-  background-color: rgb(245, 241, 241);
-  border-bottom: 0.5px solid;
+  background-color: rgb(212, 209, 209);
   input {
     display: none;
   }
   #image-file {
-    box-shadow: 5px 3px 3px rgb(183, 181, 181);
     height: 160px;
     width: 160px;
     min-width: 160px;
@@ -31,13 +31,15 @@
     align-items: center;
     position: relative;
     margin-right: 10px;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadowBloc;
     .container-ajoutimage {
       position: absolute;
       top: 40%;
       left: 50%;
       transform: translate(-50%, -50%);
       font-size: 45px;
-      color: #508ae2;
+      color: $primeryColor;
     }
     span {
       margin-bottom: 10px;
@@ -63,7 +65,7 @@
     min-width: 160px;
     margin: 0 10px;
     position: relative;
-    box-shadow: 5px 3px 3px rgb(183, 181, 181);
+    box-shadow: $boxShadowBloc;
     img {
       height: 100%;
       width: 100%;
@@ -75,8 +77,7 @@
       top: -12.5px;
       right: -12.5px;
       ion-icon {
-        // border: 0.5px solid grey;
-        box-shadow: 3px 2px 2px rgb(183, 181, 181);
+        box-shadow: $boxShadowBloc;
         border-radius: 50%;
         padding: 4px;
         background: white;
@@ -87,4 +88,7 @@
       cursor: pointer;
     }
   }
+}
+
+#image-file:hover {
 }

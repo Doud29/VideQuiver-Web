@@ -6,6 +6,9 @@ import ImagesSlider from "../../Components/Offer/ImagesSlider";
 import Informations from "../../Components/Offer/Information";
 import TechnicalInformationsOffer from "../../Components/Offer/TechnicalInformationsOffer";
 import DescriptionOffer from "../../Components/Offer/DescriptionOffer";
+import Footer from "../../Components/Footer/Footer";
+import Header from "../../Components/SearchBar/SearchBar";
+import Paiement from "../../Components/Offer/Paiement";
 //PACKAGEs
 import { Oval } from "react-loader-spinner";
 import { useEffect, useState } from "react";
@@ -37,7 +40,8 @@ const Offer = () => {
   }, [params.id]);
 
   return (
-    <>
+    <div className="container-component-header-offer-footer">
+      <Header />
       {isLoading === false ? (
         <div className="oval">
           {" "}
@@ -56,18 +60,15 @@ const Offer = () => {
         </div>
       ) : (
         <div className="container-offer">
-          <Link to="/home">
-            <div className="close">
-              <ion-icon name="close-circle-sharp"></ion-icon>
-            </div>
-          </Link>
           <ImagesSlider slides={data.urls} />
           <Informations data={data} />
           <TechnicalInformationsOffer data={data} />
           <DescriptionOffer data={data} />
+          <Paiement />
         </div>
       )}
-    </>
+      <Footer />
+    </div>
   );
 };
 
