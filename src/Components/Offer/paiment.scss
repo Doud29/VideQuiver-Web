@@ -25,6 +25,7 @@
     border-radius: $borderRadius;
     border: none;
     box-shadow: none;
+    box-shadow: $boxShadowBloc;
   }
   .btn-achat {
     background: $primeryColor;
@@ -51,9 +52,6 @@
       font-size: $fontSizeText;
       width: 200px;
     }
-  }
-  button:hover {
-    box-shadow: $boxShadowInut;
   }
 }
 

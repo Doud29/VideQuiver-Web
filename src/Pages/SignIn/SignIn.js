@@ -3,6 +3,7 @@ import "./SignIn.scss";
 
 //--------------// Components
 import { UserContext } from "../../Context/UserContext";
+import HeaderConnexion from "../../Components/Connexion/HeaderConnexion";
 //--------------// packages
 import { Link } from "react-router-dom";
 import { useContext, useRef, useState } from "react";
@@ -57,17 +58,7 @@ const SignIn = () => {
 
   return (
     <div className="container-signIn">
-      <div className="bloc-header">
-        <p>inscription ou connexion</p>
-        <div className="bloc-arrowLeft">
-          <Link to="/welcome" style={{ color: "grey" }}>
-            <ion-icon
-              name="arrow-back-outline"
-              style={{ fontSize: "25px" }}
-            ></ion-icon>
-          </Link>
-        </div>
-      </div>
+      <HeaderConnexion title="Inscription ou connexion" previous="/welcome" />
       <form onSubmit={handleSubmit} className="container-inputs" ref={formRef}>
         {/* //-----------------// Email  //----------------------//*/}
         <div className="inputdiv">

@@ -12,6 +12,8 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  background: $backGroundComponent;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
   p {
     font-size: 15px;
     color: black;

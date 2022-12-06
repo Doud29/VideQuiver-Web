@@ -15,30 +15,30 @@ import ProtectedRoute from "./Pages/Protected/ProtectedRoute";
 import Offer from "./Pages/Offer/Offer";
 import MyProfile from "./Pages/Profile/MyProfile";
 import { UserContextProvider } from "./Context/UserContext";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   return (
     <UserContextProvider>
       <Router>
-        <div className="app">
-          <Routes>
-            <Route path="/" element={<Intro />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/signin" element={<SignIn />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/home/offer/:id" element={<Offer />} />
-            <Route path="/welcome" element={<Welcome />} />
-            <Route
-              path="/addProduct"
-              element={
-                <ProtectedRoute>
-                  <AddProduct />
-                </ProtectedRoute>
-              }
-            />
-            <Route path="/myProfil" element={<MyProfile />} />
-          </Routes>
-        </div>
+        <Routes>
+          <Route path="/" element={<Intro />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/home/offer/:id" element={<Offer />} />
+          <Route path="/welcome" element={<Welcome />} />
+          <Route
+            path="/addProduct"
+            element={
+              <ProtectedRoute>
+                <AddProduct />
+              </ProtectedRoute>
+            }
+          />
+          <Route path="/myProfil" element={<MyProfile />} />
+        </Routes>
+        <Footer />
       </Router>
     </UserContextProvider>
   );

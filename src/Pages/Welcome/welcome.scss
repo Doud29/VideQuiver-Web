@@ -1,70 +1,62 @@
+@import "../../sass/variables.scss";
+
 .container-welcome {
   width: 100%;
-  height: 100vh;
+  min-height: 600px;
+  padding-top: 30px;
   box-sizing: border-box;
   min-width: 320px;
+  background: $backGroundApp;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   .bloc-header {
-    height: 55px;
+    height: 60px;
     width: 100%;
-    position: relative;
+    z-index: 10;
+    position: fixed;
     box-sizing: border-box;
-    border-bottom: 1px solid grey;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px;
+    background: $backGroundComponent;
     p {
       position: absolute;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -125%);
       font-size: 15px;
-      color: grey;
+      color: black;
     }
     .bloc-xmark {
       position: absolute;
       font-size: 20px;
       top: 55%;
-      right: 10px;
+      left: 20px;
       transform: translate(-50%, -50%);
     }
   }
-  .bloc-image-citation {
-    height: 250px;
-    width: 100%;
-    box-sizing: border-box;
-    border: 1px solid #508ae2;
-    p {
-      font-size: 15px;
-      margin-left: 10px;
-      margin-right: 10px;
-      position: absolute;
-      top: 75px;
-      z-index: 15;
-      color: grey;
-    }
-    span {
-      position: absolute;
-      top: 170px;
-      font-size: 15px;
-      z-index: 15;
-      margin-left: 10px;
-      color: grey;
-    }
-  }
-  img {
-    width: 100%;
-    height: auto;
-  }
   .bloc-inscription {
     box-sizing: border-box;
-    margin-top: 15px;
     width: 100%;
-    height: 60%;
-    padding: 10px;
+    max-width: 500px;
+    height: 350px;
+    margin: 20px;
+    padding: 20px;
+    background: $backGroundComponent;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     .bloc-inscription-email {
-      border: 1px solid black;
+      border: 1px solid grey;
       box-sizing: border-box;
       height: 55px;
       width: 100%;
-      margin-bottom: 20px;
-      border-radius: 10px;
+      margin: 20px;
+      border-radius: $borderRadius;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -74,13 +66,28 @@
         height: auto;
         font-size: 20px;
         margin-right: 10px;
+        color: $primeryColor;
       }
       p {
-        font-size: 13px;
+        font-size: $fontSizeText;
       }
     }
+
     .bloc-inscription-email:hover {
       cursor: pointer;
+      box-shadow: $boxShadowInut;
     }
+  }
+}
+
+//-----------------------------------------------------------//
+//--------------------// QUIERIES //-------------------------//
+//-----------------------------------------------------------//
+
+@media #{$medium-up-500} {
+  /* Rules */
+  .bloc-inscription {
+    border-radius: $borderRadius;
+    box-shadow: $boxShadowBloc;
   }
 }

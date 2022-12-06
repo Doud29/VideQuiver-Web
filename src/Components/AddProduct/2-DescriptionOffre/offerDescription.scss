@@ -16,12 +16,12 @@
   //------------// INPUT & BUTTON DESCRIPTION OFFER //-------//
   //---------------------------------------------------------//
   #model,
-  button {
+  .discipline {
     height: 50px;
   }
   #model,
   #description,
-  button {
+  .discipline {
     outline: none;
     padding-left: 10px;
     border-radius: $borderRadius;
@@ -30,7 +30,6 @@
     box-sizing: border-box;
     cursor: pointer;
   }
-  // box-shadow: $boxShadowBloc;
 
   #model,
   #description {
@@ -43,7 +42,7 @@
     padding: 15px;
     margin-top: 15px;
   }
-  button {
+  .discipline {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -115,6 +114,6 @@
   box-shadow: $boxShadowInut;
 }
 
-button:hover {
+.discipline:hover {
   box-shadow: $boxShadowInut;
 }

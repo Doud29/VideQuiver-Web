@@ -2,21 +2,29 @@
 
 //Color Primaire
 $primeryColor: #508ae2;
+//Couleur Secondaire
+$secondaryColor: white;
 //Box-shaddow pour les composants parents
-$boxShadowBloc: 2px 2px 2px 2px rgb(183, 181, 181);
-//Box-shaddow pour les inputs
+$boxShadowBloc: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+  rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+//Box-shaddow pour les inputs hover
 $boxShadowInut: 1px 1px 1px 1px rgb(183, 181, 181);
 //Border radius pour tous les composants
 $borderRadius: 8px;
 //Background-App
-$backGroundApp: rgb(252, 252, 252);
+$backGroundApp: rgb(240, 242, 245);
+//background-Component :
+$backGroundComponent: white;
 //Min-With Bloc
 $minWidthBloc: 320px;
 //text-color
 $text-color: white;
-//Font-size
+//Primery Font-size
 $fontSizeText: 15px;
+//Seconderay Font-size
+$secondaryFontSizeText: 12px;
 
 //MEDIA QUERIES
+$medium-up-500: "(min-width: 500px)";
 $medium-up-768: "(min-width: 768px)";
 $medium-up-1200: "(min-width: 1200px)";

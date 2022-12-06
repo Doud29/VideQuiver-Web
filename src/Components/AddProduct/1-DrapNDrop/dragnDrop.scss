@@ -15,7 +15,7 @@
   align-items: center;
   overflow: hidden;
   overflow-x: scroll;
-  background-color: rgb(212, 209, 209);
+  background-color: $primeryColor;
   input {
     display: none;
   }
@@ -23,7 +23,7 @@
     height: 160px;
     width: 160px;
     min-width: 160px;
-    background: white;
+    background: $backGroundComponent;
     font-size: 12px;
     display: flex;
     justify-content: flex-end;
@@ -66,11 +66,13 @@
     margin: 0 10px;
     position: relative;
     box-shadow: $boxShadowBloc;
+    border-radius: $borderRadius;
     img {
       height: 100%;
       width: 100%;
       background: white;
       object-fit: cover;
+      border-radius: $borderRadius;
     }
     .trash {
       position: absolute;

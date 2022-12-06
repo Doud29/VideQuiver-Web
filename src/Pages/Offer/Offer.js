@@ -67,7 +67,7 @@ const Offer = () => {
           <Paiement />
         </div>
       )}
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 };

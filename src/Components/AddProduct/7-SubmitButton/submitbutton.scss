@@ -1,3 +1,5 @@
+@import "../../../sass/variables.scss";
+
 .container-input-submit {
   display: flex;
   flex-direction: column;
@@ -7,16 +9,16 @@
   padding-bottom: 15px;
   height: auto;
   span {
-    font-size: 12px;
     margin-bottom: 10px;
   }
   button {
+    box-shadow: $boxShadowBloc;
     height: 50px;
     padding: 15px;
-    background-color: #508ae2;
+    background-color: $primeryColor;
     border: none;
-    color: white;
-    border-radius: 8px;
-    font-size: 15px;
+    color: $text-color;
+    border-radius: $borderRadius;
+    font-size: $fontSizeText;
   }
 }

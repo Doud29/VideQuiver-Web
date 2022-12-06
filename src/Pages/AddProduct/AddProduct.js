@@ -274,7 +274,6 @@ const AddProduct = () => {
           <AdditionalInformation />
           <SubmitButton errorMessage={errorMessage} SubmitOffer={SubmitOffer} />
         </div>
-        <Footer />
       </div>
     </>
   );

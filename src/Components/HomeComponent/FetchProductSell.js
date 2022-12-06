@@ -6,10 +6,11 @@ import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 //-----// Components
-
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
+//-----// Packages
+import { Oval } from "react-loader-spinner";
 const FetchProductSell = () => {
   const navigate = useNavigate();
 
@@ -23,7 +24,6 @@ const FetchProductSell = () => {
       const getProduct = async () => {
         const response = await getDocs(addProductCollectionRef);
         setdata(response.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-        // console.log(data);
         setIsFetching(true);
       };
       getProduct();
@@ -36,9 +36,24 @@ const FetchProductSell = () => {
     <div className="container-home-produit">
       {isFetching === false ? (
         <div className="container-produit-description">
-          <p>En Chargement...</p>
+          <div className="oval">
+            {" "}
+            <Oval
+              height={40}
+              width={40}
+              color="#508ae2"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+              ariaLabel="oval-loading"
+              secondaryColor="#555555"
+              strokeWidth={3}
+              strokeWidthSecondary={3}
+            />
+          </div>
         </div>
       ) : (
+        // </div>
         <>
           {data.map((data, index) => {
             return (

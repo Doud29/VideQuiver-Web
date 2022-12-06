@@ -4,7 +4,7 @@
   width: 100%;
   position: absolute;
   z-index: 2;
-  background: white;
+  background: $backGroundComponent;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,14 +15,16 @@
 .container-component-header-offer-footer {
   width: 100%;
   height: 100%;
-  padding-top: 55px;
+  min-height: 800px;
+  padding-top: 60px;
   padding-bottom: 130px;
-  border: 2px solid green;
+  background: $backGroundApp;
   display: flex;
   flex-direction: column;
 }
 
 .container-offer {
+  background: $backGroundComponent;
   box-sizing: border-box;
   margin: 0 auto;
   height: 100%;

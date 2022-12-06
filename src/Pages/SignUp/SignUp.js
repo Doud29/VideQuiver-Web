@@ -5,7 +5,7 @@ import "./SignUp.scss";
 import React, { useRef, useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router";
-
+import HeaderConnexion from "../../Components/Connexion/HeaderConnexion";
 //--------------// Components && Méthodes
 import { UserContext } from "../../Context/UserContext";
 
@@ -86,17 +86,9 @@ const SignUp = () => {
       }
     }
   };
-
   return (
     <div className="container-signUp">
-      <div className="bloc-header">
-        <p>inscription ou connexion</p>
-        <div className="bloc-arrowLeft">
-          <Link to="/welcome" style={{ color: "grey" }}>
-            <ion-icon name="arrow-back-outline"></ion-icon>{" "}
-          </Link>
-        </div>
-      </div>
+      <HeaderConnexion title="Inscription" previous="/welcome" />
 
       <form onSubmit={handleForm} className="container-inputs" ref={formRef}>
         <div className="inputdiv">

@@ -38,20 +38,21 @@ const Home = () => {
       <Header
         setIsSearchBarexisting={setIsSearchBarexisting}
         isSearchBarexisting={isSearchBarexisting}
-      />
+      />{" "}
       <SearchBar />
-      <Disciplines
-        montagneState={montagneState}
-        setMontagneState={setMontagneState}
-        merState={merState}
-        setMerState={setMerState}
-      />
-      {wichCategorie(montagneState, merState)}
-      {/* <Infos /> */}
-      <h3>Nouveautés vente</h3>
-      <FetchProductSell />
-      <h3>Nouveautés location</h3>
-      <Footer />
+      <div className="container-products">
+        <Disciplines
+          montagneState={montagneState}
+          setMontagneState={setMontagneState}
+          merState={merState}
+          setMerState={setMerState}
+        />
+        {wichCategorie(montagneState, merState)}
+        {/* <Infos /> */}
+        <h3>Nouveautés vente</h3>
+        <FetchProductSell />
+        <h3>Nouveautés location</h3>
+      </div>
     </div>
   );
 };
