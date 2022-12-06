@@ -1,16 +1,17 @@
+@import "../../sass/variables.scss";
+
 .container-footer {
   min-width: 320px;
   width: 100vw;
   box-sizing: border-box;
-  color: white;
+  color: $secondaryColor;
   height: auto;
-  background: #508ae2;
+  background: $primeryColor;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  // padding-left: 15px;
-  // padding-right: 15px;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 0px 1px;
   .container-bloc {
     box-sizing: border-box;
     height: 120px;

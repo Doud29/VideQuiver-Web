@@ -40,7 +40,7 @@ const Offer = () => {
   }, [params.id]);
 
   return (
-    <div className="container-component-header-offer-footer">
+    <div className="container-component-header-offer">
       <Header />
       {isLoading === false ? (
         <div className="oval">
@@ -60,11 +60,15 @@ const Offer = () => {
         </div>
       ) : (
         <div className="container-offer">
-          <ImagesSlider slides={data.urls} />
-          <Informations data={data} />
-          <TechnicalInformationsOffer data={data} />
-          <DescriptionOffer data={data} />
-          <Paiement />
+          <div className="container-item-offer">
+            <ImagesSlider slides={data.urls} />
+            <Informations data={data} />
+            <TechnicalInformationsOffer data={data} />
+            <DescriptionOffer data={data} />
+          </div>
+          <div className="container-item-sideBar">
+            <Paiement />
+          </div>
         </div>
       )}
       {/* <Footer /> */}
