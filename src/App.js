@@ -36,7 +36,14 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="/myProfil" element={<MyProfile />} />
+          <Route
+            path="/myProfil"
+            element={
+              <ProtectedRoute>
+                <MyProfile />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
         <Footer />
       </Router>

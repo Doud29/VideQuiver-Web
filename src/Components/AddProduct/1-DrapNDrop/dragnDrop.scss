@@ -15,7 +15,13 @@
   align-items: center;
   overflow: hidden;
   overflow-x: scroll;
-  background-color: $primeryColor;
+  background: linear-gradient(
+    90deg,
+    rgba(101, 155, 237, 1) 2%,
+    rgba(80, 138, 224, 1) 41%,
+    rgba(64, 131, 230, 1) 68%
+  );
+
   input {
     display: none;
   }

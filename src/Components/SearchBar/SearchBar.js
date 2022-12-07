@@ -1,28 +1,35 @@
-//---------------// Css
+//--// Css
 import "./SearchBar.scss";
 
-//---------------// icones
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { faMessage } from "@fortawesome/free-solid-svg-icons";
-
-//---------------// Composent
-// import BtnProfil from "../Btn-Header/BtnProfil";
-
-//---------------// Link
+//--// Composent
+import { useContext } from "react";
+import { UserContext } from "../../Context/UserContext";
+import BtnHeader from "./Btn-Header/BtnHeader";
+// import BtnAcceuil from "./Btn-Header/BtnAcceuil";
+// import BtnProfil from "./Btn-Header/BtnProfil";
+// import BtnSale from "./Btn-Header/BtnSale";
+// import BtnLogOut from "./Btn-Header/BtnLogOut";
+// import BtnMessage from "./Btn-Header/BtnMessage";
+//--// Link
 import { Link } from "react-router-dom";
 
-//---------------// Déclaration des constantes
-const user = <FontAwesomeIcon icon={faUser} />;
-const message = <FontAwesomeIcon icon={faMessage} />;
-const panier = <FontAwesomeIcon icon={faCartShopping} />;
-
 const SearchBar = () => {
+  const { currentUser, logout } = useContext(UserContext);
+  console.log(currentUser);
+
+  //on se déconnecte
+  const handleLogout = async () => {
+    try {
+      await logout();
+      console.log("your are disconnect");
+    } catch (error) {
+      console.log(error.message);
+    }
+  };
+
   return (
     <div className="container-searchBar">
       <Link to="/home" style={{ textDecoration: "none" }}>
-        {" "}
         <h2>VideQuiver</h2>
       </Link>
 
@@ -32,27 +39,47 @@ const SearchBar = () => {
           <ion-icon name="search-outline"></ion-icon>
         </div>
       </div>
-      <div className="container-searchBar-profil">
-        {/* <p>Mon compte</p> */}
-        <div className="bloc-font">
-          <Link to="/welcome" style={{ color: "grey" }}>
-            {user}
-          </Link>
-          <Link to="/message" style={{ color: "grey" }}>
-            {message}
-          </Link>
-          <Link to="/panier" style={{ color: "grey" }}>
-            {panier}
-          </Link>
-        </div>
-        <div className="bloc-button">
-          <Link to="/addProduct" style={{ height: "100%" }}>
-            <button>Vendre</button>
-          </Link>
-          <Link to="/addProduct" style={{ height: "100%" }}>
-            <button>Louer</button>
-          </Link>
-        </div>
+      <div className="bloc-button">
+        {/* Message */}
+        <BtnHeader
+          url="/message"
+          item="Message"
+          icon={<ion-icon name="mail-outline"></ion-icon>}
+        />
+        {/* Profile */}
+        <BtnHeader
+          url="/myProfil"
+          item="Profile"
+          icon={<ion-icon name="settings-outline"></ion-icon>}
+        />
+        {/* Panier */}
+        <BtnHeader
+          url="/panier"
+          item="Panier"
+          icon={<ion-icon name="basket-outline"></ion-icon>}
+        />
+        {currentUser ? (
+          <>
+            <Link to="/addProduct">
+              <button className="btn-annonce">Vendre</button>
+            </Link>
+            <button className="btn-deconnexion" onClick={handleLogout}>
+              Déconnexion
+            </button>
+            <img src={currentUser.photoURL} alt="utilisateur" />
+          </>
+        ) : (
+          <>
+            <BtnHeader
+              url="/welcome"
+              item="Connexion"
+              icon={<ion-icon name="person-add-outline"></ion-icon>}
+            />
+            <Link to="/addProduct">
+              <button className="btn-annonce">Vendre</button>
+            </Link>
+          </>
+        )}
       </div>
     </div>
   );

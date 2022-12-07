@@ -8,7 +8,7 @@ const ProtectedRoute = ({ children }) => {
   const { currentUser } = useContext(UserContext);
 
   if (!currentUser) {
-    return <Navigate to="/home" />;
+    return <Navigate to="/welcome" />;
   }
   return <div>{children}</div>;
 };

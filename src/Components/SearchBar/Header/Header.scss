@@ -15,23 +15,11 @@
   align-items: center;
   color: black;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 1px 1px;
-  .container-btn {
-    box-sizing: border-box;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    ion-icon {
-      margin: 0 auto;
-      font-size: 20px;
-      color: #508ae2;
-    }
-    span {
-      font-size: 15px;
-      margin: 0 auto;
-    }
+  img {
+    border-radius: 50%;
+    width: 40px;
+    display: block;
+    margin: 0 5px;
   }
 }
 
@@ -39,7 +27,7 @@
 //-----------------------------// MEDIA QUERY //------------------------------//
 //----------------------------------------------------------------------------//
 
-@media (min-width: 755px) {
+@media #{$medium-up-880} {
   .container-header {
     display: none;
   }

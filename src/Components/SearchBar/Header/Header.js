@@ -1,33 +1,48 @@
 //---------------// Css
 import "./Header.scss";
 
-//---------------// Composent
-import BtnAcceuil from "../Btn-Header/BtnAcceuil";
-import BtnProfil from "../Btn-Header/BtnProfil";
-import BtnSale from "../Btn-Header/BtnSale";
 import BtnLogOut from "../Btn-Header/BtnLogOut";
-import BtnMessage from "../Btn-Header/BtnMessage";
-// import BtnSignIn from "../Btn-Header/BtnSignIn";
-// import BtnSignUp from "../Btn-Header/BtnSignUp";
+import BtnHeader from "../Btn-Header/BtnHeader";
 
 import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext";
 
 //---------------// Packages
-const Header = ({ setIsSearchBarexisting, isSearchBarexisting }) => {
+const Header = () => {
   const { currentUser } = useContext(UserContext);
 
   return (
     <div className="container-header">
-      <BtnAcceuil />
-      <BtnSale />
-      <BtnMessage />
-      {/* <BtnResearch
-        setIsSearchBarexisting={setIsSearchBarexisting}
-        isSearchBarexisting={isSearchBarexisting}
-      /> */}
-      <BtnProfil />
-      {currentUser && <BtnLogOut />}
+      {/* message */}
+      <BtnHeader
+        url="/message"
+        item="Message"
+        icon={<ion-icon name="mail-outline"></ion-icon>}
+      />
+      {/* Vendre */}
+      <BtnHeader
+        url="/addProduct"
+        item="Vendre"
+        icon={<ion-icon name="play-outline"></ion-icon>}
+      />
+      {/* Panier */}
+      <BtnHeader
+        url="/panier"
+        item="Panier"
+        icon={<ion-icon name="basket-outline"></ion-icon>}
+      />
+      {currentUser ? (
+        <>
+          <img src={currentUser.photoURL} alt="utilisateur" />
+          <BtnLogOut />
+        </>
+      ) : (
+        <BtnHeader
+          url="/welcome"
+          item="Connexion"
+          icon={<ion-icon name="person-add-outline"></ion-icon>}
+        />
+      )}
     </div>
   );
 };
