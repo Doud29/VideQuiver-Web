@@ -26,7 +26,6 @@
       box-sizing: border-box;
       button,
       .button {
-        // border-top: 2px solid red;
         box-sizing: border-box;
         width: 100%;
         height: 55px;
@@ -36,11 +35,10 @@
         border-top: none;
         border-left: none;
         border-right: none;
-        border-bottom: 0.5px solid grey;
+        border-bottom: 0.5px solid rgba(17, 17, 26, 0.3);
         background: white;
         padding-left: 10px;
         padding-right: 10px;
-        border-radius: $borderRadius;
       }
 
       label,
@@ -49,7 +47,8 @@
       }
       button:hover {
         cursor: pointer;
-        box-shadow: none;
+        border: none;
+        background: rgb(240, 237, 237);
       }
     }
   }
@@ -81,9 +80,12 @@
       max-width: 600px;
       background-color: white;
       box-sizing: border-box;
-      // .container-button {
-      //   border-radius: 8px;
-      // }
+      .bloc-header {
+        border-radius: $borderRadius;
+      }
+      .container-button {
+        border-radius: $borderRadius;
+      }
     }
   }
 }

@@ -32,7 +32,6 @@ const SearchBar = () => {
       <Link to="/home" style={{ textDecoration: "none" }}>
         <h2>VideQuiver</h2>
       </Link>
-
       <div className="container-input-glass">
         <input type="search" placeholder="Rechercher" />
         <div className="glass">
