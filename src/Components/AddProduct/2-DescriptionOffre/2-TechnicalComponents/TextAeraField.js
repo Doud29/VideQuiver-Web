@@ -1,17 +1,19 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../../../../Context/UserContext";
 
-const TexteAeraField = () => {
-  const { createOffer, setCreateOffer, ToggleModal } = useContext(UserContext);
+const TexteAeraField = ({ name, id, title }) => {
+  const { createOffer, setCreateOffer } = useContext(UserContext);
 
-  //------// connaitre le nombre de caractére restant
+  //STATE
+  const [inputLength, setInputLength] = useState("");
+  //LONGUEUR
   const numberOfCaractersDescription = (valueInput) => {
     let LongueurInput = valueInput.length;
     const Limit = 300;
     let result = Limit - LongueurInput;
     return result;
   };
-
+  //COLOR
   const getColorDescription = (valueInput) => {
     let InputLength = valueInput.length;
     let color = "";
@@ -22,35 +24,31 @@ const TexteAeraField = () => {
   };
 
   const handleCheckBox = (e) => {
-    if (e.target.value !== "") {
-      setTimeout(() => {
-        ToggleModal("closeAll");
-      }, 500);
-    }
-    setCreateOffer({ ...createOffer, DescriptionOffer: e.target.value });
+    let newObject = { ...createOffer };
+    let inputValue = e.target.value;
+    setCreateOffer({ ...newObject, [name]: inputValue });
+    setInputLength(inputValue);
   };
 
   return (
     <div className="container-input-span">
       <textarea
         type="text"
-        value={createOffer.DescriptionOffer}
         placeholder=" "
         onChange={(e) => handleCheckBox(e)}
-        name="description"
-        id="description"
+        name={name}
+        id={id}
         maxLength={300}
         autoComplete="off"
       />
-      <span className="descriptionSpan">Description de l'annonce</span>
+      <span className="descriptionSpan">{title}</span>
       <span
         className="numberCaracterstextaera"
         style={{
-          color: getColorDescription(createOffer.DescriptionOffer),
+          color: getColorDescription(inputLength),
         }}
       >
-        {numberOfCaractersDescription(createOffer.DescriptionOffer)} caractères
-        restants
+        {numberOfCaractersDescription(inputLength)} caractères restants
       </span>
     </div>
   );

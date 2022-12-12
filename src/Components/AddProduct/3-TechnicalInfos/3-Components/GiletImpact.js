@@ -10,8 +10,12 @@ const GiletImpact = () => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
+      {/* //---// Genre */}
+      <DropDown data={TechnicalValue.COMMUN.Genre} name="Genre" />
       {/* //---// Etat Taille */}
       <DropDown data={TechnicalValue.COMMUN.Taille} name="Taille" />
+      {/* //---// Genre */}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
     </div>
   );
 };

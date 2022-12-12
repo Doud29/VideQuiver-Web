@@ -1,4 +1,3 @@
-import "./BtnHeader.scss";
 import { Link } from "react-router-dom";
 
 const BtnHeader = ({ item, url, icon }) => {
@@ -9,12 +8,12 @@ const BtnHeader = ({ item, url, icon }) => {
   };
   return (
     <>
-      <Link to={url} style={styleBloc}>
-        <div className="bloc-logo-par">
-          {icon}
-          <span style={{ color: "black" }}>{item}</span>
-        </div>
-      </Link>
+      {/* <Link to={url} style={styleBloc}> */}
+      <button className="link">
+        {icon}
+        <span style={{ color: "black" }}>{item}</span>
+      </button>
+      {/* </Link> */}
     </>
   );
 };

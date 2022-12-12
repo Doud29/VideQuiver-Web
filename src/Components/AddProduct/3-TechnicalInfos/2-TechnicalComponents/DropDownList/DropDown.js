@@ -5,10 +5,11 @@ import { useState, useContext } from "react";
 import { UserContext } from "../../../../../Context/UserContext";
 
 const DropDown = ({ data, name }) => {
-  const [isActive, setIsActive] = useState(false);
   const [selected, setSelected] = useState("");
 
   const { addTechnicalData } = useContext(UserContext);
+
+  const [isActive, setIsActive] = useState(false);
 
   return (
     <div className="dropdown">

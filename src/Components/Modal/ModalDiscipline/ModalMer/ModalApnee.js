@@ -33,7 +33,7 @@ const ModalApnee = () => {
             onChange={handleCheckBox}
             id="Palmes polymères"
             name="Produit"
-            value="Palmes polymères d'apnée"
+            value="Palmes polymères"
           />
           <InputRadio
             type="radio"
@@ -45,30 +45,44 @@ const ModalApnee = () => {
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
+            id="Bouée et planche"
+            name="Produit"
+            value="Bouée et planche de chasse"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
+            id="Plomb et lestage"
+            name="Produit"
+            value="Plomb et lestage"
+          />
+          <InputRadio
+            type="radio"
+            onChange={handleCheckBox}
             id="Tubas"
             name="Produit"
-            value="Tubas d'apnée"
+            value="Tubas"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Masques"
             name="Produit"
-            value="Masques d'apnée"
+            value="Masques"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Accessoires"
             name="Produit"
-            value="Accessoires d'apnée"
+            value="Accessoires"
           />
           <InputRadio
             type="radio"
             onChange={handleCheckBox}
             id="Bagagerie"
             name="Produit"
-            value="Bagagerie Apnée"
+            value="Bagagerie"
           />
         </div>
       </div>

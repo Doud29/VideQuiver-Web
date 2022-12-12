@@ -12,7 +12,7 @@ const AccessoriesDescription = () => {
     <div className="container-description">
       <TitleTechnicalInformation />
       {/* //---// détails */}
-      <InputField
+      {/* <InputField
         type="text"
         name="Type d'acessoire"
         id="Type d'acessoire"
@@ -20,18 +20,9 @@ const AccessoriesDescription = () => {
         // onChange={onChange}
         placeholder=" "
         autoComplete="off"
-      />
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
+      /> */}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
       {/* //----// Marque*/}
-      <InputField
-        type="text"
-        name="Marque"
-        id="Marque"
-        // value={Marque}
-        // onChange={onChange}
-        placeholder=" "
-        autoComplete="off"
-      />
     </div>
   );
 };

@@ -12,8 +12,13 @@ const OfferDescription = () => {
     <div className="container-input-button">
       <TitleOfferDescription />
       <ButtonDiscipline />
-      <InputFieldSpan />
-      <TexteAeraField />
+      <InputFieldSpan id="model" name="Model" title="Modèle" />
+      <InputFieldSpan id="brand" name="Brand" title="Marque" />
+      <TexteAeraField
+        id="description"
+        name="offerDescription"
+        title="Description de l'annonce"
+      />
     </div>
   );
 };

@@ -23,7 +23,7 @@ export const UserContextProvider = (props) => {
 
   //state User
   const [currentUser, setCurrentUser] = useState({});
-  console.log(currentUser);
+  // console.log(currentUser);
   //inscription
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
@@ -333,8 +333,6 @@ export const UserContextProvider = (props) => {
 
   //state global pour ajouter les datas
   const [createOffer, setCreateOffer] = useState({
-    Model: "",
-    DescriptionOffer: "",
     userId: "",
     Price: "",
     Product: "",

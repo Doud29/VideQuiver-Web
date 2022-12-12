@@ -37,7 +37,7 @@ const ModalMer = () => {
           <CategorieButton modal="BodySurf" value="BodySurf" />
           <CategorieButton modal="Foil" value="Foil" />
           <CategorieButton modal="KiteSurf" value="KiteSurf" />
-          <CategorieButton modal="Neoprene" value="Néporene" />
+          <CategorieButton modal="Neoprene" value="Néoprene" />
           <CategorieButton modal="Surf" value="Surf" />
           <CategorieButton modal="SUP" value="SUP" />
           <CategorieButton modal="WindSurf" value="WindSurf" />

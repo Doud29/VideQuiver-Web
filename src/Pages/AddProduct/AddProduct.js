@@ -30,7 +30,9 @@ import LeashBodyBoardDescription from "../../Components/AddProduct/3-TechnicalIn
 import JacketDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/JacketDescription";
 import WetSuitDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/WetSuitDescription";
 import SocksDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/SocksDescription";
+import LycraDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/LycraDescription";
 import BalaclavaDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/BalaclavaDescription";
+import GlovesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/GlovesDescription";
 // import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
 //----------// Components
@@ -39,7 +41,7 @@ import SwitchSelection from "../../Components/AddProduct/5-SwicthSelection/Switc
 import OfferDescription from "../../Components/AddProduct/2-DescriptionOffre/OfferDescription";
 import AdditionalInformation from "../../Components/AddProduct/6-additional information/AdditionalInformation";
 import SubmitButton from "../../Components/AddProduct/7-SubmitButton/SubmitButton";
-import Footer from "../../Components/Footer/Footer";
+
 //---------// Context
 import { UserContext } from "../../Context/UserContext";
 //---------// packages
@@ -149,7 +151,7 @@ const AddProduct = () => {
           navigate("/home");
         }
       } catch (error) {
-        console.log(error);
+        console.log(error.message);
       }
     };
     uploadMultipleImagesAndAddOffer();
@@ -204,8 +206,7 @@ const AddProduct = () => {
           {createOffer.Product === "Gilet Impact de surf" && <GiletImpact />}
           {createOffer.Product === "Pad de surf" && <PadDescription />}
           {createOffer.Product === "Leash de surf" && <LeashDescription />}
-          {(createOffer.Product === "Accessoires de surf" ||
-            createOffer.Product === "Accessoires de bodyboard") && (
+          {createOffer.Product === "Accessoires de surf" && (
             <AccessoriesDescription />
           )}
           {createOffer.Product === "Bagagerie de surf" && (
@@ -225,42 +226,45 @@ const AddProduct = () => {
           {createOffer.Product === "Leash coil" && (
             <LeashBodyBoardDescription />
           )}
+          {createOffer.Product === "Accessoires de bodyboard" && (
+            <AccessoriesDescription />
+          )}
           {/*
 //-----------// Composents Neoprene */}
           {createOffer.Product === "Combinaison intégrale" && (
             <WetSuitDescription />
           )}
+          {createOffer.Product === "Combinaison shorty" && (
+            <WetSuitDescription />
+          )}
+          {createOffer.Product === "Long John" && <WetSuitDescription />}
+          {createOffer.Product === "Lycra / Top" && <LycraDescription />}
           {createOffer.Product === "Veste néopréne" && <JacketDescription />}
           {createOffer.Product === "Chaussons néopréne" && <SocksDescription />}
           {createOffer.Product === "Cagoules / Bonnets" && (
             <BalaclavaDescription />
           )}
-
+          {createOffer.Product === "Gants néopréne" && <GlovesDescription />}
           {/*
 //----------------------------------------------//  
 //-----------// Composents BodySurf //----------// 
 //----------------------------------------------//   */}
-
           {/*
 //----------------------------------------------//  
 //-----------// Composents Kite Surf //---------// 
 //----------------------------------------------//   */}
-
           {/*
 //----------------------------------------------//  
 //-----------// Composents Windsurf //----------// 
 //----------------------------------------------//   */}
-
           {/*
 //----------------------------------------------//  
 //--------// Composents StandUpPaddle //--------// 
 //----------------------------------------------//   */}
-
           {/*
 //----------------------------------------------//  
 //----------// Composents Apnée //--------------// 
 //----------------------------------------------//   */}
-
           {/* 
 //----------------------------------------------//  
 //------------------// MONTAGNE //--------------//

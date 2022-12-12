@@ -19,24 +19,14 @@ const LeashDescription = () => {
       {/* //---- Epaisseur */}
       <DropDown
         data={TechnicalValue.MER.Surf.Leash.Epaisseur}
-        name="Epaisseur"
+        name="Épaisseur"
       />
-      {/* //---- Etat */}
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
-
       {/* //----- Longueur*/}
       <DropDown data={TechnicalValue.MER.Surf.Leash.Longueur} name="Longueur" />
+      {/* //---- Etat */}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
 
       {/* //---- Marque */}
-      <InputField
-        type="text"
-        name="Marque"
-        id="Marque"
-        // value={Marque}
-        // onChange={onChange}
-        placeholder=" "
-        autoComplete="off"
-      />
     </div>
   );
 };

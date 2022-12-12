@@ -1,0 +1,29 @@
+@import "../../../sass/variables.scss";
+
+.container {
+  position: fixed;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 60px;
+  height: 50px;
+  z-index: 10;
+  border: 1px solid rgba(17, 17, 26, 0.1);
+  background: $backGroundComponent;
+  min-width: 320px;
+  padding-left: 15px;
+  button {
+    height: 100%;
+    width: 90px;
+    cursor: pointer;
+    background: $backGroundComponent;
+    border: none;
+    font-size: $fontSizeText;
+  }
+  button:hover {
+    background: $backgroundHover;
+  }
+  button:focus {
+    border-bottom: 2px solid $primeryColor;
+  }
+}

@@ -12,7 +12,7 @@ const CombinaisonDescription = () => {
     <div className="container-description">
       <TitleTechnicalInformation />
       {/* //---------// Epaisseur combinaisaon*/}
-      <DropDown data={TechnicalValue.MER.Néopréne.Epaisseur} name="Epaisseur" />
+      <DropDown data={TechnicalValue.MER.Néopréne.Epaisseur} name="Épaisseur" />
       {/* //-----------------// Zip combinaisaon*/}
       <DropDown data={TechnicalValue.MER.Néopréne.Fermeture} name="Fermeture" />
       {/* //-----------------// Taille combinaisaon*/}
@@ -20,17 +20,7 @@ const CombinaisonDescription = () => {
       {/* //-----------------// Genre */}
       <DropDown data={TechnicalValue.COMMUN.Genre} name="Genre" />
       {/* //-----------------// Etat*/}
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
-      {/* //---- Marque */}
-      <InputField
-        type="text"
-        name="Marque"
-        id="Marque"
-        // value={Marque}
-        // onChange={onChange}
-        placeholder=" "
-        autoComplete="off"
-      />
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
     </div>
   );
 };

@@ -85,15 +85,14 @@
       justify-content: space-evenly;
       align-items: center;
       box-sizing: border-box;
-      padding: 5px;
-      // border: #ea5454 1px solid;
       img {
         border-radius: 50%;
         width: 40px;
         display: block;
         margin: 0 5px;
       }
-      button {
+      .btn-annonce,
+      .btn-deconnexion {
         margin: 0 5px;
         box-shadow: $boxShadowBloc;
         height: 45px;
@@ -105,6 +104,7 @@
         border-radius: $borderRadius;
         cursor: pointer;
       }
+
       .btn-annonce {
         background: $primeryColor;
         color: $secondaryColor;
@@ -112,6 +112,40 @@
       .btn-deconnexion {
         background: #ea5454;
         color: $secondaryColor;
+      }
+
+      .link {
+        box-sizing: border-box;
+        height: 100%;
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        cursor: pointer;
+        background: $secondaryColor;
+        border: none;
+        ion-icon {
+          margin: 0 auto;
+          font-size: 20px;
+          color: $primeryColor;
+        }
+        span {
+          font-size: $fontSizeText;
+          margin: 0 auto;
+        }
+      }
+
+      .link:focus {
+        border-bottom: 2px solid $primeryColor;
+      }
+
+      .link:hover {
+        background: $backgroundHover;
+      }
+
+      .button:focus {
+        border-bottom: 2px solid $primeryColor;
       }
     }
   }

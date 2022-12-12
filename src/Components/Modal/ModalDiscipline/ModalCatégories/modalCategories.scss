@@ -2,7 +2,7 @@
 
 .container-modal {
   width: 100vw;
-  background: white;
+  // background: white;
   box-sizing: border-box;
   min-width: 320px;
   height: 100%;
@@ -19,7 +19,9 @@
   .modal {
     height: auto;
     width: 100%;
-    border-radius: $borderRadius;
+    ion-icon {
+      cursor: pointer;
+    }
     .container-button {
       height: auto;
       width: 100%;
@@ -32,18 +34,18 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        border-top: none;
+        border-bottom: none;
         border-left: none;
         border-right: none;
-        border-bottom: 0.5px solid rgba(17, 17, 26, 0.3);
-        background: white;
+        border-top: 1px solid rgba(17, 17, 26, 0.2);
+        background: none;
         padding-left: 10px;
         padding-right: 10px;
       }
 
       label,
       span {
-        font-size: 15px;
+        font-size: $fontSizeText;
       }
       button:hover {
         cursor: pointer;
@@ -78,13 +80,11 @@
       transform: translate(-50%, -50%);
       width: 50%;
       max-width: 600px;
-      background-color: white;
       box-sizing: border-box;
+      background: $secondaryColor;
+      border-radius: $borderRadius;
       .bloc-header {
-        border-radius: $borderRadius;
-      }
-      .container-button {
-        border-radius: $borderRadius;
+        background: none;
       }
     }
   }

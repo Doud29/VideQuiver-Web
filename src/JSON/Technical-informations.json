@@ -4,12 +4,6 @@
       "Planche de surf": {
         "Type": [
           {
-            "id": "Type-0",
-            "Theme": "Type de planche",
-            "content": " ",
-            "value": null
-          },
-          {
             "id": "Type-1",
             "Theme": "Type de planche",
             "content": "Je ne sais pas",
@@ -84,12 +78,6 @@
         ],
         "Materiaux": [
           {
-            "id": "matériaux-planche-surf-0",
-            "Theme": "matériaux",
-            "content": " ",
-            "value": null
-          },
-          {
             "id": "matériaux-planche-surf-1",
             "Theme": "Matériau",
             "content": "Je ne sais pas",
@@ -116,22 +104,10 @@
         ],
         "Marque": [
           {
-            "id": "marque-plance-surf-0",
-            "Theme": "Marque planche",
-            "content": " ",
-            "value": null
-          },
-          {
             "id": "marque-plance-surf-1",
             "Theme": "Marque planche",
             "content": "Je ne sais pas",
             "value": "Je ne sais pas"
-          },
-          {
-            "id": "marque-plance-surf-2",
-            "Theme": "Marque planche",
-            "content": "Local shaper",
-            "value": "Local shaper"
           },
           {
             "id": "marque-plance-surf-3",
@@ -361,12 +337,6 @@
       "Pad": {
         "Nombre de pièces": [
           {
-            "id": "nombre-de-pièces-0",
-            "Theme": "Nombre de pièces",
-            "content": " ",
-            "value": null
-          },
-          {
             "id": "nombre-de-pièces-1",
             "Theme": "Nombre de pièces",
             "content": "Je ne sais pas",
@@ -425,12 +395,6 @@
       "Leash": {
         "Type de maintien": [
           {
-            "id": "Maintien-leash0",
-            "Theme": "Maintien",
-            "content": " ",
-            "value": null
-          },
-          {
             "id": "Maintien-leash01",
             "Theme": "Maintien",
             "content": "Je ne sais pas",
@@ -450,12 +414,6 @@
           }
         ],
         "Epaisseur": [
-          {
-            "id": "Epaisseur-Leash-0",
-            "Theme": "Diamètre du leash",
-            "content": " ",
-            "value": null
-          },
           {
             "id": "Epaisseur-Leash-1",
             "Theme": "Diamètre du leash",
@@ -601,12 +559,6 @@
       "Bagagerie": {
         "Epaisseur-Bagagerie": [
           {
-            "id": "Epaisseur-Bagagerie-0",
-            "Theme": "Epaisseur bagagerie",
-            "content": " ",
-            "value": null
-          },
-          {
             "id": "Epaisseur-Bagagerie-1",
             "Theme": "Epaisseur bagagerie",
             "content": "Je ne sais pas",
@@ -670,12 +622,6 @@
         ],
         "Construction": [
           {
-            "id": "Construction-0",
-            "Theme": "Construction bagagerie",
-            "content": " ",
-            "value": null
-          },
-          {
             "id": "Construction-1",
             "Theme": "Construction bagagerie",
             "content": "Je ne sais pas",
@@ -699,12 +645,6 @@
     "BodyBoard": {
       "Planche de BodyBoard": {
         "Longueur": [
-          {
-            "id": "longueur-bodyboard-0",
-            "Theme": "Longueur",
-            "content": " ",
-            "value": null
-          },
           {
             "id": "longueur-bodyboard-01",
             "Theme": "Longueur",
@@ -797,16 +737,9 @@
           }
         ]
       },
-      "Palmes de BodyBoard": {},
       "Accessoires": {},
       "Bagagerie": {
         "Nombre de planche": [
-          {
-            "id": "nombre-de-planche-0",
-            "Theme": "nombre de planche",
-            "content": " ",
-            "value": null
-          },
           {
             "id": "nombre-de-planche-1",
             "Theme": "Nombre de planche",
@@ -842,12 +775,6 @@
     },
     "Néopréne": {
       "Marque": [
-        {
-          "id": "Marque-combinaison-0",
-          "Theme": "Marque combinaison",
-          "content": " ",
-          "value": null
-        },
         {
           "id": "Marque-combinaison-1",
           "Theme": "Marque combinaison",
@@ -1152,12 +1079,6 @@
 
       "Epaisseur": [
         {
-          "id": "Epaisseur-combinaison-0",
-          "Theme": "Epaisseur combinaison",
-          "content": " ",
-          "value": null
-        },
-        {
           "id": "Epaisseur-combinaison-2",
           "Theme": "Epaisseur combinaison",
           "content": "Je ne sais pas",
@@ -1209,12 +1130,6 @@
       ],
       "Fermeture": [
         {
-          "id": "Fermeture-0",
-          "Theme": "Fermeture",
-          "content": " ",
-          "value": null
-        },
-        {
           "id": "Fermeture-1",
           "Theme": "Fermeture",
           "content": "Je ne sais pas",
@@ -1240,12 +1155,6 @@
         }
       ],
       "Epaisseur Jacket": [
-        {
-          "id": "Epaisseur-Jacket-0",
-          "Theme": "Epaisseur Jacket",
-          "content": " ",
-          "value": null
-        },
         {
           "id": "Epaisseur-Jacket-1",
           "Theme": "Epaisseur Jacket",
@@ -1283,12 +1192,6 @@
   "COMMUN": {
     "Genre": [
       {
-        "id": "Genre-0",
-        "Theme": "Genre",
-        "content": " ",
-        "value": null
-      },
-      {
         "id": "Genre-1",
         "Theme": "Genre",
         "content": "Je ne sais pas",
@@ -1314,12 +1217,6 @@
       }
     ],
     "Etat": [
-      {
-        "id": "etat-0",
-        "Theme": "État",
-        "content": " ",
-        "value": null
-      },
       {
         "id": "etat-1",
         "Theme": "État",
@@ -1351,13 +1248,7 @@
         "value": "Mauvais Etat"
       }
     ],
-    "Longeur": [
-      {
-        "id": "longueur-0",
-        "Theme": "Longueur",
-        "content": " ",
-        "value": null
-      },
+    "Longueur": [
       {
         "id": "longueur-01",
         "Theme": "Longueur",
@@ -1790,12 +1681,6 @@
       {
         "id": "Largeur-0",
         "Theme": "Largeur",
-        "content": " ",
-        "value": null
-      },
-      {
-        "id": "Largeur-0",
-        "Theme": "Largeur",
         "content": "Je ne sais pas",
         "value": "Je ne sais pas"
       },
@@ -2138,12 +2023,6 @@
     ],
     "Epaisseur": [
       {
-        "id": "Epaisseur-0",
-        "Theme": "Èpaisseur",
-        "content": " ",
-        "value": null
-      },
-      {
         "id": "Epaisseur-1",
         "Theme": "Èpaisseur",
         "content": "Je ne sais pas",
@@ -2372,13 +2251,7 @@
         "value": "4 7/8 - 12.54 cm"
       }
     ],
-    "Litrage": [
-      {
-        "id": "volume-0",
-        "Theme": "Volume",
-        "content": " ",
-        "value": null
-      },
+    "Volume": [
       {
         "id": "volume-01",
         "Theme": "Volume",
@@ -2682,12 +2555,6 @@
     ],
     "Taille": [
       {
-        "id": "Taille-0",
-        "Theme": "Taille",
-        "content": " ",
-        "value": null
-      },
-      {
         "id": "Taille-01",
         "Theme": "Taille",
         "content": "Je ne sais pas",
@@ -2702,14 +2569,14 @@
       {
         "id": "Taille-3",
         "Theme": "Taille",
-        "content": "XS/S",
-        "value": "XS/S"
+        "content": "S",
+        "value": "S"
       },
       {
         "id": "Taille-4",
         "Theme": "Taille",
-        "content": "S",
-        "value": "S"
+        "content": "MS",
+        "value": "MS"
       },
       {
         "id": "Taille-5",
@@ -2732,23 +2599,11 @@
       {
         "id": "Taille-8",
         "Theme": "Taille",
-        "content": "XXLS",
-        "value": "XXLS"
-      },
-      {
-        "id": "Taille-9",
-        "Theme": "Taille",
         "content": "XXL",
         "value": "XXL"
       }
     ],
     "Construction": [
-      {
-        "id": "construction-derives-1",
-        "Theme": "construction",
-        "content": "",
-        "value": null
-      },
       {
         "id": "construction-derives-2",
         "Theme": "construction",
@@ -2780,13 +2635,7 @@
         "value": "Soft (souple)"
       }
     ],
-    "Accessory": [
-      {
-        "id": "Accessory-0",
-        "Theme": "Accessoires",
-        "content": "",
-        "value": null
-      },
+    "Accessoires": [
       {
         "id": "Accessory-1",
         "Theme": "Accessoires",
@@ -2825,12 +2674,6 @@
       }
     ],
     "Configuration ailerons": [
-      {
-        "id": "configuration-0",
-        "Theme": "Configuration",
-        "content": " ",
-        "value": null
-      },
       {
         "id": "configuration-01",
         "Theme": "Configuration",
@@ -2882,12 +2725,6 @@
     ],
     "Boitier": [
       {
-        "id": "Boitier-dérives0",
-        "Theme": "Boitier",
-        "content": " ",
-        "value": null
-      },
-      {
         "id": "Boitier-dérives1",
         "Theme": "Boitier",
         "content": "Je ne sais pas",
@@ -2938,12 +2775,6 @@
     ],
     "Niveau": [
       {
-        "id": "Level-0",
-        "Theme": "niveau requis",
-        "content": " ",
-        "value": null
-      },
-      {
         "id": "Level-1",
         "Theme": "Niveau requis",
         "content": "Débutant",
@@ -2975,12 +2806,6 @@
       }
     ],
     "Pointure": [
-      {
-        "id": "taille-pied-0",
-        "Theme": "Pointure",
-        "content": " ",
-        "value": null
-      },
       {
         "id": "taille-pied-1",
         "Theme": "Pointure",

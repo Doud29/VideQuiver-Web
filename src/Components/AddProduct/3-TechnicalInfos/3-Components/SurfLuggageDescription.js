@@ -32,12 +32,12 @@ const SurfLuggageDescription = () => {
       {/* //---// Epaisseur */}
       <DropDown
         data={TechnicalValue.MER.Surf.Bagagerie["Epaisseur-Bagagerie"]}
-        name="Epaisseur Bagagerie"
+        name="Épaisseur Bagagerie"
       />
       {/* //---// Etat */}
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="état" />
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
       {/* //---// Marque */}
-      <InputField
+      {/* <InputField
         type="text"
         name="Marque"
         id="Marque"
@@ -45,7 +45,7 @@ const SurfLuggageDescription = () => {
         // onChange={onChange}
         placeholder=" "
         autoComplete="off"
-      />
+      /> */}
     </div>
   );
 };

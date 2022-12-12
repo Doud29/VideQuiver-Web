@@ -22,17 +22,8 @@ const BodyBoardLuggageDescription = () => {
         name="Nombre de planche"
       />
       {/* //---// Etat */}
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="état" />
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
       {/* //---- Marque */}
-      <InputField
-        type="text"
-        name="Marque"
-        id="Marque"
-        // value={Marque}
-        // onChange={onChange}
-        placeholder=" "
-        autoComplete="off"
-      />
     </div>
   );
 };

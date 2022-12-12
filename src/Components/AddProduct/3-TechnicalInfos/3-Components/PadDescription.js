@@ -20,18 +20,9 @@ const PadDescription = () => {
         name="Nombre de pièce"
       />
       {/* //---- Etat */}
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
 
       {/* //---- Marque */}
-      <InputField
-        type="text"
-        name="Marque"
-        id="Marque"
-        // value={Marque}
-        // onChange={onChange}
-        placeholder=" "
-        autoComplete="off"
-      />
     </div>
   );
 };

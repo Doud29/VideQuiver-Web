@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { UserContext } from "../../../../Context/UserContext";
 
-const InputFieldSpan = () => {
-  const { createOffer, setCreateOffer, ToggleModal } = useContext(UserContext);
+const InputFieldSpan = ({ id, name, title }) => {
+  const { createOffer, setCreateOffer } = useContext(UserContext);
 
-  //------// fonction pour afficher le nombre de caractere restant dans l'input Modèle
+  //STATE
+  const [inputLength, setInputLength] = useState("");
+  //LONGUEUR
   const numberOfCaractersModel = (valueInput) => {
     let LongueurInput = valueInput.length;
     const Limit = 40;
@@ -12,7 +14,7 @@ const InputFieldSpan = () => {
     return result;
   };
 
-  //------// fonction la couleur de l'input si maximum de caractére est atteinds
+  //COLOR
   const getColor = (valueInput) => {
     let InputLength = valueInput.length;
     let color1 = "";
@@ -23,12 +25,10 @@ const InputFieldSpan = () => {
   };
 
   const handleCheckBox = (e) => {
-    if (e.target.value !== "") {
-      setTimeout(() => {
-        ToggleModal("closeAll");
-      }, 500);
-    }
-    setCreateOffer({ ...createOffer, Model: e.target.value });
+    let newObject = { ...createOffer };
+    let inputValue = e.target.value;
+    setCreateOffer({ ...newObject, [name]: inputValue });
+    setInputLength(inputValue);
   };
 
   return (
@@ -37,20 +37,19 @@ const InputFieldSpan = () => {
         type="text"
         placeholder=" "
         onChange={(e) => handleCheckBox(e)}
-        value={createOffer.Model}
-        id="model"
-        name="model"
+        id={id}
+        name={name}
         autoComplete="off"
         maxLength={40}
       />
-      <span className="modèleSpan">Modèle</span>
+      <span className="modèleSpan">{title}</span>
       <span
         className="numberCaracters"
         style={{
-          color: getColor(createOffer.Model),
+          color: getColor(inputLength),
         }}
       >
-        {numberOfCaractersModel(createOffer.Model)} caractères restants
+        {numberOfCaractersModel(inputLength)} caractères restants
       </span>
     </div>
   );

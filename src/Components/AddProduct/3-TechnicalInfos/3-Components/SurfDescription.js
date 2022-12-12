@@ -1,26 +1,23 @@
 //CSS
 import "../DescriptionProduit.scss";
 
-//--------------// Surf description css
-import "../DescriptionProduit.scss";
+import { useState } from "react";
 
 //--------------// Composent
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
 import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../JSON/Technical-informations.json";
-import InputField from "../2-TechnicalComponents/InputField/InputField";
-
+// import InputField from "../2-TechnicalComponents/InputField/InputField";
+// import { UserContext } from "../../../../Context/UserContext";
+// import { useContext } from "react";
 const SurfDescription = () => {
   //add + check + update technical data Inputdata
+
+  // const { createOffer } = useContext(UserContext);
 
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
-      {/* //---- Type de Planche */}
-      <DropDown
-        data={TechnicalValue.MER.Surf["Planche de surf"].Marque}
-        name="Marque planche"
-      />
       {/* //---- Type de Planche */}
       <DropDown
         data={TechnicalValue.MER.Surf["Planche de surf"].Type}
@@ -31,8 +28,7 @@ const SurfDescription = () => {
         data={TechnicalValue.MER.Surf["Planche de surf"].Materiaux}
         name="Materiaux"
       />
-      {/* //---- Etat */}
-      <DropDown data={TechnicalValue.COMMUN.Etat} name="Etat" />
+
       {/* //---- Level */}
       <DropDown data={TechnicalValue.COMMUN.Niveau} name="Niveau requis" />
       {/* //---- Boitier dérives */}
@@ -44,18 +40,20 @@ const SurfDescription = () => {
       />
       {/* //---- Volume */}
       <DropDown
-        data={TechnicalValue.COMMUN.Litrage}
+        data={TechnicalValue.COMMUN.Volume}
         name="Volume de la planche"
       />
       {/* //---- Longueur */}
-      <DropDown data={TechnicalValue.COMMUN.Longeur} name="Longueur planche" />
+      <DropDown data={TechnicalValue.COMMUN.Longueur} name="Longueur planche" />
       {/* //---- Largeur */}
       <DropDown data={TechnicalValue.COMMUN.Largeur} name="Largeur planche" />
       {/* //---- Epaisseur */}
       <DropDown
         data={TechnicalValue.COMMUN.Epaisseur}
-        name="Epaisseur planche"
+        name="Épaisseur planche"
       />
+      {/* //---- Etat */}
+      <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
       {/* //---- Marque */}
       {/* <InputField
         type="text"
