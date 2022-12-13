@@ -21,6 +21,35 @@
     display: block;
     margin: 0 5px;
   }
+  .link {
+    box-sizing: border-box;
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    background: $secondaryColor;
+    border: none;
+    ion-icon {
+      margin: 0 auto;
+      font-size: 20px;
+      color: $primeryColor;
+    }
+    span {
+      font-size: $fontSizeText;
+      margin: 0 auto;
+    }
+  }
+
+  .link:hover {
+    background: $backgroundHover;
+  }
+
+  button:focus {
+    border-top: 2px solid $primeryColor;
+  }
 }
 
 //----------------------------------------------------------------------------//

@@ -21,7 +21,7 @@ const SurfLuggageDescription = () => {
       />
       {/* //---// Longueur */}
       <DropDown
-        data={TechnicalValue.COMMUN.Longeur}
+        data={TechnicalValue.COMMUN.Longueur}
         name="Longueur de la housse"
       />
       {/* //---// Largeur */}

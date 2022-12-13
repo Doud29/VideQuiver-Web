@@ -35,6 +35,12 @@ import BalaclavaDescription from "../../Components/AddProduct/3-TechnicalInfos/3
 import GlovesDescription from "../../Components/AddProduct/3-TechnicalInfos/3-Components/GlovesDescription";
 // import InformationsComplémentaire from "../../Components/InformationsComplementaire/InformationsComplémentaire";
 import HeaderAddProduct from "../../Components/AddProduct/0-HeaderAddProduct/HeaderAddProduct";
+//----------// Technical KiteSurf
+import TwinTip from "../../Components/AddProduct/3-TechnicalInfos/3-Components/KiteSurf/TwinTip";
+import Aile from "../../Components/AddProduct/3-TechnicalInfos/3-Components/KiteSurf/Aile";
+import Barre from "../../Components/AddProduct/3-TechnicalInfos/3-Components/KiteSurf/Barre";
+import Harnais from "../../Components/AddProduct/3-TechnicalInfos/3-Components/KiteSurf/Harnais";
+
 //----------// Components
 import DragnDrop from "../../Components/AddProduct/1-DrapNDrop/DragnDrop";
 import SwitchSelection from "../../Components/AddProduct/5-SwicthSelection/SwitchSelection";
@@ -71,90 +77,147 @@ const AddProduct = () => {
 
   //---// Navigate
   const navigate = useNavigate();
-
+  // console.log(errorMessage);
   //---// fonction pour soumetre la demande de vente et location
   const SubmitOffer = (e) => {
     // setIsOfferUpload(true);
     // setTimeout(() => {
     //   setIsOfferUpload(false);
     // }, 5000);
+
+    // console.log(createOffer);
+
     e.preventDefault();
+    //MESSAGE ERREUR DESCRIPTION OFFRE
     if (createOffer.sell === false && createOffer.rent === false) {
-      setErrorMessage("* S'agit-il d'une vente ou d'une location?");
-      return;
+      return setErrorMessage("* S'agit-il d'une vente ou d'une location?");
     }
-    if (createOffer.Product === " ") {
-      setErrorMessage("* Vous devez choisir un produit");
-      return;
+    if (!createOffer.Product) {
+      return setErrorMessage("* Veuillez renseinger un produit");
     }
-    if (createOffer.Model === " ") {
-      setErrorMessage("* Vous avez oubliez le modèle");
-      return;
+    if (!createOffer.Model) {
+      return setErrorMessage("* Veuillez renseinger un modèle");
     }
-    if (createOffer.DescriptionOffer === " ") {
-      setErrorMessage("* Veuillez Décrire votre produit");
-      return;
+    if (!createOffer.Brand) {
+      return setErrorMessage("* Veuillez renseinger une marque");
     }
+    if (!createOffer.offerDescription) {
+      return setErrorMessage("* Veuillez Décrire votre produit");
+    }
+    //MESSAGE ERREUR INFORMATIONS TECHNIQUES
+    //PLANCHE DE SURF
     if (
-      createOffer["technical informations"].length !== 11 &&
+      createOffer["Technical informations"].length !== 10 &&
       createOffer.Product === "Planche de Surf"
     ) {
-      setErrorMessage("* Informations techniques incomplétes");
-      return;
+      return setErrorMessage("* Informations techniques manquantes");
     }
-    if (createOffer.Price === " ") {
-      setErrorMessage("* Veuillez renseigner le prix");
-      return;
+    //DERIVES - LEASH DE SURF - VESTE NEOPRENE - AILE
+    if (
+      createOffer["Technical informations"].length !== 4 &&
+      (createOffer.Product === "Dérives de surf" ||
+        createOffer.Product === "Leash de surf" ||
+        createOffer.Product === "Veste néopréne" ||
+        createOffer.Product === "Aile de Kite Surf" ||
+        createOffer.Product === "Harnais de Kite Surf")
+    ) {
+      return setErrorMessage("* Informations techniques manquantes");
+    }
+    //PAD DE SURF - PALMES DE BODYBOARD
+    if (
+      createOffer["Technical informations"].length !== 2 &&
+      (createOffer.Product === "Pad de surf" ||
+        createOffer.Product === "Palmes de bodyboard")
+    ) {
+      return setErrorMessage("* Informations techniques manquantes");
+    }
+    //GILET IMPACT - LYCRA - CHAUSSONS - BONNETS - PlANCHE DE BODYBOARD - BAGAGERIE BODYBOARD
+    if (
+      createOffer["Technical informations"].length !== 3 &&
+      (createOffer.Product === "Gilet Impact de surf" ||
+        createOffer.Product === "Lycra / Top" ||
+        createOffer.Product === "Chaussons néopréne" ||
+        createOffer.Product === "Cagoules / Bonnets" ||
+        createOffer.Product === "Gants néopréne" ||
+        createOffer.Product === "Planche de bodyboard" ||
+        createOffer.Product === "Bagagerie de bodyboard")
+    ) {
+      return setErrorMessage("* Informations techniques manquantes");
+    }
+    //ACCESSOIRES DE SURF - LEASH BODY BOARD - BARRE DE KITE
+    if (
+      createOffer["Technical informations"].length !== 1 &&
+      (createOffer.Product === "Accessoires de surf" ||
+        createOffer.Product === "Leash coil" ||
+        createOffer.Product === "Accessoires de bodyboard" ||
+        createOffer.Product === "Barre de Kite Surf")
+    ) {
+      return setErrorMessage("* Informations techniques manquantes");
+    }
+    //BAGAGERIE DE SURF - COMBINAISON - TWINTIP
+    if (
+      createOffer["Technical informations"].length !== 5 &&
+      (createOffer.Product === "Bagagerie de surf" ||
+        createOffer.Product === "Combinaison intégrale" ||
+        createOffer.Product === "Combinaison shorty" ||
+        createOffer.Product === "Long John" ||
+        createOffer.Product === "Twin-Tip de Kite Surf")
+    ) {
+      return setErrorMessage("* Informations techniques manquantes");
+    }
+
+    if (!createOffer.Price) {
+      return setErrorMessage("* Veuillez renseigner le prix");
     }
     //---//upload on firebase
     if (imageUpload === null) {
-      setErrorMessage("* Veuillez sélcetionner une photo");
-      return;
+      return setErrorMessage("* Veuillez sélectionner au moins une photo");
+      // return;
     }
     //----//UPLOAD ON FIREBASE
-    const uploadMultipleImagesAndAddOffer = async () => {
-      const newObj = { ...createOffer };
-      try {
-        //UPLOAD IMAGE
-        for (let i = 0; i < imageUpload.length; i++) {
-          console.log(imageUpload[i]);
-          let file = imageUpload[i];
-          // REF DB FIREBASE
-          const imageRef = ref(
-            storage,
-            `Images/${currentUser.uid}/${createOffer.Product}/${file.name}`
-          );
-          // SNAPSHOT
-          const snapshot = await uploadBytes(imageRef, file);
-          //URL FIREBASE
-          const downloadURL = await getDownloadURL(snapshot.ref);
-          // console.log(downloadURL);
-          newObj.urls.push(downloadURL);
-        }
-        console.log(newObj);
-        console.log("images envoyées");
-        // SELL
-        if (newObj.sell === true && newObj.rent === false) {
-          console.log("condition de vente respecté");
-          await addDoc(newProductForSellCollectionRef, newObj);
-          console.log("data sell envoyé");
-          setErrorMessage("");
-          // navigate("/home");
-        }
-        console.log("annoncé déposé");
-        //RENT
-        if (newObj.sell === false && newObj.rent === true) {
-          await addDoc(newProductForRentCollectionRef, newObj);
-          // window.location.reload(false);
-          // console.log("data rent envoyé");
-          // setIsOfferUpload(true);
-          navigate("/home");
-        }
-      } catch (error) {
-        console.log(error.message);
-      }
-    };
-    uploadMultipleImagesAndAddOffer();
+    // const uploadMultipleImagesAndAddOffer = async () => {
+    //   const newObj = { ...createOffer };
+    //   try {
+    //     //UPLOAD IMAGE
+    //     for (let i = 0; i < imageUpload.length; i++) {
+    //       console.log(imageUpload[i]);
+    //       let file = imageUpload[i];
+    //       // REF DB FIREBASE
+    //       const imageRef = ref(
+    //         storage,
+    //         `Images/${currentUser.uid}/${createOffer.Product}/${file.name}`
+    //       );
+    //       // SNAPSHOT
+    //       const snapshot = await uploadBytes(imageRef, file);
+    //       //URL FIREBASE
+    //       const downloadURL = await getDownloadURL(snapshot.ref);
+    //       // console.log(downloadURL);
+    //       newObj.urls.push(downloadURL);
+    //     }
+    //     console.log(newObj);
+    //     console.log("images envoyées");
+    //     // SELL
+    //     if (newObj.sell === true && newObj.rent === false) {
+    //       console.log("condition de vente respecté");
+    //       await addDoc(newProductForSellCollectionRef, newObj);
+    //       console.log("data sell envoyé");
+    //       setErrorMessage("");
+    //       // navigate("/home");
+    //     }
+    //     console.log("annoncé déposé");
+    //     //RENT
+    //     if (newObj.sell === false && newObj.rent === true) {
+    //       await addDoc(newProductForRentCollectionRef, newObj);
+    //       // window.location.reload(false);
+    //       // console.log("data rent envoyé");
+    //       // setIsOfferUpload(true);
+    //       navigate("/home");
+    //     }
+    //   } catch (error) {
+    //     console.log(error.message);
+    //   }
+    // };
+    // uploadMultipleImagesAndAddOffer();
   };
 
   return (
@@ -253,10 +316,15 @@ const AddProduct = () => {
 //----------------------------------------------//  
 //-----------// Composents Kite Surf //---------// 
 //----------------------------------------------//   */}
+          {createOffer.Product === "Twin-Tip de Kite Surf" && <TwinTip />}
+          {createOffer.Product === "Aile de Kite Surf" && <Aile />}
+          {createOffer.Product === "Barre de Kite Surf" && <Barre />}
+          {createOffer.Product === "Harnais de Kite Surf" && <Harnais />}
           {/*
 //----------------------------------------------//  
 //-----------// Composents Windsurf //----------// 
 //----------------------------------------------//   */}
+
           {/*
 //----------------------------------------------//  
 //--------// Composents StandUpPaddle //--------// 

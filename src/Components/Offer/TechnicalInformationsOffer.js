@@ -16,7 +16,7 @@ const TechnicalInformationsOffer = ({ data }) => {
         return (
           <div key={index} className="container-span">
             <span style={{ fontWeight: "600", marginRight: "5px" }}>
-              {infos.Type} :{" "}
+              {infos.Type} :
             </span>
             <span>{infos.valeur}</span>
           </div>

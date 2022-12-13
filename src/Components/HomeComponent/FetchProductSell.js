@@ -15,6 +15,7 @@ const FetchProductSell = () => {
   const navigate = useNavigate();
 
   const [data, setdata] = useState([]);
+  console.log(data);
   const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
@@ -53,7 +54,6 @@ const FetchProductSell = () => {
           </div>
         </div>
       ) : (
-        // </div>
         <>
           {data.map((data, index) => {
             return (

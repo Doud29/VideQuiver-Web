@@ -1,8 +1,8 @@
 //---------------// Css
 import "./Header.scss";
 
-import BtnLogOut from "../Btn-Header/BtnLogOut";
-import BtnHeader from "../Btn-Header/BtnHeader";
+// import BtnLogOut from "../Btn-Header/BtnLogOut";
+import BtnHeader from "./Btn-Header/BtnHeader";
 
 import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext";
@@ -34,7 +34,11 @@ const Header = () => {
       {currentUser ? (
         <>
           <img src={currentUser.photoURL} alt="utilisateur" />
-          <BtnLogOut />
+          <BtnHeader
+            url="/home"
+            item="Out"
+            icon={<ion-icon name="log-out-outline"></ion-icon>}
+          />
         </>
       ) : (
         <BtnHeader

@@ -6,8 +6,7 @@ import ImagesSlider from "../../Components/Offer/ImagesSlider";
 import Informations from "../../Components/Offer/Information";
 import TechnicalInformationsOffer from "../../Components/Offer/TechnicalInformationsOffer";
 import DescriptionOffer from "../../Components/Offer/DescriptionOffer";
-import Footer from "../../Components/Footer/Footer";
-import Header from "../../Components/SearchBar/SearchBar";
+import Header from "../../Components/Header/HeaderTop/SearchBar";
 import Paiement from "../../Components/Offer/Paiement";
 //PACKAGEs
 import { Oval } from "react-loader-spinner";
@@ -33,7 +32,7 @@ const Offer = () => {
         setData(response.data());
         setIsloading(true);
       } catch (error) {
-        console.log(error);
+        console.log(error.message);
       }
     };
     getOneProduct();

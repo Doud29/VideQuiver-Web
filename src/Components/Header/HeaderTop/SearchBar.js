@@ -3,9 +3,9 @@ import "./SearchBar.scss";
 
 //--// Composent
 import { useContext } from "react";
-import { UserContext } from "../../Context/UserContext";
-import BtnHeader from "./Btn-Header/BtnHeader";
-import Container from "./Catégories/container";
+import { UserContext } from "../../../Context/UserContext";
+import BtnHeader from "../HeaderBottom/Btn-Header/BtnHeader";
+import Container from "../Catégories/container";
 // import BtnAcceuil from "./Btn-Header/BtnAcceuil";
 // import BtnProfil from "./Btn-Header/BtnProfil";
 // import BtnSale from "./Btn-Header/BtnSale";

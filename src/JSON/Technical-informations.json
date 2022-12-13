@@ -654,90 +654,89 @@
           {
             "id": "longueur-bodyboard-2",
             "Theme": "Longueur",
-            "content": "36 pouces - 91.44 cm",
-            "value": "36 pouces - 91.44 cm"
+            "content": "36\" - 91.44 cm",
+            "value": "36\" - 91.44 cm"
           },
           {
             "id": "longueur-bodyboard-3",
             "Theme": "Longueur",
-            "content": "37 pouces - 93.98 cm",
-            "value": "37 pouces - 93.98 cm"
+            "content": "37\" - 93.98 cm",
+            "value": "37\" - 93.98 cm"
           },
           {
             "id": "longueur-bodyboard-4",
             "Theme": "Longueur",
-            "content": "38 pouces - 96,52 cm",
-            "value": "38 pouces - 96,52 cm"
+            "content": "38\" - 96,52 cm",
+            "value": "38\" - 96,52 cm"
           },
           {
             "id": "longueur-bodyboard-5",
             "Theme": "Longueur",
-            "content": "39 pouces - 99,06 cm",
-            "value": "39 pouces - 99,06 cm"
+            "content": "39\" - 99,06 cm",
+            "value": "39\" - 99,06 cm"
           },
           {
             "id": "longueur-bodyboard-6",
             "Theme": "Longueur",
-            "content": "40 pouces - 101,6 cm",
-            "value": "40 pouces - 101,6 cm"
+            "content": "40\" - 101,6 cm",
+            "value": "40\" - 101,6 cm"
           },
           {
             "id": "longueur-bodyboard-7",
             "Theme": "Longueur",
-            "content": "40.5 pouces - 102,87 cm",
-            "value": "40.5 pouces - 102,87 cm"
+            "content": "40.5\" - 102,87 cm",
+            "value": "40.5\" - 102,87 cm"
           },
           {
             "id": "longueur-bodyboard-8",
             "Theme": "Longueur",
-            "content": "41 pouces - 104,14 cm",
-            "value": "41 pouces - 104,14 cm"
+            "content": "41\" - 104,14 cm",
+            "value": "41\" - 104,14 cm"
           },
           {
             "id": "longueur-bodyboard-9",
             "Theme": "Longueur",
-            "content": "41.5 pouces - 105,41 cm",
-            "value": "41.5 pouces - 105,41 cm"
+            "content": "41.5\" - 105,41 cm",
+            "value": "41.5\" - 105,41 cm"
           },
           {
             "id": "longueur-bodyboard-10",
             "Theme": "Longueur",
-            "content": "42 pouces - 106,68 cm",
-            "value": "42 pouces - 106,68 cm"
+            "content": "42\" - 106,68 cm",
+            "value": "42\" - 106,68 cm"
           },
           {
             "id": "longueur-bodyboard-11",
             "Theme": "Longueur",
-            "content": "42.5 pouces - 107,95 cm",
-            "value": "42.5 pouces - 107,95 cm"
+            "content": "42.5\" - 107,95 cm",
+            "value": "42.5\" - 107,95 cm"
           },
           {
             "id": "longueur-bodyboard-12",
             "Theme": "Longueur",
-            "content": "43 pouces - 109,22 cm",
-            "value": "43 pouces - 109,22 cm"
+            "content": "43\" - 109,22 cm",
+            "value": "43\" - 109,22 cm"
           },
           {
             "id": "longueur-bodyboard-13",
             "Theme": "Longueur",
-            "content": "44 pouces - 111,76 cm",
-            "value": "44 pouces - 111,76 cm"
+            "content": "44\" - 111,76 cm",
+            "value": "44\" - 111,76 cm"
           },
           {
             "id": "longueur-bodyboard-14",
             "Theme": "Longueur",
-            "content": "45 pouces - 114,3 cm",
-            "value": "45 pouces - 114,3 cm"
+            "content": "45\" - 114,3 cm",
+            "value": "45\" - 114,3 cm"
           },
           {
             "id": "longueur-bodyboard-15",
             "Theme": "Longueur",
-            "content": "46 pouces - 116,84 cm",
-            "value": "46 pouces - 116,84 cm"
+            "content": "46\" - 116,84 cm",
+            "value": "46\" - 116,84 cm"
           }
         ]
       },
-      "Accessoires": {},
       "Bagagerie": {
         "Nombre de planche": [
           {
@@ -1187,6 +1186,674 @@
           "value": "5 mm"
         }
       ]
+    },
+    "KiteSurf": {
+      "TwinTip": {
+        "Programme": [
+          {
+            "id": "Programme-1",
+            "Theme": "Programme",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "Programme-2",
+            "Theme": "Programme",
+            "content": "Freestyle",
+            "value": "Freestyle"
+          },
+          {
+            "id": "Programme-3",
+            "Theme": "Programme",
+            "content": "Freeride",
+            "value": "Freeride"
+          },
+          {
+            "id": "Programme-4",
+            "Theme": "Programme",
+            "content": "Downwind",
+            "value": "Downwind"
+          },
+          {
+            "id": "Programme-5",
+            "Theme": "Programme",
+            "content": "Lightwind",
+            "value": "Lightwind"
+          }
+        ],
+        "Largeur": [
+          {
+            "id": "Largeur-1",
+            "Theme": "Largeur",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "Largeur-2",
+            "Theme": "Largeur",
+            "content": "15\"23/64 - 39 cm",
+            "value": "15\"23/64 - 39 cm"
+          },
+          {
+            "id": "Largeur-3",
+            "Theme": "Largeur",
+            "content": "15\"3/4 - 40 cm",
+            "value": "15\"3/4 - 40 cm"
+          },
+          {
+            "id": "Largeur-4",
+            "Theme": "Largeur",
+            "content": "15\"15/16 - 40.5 cm",
+            "value": "15\"15/16 - 40.5 cm"
+          },
+          {
+            "id": "Largeur-5",
+            "Theme": "Largeur",
+            "content": "15\"9/64 - 41 cm",
+            "value": "15\"9/64 - 41 cm"
+          },
+          {
+            "id": "Largeur-5",
+            "Theme": "Largeur",
+            "content": "16\"11/32 - 41.5 cm",
+            "value": "16\"11/32 - 41.5 cm"
+          },
+          {
+            "id": "Largeur-6",
+            "Theme": "Largeur",
+            "content": "16\"17/32 - 42 cm",
+            "value": "16\"17/32 - 42 cm"
+          },
+          {
+            "id": "Largeur-7",
+            "Theme": "Largeur",
+            "content": "16\"47/64 - 42.5 cm",
+            "value": "16\"47/64 - 42.5 cm"
+          },
+          {
+            "id": "Largeur-8",
+            "Theme": "Largeur",
+            "content": "16\"59/64 - 43 cm",
+            "value": "16\"59/64 - 43 cm"
+          },
+          {
+            "id": "Largeur-9",
+            "Theme": "Largeur",
+            "content": "17\"21/64 - 44 cm",
+            "value": "17\"21/64 - 44 cm"
+          },
+          {
+            "id": "Largeur-10",
+            "Theme": "Largeur",
+            "content": "17\"33/64 - 44.5 cm",
+            "value": "17\"33/64 - 44.5 cm"
+          },
+          {
+            "id": "Largeur-11",
+            "Theme": "Largeur",
+            "content": "17\"59/64 - 45 cm",
+            "value": "17\"59/64 - 45 cm"
+          },
+          {
+            "id": "Largeur-12",
+            "Theme": "Largeur",
+            "content": "17\"29/32 - 45.5 cm",
+            "value": "17\"29/32 - 45.5 cm"
+          },
+          {
+            "id": "Largeur-13",
+            "Theme": "Largeur",
+            "content": "18\"7/64 - 46 cm",
+            "value": "18\"7/64 - 46 cm"
+          },
+          {
+            "id": "Largeur-14",
+            "Theme": "Largeur",
+            "content": "18\"5/16 - 46.5 cm",
+            "value": "18\"5/16 - 46.5 cm"
+          },
+          {
+            "id": "Largeur-15",
+            "Theme": "Largeur",
+            "content": "18\"1/2 - 47 cm",
+            "value": "18\"1/2 - 47 cm"
+          }
+        ],
+        "Longueur": [
+          {
+            "id": "Longueur-1",
+            "Theme": "Longueur",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "Longueur-2",
+            "Theme": "Longueur",
+            "content": "50\"25/64 - 128 cm",
+            "value": "50\"25/64 - 128 cm"
+          },
+          {
+            "id": "Longueur-3",
+            "Theme": "Longueur",
+            "content": "50\"25/32 - 129 cm",
+            "value": "50\"25/32 - 129 cm"
+          },
+          {
+            "id": "Longueur-4",
+            "Theme": "Longueur",
+            "content": "51\"3/16 - 130 cm",
+            "value": "51\"3/16 - 130 cm"
+          },
+          {
+            "id": "Longueur-5",
+            "Theme": "Longueur",
+            "content": "51\"37/64 - 131 cm",
+            "value": "51\"37/64 - 131 cm"
+          },
+          {
+            "id": "Longueur-6",
+            "Theme": "Longueur",
+            "content": "51\"31/32 - 132 cm",
+            "value": "51\"31/32 - 132 cm"
+          },
+          {
+            "id": "Longueur-7",
+            "Theme": "Longueur",
+            "content": "52\"23/64 - 133 cm",
+            "value": "52\"23/64 - 133 cm"
+          },
+          {
+            "id": "Longueur-8",
+            "Theme": "Longueur",
+            "content": "52\"3/4 - 134 cm",
+            "value": "52\"3/4 - 134 cm"
+          },
+          {
+            "id": "Longueur-9",
+            "Theme": "Longueur",
+            "content": "53\"5/32 - 135 cm",
+            "value": "53\"5/32 - 135 cm"
+          },
+          {
+            "id": "Longueur-10",
+            "Theme": "Longueur",
+            "content": "53\"35/64 - 136 cm",
+            "value": "53\"35/64 - 136 cm"
+          },
+          {
+            "id": "Longueur-11",
+            "Theme": "Longueur",
+            "content": "53\"15/16 - 137 cm",
+            "value": "53\"15/16 - 137 cm"
+          },
+          {
+            "id": "Longueur-12",
+            "Theme": "Longueur",
+            "content": "54\"21/65 - 138 cm",
+            "value": "54\"21/65 - 138 cm"
+          },
+          {
+            "id": "Longueur-13",
+            "Theme": "Longueur",
+            "content": "54\"23/32 - 139 cm",
+            "value": "54\"23/32 - 139 cm"
+          },
+          {
+            "id": "Longueur-14",
+            "Theme": "Longueur",
+            "content": "55\"1/8 - 140 cm",
+            "value": "55\"1/8 - 140 cm"
+          },
+          {
+            "id": "Longueur-15",
+            "Theme": "Longueur",
+            "content": "55\"33/64 - 141 cm",
+            "value": "55\"33/64 - 141 cm"
+          },
+          {
+            "id": "Longueur-16",
+            "Theme": "Longueur",
+            "content": "55\"29/32 - 142 cm",
+            "value": "55\"29/32 - 142 cm"
+          },
+          {
+            "id": "Longueur-17",
+            "Theme": "Longueur",
+            "content": "56\"19/64 - 143 cm",
+            "value": "56\"19/64 - 143 cm"
+          },
+          {
+            "id": "Longueur-18",
+            "Theme": "Longueur",
+            "content": "56\"11/16 - 144 cm",
+            "value": "56\"11/16 - 144 cm"
+          },
+          {
+            "id": "Longueur-19",
+            "Theme": "Longueur",
+            "content": "57\"3/32 - 145 cm",
+            "value": "57\"3/32 - 145 cm"
+          },
+          {
+            "id": "Longueur-20",
+            "Theme": "Longueur",
+            "content": "57\"31/64 - 146 cm",
+            "value": "57\"31/64 - 146 cm"
+          },
+          {
+            "id": "Longueur-21",
+            "Theme": "Longueur",
+            "content": "57\"7/8 - 147 cm",
+            "value": "57\"7/8 - 147 cm"
+          },
+          {
+            "id": "Longueur-22",
+            "Theme": "Longueur",
+            "content": "58\"17/64 - 148 cm",
+            "value": "58\"17/64 - 148 cm"
+          },
+          {
+            "id": "Longueur-23",
+            "Theme": "Longueur",
+            "content": "58\"21/32 - 149 cm",
+            "value": "58\"21/32 - 149 cm"
+          },
+          {
+            "id": "Longueur-24",
+            "Theme": "Longueur",
+            "content": "59\"1/16 - 150 cm",
+            "value": "59\"1/16 - 150 cm"
+          },
+          {
+            "id": "Longueur-25",
+            "Theme": "Longueur",
+            "content": "59\"29/64 - 151 cm",
+            "value": "59\"29/64 - 151 cm"
+          },
+          {
+            "id": "Longueur-26",
+            "Theme": "Longueur",
+            "content": "59\"27/32 - 152 cm",
+            "value": "59\"27/32 - 152 cm"
+          },
+          {
+            "id": "Longueur-27",
+            "Theme": "Longueur",
+            "content": "60\"15/64 - 153 cm",
+            "value": "60\"15/64 - 153 cm"
+          },
+          {
+            "id": "Longueur-28",
+            "Theme": "Longueur",
+            "content": "60\"5/8 - 154 cm",
+            "value": "60\"5/8 - 154 cm"
+          },
+          {
+            "id": "Longueur-29",
+            "Theme": "Longueur",
+            "content": "61\"1/32 - 155 cm",
+            "value": "61\"1/32 - 155 cm"
+          },
+          {
+            "id": "Longueur-30",
+            "Theme": "Longueur",
+            "content": "61\"27/64 - 156 cm",
+            "value": "61\"27/64 - 156 cm"
+          },
+          {
+            "id": "Longueur-31",
+            "Theme": "Longueur",
+            "content": "61\"13/16 - 157 cm",
+            "value": "61\"13/16 - 157 cm"
+          },
+          {
+            "id": "Longueur-32",
+            "Theme": "Longueur",
+            "content": "61\"13/64 - 158 cm",
+            "value": "61\"13/64 - 158 cm"
+          },
+          {
+            "id": "Longueur-33",
+            "Theme": "Longueur",
+            "content": "62\"19/32 - 159 cm",
+            "value": "62\"19/32 - 159 cm"
+          },
+          {
+            "id": "Longueur-34",
+            "Theme": "Longueur",
+            "content": "62\"63/64 - 160 cm",
+            "value": "62\"63/64 - 160 cm"
+          },
+          {
+            "id": "Longueur-35",
+            "Theme": "Longueur",
+            "content": "63\"25/64 - 161 cm",
+            "value": "63\"25/64 - 161 cm"
+          },
+          {
+            "id": "Longueur-36",
+            "Theme": "Longueur",
+            "content": "63\"25/32 - 162 cm",
+            "value": "63\"25/32 - 162 cm"
+          },
+          {
+            "id": "Longueur-37",
+            "Theme": "Longueur",
+            "content": "64\"11/64 - 163 cm",
+            "value": "64\"11/64 - 163 cm"
+          },
+          {
+            "id": "Longueur-38",
+            "Theme": "Longueur",
+            "content": "64\"9/16 - 164 cm",
+            "value": "64\"9/16 - 164 cm"
+          }
+        ]
+      },
+      "Aile": {
+        "Surface": [
+          {
+            "id": "SurfaceAile-1",
+            "Theme": "SurfaceAile",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "SurfaceAile-2",
+            "Theme": "SurfaceAile",
+            "content": "3.5 m²",
+            "value": "3.5 m²"
+          },
+          {
+            "id": "SurfaceAile-3",
+            "Theme": "SurfaceAile",
+            "content": "4 m²",
+            "value": "4 m²"
+          },
+          {
+            "id": "SurfaceAile-4",
+            "Theme": "SurfaceAile",
+            "content": "4.5 m²",
+            "value": "4.5 m²"
+          },
+          {
+            "id": "SurfaceAile-5",
+            "Theme": "SurfaceAile",
+            "content": "5 m²",
+            "value": "5 m²"
+          },
+          {
+            "id": "SurfaceAile-6",
+            "Theme": "SurfaceAile",
+            "content": "5.5 m²",
+            "value": "5.5 m²"
+          },
+          {
+            "id": "SurfaceAile-7",
+            "Theme": "SurfaceAile",
+            "content": "6 m²",
+            "value": "6 m²"
+          },
+          {
+            "id": "SurfaceAile-8",
+            "Theme": "SurfaceAile",
+            "content": "6.5 m²",
+            "value": "6.5 m²"
+          },
+          {
+            "id": "SurfaceAile-9",
+            "Theme": "SurfaceAile",
+            "content": "7 m²",
+            "value": "7 m²"
+          },
+          {
+            "id": "SurfaceAile-10",
+            "Theme": "SurfaceAile",
+            "content": "7.5 m²",
+            "value": "7.5 m²"
+          },
+          {
+            "id": "SurfaceAile-11",
+            "Theme": "SurfaceAile",
+            "content": "8 m²",
+            "value": "8 m²"
+          },
+          {
+            "id": "SurfaceAile-12",
+            "Theme": "SurfaceAile",
+            "content": "8.5 m²",
+            "value": "8.5 m²"
+          },
+          {
+            "id": "SurfaceAile-13",
+            "Theme": "SurfaceAile",
+            "content": "9 m²",
+            "value": "9 m²"
+          },
+          {
+            "id": "SurfaceAile-14",
+            "Theme": "SurfaceAile",
+            "content": "9.5 m²",
+            "value": "9.5 m²"
+          },
+          {
+            "id": "SurfaceAile-15",
+            "Theme": "SurfaceAile",
+            "content": "10 m²",
+            "value": "10 m²"
+          },
+          {
+            "id": "SurfaceAile-16",
+            "Theme": "SurfaceAile",
+            "content": "10.5 m²",
+            "value": "10.5 m²"
+          },
+          {
+            "id": "SurfaceAile-17",
+            "Theme": "SurfaceAile",
+            "content": "11 m²",
+            "value": "11 m²"
+          },
+          {
+            "id": "SurfaceAile-17",
+            "Theme": "SurfaceAile",
+            "content": "11.5 m²",
+            "value": "11.5 m²"
+          },
+          {
+            "id": "SurfaceAile-19",
+            "Theme": "SurfaceAile",
+            "content": "12 m²",
+            "value": "12 m²"
+          },
+          {
+            "id": "SurfaceAile-20",
+            "Theme": "SurfaceAile",
+            "content": "12.5 m²",
+            "value": "12.5 m²"
+          },
+          {
+            "id": "SurfaceAile-21",
+            "Theme": "SurfaceAile",
+            "content": "13 m²",
+            "value": "13 m²"
+          },
+          {
+            "id": "SurfaceAile-22",
+            "Theme": "SurfaceAile",
+            "content": "13.5 m²",
+            "value": "13.5 m²"
+          },
+          {
+            "id": "SurfaceAile-23",
+            "Theme": "SurfaceAile",
+            "content": "14 m²",
+            "value": "14 m²"
+          },
+          {
+            "id": "SurfaceAile-24",
+            "Theme": "SurfaceAile",
+            "content": "14.5 m²",
+            "value": "14.5 m²"
+          },
+          {
+            "id": "SurfaceAile-25",
+            "Theme": "SurfaceAile",
+            "content": "15 m²",
+            "value": "15 m²"
+          },
+          {
+            "id": "SurfaceAile-26",
+            "Theme": "SurfaceAile",
+            "content": "15.5 m²",
+            "value": "15.5 m²"
+          },
+          {
+            "id": "SurfaceAile-27",
+            "Theme": "SurfaceAile",
+            "content": "16 m²",
+            "value": "16 m²"
+          },
+          {
+            "id": "SurfaceAile-28",
+            "Theme": "SurfaceAile",
+            "content": "16.5 m²",
+            "value": "16.5 m²"
+          },
+          {
+            "id": "SurfaceAile-29",
+            "Theme": "SurfaceAile",
+            "content": "17 m²",
+            "value": "17 m²"
+          },
+          {
+            "id": "SurfaceAile-30",
+            "Theme": "SurfaceAile",
+            "content": "17.5 m²",
+            "value": "17.5 m²"
+          },
+          {
+            "id": "SurfaceAile-31",
+            "Theme": "SurfaceAile",
+            "content": "18.5 m²",
+            "value": "18.5 m²"
+          },
+          {
+            "id": "SurfaceAile-32",
+            "Theme": "SurfaceAile",
+            "content": "19 m²",
+            "value": "19 m²"
+          },
+          {
+            "id": "SurfaceAile-33",
+            "Theme": "SurfaceAile",
+            "content": "19.5 m²",
+            "value": "19.5 m²"
+          },
+          {
+            "id": "SurfaceAile-34",
+            "Theme": "SurfaceAile",
+            "content": "20 m²",
+            "value": "20 m²"
+          },
+          {
+            "id": "SurfaceAile-35",
+            "Theme": "SurfaceAile",
+            "content": "20.5 m²",
+            "value": "20.5 m²"
+          },
+          {
+            "id": "SurfaceAile-36",
+            "Theme": "SurfaceAile",
+            "content": "21 m²",
+            "value": "21 m²"
+          },
+          {
+            "id": "SurfaceAile-37",
+            "Theme": "SurfaceAile",
+            "content": "21.5 m²",
+            "value": "21.5 m²"
+          },
+          {
+            "id": "SurfaceAile-38",
+            "Theme": "SurfaceAile",
+            "content": "22 m²",
+            "value": "22 m²"
+          },
+          {
+            "id": "SurfaceAile-39",
+            "Theme": "SurfaceAile",
+            "content": "22.5 m²",
+            "value": "22.5 m²"
+          },
+          {
+            "id": "SurfaceAile-40",
+            "Theme": "SurfaceAile",
+            "content": "23 m²",
+            "value": "23 m²"
+          }
+        ],
+        "Programme": [
+          {
+            "id": "Programme-1",
+            "Theme": "Programme",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "Programme-2",
+            "Theme": "Programme",
+            "content": "Allround",
+            "value": "Allround"
+          },
+          {
+            "id": "Programme-3",
+            "Theme": "Programme",
+            "content": "Freeride",
+            "value": "Freeride"
+          },
+          {
+            "id": "Programme-4",
+            "Theme": "Programme",
+            "content": "Freestyle",
+            "value": "Freestyle"
+          },
+          {
+            "id": "Programme-5",
+            "Theme": "Programme",
+            "content": "Lightwind",
+            "value": "Lightwind"
+          },
+          {
+            "id": "Programme-6",
+            "Theme": "Programme",
+            "content": "Hangtime",
+            "value": "Hangtime"
+          }
+        ]
+      },
+      "Harnais": {
+        "Maintien": [
+          {
+            "id": "Maintien-Harnais01",
+            "Theme": "Maintien",
+            "content": "Je ne sais pas",
+            "value": "Je ne sais pas"
+          },
+          {
+            "id": "Maintien-Harnais02",
+            "Theme": "Maintien",
+            "content": "Dorsal",
+            "value": "Dorsal"
+          },
+          {
+            "id": "Maintien-Harnais03",
+            "Theme": "Maintien",
+            "content": "Sous Cutale",
+            "value": "Sous Cutale"
+          }
+        ]
+      }
     }
   },
   "COMMUN": {

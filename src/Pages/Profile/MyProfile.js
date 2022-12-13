@@ -5,8 +5,8 @@ import Sells from "../../Components/Profile/01-Component/Sells";
 import Purchase from "../../Components/Profile/01-Component/Purchase";
 import Assistance from "../../Components/Profile/01-Component/Assistance";
 import Headerprofile from "../../Components/Profile/HeaderProfile";
-import Header from "../../Components/SearchBar/Header/Header";
-import SearchBar from "../../Components/SearchBar/SearchBar";
+import Header from "../../Components/Header/HeaderTop/SearchBar";
+import SearchBar from "../../Components/Header/HeaderBottom/Header";
 
 const MyProfile = () => {
   return (
