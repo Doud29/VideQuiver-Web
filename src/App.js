@@ -1,10 +1,7 @@
-//------------// CSS
 import "./App.scss";
 
-//------------// Packages
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-//------------// Components and Pages
 import Intro from "./Pages/Intro/Intro.js";
 import Home from "./Pages/Home/Home.js";
 import SignIn from "./Pages/SignIn/SignIn.js";
@@ -14,7 +11,9 @@ import AddProduct from "./Pages/AddProduct/AddProduct";
 import ProtectedRoute from "./Pages/Protected/ProtectedRoute";
 import Offer from "./Pages/Offer/Offer";
 import MyProfile from "./Pages/Profile/MyProfile";
+
 import { UserContextProvider } from "./Context/UserContext";
+
 import Footer from "./Components/Footer/Footer";
 
 function App() {

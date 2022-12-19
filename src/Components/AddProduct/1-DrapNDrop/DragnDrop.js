@@ -11,7 +11,6 @@ const DragnDrop = ({ imageUpload, setImageUpload }) => {
 
   //DISPLAY-IMAGES
   const [displayImages, setDisplayImages] = useState([]);
-  // console.log(displayImages);
   //LIMIT IMAGES
   const NumberOfImages = (longueur) => {
     let lengthArray = longueur;

@@ -13,9 +13,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { Oval } from "react-loader-spinner";
 const FetchProductSell = () => {
   const navigate = useNavigate();
-
   const [data, setdata] = useState([]);
-  console.log(data);
   const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {

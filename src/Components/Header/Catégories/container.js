@@ -5,6 +5,8 @@ import BtnContainer from "./Btn-Container/BtnContainer";
 const Container = () => {
   return (
     <div className="container">
+      <BtnContainer title="Location" />
+      <BtnContainer title="Vente" />
       <BtnContainer title="Mer" />
       <BtnContainer title="Montagne" />
       <BtnContainer title="Air" />

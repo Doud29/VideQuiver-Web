@@ -49,7 +49,6 @@ const Home = () => {
         {/* <Infos /> */}
         <h3>Fil d'actualités</h3>
         <FetchProductSell />
-        <h3>Nouveautés location</h3>
       </div>
     </div>
   );

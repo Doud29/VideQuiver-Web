@@ -61,33 +61,24 @@ import { storage } from "../../firebase-config";
 import { ref, uploadBytes, getDownloadURL } from "firebase/storage";
 
 const AddProduct = () => {
-  //----// Erro MESSAGE
+  //ERROR MESSAGE
   const [errorMessage, setErrorMessage] = useState([]);
   //DISPLAY IMAGES
   const [imageUpload, setImageUpload] = useState([]);
-  //UPLOAD OFFER
-  // const [isOfferUpload, setIsOfferUpload] = useState(false);
-  //---// CONTEXT
+  //CONTEXT
   const { openModalState, createOffer, currentUser, setCreateOffer } =
     useContext(UserContext);
-
-  //---//REF DB FIRESTORE
+  //REF DB FIRESTORE
   const newProductForSellCollectionRef = collection(db, "newOfferForSell");
-  const newProductForRentCollectionRef = collection(db, "newOfferForRent");
-
-  //---// Navigate
+  //NAVIGATE
   const navigate = useNavigate();
-  // console.log(errorMessage);
-  //---// fonction pour soumetre la demande de vente et location
+  //SOUMISSION
   const SubmitOffer = (e) => {
-    // setIsOfferUpload(true);
-    // setTimeout(() => {
-    //   setIsOfferUpload(false);
-    // }, 5000);
-
-    // console.log(createOffer);
-
     e.preventDefault();
+    //IMAGE
+    if (imageUpload === null) {
+      return setErrorMessage("* Veuillez sélectionner au moins une photo");
+    }
     //MESSAGE ERREUR DESCRIPTION OFFRE
     if (createOffer.sell === false && createOffer.rent === false) {
       return setErrorMessage("* S'agit-il d'une vente ou d'une location?");
@@ -169,55 +160,38 @@ const AddProduct = () => {
     if (!createOffer.Price) {
       return setErrorMessage("* Veuillez renseigner le prix");
     }
-    //---//upload on firebase
-    if (imageUpload === null) {
-      return setErrorMessage("* Veuillez sélectionner au moins une photo");
-      // return;
-    }
+
     //----//UPLOAD ON FIREBASE
-    // const uploadMultipleImagesAndAddOffer = async () => {
-    //   const newObj = { ...createOffer };
-    //   try {
-    //     //UPLOAD IMAGE
-    //     for (let i = 0; i < imageUpload.length; i++) {
-    //       console.log(imageUpload[i]);
-    //       let file = imageUpload[i];
-    //       // REF DB FIREBASE
-    //       const imageRef = ref(
-    //         storage,
-    //         `Images/${currentUser.uid}/${createOffer.Product}/${file.name}`
-    //       );
-    //       // SNAPSHOT
-    //       const snapshot = await uploadBytes(imageRef, file);
-    //       //URL FIREBASE
-    //       const downloadURL = await getDownloadURL(snapshot.ref);
-    //       // console.log(downloadURL);
-    //       newObj.urls.push(downloadURL);
-    //     }
-    //     console.log(newObj);
-    //     console.log("images envoyées");
-    //     // SELL
-    //     if (newObj.sell === true && newObj.rent === false) {
-    //       console.log("condition de vente respecté");
-    //       await addDoc(newProductForSellCollectionRef, newObj);
-    //       console.log("data sell envoyé");
-    //       setErrorMessage("");
-    //       // navigate("/home");
-    //     }
-    //     console.log("annoncé déposé");
-    //     //RENT
-    //     if (newObj.sell === false && newObj.rent === true) {
-    //       await addDoc(newProductForRentCollectionRef, newObj);
-    //       // window.location.reload(false);
-    //       // console.log("data rent envoyé");
-    //       // setIsOfferUpload(true);
-    //       navigate("/home");
-    //     }
-    //   } catch (error) {
-    //     console.log(error.message);
-    //   }
-    // };
-    // uploadMultipleImagesAndAddOffer();
+    const uploadMultipleImagesAndAddOffer = async () => {
+      let newObj = { ...createOffer };
+      try {
+        //UPLOAD IMAGE
+        for (let i = 0; i < imageUpload.length; i++) {
+          console.log(imageUpload[i]);
+          let file = imageUpload[i];
+          // REF DB FIREBASE
+          const imageRef = ref(
+            storage,
+            `Images/${currentUser.uid}/${newObj.Product}/${newObj.name}`
+          );
+          // SNAPSHOT
+          const snapshot = await uploadBytes(imageRef, file);
+          //URL FIREBASE
+          const downloadURL = await getDownloadURL(snapshot.ref);
+          // console.log(downloadURL);
+          newObj.urls.push(downloadURL);
+        }
+        // SELL AND RENT
+        await addDoc(newProductForSellCollectionRef, newObj);
+        console.log("data sell envoyé");
+        setErrorMessage("");
+        navigate("/home");
+        console.log("annoncé déposé");
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    uploadMultipleImagesAndAddOffer();
   };
 
   return (

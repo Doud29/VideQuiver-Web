@@ -8,7 +8,7 @@ const DescriptionOffer = ({ data }) => {
         <h3>Description annonce</h3>
       </div>
       <div className="container-p">
-        <p>{data.DescriptionOffer}</p>
+        <p>{data.offerDescription}</p>
       </div>
     </div>
   );

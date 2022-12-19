@@ -27,12 +27,12 @@ const SignIn = () => {
   };
 
   //Reset password
-  const handleReset = async () => {
-    try {
-      const reset = await resetPassword(inputsRef.current[0].value);
-      console.log(reset);
-    } catch (error) {}
-  };
+  // const handleReset = async () => {
+  //   try {
+  //     const reset = await resetPassword(inputsRef.current[0].value);
+  //     console.log(reset);
+  //   } catch (error) {}
+  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -102,7 +102,7 @@ const SignIn = () => {
             fontSize: "12px",
             marginTop: "10px",
           }}
-          onClick={handleReset}
+          // onClick={handleReset}
         >
           Mot de passe oublié?
         </div>
