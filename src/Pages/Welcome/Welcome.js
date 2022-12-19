@@ -1,11 +1,13 @@
-//--------------// Css
+//Css
 import "./welcome.scss";
-//--------------// Components
+
+//COMPONENTS
 import { UserContext } from "../../Context/UserContext";
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router";
 import HeaderConnexion from "../../Components/Connexion/HeaderConnexion";
-//--------------// packages
+
+//PACKAGES
 import { Link } from "react-router-dom";
 
 const Welcome = () => {
@@ -17,6 +19,7 @@ const Welcome = () => {
   const handleGoogle = async () => {
     try {
       await connectGoogleUser();
+      navigate("/home");
     } catch (error) {
       console.dir(error.message);
     }
@@ -26,7 +29,7 @@ const Welcome = () => {
     if (currentUser !== null) {
       navigate("/home");
     }
-  }, [currentUser]);
+  }, [currentUser, navigate]);
 
   return (
     <div className="container-welcome">

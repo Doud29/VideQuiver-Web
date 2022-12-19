@@ -5,16 +5,6 @@ import "./imagesSlider.scss";
 const ImagesSlider = ({ slides }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // console.log(slides);
-
-  const arrowLeft = {
-    color: "blue",
-    fontSize: "40px",
-    position: "absolute",
-    width: "40px",
-    border: "2px solid red",
-  };
-
   return (
     <div className="container-carroussel">
       <div
@@ -29,10 +19,8 @@ const ImagesSlider = ({ slides }) => {
           currentIndex < slides.length - 1 && setCurrentIndex(currentIndex + 1)
         }
       >
-        {" "}
         <ion-icon name="chevron-forward-outline"></ion-icon>{" "}
       </div>
-
       <div
         className="carrousselIner"
         style={{
@@ -40,7 +28,6 @@ const ImagesSlider = ({ slides }) => {
         }}
       ></div>
       <div className="container-dot">
-        {" "}
         {slides.map((slides, index) => {
           return (
             <div

@@ -1,30 +1,25 @@
-//--------------// Surf description css
+//CSS
 import "../DescriptionProduit.scss";
 
-//--------------// Composent
+//COMPONENTS
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
 import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../JSON/Technical-informations.json";
-import InputField from "../2-TechnicalComponents/InputField/InputField";
 
 const DerivesDescription = () => {
   return (
     <div className="container-description">
       <TitleTechnicalInformation />
-      {/* //----// Boitier derives*/}
       <DropDown
         data={TechnicalValue.COMMUN.Boitier}
         name="Système de dérives"
       />
-      {/* //----// type dérives*/}
       <DropDown
         data={TechnicalValue.COMMUN["Configuration ailerons"]}
         name="Configuration"
       />
       <DropDown data={TechnicalValue.COMMUN.Construction} name="Construction" />
-      {/* //---// Etat derives */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
-      {/* //----// Marque*/}
     </div>
   );
 };

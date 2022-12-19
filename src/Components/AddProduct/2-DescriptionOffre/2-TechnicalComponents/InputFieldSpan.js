@@ -1,9 +1,9 @@
+//CONTEXT
 import { useContext, useState } from "react";
 import { UserContext } from "../../../../Context/UserContext";
 
 const InputFieldSpan = ({ id, name, title }) => {
   const { createOffer, setCreateOffer } = useContext(UserContext);
-
   //STATE
   const [inputLength, setInputLength] = useState("");
   //LONGUEUR

@@ -1,4 +1,4 @@
-//--------------// packages
+//PACKAGES
 import { Link } from "react-router-dom";
 
 const HeaderConnexion = ({ title, previous }) => {

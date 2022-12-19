@@ -1,3 +1,6 @@
+// CSS
+import "./InputPriceInformation.scss";
+
 const InputAdditionalInformations = ({ onChange, value, name, type }) => {
   return (
     <div className="inputdiv">

@@ -1,5 +1,6 @@
 //CSS
 import "./footer.scss";
+
 //COMPONENTS
 import BlocTop from "./BlocTop";
 import BlocMiddle from "./BlocMiddle";

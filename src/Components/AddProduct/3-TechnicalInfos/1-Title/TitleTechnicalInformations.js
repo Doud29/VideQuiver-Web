@@ -1,3 +1,4 @@
+//CSS
 import "./titleTechnicalsInformations.scss";
 
 const TitleTechnicalInformation = () => {

@@ -1,14 +1,10 @@
-//-----------// CSS
+//CSS
 import "./dragnDrop.scss";
-//--------------// packages
-// import { useDropzone } from "react-dropzone";
+
+//REACT
 import React, { useState } from "react";
-import { useContext } from "react";
-import { UserContext } from "../../../Context/UserContext";
 
-const DragnDrop = ({ imageUpload, setImageUpload }) => {
-  const { setCreateOffer, currentUser } = useContext(UserContext);
-
+const DragnDrop = ({ setImageUpload }) => {
   //DISPLAY-IMAGES
   const [displayImages, setDisplayImages] = useState([]);
   //LIMIT IMAGES
@@ -80,8 +76,6 @@ const DragnDrop = ({ imageUpload, setImageUpload }) => {
           })}
         </>
       ) : null}
-
-      {/* <div className="addPhoto"></div> */}
     </div>
   );
 };

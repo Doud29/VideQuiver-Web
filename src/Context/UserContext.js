@@ -8,61 +8,41 @@ import {
   GoogleAuthProvider,
   signInWithRedirect,
   updateProfile,
-  // updatePhoneNumber,
 } from "firebase/auth";
+
 import { auth } from "../firebase-config";
-//création du context
+
 export const UserContext = createContext();
 
-//création du provider [composant d'ordre supérieur] qui va pouvoir lui même retourné le usercontext.provider.
-//Celui qui va apporter le contenu les données à tout ceux qu'il va entouré. En l'occurence props.children
 export const UserContextProvider = (props) => {
-  //-------------------------------------------------------//
-  //--------------------// Connexion //--------------------//
-  //-------------------------------------------------------//
-
-  //state User
   const [currentUser, setCurrentUser] = useState({});
-  // console.log(currentUser);
-  //inscription
+
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
-  //Pseudo utilisateur
   const completeProfile = (obj) => {
     return updateProfile(auth.currentUser, obj);
   };
-  //connexion avec Google
   const connectGoogleUser = () => {
-    //Instance de l'objet fournisseur google
     const provider = new GoogleAuthProvider();
     return signInWithRedirect(auth, provider);
   };
-  //connexion avec email User
   const connectUser = (email, password) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
-  //déconnexion
   const logout = () => {
     return signOut(auth);
   };
-  //reset password
   const resetPassword = (password) => {
     return sendPasswordResetEmail(auth, password);
   };
-  //observateur
+
   useEffect(() => {
     const unscribe = onAuthStateChanged(auth, (currentUser) => {
       setCurrentUser(currentUser);
     });
     return unscribe;
   }, []);
-
-  //--------------------------------------------------//
-  //---------------// Toggle Modaux //----------------//
-  //--------------------------------------------------//
-
-  //-------// State pour ouvrir et fermer les modals modal
 
   const [openModalState, setOpenModalState] = useState({
     modalCategorie: false,
@@ -327,11 +307,6 @@ export const UserContextProvider = (props) => {
     }
   };
 
-  //-------------------------------------------------------//
-  //-----------------// Data add Product //----------------//
-  //-------------------------------------------------------//
-
-  //state global pour ajouter les datas
   const [createOffer, setCreateOffer] = useState({
     userId: "",
     Price: "",
@@ -339,31 +314,24 @@ export const UserContextProvider = (props) => {
     urls: [],
     sell: false,
     rent: false,
-    ["Technical informations"]: [],
-    userName: "",
+    technicalInformations: [],
   });
 
-  console.log(createOffer);
-
-  //add + check + update technical data forDropdownList
   const addTechnicalData = (value, Theme) => {
-    //copie du state
-    let newOffer = { ...createOffer };
-    //on récupére nos valeurs dans une varibale
-    let ObjAdded = { valeur: value, Type: Theme };
-    //on vérifie que nos valeurs
-    let index = newOffer["Technical informations"].findIndex(
+    const newOffer = { ...createOffer };
+    const ObjAdded = { valeur: value, Type: Theme };
+    const index = newOffer.technicalInformations.findIndex(
       (obj) => obj.Type === Theme
     );
-    //si l'obj n'existe pas, on push
+
     if (index === -1) {
-      newOffer["Technical informations"].push(ObjAdded);
-      //si l'obj existe, on supprime l'existant et on push le nouvel
-    } else if (index !== -1) {
-      newOffer["Technical informations"].splice(index, 1);
-      newOffer["Technical informations"].push(ObjAdded);
+      newOffer.technicalInformations.push(ObjAdded);
+    } else {
+      newOffer.technicalInformations.splice(index, 1);
+      newOffer.technicalInformations.push(ObjAdded);
     }
-    //MAJ state
+
+    // MAJ du state offer
     setCreateOffer(newOffer);
   };
 

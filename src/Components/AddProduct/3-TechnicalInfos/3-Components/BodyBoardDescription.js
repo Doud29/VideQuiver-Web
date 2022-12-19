@@ -1,11 +1,10 @@
 //CSS
 import "../DescriptionProduit.scss";
 
-//--------------// Composent
+//COMPONENTS
 import TitleTechnicalInformation from "../1-Title/TitleTechnicalInformations";
 import DropDown from "../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../JSON/Technical-informations.json";
-import InputField from "../2-TechnicalComponents/InputField/InputField";
 
 const BodyBoardDescription = () => {
   return (
@@ -16,9 +15,7 @@ const BodyBoardDescription = () => {
         name="Longueur"
       />
       <DropDown data={TechnicalValue.COMMUN.Niveau} name="Niveau requis" />
-      {/* //---// Etat  */}
       <DropDown data={TechnicalValue.COMMUN.Etat} name="État" />
-      {/* //----// Marque*/}
     </div>
   );
 };

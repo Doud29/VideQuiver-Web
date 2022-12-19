@@ -1,31 +1,32 @@
-//---------------// Css
+//CSS
 import "./Header.scss";
 
-// import BtnLogOut from "../Btn-Header/BtnLogOut";
+//COMPONENT
 import BtnHeader from "./Btn-Header/BtnHeader";
+import LogoProfil from "../../../img/logoProfil.svg";
+import BtnLogOut from "./Btn-Header/BtnLogOut";
 
+//PACKAGES
 import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext";
 
-//---------------// Packages
 const Header = () => {
   const { currentUser } = useContext(UserContext);
 
   return (
     <div className="container-header">
-      {/* message */}
       <BtnHeader
         url="/message"
         item="Message"
         icon={<ion-icon name="mail-outline"></ion-icon>}
       />
-      {/* Vendre */}
+
       <BtnHeader
         url="/addProduct"
         item="Vendre"
         icon={<ion-icon name="play-outline"></ion-icon>}
       />
-      {/* Panier */}
+
       <BtnHeader
         url="/panier"
         item="Panier"
@@ -33,12 +34,12 @@ const Header = () => {
       />
       {currentUser ? (
         <>
-          <img src={currentUser.photoURL} alt="utilisateur" />
-          <BtnHeader
-            url="/home"
-            item="Out"
-            icon={<ion-icon name="log-out-outline"></ion-icon>}
-          />
+          {!currentUser.photoURL ? (
+            <img src={LogoProfil} alt="logo profil" />
+          ) : (
+            <img src={currentUser.photoURL} alt="utilisateur" />
+          )}
+          <BtnLogOut />
         </>
       ) : (
         <BtnHeader

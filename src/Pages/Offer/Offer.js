@@ -8,10 +8,12 @@ import TechnicalInformationsOffer from "../../Components/Offer/TechnicalInformat
 import DescriptionOffer from "../../Components/Offer/DescriptionOffer";
 import Header from "../../Components/Header/HeaderTop/SearchBar";
 import Paiement from "../../Components/Offer/Paiement";
+
 //PACKAGEs
 import { Oval } from "react-loader-spinner";
 import { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
+
 //DB
 import { db } from "../../firebase-config";
 import { doc, getDoc } from "firebase/firestore";
@@ -21,14 +23,12 @@ const Offer = () => {
 
   const [isLoading, setIsloading] = useState(false);
   const [data, setData] = useState({});
-  console.log(data);
   useEffect(() => {
     const getOneProduct = async () => {
       //REF
       const docRef = doc(db, "newOfferForSell", params.id);
       try {
         const response = await getDoc(docRef);
-        // console.log(response.data());
         setData(response.data());
         setIsloading(true);
       } catch (error) {
@@ -70,7 +70,6 @@ const Offer = () => {
           </div>
         </div>
       )}
-      {/* <Footer /> */}
     </div>
   );
 };

@@ -23,9 +23,6 @@ const BlocMiddle = () => {
             <li>FAQ</li>
             <li>Nous contacter</li>
           </ul>
-          {/* <p>Comment ça marche?</p>
-          <p>FAQ</p>
-          <p>Nous contacter</p> */}
         </div>
       </div>
       <div className="container-follow">

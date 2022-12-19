@@ -5,7 +5,7 @@ import InputRadio from "../ComposantModal/InputRadio";
 import TitleModal from "../ComposantModal/TitleModal";
 
 const ModalNeoprene = () => {
-  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
+  const { ToggleModal, setCreateOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
     e.preventDefault();

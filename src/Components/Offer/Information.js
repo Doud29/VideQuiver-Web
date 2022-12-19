@@ -2,7 +2,7 @@
 import "./information.scss";
 
 const Informations = ({ data }) => {
-  const Objet = data["Technical informations"].find((el) => el.Type === "État");
+  const Objet = data.technicalInformations.find((el) => el.Type === "État");
   return (
     <>
       <div className="container-information">

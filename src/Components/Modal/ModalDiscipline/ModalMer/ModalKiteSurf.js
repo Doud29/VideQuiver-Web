@@ -5,7 +5,7 @@ import InputRadio from "../ComposantModal/InputRadio";
 import TitleModal from "../ComposantModal/TitleModal";
 
 const ModalKiteSurf = () => {
-  const { ToggleModal, setCreateOffer, createOffer } = useContext(UserContext);
+  const { ToggleModal, setCreateOffer } = useContext(UserContext);
 
   const handleCheckBox = (e) => {
     e.preventDefault();
@@ -22,12 +22,10 @@ const ModalKiteSurf = () => {
   };
   return (
     <div className="container-modal">
-      {/* //-------//Overlay  */}
       <div
         className="overlay-modal-trigger"
         onClick={() => ToggleModal("closeAll")}
       ></div>
-      {/* //------//Modal et son contenu */}
       <div className="modal">
         <TitleModal title="KiteSurf" modal="Sea" />
         <div className="container-button">

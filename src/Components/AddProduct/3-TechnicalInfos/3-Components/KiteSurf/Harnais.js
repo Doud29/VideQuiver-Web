@@ -1,4 +1,4 @@
-// COMPOSENT
+//COMPONENTS
 import TitleTechnicalInformation from "../../1-Title/TitleTechnicalInformations";
 import DropDown from "../../2-TechnicalComponents/DropDownList/DropDown";
 import TechnicalValue from "../../../../../JSON/Technical-informations.json";

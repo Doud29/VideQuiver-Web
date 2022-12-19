@@ -3,7 +3,6 @@
 .container-home-produit {
   width: 100%;
   min-height: 280px;
-  border: 2px solid red;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -50,7 +49,7 @@
       height: 50px;
       position: absolute;
       z-index: 5;
-      bottom: 90px;
+      bottom: 70px;
       left: 0px;
       display: flex;
       justify-content: flex-start;

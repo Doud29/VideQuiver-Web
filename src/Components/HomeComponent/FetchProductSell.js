@@ -1,23 +1,23 @@
-//-----// Css
+//CSS
 import "./produit.scss";
 
-//-----// Librairie
+//REACT
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-//-----// Components
+//COMPONENTS
 import { db } from "../../firebase-config";
 import { collection, getDocs } from "firebase/firestore";
 
-//-----// Packages
+//PACKAGES
 import { Oval } from "react-loader-spinner";
+
 const FetchProductSell = () => {
   const navigate = useNavigate();
   const [data, setdata] = useState([]);
   const [isFetching, setIsFetching] = useState(false);
 
   useEffect(() => {
-    //REF
     const addProductCollectionRef = collection(db, "newOfferForSell");
     try {
       const getProduct = async () => {
@@ -36,7 +36,6 @@ const FetchProductSell = () => {
       {isFetching === false ? (
         <div className="container-produit-description">
           <div className="oval">
-            {" "}
             <Oval
               height={40}
               width={40}
@@ -62,17 +61,18 @@ const FetchProductSell = () => {
                   navigate(`offer/${data.id}`);
                 }}
               >
-                <img src={data.urls[0]} alt="" className="image-produit" />
+                <img
+                  src={data.urls[0]}
+                  alt="annonce"
+                  className="image-produit"
+                />
                 <div className="bloc-image-nom">
                   <img src="" alt="" />
                   <span>Nom Vendeur</span>
                 </div>
                 <div className="container-titreProduit-description-prix">
                   <span>{data.Product}</span>
-                  <span>
-                    {data.Marque} | {data.Model} |{" "}
-                    {data["Technical informations"][0].Epaisseur}
-                  </span>
+                  <span>{data.Brand}</span>
                   <span style={{ color: "#508ae2" }}> {data.Price} €</span>
                 </div>
               </div>

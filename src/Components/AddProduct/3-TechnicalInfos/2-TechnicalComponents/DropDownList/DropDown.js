@@ -1,7 +1,8 @@
-//---------// Css
+//CSS
 import "./dropdownlist.scss";
-//---------// React
+//REACT
 import { useState, useContext } from "react";
+//CONTEXT
 import { UserContext } from "../../../../../Context/UserContext";
 
 const DropDown = ({ data, name }) => {

@@ -1,12 +1,10 @@
 //CSS
 import "./headerAddProduct.scss";
 
-//COMPONENTS
-import { Link, useNavigate } from "react-router-dom";
-import React from "react";
+//PACKAGES
+import { Link } from "react-router-dom";
 
 const HeaderAddProduct = () => {
-  // const navigate = useNavigate();
   return (
     <div className="bloc-header">
       <p>Vendre un article</p>

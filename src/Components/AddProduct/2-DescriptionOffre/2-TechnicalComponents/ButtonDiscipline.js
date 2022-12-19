@@ -4,15 +4,13 @@ import { UserContext } from "../../../../Context/UserContext";
 const ButtonDiscipline = () => {
   const { ToggleModal, createOffer, setCreateOffer } = useContext(UserContext);
 
-  // console.log(createOffer);
-
   const deleteExistingArray = () => {
-    let newArray = createOffer["Technical informations"].slice(
-      createOffer["Technical informations"].length
+    let newArray = createOffer.TechnicalInformations.slice(
+      createOffer.TechnicalInformations.length
     );
     setCreateOffer({
       ...createOffer,
-      ["Technical informations"]: newArray,
+      TechnicalInformations: newArray,
       Product: "",
     });
   };

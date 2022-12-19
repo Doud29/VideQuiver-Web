@@ -1,3 +1,4 @@
+//CSS
 import "./paiment.scss";
 
 const Paiement = () => {

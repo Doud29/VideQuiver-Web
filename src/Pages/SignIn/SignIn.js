@@ -10,29 +10,20 @@ import { useContext, useRef, useState } from "react";
 import { useNavigate } from "react-router";
 
 const SignIn = () => {
-  //récupération de nos méthodes depuis notre contect
-  const { connectUser, resetPassword } = useContext(UserContext);
-  //state error
+  const { connectUser } = useContext(UserContext);
+
   const [validation, setValidation] = useState("");
-  //Hook navigate
+
   const navigate = useNavigate();
-  //référancement des inputs et du formulaire
+
   const inputsRef = useRef([]);
   const formRef = useRef();
-  //on récupéra la valeur des inputs
+
   const addinputs = (el) => {
     if (el && !inputsRef.current.includes(el)) {
       inputsRef.current.push(el);
     }
   };
-
-  //Reset password
-  // const handleReset = async () => {
-  //   try {
-  //     const reset = await resetPassword(inputsRef.current[0].value);
-  //     console.log(reset);
-  //   } catch (error) {}
-  // };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -60,7 +51,6 @@ const SignIn = () => {
     <div className="container-signIn">
       <HeaderConnexion title="Inscription ou connexion" previous="/welcome" />
       <form onSubmit={handleSubmit} className="container-inputs" ref={formRef}>
-        {/* //-----------------// Email  //----------------------//*/}
         <div className="inputdiv">
           <input
             ref={addinputs}
@@ -73,7 +63,7 @@ const SignIn = () => {
           />
           <span className="spanDescriptionInput">Email</span>
         </div>
-        {/* //-----------------// Password //----------------------//*/}
+
         <div className="inputdiv">
           <input
             ref={addinputs}
@@ -102,7 +92,6 @@ const SignIn = () => {
             fontSize: "12px",
             marginTop: "10px",
           }}
-          // onClick={handleReset}
         >
           Mot de passe oublié?
         </div>

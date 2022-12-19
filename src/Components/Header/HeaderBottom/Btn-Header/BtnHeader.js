@@ -8,12 +8,12 @@ const BtnHeader = ({ item, url, icon }) => {
   };
   return (
     <>
-      {/* <Link to={url} style={styleBloc}> */}
-      <button className="link">
-        {icon}
-        <span style={{ color: "black" }}>{item}</span>
-      </button>
-      {/* </Link> */}
+      <Link to={url} style={styleBloc}>
+        <button className="link">
+          {icon}
+          <span style={{ color: "black" }}>{item}</span>
+        </button>
+      </Link>
     </>
   );
 };

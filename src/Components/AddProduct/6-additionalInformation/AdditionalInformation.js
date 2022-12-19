@@ -1,7 +1,11 @@
-import TitleAdditionalinformations from "./TitleAdditionalinformations";
-import InputAdditionalInformations from "./InputAdditionalinformations";
+//CSS
+
+//CONTEXT
 import { UserContext } from "../../../Context/UserContext";
 import { useContext } from "react";
+//COMPONENTS
+import TitleAdditionalinformations from "./TitleAdditionalinformations";
+import InputAdditionalInformations from "./InputAdditionalinformations";
 
 const AdditionalInformation = () => {
   const { setCreateOffer, createOffer } = useContext(UserContext);

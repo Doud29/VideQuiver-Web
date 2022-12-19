@@ -1,37 +1,34 @@
-//--// Css
+//CSS
 import "./SearchBar.scss";
 
-//--// Composent
+//CONTEXT
 import { useContext } from "react";
 import { UserContext } from "../../../Context/UserContext";
+
+//COMPONENTS
 import BtnHeader from "../HeaderBottom/Btn-Header/BtnHeader";
-import Container from "../Catégories/container";
-// import BtnAcceuil from "./Btn-Header/BtnAcceuil";
-// import BtnProfil from "./Btn-Header/BtnProfil";
-// import BtnSale from "./Btn-Header/BtnSale";
-// import BtnLogOut from "./Btn-Header/BtnLogOut";
-// import BtnMessage from "./Btn-Header/BtnMessage";
-//--// Link
+import Container from "../Categories/container";
+import LogoProfil from "../../../img/logoProfil.svg";
+
 import { Link } from "react-router-dom";
 
 const SearchBar = () => {
   const { currentUser, logout } = useContext(UserContext);
-  console.log(currentUser);
 
-  //on se déconnecte
   const handleLogout = async () => {
     try {
       await logout();
-      console.log("your are disconnect");
     } catch (error) {
       console.log(error.message);
     }
   };
 
+  const styleLink = { textDecoration: "none" };
+
   return (
     <>
       <div className="container-searchBar">
-        <Link to="/home" style={{ textDecoration: "none" }}>
+        <Link to="/home" style={styleLink}>
           <h2>VideQuiver</h2>
         </Link>
         <div className="container-input-glass">
@@ -41,19 +38,18 @@ const SearchBar = () => {
           </div>
         </div>
         <div className="bloc-button">
-          {/* Message */}
           <BtnHeader
             url="/message"
             item="Message"
             icon={<ion-icon name="mail-outline"></ion-icon>}
           />
-          {/* Profile */}
+
           <BtnHeader
             url="/myProfil"
             item="Profile"
             icon={<ion-icon name="settings-outline"></ion-icon>}
           />
-          {/* Panier */}
+
           <BtnHeader
             url="/panier"
             item="Panier"
@@ -67,7 +63,11 @@ const SearchBar = () => {
               <button className="btn-deconnexion" onClick={handleLogout}>
                 Déconnexion
               </button>
-              <img src={currentUser.photoURL} alt="utilisateur" />
+              {!currentUser.photoURL ? (
+                <img src={LogoProfil} alt="logo profil" />
+              ) : (
+                <img src={currentUser.photoURL} alt="utilisateur" />
+              )}
             </>
           ) : (
             <>
