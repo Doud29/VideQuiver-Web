@@ -5,12 +5,12 @@ const ButtonDiscipline = () => {
   const { ToggleModal, createOffer, setCreateOffer } = useContext(UserContext);
 
   const deleteExistingArray = () => {
-    let newArray = createOffer.TechnicalInformations.slice(
-      createOffer.TechnicalInformations.length
+    let newArray = createOffer.technicalInformations.slice(
+      createOffer.technicalInformations.length
     );
     setCreateOffer({
       ...createOffer,
-      TechnicalInformations: newArray,
+      technicalInformations: newArray,
       Product: "",
     });
   };

@@ -317,6 +317,8 @@ export const UserContextProvider = (props) => {
     technicalInformations: [],
   });
 
+  console.log(createOffer);
+
   const addTechnicalData = (value, Theme) => {
     const newOffer = { ...createOffer };
     const ObjAdded = { valeur: value, Type: Theme };

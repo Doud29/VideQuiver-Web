@@ -168,7 +168,7 @@ const AddProduct = () => {
           const file = imageUpload[i];
           const imageRef = ref(
             storage,
-            `Images/${currentUser.uid}/${newOffer.Product}/${newOffer.name}`
+            `Images/${currentUser.uid}/${newOffer.Product}/${imageUpload[i].name}`
           );
           const snapshot = await uploadBytes(imageRef, file);
           const downloadURL = await getDownloadURL(snapshot.ref);

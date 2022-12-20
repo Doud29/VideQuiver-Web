@@ -23,6 +23,7 @@ const FetchProductSell = () => {
       const getProduct = async () => {
         const response = await getDocs(addProductCollectionRef);
         setdata(response.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+        console.log(data);
         setIsFetching(true);
       };
       getProduct();
