@@ -6,7 +6,7 @@ Création d'une application web permettant la location et la vente de matériel 
 Pour ce projet, l'idée est de référencer l'ensemble des caractérisques techniques d'un produit pour permettre le dépot une annonce simplement.
 L'acheteur devra retrouver l'ensemble des caractérisques techniques [ex : Taille / Longueur / Largeur / Type de construction / Niveau requis / etc ...] du produit voulu sur l'annonce. Permettant ainsi, une lecture et une selection rapide du produit. 
 
-
+URL : https://videquiver-9a435.web.app
 
 ## Author
 
